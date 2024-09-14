@@ -1117,7 +1117,7 @@ INSERT INTO `payment_gateways` (`id`, `identifier`, `currency`, `title`, `model_
 --
 
 CREATE TABLE `payment_histories` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `payment_type` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `course_id` int(11) DEFAULT NULL,
@@ -1133,7 +1133,8 @@ CREATE TABLE `payment_histories` (
   `session_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `coupon` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -1865,11 +1866,7 @@ ALTER TABLE `password_reset_tokens`
 ALTER TABLE `payment_gateways`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `payment_histories`
---
-ALTER TABLE `payment_histories`
-  ADD PRIMARY KEY (`id`);
+
 
 --
 -- Indexes for table `payouts`
@@ -2253,11 +2250,7 @@ ALTER TABLE `offline_payments`
 ALTER TABLE `payment_gateways`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
---
--- AUTO_INCREMENT for table `payment_histories`
---
-ALTER TABLE `payment_histories`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 
 --
 -- AUTO_INCREMENT for table `payouts`
