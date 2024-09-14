@@ -27,6 +27,10 @@ class HomeController extends Controller
         return view('frontend.fase-1.index');
     }
 
+    public function applicant_signup(){
+        return view('frontend.fase-1.applicant-signup');
+    }
+
     // public function index()
     // {
     //     if(session('home')){
