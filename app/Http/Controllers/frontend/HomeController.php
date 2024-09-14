@@ -23,32 +23,36 @@ class HomeController extends Controller
         return redirect(route('home'));
     }
 
-    public function index()
-    {
-        if(session('home')){
-            $page_builder = Builder_page::where('id', session('home'))->first();
-        }else{
-            $page_builder = Builder_page::where('status', 1)->first();
-        }
-
-        if ($page_builder && $page_builder->is_permanent == 1) {
-            $page_data['blogs']    = Blog::where('status', 1)->orderBy('is_popular', 'desc')->orderBy('id', 'desc')->take(3)->get();
-            $page_data['reviews']    = Review::all();
-            return view('frontend.default.home.' . $page_builder->identifier, $page_data);
-        } elseif ($page_builder) {
-            return view('frontend.builder-home.index');
-        } else {
-            $page_data['instructor'] = User::join('courses', 'users.id', 'courses.user_id')
-                ->select('users.*', 'courses.title as course_title')
-                ->get()->unique()->take(4);
-
-            $page_data['blogs']    = Blog::where('status', 1)->orderBy('is_popular', 'desc')->orderBy('id', 'desc')->take(3)->get();
-            $page_data['category'] = Category::take(8)->get();
-
-            $view_path = 'frontend' . '.' . get_frontend_settings('theme') . '.home.index';
-            return view($view_path, $page_data);
-        }
+    public function index(){
+        return view('frontend.fase-1.index');
     }
+
+    // public function index()
+    // {
+    //     if(session('home')){
+    //         $page_builder = Builder_page::where('id', session('home'))->first();
+    //     }else{
+    //         $page_builder = Builder_page::where('status', 1)->first();
+    //     }
+
+    //     if ($page_builder && $page_builder->is_permanent == 1) {
+    //         $page_data['blogs']    = Blog::where('status', 1)->orderBy('is_popular', 'desc')->orderBy('id', 'desc')->take(3)->get();
+    //         $page_data['reviews']    = Review::all();
+    //         return view('frontend.default.home.' . $page_builder->identifier, $page_data);
+    //     } elseif ($page_builder) {
+    //         return view('frontend.builder-home.index');
+    //     } else {
+    //         $page_data['instructor'] = User::join('courses', 'users.id', 'courses.user_id')
+    //             ->select('users.*', 'courses.title as course_title')
+    //             ->get()->unique()->take(4);
+
+    //         $page_data['blogs']    = Blog::where('status', 1)->orderBy('is_popular', 'desc')->orderBy('id', 'desc')->take(3)->get();
+    //         $page_data['category'] = Category::take(8)->get();
+
+    //         $view_path = 'frontend' . '.' . get_frontend_settings('theme') . '.home.index';
+    //         return view($view_path, $page_data);
+    //     }
+    // }
 
     public function download_certificate($identifier)
     {
