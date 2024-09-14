@@ -76,7 +76,7 @@
                     <!-- offcanvas-logo-start -->
                     <div class="offcanvas-logo">
                         <a href="index.html">
-                            <img src="{{ asset('assets/images/logo-3.svg') }}" alt="#" />
+                            <img src="./assets/images/logo-3.svg" alt="#" />
                         </a>
                     </div>
                     <!-- offcanvas-logo-end -->
@@ -89,28 +89,28 @@
                     <nav id="offcanvas-menu" class="navigation offcanvas-menu">
                         <ul id="nav mobile-nav" class="list-none offcanvas-men-list">
                             <li>
-                                <a class="menu-arrow" href="javascript:void(0)">Home</a>
-                                <ul class="sub-menu">
+                                <a href="index.html">Home One</a>
+                                <!-- <ul class="sub-menu">
                                     <li>
                                         <a href="index.html">Home One</a>
                                     </li>
                                     <li>
                                         <a href="index-2.html">Home Two</a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a class="menu-arrow" href="javascript:void(0)">Courses</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="course.html">Course</a>
+                                        <a>Course</a>
                                     </li>
                                     <li>
                                         <a href="course-details.html">Course Details</a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <a class="menu-arrow" href="javascript:void(0)">Events</a>
                                 <ul class="sub-menu">
                                     <li>
@@ -120,7 +120,7 @@
                                         <a href="event-details.html">Event Details</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li>
                                 <a class="menu-arrow" href="javascript:void(0)">Pages</a>
                                 <ul class="sub-menu">
@@ -193,14 +193,14 @@
                         <div class="ep-topbar__column">
                             <div class="ep-logo">
                                 <a href="index.html">
-                                    <img src="{{ asset('assets/images/logo-3.svg') }}" alt="logo" />
+                                    <img src="./assets/images/logo-3.svg" alt="logo" />
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-10 col-6">
                         <div class="ep-topbar__column ep-topbar__column2">
-                            <div class="ep-topbar__search-widget">
+                            <!-- <div class="ep-topbar__search-widget">
                                 <div class="ep-topbar__category">
                                     <select>
                                         <option data-display="All">All</option>
@@ -219,14 +219,41 @@
                                         </button>
                                     </form>
                                 </div>
-                            </div>
+                            </div> -->
+                            <nav class="ep-header__navigation">
+                                <ul class="ep-header__menu ep-header__menu--style2">
+                                    
+                                    <li>
+                                        <a href="#">Signup <i class="fi fi-ss-angle-small-down"></i>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="signup_applicant.html">Participant</a>
+                                            </li>
+                                            <li>
+                                                <a href="signup_instructor.html">Instructor</a>
+                                            </li>
+                                            <li>
+                                                <a href="signup_company.html">Company</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+                            </nav>
                             <a href="login.html" class="ep-header__account">
                                 <i class="fi fi-rr-user"></i>
                                 <div class="ep-header__account-info">
                                     <span>Sign In</span>
-                                    <p>Account</p>
                                 </div>
                             </a>
+                            <!-- <a href="signup.html" class="ep-header__account">
+                                <i class="fi fi-rr-user"></i>
+                                <div class="ep-header__account-info">
+                                    <span>Sign Up</span>
+                                </div>
+                            </a> -->
+                            
                         </div>
                     </div>
                 </div>
@@ -237,108 +264,10 @@
             <div class="container ep-container">
                 <div class="ep-header__inner">
                     <div class="row align-items-center">
-                        <div class="col-lg-10 col-12">
-                            <nav class="ep-header__navigation">
-                                <ul class="ep-header__menu">
-                                    <li class="active">
-                                        <a href="#">Home <i class="fi fi-ss-angle-small-down"></i>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="active">
-                                                <a href="index.html">Home One</a>
-                                            </li>
-                                            <li>
-                                                <a href="index-2.html">Home Two</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Courses <i class="fi fi-ss-angle-small-down"></i>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="course.html">Course</a>
-                                            </li>
-                                            <li>
-                                                <a href="course-details.html">Course Details</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Events <i class="fi fi-ss-angle-small-down"></i>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="event.html">Event</a>
-                                            </li>
-                                            <li>
-                                                <a href="event-details.html">Event Details</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Pages <i class="fi fi-ss-angle-small-down"></i>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="about.html">About Us</a>
-                                            </li>
-                                            <li>
-                                                <a href="team.html">Team</a>
-                                            </li>
-                                            <li>
-                                                <a href="team-details.html">Team Details</a>
-                                            </li>
-                                            <li>
-                                                <a href="login.html">Login</a>
-                                            </li>
-                                            <li>
-                                                <a href="register.html">Register</a>
-                                            </li>
-                                            <li>
-                                                <a href="404.html">404 Error</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Shop <i class="fi fi-ss-angle-small-down"></i>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="shop.html">Shop</a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.html">Cart</a>
-                                            </li>
-                                            <li>
-                                                <a href="wishlist.html">Wishlist</a>
-                                            </li>
-                                            <li>
-                                                <a href="checkout.html">Checkout</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Blog <i class="fi fi-ss-angle-small-down"></i>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="blog.html">Blog</a>
-                                            </li>
-                                            <li>
-                                                <a href="blog-details.html">Blog Details</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">Contact</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+                        
                         <div class="col-lg-12 col-xl-2 col-12">
                             <div class="ep-header__right">
-                                <div class="ep-topbar__action">
+                                <!-- <div class="ep-topbar__action">
                                     <div class="ep-topbar__wishlist">
                                         <a href="wishlist.html" class="ep-topbar__action-icon">
                                             <i class="fi-rr-heart"></i>
@@ -355,10 +284,9 @@
                                             <span>$496.00</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Mobile Menu Button -->
-                                <button type="button" class="mobile-menu-offcanvas-toggler" data-bs-toggle="modal"
-                                    data-bs-target="#offcanvas-modal">
+                                <button type="button" class="mobile-menu-offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal">
                                     <span class="line"></span>
                                     <span class="line"></span>
                                     <span class="line"></span>
