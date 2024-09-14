@@ -64,9 +64,9 @@ return [
     |
     */
 
-    'url' => $app_url,
+    'url' => env('APP_URL', $app_url),
 
-    'asset_url' => $asset_url,
+    'asset_url' => env('ASSET_URL', $asset_url),
 
     /*
     |--------------------------------------------------------------------------
