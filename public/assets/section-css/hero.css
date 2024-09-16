@@ -5,6 +5,93 @@
 .hero-bg {
   background-color: var(--ep-offwhite-color);
 }
+.hero-bg-opacity {
+  position: relative;
+  background: url('../images/DSC09353.jpg') no-repeat center center / cover;
+  height: 100vh;
+  z-index: 1;
+}
+
+.hero-bg-opacity::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+  /* z-index: 1; */
+}
+
+.ep-content-opacity {
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  color: var(--ep-offwhite-color); /* Ensure text is white for better contrast */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1200px) {
+  .hero-bg-opacity {
+    height: 500px;
+    margin-top: 150px;
+  }
+  .ep-hero__content h3 {
+    font-size: 32px;
+  }
+  .ep-hero__content p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .hero-bg-opacity {
+    height: 400px;
+    margin-top: 100px;
+  }
+  .ep-hero__content h3 {
+    font-size: 28px;
+  }
+  .ep-hero__content p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-bg-opacity {
+    height: 300px;
+    margin-top: 50px;
+  }
+  .ep-hero__content h3 {
+    font-size: 24px;
+  }
+  .ep-hero__content p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero-bg-opacity {
+    height: 250px;
+    margin-top: 30px;
+  }
+  .ep-hero__content h3 {
+    font-size: 20px;
+  }
+  .ep-hero__content p {
+    font-size: 10px;
+  }
+}
 .ep-hero {
   padding: 288px 0px 100px;
 }
@@ -190,12 +277,12 @@
 }
 
 /* Hero Style 2 */
-
 .ep-hero--style2 {
   padding: 215px 0px 100px;
 }
 .ep-hero__content--style2 {
   padding-right: 48px;
+  opacity: 1;
 }
 .ep-hero__content--style2 .ep-hero__title {
   line-height: 96.333px;
@@ -355,6 +442,19 @@
   }
 }
 
+.apply-now-btn {
+  background: linear-gradient(to right, #2849e6, #0476d9);
+  width: 200px; 
+  height: 40px;
+  border-radius:5px; 
+  text-decoration: none;
+  padding: 5px 55px;
+  margin-top: 20px;
+}
+
+.apply-now-btn span {
+  color: #f2f2f2;
+}
 /*============================================================================================
 	End Hero Area
 ==============================================================================================*/

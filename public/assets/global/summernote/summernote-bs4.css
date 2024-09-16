@@ -11,7 +11,7 @@
  *
  */
 @font-face {
-    font-family: "summernote";
+    font-family: "Segoe UI";
     font-style: normal;
     font-weight: 400;
     font-display: auto;
@@ -20,7 +20,7 @@
 [class^=note-icon]:before,
 [class*=" note-icon"]:before {
     display: inline-block;
-    font-family: "summernote";
+    font-family: "Segoe UI";
     font-style: normal;
     font-size: inherit;
     text-decoration: inherit;

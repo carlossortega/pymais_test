@@ -708,7 +708,7 @@ img {
     font-size: 52px;
     font-weight: 600;
     line-height: 64px;
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     color: var(--color-2);
     margin-bottom: 30px;
 }
@@ -870,7 +870,7 @@ img {
     font-size: 40px;
     font-weight: 600;
     color: var(--color-2);
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
 }
 
 .single-category {
@@ -911,7 +911,7 @@ img {
     border-radius: 10px;
 }
 .single-category h4 {
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     font-size: 20px;
     font-weight: 600;
     color: var(--color-2);
@@ -919,7 +919,7 @@ img {
     margin-bottom: 6px;
 }
 .single-category p {
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     font-weight: 500;
     font-size: 13px;
     color: var(--text-color);
@@ -978,7 +978,7 @@ img {
 .cText h4 {
     font-size: 24px;
     font-weight: 600;
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     color: var(--color-white);
 }
 .cText del {
@@ -995,7 +995,7 @@ img {
 }
 .entry-title h3 {
     font-size: 20px;
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     font-weight: 600;
     color: var(--color-2);
     margin-bottom: 12px;
@@ -1489,7 +1489,7 @@ img {
 .ol-card p-4 .card-body h4 {
     font-size: 20px;
     font-weight: 600;
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     color: var(--color-2);
     line-height: 32px;
 }
@@ -1589,7 +1589,7 @@ img {
     padding: 30px !important;
 }
 .blog-sidebar .widget-title {
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     font-size: 20px;
     font-weight: 500;
 }
@@ -1665,7 +1665,7 @@ img {
     font-size: 24px;
     font-weight: 600;
     color: var(--color-2);
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
 }
 .form-area {
     display: flex;
@@ -1816,7 +1816,7 @@ img {
     font-size: 24px;
     font-weight: 600;
     color: var(--color-1);
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
 }
 .ct_hover span {
     color: var(--color-2);
@@ -1829,7 +1829,7 @@ img {
     font-size: 15px;
     font-weight: 500;
     color: var(--text-color);
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
 }
 .ct-text p {
     font-size: 15px;
@@ -2174,7 +2174,7 @@ html .ui-button.ui-state-disabled:active {
 }
 .btn-wrap .learn-btn {
     color: var(--color-2);
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     border: 1px solid #2f57ef38;
 }
 .right-profile .g-title {
@@ -2183,7 +2183,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .right-profile .gradient {
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     font-weight: 500;
     display: inline-block;
     margin-bottom: 30px;
@@ -2192,7 +2192,7 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 30px;
 }
 .instruct-add li {
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     font-weight: 500;
     color: var(--color-2);
     display: flex;
@@ -2278,7 +2278,7 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 16px;
     font-weight: 500;
     color: var(--color-2);
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
 }
 .global-form .form-control {
     padding: 14px 22px;
@@ -2724,7 +2724,7 @@ html .ui-button.ui-state-disabled:active {
     padding: 10px 24px;
     font-size: 15px;
     font-weight: 500;
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     transition: 0.5s;
     margin-right: 13px;
 }
@@ -3239,7 +3239,7 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 0;
 }
 .ps-sidebar del {
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     font-size: 20px;
     font-weight: 500;
     margin-top: 30px;
@@ -3488,12 +3488,12 @@ html .ui-button.ui-state-disabled:active {
     margin-bottom: 0;
     padding-bottom: 0;
     font-size: 28px;
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     font-weight: 600;
 }
 .g_font {
     font-size: 28px !important;
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     font-weight: 600;
 }
 .comment-form {
@@ -3761,7 +3761,7 @@ html .ui-button.ui-state-disabled:active {
 .footer-widget h4 {
     font-size: 18px;
     font-weight: 600;
-    font-family: "Euclid Circular A";
+    font-family: "Segoe UI";
     margin-bottom: 24px;
 }
 .footer-widget ul {

@@ -4,7 +4,7 @@
  * Copyright 2022 Fonticons, Inc.
  */
 .fa {
-  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-family: var(--fa-style-family, "Segoe UI");
   font-weight: var(--fa-style, 900); }
 
 .fa,
@@ -29,11 +29,11 @@
 .fa-solid,
 .far,
 .fa-regular {
-  font-family: 'Font Awesome 6 Free'; }
+  font-family: 'Segoe UI'; }
 
 .fab,
 .fa-brands {
-  font-family: 'Font Awesome 6 Brands'; }
+  font-family: 'Segoe UI'; }
 
 .fa-1x {
   font-size: 1em; }

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "uicons-solid-straight";
+  font-family: "Segoe UI";
   src: url("../../fonts/uicons-solid-straight.woff2") format("woff2"),
     url("../../fonts/uicons-solid-straight.woff") format("woff"),
     url("../../fonts/uicons-solid-straight.eot#iefix")
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: "uicons-solid-rounded";
+  font-family: "Segoe UI";
   src: url("../../fonts/uicons-solid-rounded.woff2") format("woff2"),
     url("../../fonts/uicons-solid-rounded.woff") format("woff"),
     url("../../fonts/uicons-solid-rounded.eot#iefix")
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-  font-family: "uicons-regular-straight";
+  font-family: "Segoe UI";
   src: url("../../fonts/uicons-regular-straight.woff2") format("woff2"),
     url("../../fonts/uicons-regular-straight.woff") format("woff"),
     url("../../fonts/uicons-regular-straight.eot#iefix")
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-  font-family: "uicons-regular-rounded";
+  font-family: "Segoe UI";
   src: url("../../fonts/uicons-regular-rounded.woff2") format("woff2"),
     url("../../fonts/uicons-regular-rounded.woff") format("woff"),
     url("../../fonts/uicons-regular-rounded.eot#iefix")
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-  font-family: "uicons-bold-rounded";
+  font-family: "Segoe UI";
   src: url("../../fonts/uicons-bold-rounded.woff2") format("woff2"),
     url("../../fonts/uicons-bold-rounded.woff") format("woff"),
     url("../../fonts/uicons-bold-rounded.eot#iefix") format("embedded-opentype");
@@ -43,7 +43,7 @@
 }
 
 @font-face {
-  font-family: "uicons-bold-straight";
+  font-family: "Segoe UI";
   src: url("../../fonts/uicons-bold-straight.woff2") format("woff2"),
     url("../../fonts/uicons-bold-straight.woff") format("woff"),
     url("../../fonts/uicons-bold-straight.eot#iefix")
@@ -52,7 +52,7 @@
 }
 
 @font-face {
-  font-family: "uicons-brands";
+  font-family: "Segoe UI";
   src: url("../../fonts/uicons-brands.woff2") format("woff2"),
     url("../../fonts/uicons-brands.woff") format("woff"),
     url("../../fonts/uicons-brands.eot#iefix") format("embedded-opentype");

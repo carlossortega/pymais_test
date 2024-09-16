@@ -3,43 +3,17 @@
 @section('content')
 
 <!-- Start Hero Area -->
-<section class="ep-hero section-gap section-bg-1">
+<section class="ep-hero section-gap section-bg-1 hero-background hero-bg-opacity">
+    <div class="overlay"></div> 
     <div class="container ep-container">
         <div class="row align-items-center">
             <div class="col-lg-12 col-xl-6 col-12">
-                <div class="ep-hero__content">
-                    <h1 class="ep-hero__title ep-split-text left"> Welcome to <span>
-                            <a class="ep-hero__hover-images position-relative" href="about.html">
-                                <img class="hover-img-1 wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s" src="./assets/images/hero/home-1/text-arrow.svg" alt="arrow" />
-                                <img class="hover-img-2" src="./assets/images/hero/home-1/hover-img.svg" alt="hover-img" />
-                            </a> PYMAIS </span> PLATFORM </h1>
-                    <p class="ep-hero__text"> SMB's expansion To leverage nearshoring and robust MX-US value chains.
-                    </p>
-                    
-                </div>
-            </div>
-            <div class="col-lg-12 col-xl-6 col-12 order-top">
-                <div class="ep-hero__widget">
-                    <!-- Widget One  -->
-                    <div class="ep-hero__widget-column">
-                        <!-- Image One -->
-                        <div class="ep-hero__widget-img">
-                            <img src="./assets/images/hero/home-1/img-1.png" alt="hero-img" />
-                        </div>
-                        <!-- Team Widget -->
-                        
-                    </div>
-                    <!-- Shape Image -->
-                    <div class="ep-hero__shape updown-ani">
-                        <img src="./assets/images/hero/home-1/shape.svg" alt="shape" />
-                    </div>
-                    <!-- Widget Two  -->
-                    <div class="ep-hero__widget-column">
-                        <!-- Image Two -->
-                        <div class="ep-hero__widget-img">
-                            <img src="./assets/images/hero/home-1/img-2.png" alt="hero-img" />
-                        </div>
-                    </div>
+                <div class="ep-hero__content ep-content-opacity">
+                    <h3 class="ep-section-head__big-title ep-split-text left"> Welcome to PYMAIS PLATFORM</h3>
+                    <p class="ep-section-head__text"> An innovative training program to accelerate the growth of manufacturing industry supply chain businesses, to strengthen and professionalize them based on real demands of each region.</p>
+                    <a class="apply-now-btn">
+                        <span>Apply now</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -53,106 +27,105 @@
     </div>
     <div class="container ep-container">
         <div class="row align-items-center">
-            <div class="col-lg-6 col-12">
-                <div class="ep-section__img position-relative">
-                    <div class="ep-section__img-shape rotate-ani">
-                        <img src="./assets/images/about/about-1/pattern-shape.svg" alt="pattern-shape" />
-                    </div>
-                    <div class="ep-section__img-main">
-                        <img src="./assets/images/about/about-1/about-img.png" alt="about-img" />
-                    </div>
-                    <div class="overview-card updown-ani">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12">
-                <div class="ep-section__content">
+            <div class="col-lg-12 col-12">
+                <div class="ep-section__content text-center">
                     <div class="ep-section-head">
-                        
-                        <h3 class="ep-section-head__big-title ep-split-text left"><span>PyMAis</span> Platform
-                        </h3>
-                        <p class="ep-section-head__text"> An innovative training program to accelerate the growth of manufacturing industry supply chain businesses, to strengthen and professionalize them based on real demands of each region.</p>
-                        <h3 class="ep-section-head__big-title ep-split-text left">Value Offer
-                        </h3>
-                        <p class="ep-section-head__text"> Strengthen Supply Chain Integration through six key areas:
-                        </p>
+                        <h3 class="ep-section-head__big-title ep-split-text">Value Offer</h3>
+                        <p class="ep-section-head__text">Strengthen Supply Chain Integration through six key areas:</p>
                         <div class="ep-section__widget ep-section__widget--style2">
-                            <ul class="ep-feature-list">
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>Innovation
-                                </li>
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>Scalability and growth
-                                </li>
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>Digital transformation
-                                </li>
-                            </ul>
-                            <ul class="ep-feature-list">
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>Modernization and improvement of operations
-
-                                </li>
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>Financial preparedness
-                                </li>
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>Make SMEs visible within value chains
-                                </li>
-                            </ul>
+                            <div class="ep-feature-buttons row">
+                                <!-- First Row: Offset 0 -->
+                                <div class="col-6 offset-0">
+                                    <button class="ep-btn feature-btn">Innovation</button>
+                                </div>
+                                <div class="col-6 offset-0">
+                                    <button class="ep-btn feature-btn">Scalability and growth</button>
+                                </div>
+                            
+                                <!-- Second Row: Offset 1 -->
+                                <div class="col-6 offset-2">
+                                    <button class="ep-btn feature-btn">Digital transformation</button>
+                                </div>
+                                <div class="col-6 offset-2">
+                                    <button class="ep-btn feature-btn">Modernization and improvement of operations</button>
+                                </div>
+                            
+                                <!-- Third Row: Offset 3 -->
+                                <div class="col-6 offset-1">
+                                    <button class="ep-btn feature-btn">Financial preparedness</button>
+                                </div>
+                                <div class="col-6 offset-1">
+                                    <button class="ep-btn feature-btn">Make SMEs visible within value chains</button>
+                                </div>
+                            </div>    
                         </div>
                     </div>
-<!--                                         
                     <div class="ep-section__btn">
-                        <a href="about.html" class="ep-btn border-btn">Read More <i class="fi fi-rs-arrow-small-right"></i>
-                        </a>
-                    </div> -->
+                        <a href="about.html" class="ep-btn border-btn">Why this program?</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!-- End Start About Area -->
-<!-- Start Category Area -->
-<section class="ep-group-study position-relative section-gap mg-btm-120 pt-0">
+<!-- Start Event Area -->
+<section class="ep-features ep-section position-relative">
     <div class="container ep-container">
-        <div class="ep-group-study__inner position-relative">
-            
-            <div class="row">
-                <div class="col-12">
-                    <div class="ep-section-head ep-section-head--style2">
-                        <h3 class="ep-section-head__color-title ep9-color ep9-border-color"> 1.Business Enhancer </h3>
-                    </div>
+        <div class="row align-items-center">
+            <div class="col-12 text-center">
+                <h3 class="ep-section-head__big-title ep-split-text">Perfiles</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="ep-feature-box">
+                    <h4 class="ep-feature-box__title">SME's</h4>
+                    <p class="ep-feature-box__description">SME's</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6 col-xl-4 col-12">
-                    <div class="ep-section__content ep-section__content--style2">
-                        <h3 class="ep-section__title ep-split-text left"> 1.1 Primer Program </h3>
-                        <p class="ep-section__text"> Through asynchronous online sessions, participating companies will become aware of US - Mexico business opportunities and will be equipped with six 1-hour topics.
-                        </p>
-                        <div class="ep-section__btn">
-                            <a href="about.html" class="ep-btn border-btn">Read More <i class="fi fi-rs-arrow-small-right"></i>
-                            </a>
-                        </div>
-                    </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="ep-feature-box">
+                    <h4 class="ep-feature-box__title">Mentor</h4>
+                    <p class="ep-feature-box__description">Mentor</p>
                 </div>
-                <div class="col-lg-6 col-xl-6 offset-xl-2 col-12">
-                    <div class="ep-group-study__video background-image ep-hobble position-relative" style="
-    background-image: url('./assets/images/group-study/study-img.png');
-  ">
-                        <a href="https://www.youtube.com/watch?v=gyGsPlt06bo" class="ep-video__btn popup-video ep-hover-layer-2">
-                            <i class="fi fi-sr-play"></i>
-                        </a>
-                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="ep-feature-box">
+                    <h4 class="ep-feature-box__title">Corporate</h4>
+                    <p class="ep-feature-box__description">Description for feature 3.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="ep-category section-gap pt-0">
-    
+<!-- End Event Area -->
+<!-- Start Course Area -->
+<section class="ep-video-section section-gap ep-section position-relative">
+    <div class="container ep-container">
+        <div class="row align-items-center">
+            <div class="col-12 text-center">
+                <h3 class="ep-section-head__big-title ep-split-text">How PYMAIS works</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-12">
+                <div class="ep-video-wrapper">
+                    <video id="promoPlayer" playsinline controls>
+                        <source src="{{ asset('path/to/your/video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Course Area -->
+<!-- Start Event Area -->
+<section>
+</section>
+<!-- End Event Area -->
+<!-- Start Category Area -->
+<section class="ep-category section-gap ep-section">
     <div class="container ep-container">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-xl-4 col-md-8 col-12">
@@ -312,6 +285,77 @@
                 </ul>
             </div>
             
+        </div>
+    </div>
+</section>
+<!-- Start Course Area -->
+<section class="ep-blog section-gap pt-0 position-relative">
+    <div class="container ep-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="ep-section-head ep-section-head--style2">
+                    <h2 class="ep-section-head__big-title ep-split-text left">Courses</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Single Blog Card -->
+            <div class="col-lg-6 col-xl-4 col-md-6 col-12">
+                <div class="ep-blog__card ep-blog__card--style2 wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                    <a href="blog-details.html" class="ep-blog__img">
+                        <img src="./assets/images/blog/blog-1/4.png" alt="blog-img" />
+                    </a>
+                    <div class="ep-blog__info">
+                        <div class="ep-blog__content">
+                            <a href="blog-details.html" class="ep-blog__title">
+                                <h5 class="m-0"> Qué es la IA generativa </h5>
+                            </a>
+                            <div class="ep-blog__btn">
+                                <a href="blog-details.html">Signup now</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Blog Card -->
+            <div class="col-lg-6 col-xl-4 col-md-6 col-12">
+                <div class="ep-blog__card ep-blog__card--style2 wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
+                    <a href="blog-details.html" class="ep-blog__img">
+                        <img src="./assets/images/blog/blog-1/5.png" alt="blog-img" />
+                    </a>
+                    <div class="ep-blog__info">
+                        <div class="ep-blog__content">
+                            <a href="blog-details.html" class="ep-blog__title">
+                                <h5 class="m-0"> Prompt Engineering: Aprende a hablar con una inteligencia artificial generativa </h5>
+                            </a>
+                            <div class="ep-blog__btn">
+                                <a href="blog-details.html">Signup now</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Blog Card -->
+            <div class="col-lg-6 col-xl-4 col-md-6 col-12">
+                <div class="ep-blog__card ep-blog__card--style2 wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
+                    <a href="blog-details.html" class="ep-blog__img">
+                        <img src="./assets/images/blog/blog-1/6.png" alt="blog-img" />
+                    </a>
+                    <div class="ep-blog__info">
+                        <div class="ep-blog__content">
+                            <a href="blog-details.html" class="ep-blog__title">
+                                <h5 class="m-0"> Agiliza tu trabajo con el chat de Microsoft Copilot </h5>
+                            </a>
+                            <div class="ep-blog__btn">
+                                <a href="blog-details.html">Signup now</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

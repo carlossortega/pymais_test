@@ -13,21 +13,21 @@
 
 /* Custom Variable Colors */
 :root {
-  --ep-primary-color-1: #00bfad;
-  --ep-primary-color-2: #006bff;
-  --ep-primary-color-3: #543ee8;
-  --ep-primary-color-4: #fec961;
+  --ep-primary-color-1: #212121;
+  --ep-primary-color-2: #3c6ee2;
+  --ep-primary-color-3: #2849e6;
+  --ep-primary-color-4: #0476d9;
   --ep-primary-color-5: #ff723a;
   --ep-primary-color-6: #57f2d0;
   --ep-primary-color-7: #fd2121;
   --ep-primary-color-8: #c342ff;
   --ep-secondary-color: #1f1c35;
-  --ep-white-color: #fff;
-  --ep-offwhite-color: #f5f5f5;
+  --ep-white-color: #f2f2f2;
+  --ep-offwhite-color: #f2f2f2;
   --ep-title-color: #1f1c35;
   --ep-paragraph-color: #4f536c;
   --ep-border-color: #e7e7eb;
-  --ep-font-family: "Outfit", sans-serif;
+  --ep-font-family: "Segoe UI";
 }
 
 *,
@@ -214,7 +214,7 @@ textarea:focus-visible {
 }
 button {
   overflow: visible;
-  border: none !important;
+  border: none;
 }
 button,
 select {
@@ -625,7 +625,7 @@ h5 a,
 h6,
 h6 a {
   font-family: var(--ep-font-family);
-  color: var(--ep-title-color);
+  /* color: var(--ep-white-color); */
   font-weight: 700;
   line-height: 130%;
 }
@@ -650,7 +650,6 @@ h6 {
 
 /* Paragraph Text */
 p {
-  color: var(--ep-paragraph-color);
   margin: 0;
   line-height: 28px;
   font-weight: 400;
@@ -981,6 +980,42 @@ p {
   font-weight: 700;
   line-height: 50.04px;
   margin: 0;
+  margin-bottom: 40px; /* Add space below the title */
+}
+
+.ep-feature-box {
+  background-color: var(--ep-white-color);
+  border: 1px solid var(--ep-primary-color-2);
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ep-feature-box__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.ep-feature-box__description {
+  font-size: 16px;
+  color: var(--ep-primary-color-3);
+}
+
+.ep-video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.ep-video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .ep-section-head__big-title span {
@@ -1540,7 +1575,7 @@ input[type="number"] {
   background: var(--ep-primary-color-2);
   padding: 18px 26px;
   border-radius: 42px;
-  color: var(--ep-white-color) !important;
+  /* color: var(--ep-white-color) !important; */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1557,9 +1592,9 @@ input[type="number"] {
   line-height: 0;
 }
 .ep-btn.border-btn {
-  border: 1px solid var(--ep-border-color);
+  /* border: 1px solid var(--ep-border-color); */
   background: transparent;
-  color: var(--ep-title-color) !important;
+  color: var(--ep-primary-color-2) !important;
   padding: 17.2px 26px;
 }
 .ep-btn.border-btn:hover {
@@ -1574,6 +1609,53 @@ input[type="number"] {
   }
 }
 
+/* Centering the text in the section */
+.ep-section__content.text-center {
+  text-align: center;
+}
+
+.ep-section-head__text {
+  margin: 0 auto;
+  margin-top: 20px;
+  line-height: 28px;
+  max-width: 600px; /* Optional: limit the width for better readability */
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styling the feature buttons */
+.ep-feature-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.feature-btn {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--ep-white-color);
+  color: var(--ep-primary-color-2);
+  border: 1px solid var(--ep-primary-color-2);
+  border-radius: 5px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.feature-btn i {
+  font-size: 16px;
+}
+
+.feature-btn:hover {
+  background-color: var(--ep-primary-color-dark);
+}
 /*============================================================================================
 	End Theme Reset
 ==============================================================================================*/

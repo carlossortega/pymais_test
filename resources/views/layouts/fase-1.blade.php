@@ -76,7 +76,7 @@
                     <!-- offcanvas-logo-start -->
                     <div class="offcanvas-logo">
                         <a href="index.html">
-                            <img src="./assets/images/logo-3.svg" alt="#" />
+                            <img src="./assets/images/logo_pymais.png" alt="#" />
                         </a>
                     </div>
                     <!-- offcanvas-logo-end -->
@@ -184,121 +184,55 @@
     <!-- End Mobile Menu Modal -->
 
     <!-- Start Header Area -->
-    <header class="ep-header position-relative section-bg-1">
-        <!-- Topbar -->
-        <div class="ep-topbar">
-            <div class="container ep-container">
-                <div class="row align-items-center">
-                    <div class="col-lg-2 col-6">
-                        <div class="ep-topbar__column">
-                            <div class="ep-logo">
-                                <a href="index.html">
-                                    <img src="./assets/images/logo-3.svg" alt="logo" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-10 col-6">
-                        <div class="ep-topbar__column ep-topbar__column2">
-                            <!-- <div class="ep-topbar__search-widget">
-                                <div class="ep-topbar__category">
-                                    <select>
-                                        <option data-display="All">All</option>
-                                        <option value="1">Study Buddy</option>
-                                        <option value="2">Tutoring Services</option>
-                                        <option value="3">Digital Advertising</option>
-                                        <option value="4">Online Courses</option>
-                                        <option value="5">Tutoring Services</option>
-                                    </select>
-                                </div>
-                                <div class="ep-topbar__search">
-                                    <form action="#" method="post">
-                                        <input type="search" name="search" placeholder="Search" required />
-                                        <button type="submit">
-                                            <i class="fi-rr-search"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div> -->
-                            <nav class="ep-header__navigation">
-                                <ul class="ep-header__menu ep-header__menu--style2">
-                                    
-                                    <li>
-                                        <a href="#">Signup <i class="fi fi-ss-angle-small-down"></i>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li>
-                                                <a href="signup_applicant.html">Participant</a>
-                                            </li>
-                                            <li>
-                                                <a href="signup_instructor.html">Instructor</a>
-                                            </li>
-                                            <li>
-                                                <a href="signup_company.html">Company</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                </ul>
-                            </nav>
-                            <a href="login.html" class="ep-header__account">
-                                <i class="fi fi-rr-user"></i>
-                                <div class="ep-header__account-info">
-                                    <span>Sign In</span>
-                                </div>
-                            </a>
-                            <!-- <a href="signup.html" class="ep-header__account">
-                                <i class="fi fi-rr-user"></i>
-                                <div class="ep-header__account-info">
-                                    <span>Sign Up</span>
-                                </div>
-                            </a> -->
-                            
-                        </div>
-                    </div>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="{{ asset('assets/images/logo_pymais.png') }}" alt="Logo">
+                    </a>
                 </div>
-            </div>
-        </div>
-        <!-- Header Middle -->
-        <div id="active-sticky" class="ep-header__middle">
-            <div class="container ep-container">
-                <div class="ep-header__inner">
-                    <div class="row align-items-center">
-                        
-                        <div class="col-lg-12 col-xl-2 col-12">
-                            <div class="ep-header__right">
-                                <!-- <div class="ep-topbar__action">
-                                    <div class="ep-topbar__wishlist">
-                                        <a href="wishlist.html" class="ep-topbar__action-icon">
-                                            <i class="fi-rr-heart"></i>
-                                            <span>4</span>
-                                        </a>
-                                    </div>
-                                    <div class="ep-topbar__cart">
-                                        <a href="cart.html" class="ep-topbar__action-icon">
-                                            <i class="fi-rr-shopping-cart"></i>
-                                            <span>3</span>
-                                        </a>
-                                        <div class="ep-topbar__info">
-                                            <p>Total</p>
-                                            <span>$496.00</span>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- Mobile Menu Button -->
-                                <button type="button" class="mobile-menu-offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal">
-                                    <span class="line"></span>
-                                    <span class="line"></span>
-                                    <span class="line"></span>
-                                </button>
-                                <!-- End Mobile Menu Button -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#home"><i class="icofont-search-1"></i></a></li>
+                        <li><a href="#about">Community</a></li>
+                        <li><a href="#services">Login</a></li>
+                        <li><a href="#contact">Getting Started</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="signup_applicant.html">Participant</a>
+                                </li>
+                                <li>
+                                    <a href="signup_instructor.html">Instructor</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="signup_company.html">Company</a>
+                                </li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
+
+    {{-- <section class="ep-hero section-gap section-bg-1 hero-bg-opacity">
+        <div class="overlay"></div> 
+        <div class="container ep-container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 col-xl-6 col-12">
+                    <div class="ep-hero__content ep-content-opacity">
+                        <h3 class="ep-section-head__big-title ep-split-text left"> Welcome to <span>PYMAIS PLATFORM</span></h3>
+                        <p class="ep-section-head__text"> An innovative training program to accelerate the growth of manufacturing industry supply chain businesses, to strengthen and professionalize them based on real demands of each region.</p>
+                        <a class="ep-hero__hover-images position-relative">
+                            <img class="hover-img-1 wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s" src="{{ asset('assets/images/hero/home-1/text-arrow.svg') }}" alt="arrow" />
+                            <img class="hover-img-2" src="{{ asset('assets/images/hero/home-1/hover-img.svg') }}" alt="hover-img" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
     <!-- End Header Area -->
 
 
