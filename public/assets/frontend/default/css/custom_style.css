@@ -6450,7 +6450,7 @@ i[class^="fi-rr-"]:before, i[class*=" fi-rr-"]:before, span[class^="fi-rr-"]:bef
     overflow: hidden; /* Hide overflowing content */
     text-overflow: ellipsis; /* Add ellipsis for overflow */
   }
-  
+
 .ellipsis-line-2 {
     display: -webkit-box !important;
     -webkit-line-clamp: 2;

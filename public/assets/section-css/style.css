@@ -22,3 +22,18 @@
 @import "error.css";
 @import "mobile-menu.css";
 @import "footer.css";
+
+@font-face {
+    font-family: 'segoeuithis';
+    src: url('../fonts/segoeuithis.ttf') format('truetype'),
+         url('../fonts/segoeuithisi.ttf') format('truetype'),
+         url('../fonts/segoeuithibd.ttf') format('truetype'),
+         url('../fonts/segoeuithisz.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'segoeuithis', sans-serif;
+}

@@ -9,7 +9,16 @@
 ==============================================================================================*/
 
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@font-face {
+    font-family: 'segoeuithis';
+    src: url('../fonts/segoeuithis.ttf') format('truetype'),
+         url('../fonts/segoeuithisi.ttf') format('truetype'),
+         url('../fonts/segoeuithibd.ttf') format('truetype'),
+         url('../fonts/segoeuithisz.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 /* Custom Variable Colors */
 :root {
@@ -70,7 +79,7 @@
 
 /* Main Body CSS */
 body {
-  font-family: var(--ep-font-family);
+  font-family: 'segoeuithis', sans-serif;
   background: var(--ep-white-color);
   color: var(--ep-paragraph-color);
   font-size: 16px;
@@ -78,7 +87,7 @@ body {
   line-height: 140%;
 }
 html {
-  font-family: var(--ep-font-family);
+  font-family: 'segoeuithis', sans-serif;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -624,8 +633,8 @@ h5,
 h5 a,
 h6,
 h6 a {
-  font-family: var(--ep-font-family);
-  /* color: var(--ep-white-color); */
+  font-family: 'segoeuithis', sans-serif;
+  color: var(--ep-title-color);
   font-weight: 700;
   line-height: 130%;
 }
