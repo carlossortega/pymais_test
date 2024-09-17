@@ -99,7 +99,7 @@
                         </div>
                     </section>
                     <!-- End Start About Area -->
-                    <!-- Start Category Area -->
+                    <!-- Start Profile Area -->
                     <section class="ep-category section-gap pt-0">
                         <div class="container ep-container">
                             <div class="row justify-content-center">
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                     </section>
-                    <!-- End  Category Area -->
+                    <!-- End  Profile Area -->
                     <!-- Start Group Study Area -->
                     <section class="ep-group-study position-relative section-gap mg-btm-120 pt-0">
                         <div class="container ep-container">

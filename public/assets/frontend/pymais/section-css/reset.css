@@ -17,7 +17,7 @@
   --ep-primary-color-2: #006bff;
   --ep-primary-color-3: #543ee8;
   --ep-primary-color-4: #fec961;
-  --ep-primary-color-5: #ff723a;
+  --ep-primary-color-5: #2849E6;
   --ep-primary-color-6: #57f2d0;
   --ep-primary-color-7: #fd2121;
   --ep-primary-color-8: #c342ff;
@@ -1420,7 +1420,7 @@ input[type="number"] {
   cursor: pointer;
   display: block;
   border-radius: 50px;
-  box-shadow: inset 0 0 0 2px #ff723a47;
+  box-shadow: inset 0 0 0 2px #F2F2F2;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
