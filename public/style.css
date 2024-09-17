@@ -22,3 +22,18 @@
 @import "./assets/section-css/error.css";
 @import "./assets/section-css/mobile-menu.css";
 @import "./assets/section-css/footer.css";
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url('../fonts/segoeui.woff2') format('woff2'),
+         url('../fonts/segoeuii.woff2') format('woff2'),
+         url('../fonts/segoeuib.woff2') format('woff2'),
+         url('../fonts/segoeuiz.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+}
