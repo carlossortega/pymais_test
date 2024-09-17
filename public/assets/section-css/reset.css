@@ -611,6 +611,9 @@ object {
 .custom-logo-link {
   display: inline-block;
 }
+.ep-content-opacity h3 {
+  color: var(--ep-white-color)
+}
 
 /* Heading Title */
 h1,
