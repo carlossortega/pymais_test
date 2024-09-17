@@ -24,7 +24,7 @@ class HomeController extends Controller
     }
 
     public function index(){
-        return view('frontend.fase-1.index');
+        return view('pymais.frontend.home');
     }
 
     public function applicant_signup(){
