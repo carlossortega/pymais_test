@@ -99,73 +99,56 @@
                         </div>
                     </section>
                     <!-- End Start About Area -->
-                    <!-- Start Funfact Area -->
-                    <section class="ep-funfact ep-funfact--style2 section-gap pt-0 position-relative">
+                    <!-- Start Category Area -->
+                    <section class="ep-category section-gap pt-0">
                         <div class="container ep-container">
-                            <div class="ep-funfact-shape updown-ani">
-                                <img src="{{asset('assets/frontend/pymais/images/funfact/funfact-2/arrow.svg')}}" alt="arrow-icon" />
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 col-xl-4 col-md-8 col-12">
+                                    <div class="ep-section-head text-center">
+                                        <h3 class="ep-section-head__big-title ep-split-text left">{{__('Profiles')}}
+                                        </h3>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
-                                <!-- Single Funfact Card -->
-                                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
-                                    <div class="ep-funfact__card ep-funfact__card--style2 wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                                        <div class="ep-funfact__icon ep5-bg-light">
-                                            <img src="{{asset('assets/frontend/pymais/images/funfact/funfact-2/1.svg')}}" alt="funfact-icon" />
+                                <!-- Single Card -->
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-12">
+                                    <a href="#" class="ep-category__card wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                                        <div class="ep-category__icon ep1-bg">
+                                            <img src="{{asset('assets/frontend/pymais/images/category/category-1/1.svg')}}" alt="category-icon" />
                                         </div>
-                                        <div class="ep-funfact__info m-0">
-                                            <h4>
-                                                <span class="counter">200</span>+
-                                            </h4>
-                                            <p>Team member</p>
+                                        <div class="ep-category__info">
+                                            <h3>{{__("SME's")}}</h3>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <!-- Single Funfact Card -->
-                                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
-                                    <div class="ep-funfact__card ep-funfact__card--style2 wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
-                                        <div class="ep-funfact__icon ep1-bg-light">
-                                            <img src="{{asset('assets/frontend/pymais/images/funfact/funfact-2/2.svg')}}" alt="funfact-icon" />
+                                <!-- Single Card -->
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-12">
+                                    <a href="#" class="ep-category__card wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
+                                        <div class="ep-category__icon ep2-bg">
+                                            <img src="{{asset('assets/frontend/pymais/images/category/category-1/2.svg')}}" alt="category-icon" />
                                         </div>
-                                        <div class="ep-funfact__info m-0">
-                                            <h4>
-                                                <span class="counter">30</span>k+
-                                            </h4>
-                                            <p>Winning award</p>
+                                        <div class="ep-category__info">
+                                            <h3>{{__('Mentor')}}</h3>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <!-- Single Funfact Card -->
-                                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
-                                    <div class="ep-funfact__card ep-funfact__card--style2 wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
-                                        <div class="ep-funfact__icon ep7-bg-light">
-                                            <img src="{{asset('assets/frontend/pymais/images/funfact/funfact-2/3.svg')}}" alt="funfact-icon" />
+                                <!-- Single Card -->
+                                <div class="col-lg-4 col-xl-4 col-md-4 col-12">
+                                    <a href="#" class="ep-category__card wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
+                                        <div class="ep-category__icon ep4-bg">
+                                            <img src="{{asset('assets/frontend/pymais/images/category/category-1/3.svg')}}" alt="category-icon" />
                                         </div>
-                                        <div class="ep-funfact__info m-0">
-                                            <h4>
-                                                <span class="counter">25</span>k
-                                            </h4>
-                                            <p>Complete project</p>
+                                        <div class="ep-category__info">
+                                            <h3>{{__('Corporate')}}</h3>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <!-- Single Funfact Card -->
-                                <div class="col-lg-4 col-xl-3 col-md-6 col-12">
-                                    <div class="ep-funfact__card ep-funfact__card--style2 wow fadeInUp" data-wow-delay=".9s" data-wow-duration="1s">
-                                        <div class="ep-funfact__icon ep2-bg-light">
-                                            <img src="{{asset('assets/frontend/pymais/images/funfact/funfact-2/4.svg')}}" alt="funfact-icon" />
-                                        </div>
-                                        <div class="ep-funfact__info m-0">
-                                            <h4>
-                                                <span class="counter">300</span>k
-                                            </h4>
-                                            <p>Client review</p>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </section>
-                    <!-- End Funfact Area -->
+                    <!-- End  Category Area -->
                     <!-- Start Group Study Area -->
                     <section class="ep-group-study position-relative section-gap mg-btm-120 pt-0">
                         <div class="container ep-container">

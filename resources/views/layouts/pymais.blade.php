@@ -31,7 +31,7 @@
         <!-- Uicons -->
         <link rel="stylesheet" href="{{asset('assets/frontend/pymais/plugins/css/uicons.css')}}">
         <!-- Main CSS -->
-        <link rel="stylesheet" href="{{asset('style.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/frontend/pymais/style.css')}}">
 
     </head>
     <body class="ep-magic-cursor">
