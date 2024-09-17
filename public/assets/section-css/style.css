@@ -24,16 +24,16 @@
 @import "footer.css";
 
 @font-face {
-    font-family: 'segoeuithis';
-    src: url('../fonts/segoeuithis.ttf') format('truetype'),
-         url('../fonts/segoeuithisi.ttf') format('truetype'),
-         url('../fonts/segoeuithibd.ttf') format('truetype'),
-         url('../fonts/segoeuithisz.ttf') format('truetype');
+    font-family: "Segoe UI";
+    src: url('../fonts/segoeui.woff2') format('woff2'),
+         url('../fonts/segoeuii.woff2') format('woff2'),
+         url('../fonts/segoeuib.woff2') format('woff2'),
+         url('../fonts/segoeuiz.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 body {
-    font-family: 'segoeuithis', sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }

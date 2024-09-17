@@ -10,11 +10,11 @@
 
 /* Google Fonts */
 @font-face {
-    font-family: 'segoeuithis';
-    src: url('../fonts/segoeuithis.ttf') format('truetype'),
-         url('../fonts/segoeuithisi.ttf') format('truetype'),
-         url('../fonts/segoeuithibd.ttf') format('truetype'),
-         url('../fonts/segoeuithisz.ttf') format('truetype');
+    font-family: "Segoe UI";
+    src: url('../fonts/segoeui.woff2') format('woff2'),
+         url('../fonts/segoeuii.woff2') format('woff2'),
+         url('../fonts/segoeuib.woff2') format('woff2'),
+         url('../fonts/segoeuiz.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -79,7 +79,7 @@
 
 /* Main Body CSS */
 body {
-  font-family: 'segoeuithis', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: var(--ep-white-color);
   color: var(--ep-paragraph-color);
   font-size: 16px;
@@ -87,7 +87,7 @@ body {
   line-height: 140%;
 }
 html {
-  font-family: 'segoeuithis', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -633,7 +633,7 @@ h5,
 h5 a,
 h6,
 h6 a {
-  font-family: 'segoeuithis', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: var(--ep-title-color);
   font-weight: 700;
   line-height: 130%;
