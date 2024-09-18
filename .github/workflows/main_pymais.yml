@@ -57,7 +57,7 @@ jobs:
         run: unzip release.zip
 
       - name: Enable deployment logs
-        run: az webapp log config --name Pymais --application-logging true --detailed-error-messages true
+        run: az webapp log config --name Pymais --resource-group GrupoWPymais --application-logging true --detailed-error-messages true
       
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
