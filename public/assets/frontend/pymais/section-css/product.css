@@ -401,7 +401,9 @@
   color: #006BFF;
 }
 .ep-product-tab-inside__content {
-	width: 100%;
+    width: 100%;         /* Mantener el ancho al 100% */
+    max-height: 300px;    /* Ajusta este valor según lo que necesites */
+    overflow-y: auto;     /* Permite el scroll si el contenido es muy largo */
 }
 
 .ep-checkout__form-group {

@@ -38,7 +38,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="ep-section-head ep-section-head--style2">
-                                        <h3 class="ep-section-head__color-title ep5-color ep1-border-color"> 1.{{__('What do we offer?')}} </h3>
+                                        <h3 class="ep-section-head__color-title ep5-color ep1-border-color"> {{__('What do we offer?')}} </h3>
                                     </div>
                                 </div>
                             </div>
@@ -150,7 +150,82 @@
                     </section>
                     <!-- End  Profile Area -->
                     <!-- Start Group Study Area -->
+                    <section class="ep-about ep-about--style2 ep-section section-gap position-relative">
+                        <div class="container ep-container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="ep-section-head ep-section-head--style2">
+                                        <h3 class="ep-section-head__color-title ep5-color ep1-border-color"> {{__('The program')}} </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-12">
+                                    <div class="ep-section__content ep-section__content--style2">
+                                        <h3 class="ep-section__title ep-split-text left">1. {{__('Business Enhancer')}} </h3>
+                                        <p class="ep-section__text"> {{__('Helping SMEs accelerate AI and tech adoption along with other crucial business functions.')}} </p>
+                                        <ul class="nav nav-tabs mt-5 ep-product-tab-list" id="productTabs" role="tablist">
+                                            <li class="nav-item">
+                                                <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" role="tab">1.1 {{__('Primer Program')}}</button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button class="nav-link" id="additional-info-tab" data-bs-toggle="tab" data-bs-target="#additional-info" role="tab">1.2 {{__('Accelerating Program')}}</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content mt-4" id="productTabsContent">
+                                            <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                                                <div class="ep-product-tab-inside">
+                                                    <div class="ep-product-tab-inside__content">
+                                                        <p class="ep-product-single__tab-text"> {{__('Through asynchronous online sessions, participating companies will become aware of US - Mexico business opportunities and will be equipped with six 1-hour topics.')}} </p>
+                                                        <ul class="mt-3">
+                                                            <li>- {{__('US - Mexico Business Opportunities Overview')}}</li>
+                                                            <li>- {{__('Industry Trends + Digital Transformation')}}</li>
+                                                            <li>- {{__('Generative AI')}}</li>
+                                                            <li>- {{__('Cybersecurity and Data Protection')}}</li>
+                                                            <li>- {{__('Sustainability')}}</li>
+                                                            <li>- {{__('Open Innovation')}}</li>
+                                                        </ul>
+                                                        <p class="ep-product-single__tab-text mg-top-20"> </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="additional-info" role="tabpanel" aria-labelledby="additional-info">
+                                                <div class="ep-product-tab-inside">
+                                                    <div class="ep-product-tab-inside__content">
+                                                        <p class="ep-product-single__tab-text"> {{__('After the Primer program participants will accelerate their business model by receiving 5 modules of online asynchronous sessions plus optional online synchronic mentoring activities to improve their value proposition.')}} </p>
+                                                        <p class="ep-product-single__tab-text">{{__("Program's key modules:")}}</p>
+                                                        <ul class="mt-3">
+                                                            <li>- {{__('Innovation')}}</li>
+                                                            <li>- {{__('Scalability and Growth')}}</li>
+                                                            <li>- {{__('Digital Transformation')}}</li>
+                                                            <li>- {{__('Key operations')}}</li>
+                                                            <li>- {{__('Financial readiness')}}</li>
+                                                        </ul>
+                                                        <p class="ep-product-single__tab-text mg-top-20">{{__('During each of the modules deployment AI tools will be included as part of the programming, learning and activities.')}}</p>
+
+                                                        <div class="ep-section__btn">
+                                                            <a href="#" class="ep-btn border-btn">{{__('See full curriculum')}} <i class="fi fi-rs-arrow-small-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="ep-section__img ep-section__img--style2 position-relative">
+                                        <div class="ep-section__img-main">
+                                            <img src="{{asset('assets/frontend/pymais/images/home/home-01.jpg')}}" alt="about-img" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
                     <section class="ep-group-study position-relative section-gap mg-btm-120 pt-0">
+
                         <div class="container ep-container">
                             <div class="ep-group-study__inner position-relative">
                                 <div class="ep-brand-name">
@@ -162,10 +237,102 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="ep-section-head ep-section-head--style2">
-                                            <h3 class="ep-section-head__color-title ep9-color ep9-border-color"> 2.Group ACTIVITES </h3>
+                                            <h3 class="ep-section-head__color-title ep9-color ep9-border-color">{{__('The program')}}</h3>
                                         </div>
                                     </div>
                                 </div>
+                                {{--  <div class="row">
+                                    <h3 class="ep-section__title ep-split-text left">1. {{__('Business Enhancer')}} </h3>
+                                    <div class="col-lg-8 offset-lg-2">
+                                        <ul class="nav nav-tabs mt-5 ep-product-tab-list" id="productTabs" role="tablist">
+                                            <li class="nav-item">
+                                                <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" role="tab">1.1 {{__('Primer Program')}}</button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button class="nav-link" id="additional-info-tab" data-bs-toggle="tab" data-bs-target="#additional-info" role="tab">1.2 {{__('Accelerating Program')}}</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content mt-4" id="productTabsContent">
+                                            <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                                                <div class="ep-product-tab-inside">
+                                                    <div class="ep-product-tab-inside__content">
+                                                        <h2 class="ep-product-single__tab-title">Book Story</h2>
+                                                        <p class="ep-product-single__tab-text"> {{__('Through asynchronous online sessions, participating companies will become aware of US - Mexico business opportunities and will be equipped with six 1-hour topics.')}} </p>
+                                                        <p class="ep-product-single__tab-text mg-top-20"> </p>
+                                                    </div>
+                                                    <div class="ep-product-tab-inside__img">
+                                                        <img src="{{asset('assets/frontend/pymais/images/home/home-01.jpg')}}" width="50%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="additional-info" role="tabpanel" aria-labelledby="additional-info">
+                                                <div class="ep-product-tab-inside">
+                                                    <div class="ep-product-tab-inside__content">
+                                                        <h2 class="ep-product-single__tab-title">Additional Info</h2>
+                                                        <table class="additional-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Field</th>
+                                                                    <th>Information</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Title</td>
+                                                                    <td>The Great Adventure</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Author</td>
+                                                                    <td>John Doe</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Genre</td>
+                                                                    <td>Adventure, Fiction</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Publisher</td>
+                                                                    <td>Adventure House</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Publication Date</td>
+                                                                    <td>March 15, 2023</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>ISBN</td>
+                                                                    <td>978-1-23456-789-0</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Language</td>
+                                                                    <td>English</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Edition</td>
+                                                                    <td>1st Edition</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Number of Pages</td>
+                                                                    <td>320</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Book Format</td>
+                                                                    <td>Hardcover</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Dimensions</td>
+                                                                    <td>8.5 x 5.5 x 1 inches</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Weight</td>
+                                                                    <td>1.2 lbs</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  --}}
                                 <div class="row">
                                     <div class="col-lg-6 col-xl-4 col-12">
                                         <div class="ep-section__content ep-section__content--style2">
@@ -178,9 +345,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-xl-6 offset-xl-2 col-12">
-                                        <div class="ep-group-study__video background-image ep-hobble position-relative" style="
-                        background-image: url('{{asset('assets/frontend/pymais/images/group-study/study-img.png')}}');
-                      ">
+                                        <div class="ep-group-study__video background-image ep-hobble position-relative" style="background-image: url('{{asset('assets/frontend/pymais/images/group-study/study-img.png')}}');">
                                             <a href="https://www.youtube.com/watch?v=gyGsPlt06bo" class="ep-video__btn popup-video ep-hover-layer-2">
                                                 <i class="fi fi-sr-play"></i>
                                             </a>
