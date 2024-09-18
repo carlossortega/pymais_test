@@ -18,7 +18,7 @@
                                 <div class="col-lg-12 offset-xl-1 col-xl-5 col-12 order-top">
                                     <div class="ep-hero__widget ep-hero__widget-style2 position-relative">
                                         <div class="ep-hero__img">
-                                            <img src="{{asset('assets/images/DSC09353.jpg')}}" alt="hero-img" />
+                                            <img src="{{asset('assets/frontend/pymais/images/welcome.jpeg')}}" alt="hero-img" />
                                         </div>
                                     </div>
                                 </div>
