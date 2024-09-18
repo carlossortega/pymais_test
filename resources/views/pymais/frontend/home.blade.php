@@ -339,7 +339,7 @@
                         <div class="container ep-container">
                             <div class="col-12">
                                 <div class="ep-section-head ep-section-head--style2">
-                                    <h3 class="ep-section-head__color-title ep1-color ep1-border-color">{{__('Courses')}}</h3>
+                                    <h3 class="ep-section-head__color-title ep1-color ep1-border-color">{{__('Other Resources')}}</h3>
                                     {{--  <div class="ep-section-head__inner">
                                         <h2 class="ep-section-head__big-title ep-split-text left">  </h2>
                                         <p class="ep-section-head__text mg-top-30"> Lorem ipsum dolor sit amet consectetur. A lectus mi <br /> ultricies dictum facilisis of sem. Imperdiet an massa turpis </p>
@@ -355,52 +355,91 @@
                                 <div class="owl-carousel ep-event__slider">
                                     <!-- Single Event -->
                                     <div class="ep-event__card">
-                                        <a href="#" class="ep-event__img">
+                                        <a href="https://es.linkedin.com/learning/que-es-la-ia-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
+" class="ep-event__img">
                                             <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
                                         </a>
                                         <div class="ep-event__info">
-                                            <a href="#" class="ep-event__title">Education foundation</a>
-                                            <p class="ep-event__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde, alias iusto cum, reprehenderit aspernatur necessitatibus quod deleniti ad, assumenda accusantium aliquid iste magnam doloribus voluptas facilis at. Aspernatur, nemo.</p>
+                                            <a href="https://es.linkedin.com/learning/que-es-la-ia-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
+" class="ep-event__title">Clase online</a>
+                                            <a href="https://es.linkedin.com/learning/que-es-la-ia-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
+"> <p class="ep-event__p">Qué es la IA generativa</p></a>
                                         </div>
                                     </div>
                                     <!-- Single Event -->
                                     <div class="ep-event__card">
-                                        <a href="#" class="ep-event__img">
+                                        <a href="https://es.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img">
                                             <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
                                         </a>
                                         <div class="ep-event__info">
-                                            <a href="#" class="ep-event__title">Education foundation</a>
-                                            <p class="ep-event__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde, alias iusto cum, reprehenderit aspernatur necessitatibus quod deleniti ad, assumenda accusantium aliquid iste magnam doloribus voluptas facilis at. Aspernatur, nemo.</p>
+                                            <a href="https://es.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
+" class="ep-event__title">Clase online</a>
+                                            <a href="https://es.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
+"><p class="ep-event__p"> Prompt Engineering: Aprende a hablar con una inteligencia artificial generativa</p></a>
                                         </div>
                                     </div>
                                     <!-- Single Event -->
                                     <div class="ep-event__card">
-                                        <a href="#" class="ep-event__img">
+                                        <a href="https://es.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img">
                                             <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
                                         </a>
                                         <div class="ep-event__info">
-                                            <a href="#" class="ep-event__title">Education foundation</a>
-                                            <p class="ep-event__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde, alias iusto cum, reprehenderit aspernatur necessitatibus quod deleniti ad, assumenda accusantium aliquid iste magnam doloribus voluptas facilis at. Aspernatur, nemo.</p>
+                                            <a href="#https://es.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning
+" class="ep-event__title">Clase online</a>
+                                            <a href="https://es.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning
+"><p class="ep-event__p">Agiliza tu trabajo con el chat de Microsoft Copilot</p></a>
                                         </div>
                                     </div>
                                     <!-- Single Event -->
                                     <div class="ep-event__card">
-                                        <a href="#" class="ep-event__img">
+                                        <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img">
                                             <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
                                         </a>
                                         <div class="ep-event__info">
-                                            <a href="#" class="ep-event__title">Education foundation</a>
-                                            <p class="ep-event__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde, alias iusto cum, reprehenderit aspernatur necessitatibus quod deleniti ad, assumenda accusantium aliquid iste magnam doloribus voluptas facilis at. Aspernatur, nemo.</p>
+                                            <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__title">Clase online</a>
+                                            <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning"><p class="ep-event__p">Descubre Microsoft 365 Copilot</p></a>
                                         </div>
                                     </div>
                                     <!-- Single Event -->
                                     <div class="ep-event__card">
-                                        <a href="#" class="ep-event__img">
+                                        <a href="https://learn.microsoft.com/es-mx/ai/" class="ep-event__img">
                                             <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
                                         </a>
                                         <div class="ep-event__info">
-                                            <a href="#" class="ep-event__title">Education foundation</a>
-                                            <p class="ep-event__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde, alias iusto cum, reprehenderit aspernatur necessitatibus quod deleniti ad, assumenda accusantium aliquid iste magnam doloribus voluptas facilis at. Aspernatur, nemo.</p>
+                                            <a href="https://learn.microsoft.com/es-mx/ai/" class="ep-event__title">Microsoft Learn</a>
+                                            <a href="https://learn.microsoft.com/es-mx/ai/"><p class="ep-event__p">Preparación para la IA de Microsoft</p></a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Event -->
+                                    <div class="ep-event__card">
+                                        <a href="https://es.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics.teams.cdn.office.net%7Cre-other" class="ep-event__img">
+                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
+                                        </a>
+                                        <div class="ep-event__info">
+                                            <a href="https://es.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics.teams.cdn.office.net%7Cre-other" class="ep-event__title">Itinerario de aprendizaje </a>
+                                            <a href="https://es.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics.teams.cdn.office.net%7Cre-other"><p class="ep-event__p">Fundamentos profesionales de IA generativa, por Microsoft y LinkedIn</p></a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Event -->
+                                    <div class="ep-event__card">
+                                        <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img">
+                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
+                                        </a>
+                                        <div class="ep-event__info">
+                                            <a href="#https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__title">Clase online</a>
+                                            <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning"><p class="ep-event__p">Descubre Microsoft 365 Copilot</p></a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Event -->
+                                    <div class="ep-event__card">
+                                        <a href="#https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img">
+                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
+                                        </a>
+                                        <div class="ep-event__info">
+                                            <a href="https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning
+" class="ep-event__title">Clase online</a>
+                                            <a href="https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning
+"><p class="ep-event__p">Copilot en PowerPoint: crea presentaciones impactantes con inteligencia artificial</p></a>
                                         </div>
                                     </div>
                                 </div>
