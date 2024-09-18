@@ -105,7 +105,7 @@
                     <div class="ep-footer__bottom-link">
                         <ul>
                             <li>
-                                <a href="#">Trams & Condition</a>
+                                <a href="#">Terms & Conditions</a>
                             </li>
                             <li>
                                 <a href="#">Privacy Policy</a>
