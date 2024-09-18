@@ -67,7 +67,7 @@
 }
 
 .ep-footer__links-list li a {
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
@@ -132,7 +132,7 @@
 
 .ep-footer__social-title {
   color: var(--ep-white-color);
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;

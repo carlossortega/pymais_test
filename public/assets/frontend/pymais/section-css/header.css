@@ -5,7 +5,7 @@
   padding: 30px 0px;
 }
 .ep-logo img {
-  max-width: 168px;
+  max-width: 250px;
   height: 42px;
   object-fit: contain;
 }
@@ -217,7 +217,7 @@
 	display: flex;
 	align-items: center;
 	gap: 4px;
-	font-size: 15px;
+	font-size: 18px;
 	font-style: normal;
 	font-weight: 600;
 	line-height: 120%;
@@ -356,7 +356,7 @@
   padding: 40px 0px;
 }
 
-.ep-header__menu.ep-header__menu--style2 li:hover > a, 
+.ep-header__menu.ep-header__menu--style2 li:hover > a,
 .ep-header__menu.ep-header__menu--style2 li.active a {
   color: var(--ep-primary-color-5) ;
 }
@@ -365,7 +365,7 @@
   color: var(--ep-secondary-color) ;
 }
 
-.ep-header__menu.ep-header__menu--style2  li .sub-menu li:hover > a, 
+.ep-header__menu.ep-header__menu--style2  li .sub-menu li:hover > a,
 .ep-header__menu.ep-header__menu--style2  li .sub-menu li.active a {
 	color: var(--ep-primary-color-5);
 }

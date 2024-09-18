@@ -315,7 +315,7 @@
                                     <div class="col-lg-6 col-xl-4 col-12">
                                         <div class="ep-section__content ep-section__content--style2">
                                             <h3 class="ep-section__title ep-split-text left">{{__('How PYMAis works?')}} </h3>
-                                            {{--  <p class="ep-section__text"> Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis of sem. Imperdiet massa turpis sit proin metus volutpat.Lorem </p>  --}}
+                                            <p class="ep-section__text"> {{__('PyMAis Platform is a training program that accelerates the growth of SMEs in the manufacturing supply chain by helping them take advantage of nearshoring opportunities and improve the MX-US value chains. It focuses on strengthening and professionalizing these businesses, aligning them with the specific demands and needs of each region to capitalize on opportunities in emerging markets.')}} </p>
                                             {{--  <div class="ep-section__btn">
                                                 <a href="#" class="ep-btn border-btn">Read More <i class="fi fi-rs-arrow-small-right"></i>
                                                 </a>

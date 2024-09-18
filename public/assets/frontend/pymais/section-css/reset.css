@@ -73,7 +73,7 @@ body {
   font-family: var(--ep-font-family);
   background: var(--ep-white-color);
   color: var(--ep-paragraph-color);
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 140%;
 }
@@ -654,7 +654,7 @@ p {
   margin: 0;
   line-height: 28px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 24px;
   margin: 0;
 }
 
@@ -998,7 +998,7 @@ p {
 
 /* Section Head Style 2 */
 .ep-section-head__color-title {
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: 25.95px;
@@ -1545,7 +1545,7 @@ input[type="number"] {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   text-transform: capitalize;
 }
