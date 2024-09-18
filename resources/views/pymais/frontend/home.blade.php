@@ -38,7 +38,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="ep-section-head ep-section-head--style2">
-                                        <h3 class="ep-section-head__color-title ep1-color ep1-border-color"> 1.{{__('What do we offer?')}} </h3>
+                                        <h3 class="ep-section-head__color-title ep5-color ep1-border-color"> 1.{{__('What do we offer?')}} </h3>
                                     </div>
                                 </div>
                             </div>
