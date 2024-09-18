@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
     Route::get('applicant-signup', 'applicant_signup')->name('applicant.signup');
+    Route::get('instructor-signup', 'instructor_signup')->name('instructor.signup');
 });
 
 

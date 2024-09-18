@@ -23,16 +23,16 @@
                                     <a href="{{route('home')}}">{{__('Home')}}</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('home')}}">{{__('Sign up')}}</a>
+                                    <a href="javascritp:void">{{__('Sign up')}}</a>
                                     <ul class="sub-menu">
                                         <li>
-                                            <a href="{{route('home')}}">{{__('Participant Signup')}}</a>
+                                            <a href="javascript:void">{{__('Participant Signup')}}</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('home')}}">{{__('Instructor Signup')}}</a>
+                                            <a href="{{route('instructor.signup')}}">{{__('Instructor Signup')}}</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('home')}}">{{__('Corporate Signup')}}</a>
+                                            <a href="javascript:void">{{__('Corporate Signup')}}</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -142,16 +142,16 @@
                                                 <a href="{{route('home')}}">{{__('Home')}}</a>
                                             </li>
                                             <li class="active">
-                                                <a href="{{route('home')}}">{{__('Sign up')}}</a>
+                                                <a href="javascritp:void">{{__('Sign up')}}</a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="{{route('home')}}">{{__('Participant Signup')}}</a>
+                                                        <a href="javascript:void">{{__('Participant Signup')}}</a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{route('home')}}">{{__('Instructor Signup')}}</a>
+                                                        <a href="{{route('instructor.signup')}}">{{__('Instructor Signup')}}</a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{route('home')}}">{{__('Corporate Signup')}}</a>
+                                                        <a href="javascript:void">{{__('Corporate Signup')}}</a>
                                                     </li>
                                                 </ul>
                                             </li>
