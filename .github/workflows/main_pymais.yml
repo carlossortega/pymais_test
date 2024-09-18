@@ -55,6 +55,9 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
+
+      - name: Enable deployment logs
+        run: az webapp log config --name Pymais --application-logging true --detailed-error-messages true
       
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
