@@ -14,7 +14,8 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <form class="show-section" id="steps" method="post" enctype="multipart/form-data">
+            <form class="show-section" id="steps" method="post" enctype="multipart/form-data" action="{{route('save.application')}}">
+                @csrf
                 <section id="section-1" class="steps step-1">
                     <div class="parent-wrap">
                         <div class="main-heading">
@@ -200,25 +201,44 @@
                         <div class="leftback step-3-inner" id="step3">
                             <div class="child-wrap">
                                 <div class="showfield">
-                                    <div class="single-field">
-                                        <label class="label-heading"> Trade name </label>
-                                        <div class="form-field">
-                                            <input type="text" id="message" name="message"
-                                                placeholder="How did you hear about this website....." />
-                                            <span></span>
+                                    <div class="row">
+                                        <div class="tab-50 sm-100 col-md-4">
+                                            <div class="single-field">
+                                                <label class="label-heading">Professional Title or Area of Specialization</label>
+                                                <div class="form-field">
+                                                    <input type="text" id="profesional_title" name="profesional_title" placeholder="Your Name"
+                                                        required />
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-50 sm-100 col-md-4">
+                                            <div class="single-field">
+                                                <label class="label-heading">
+                                                    Years of Experience in Your Area of Specialization
+                                                </label>
+                                                <div class="form-field">
+                                                    <input type="number" id="years_expirence"
+                                                        name="years_expirence"
+                                                        placeholder="Enter your years of experience" required>
+                                                    <span></span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="tab-50 sm-100 col-md-4">
                                             <div class="single-field">
-                                                <label class="label-heading">Nationality</label>
+                                                <label class="label-heading">Have you previously been a mentor in
+                                                    any programs?</label>
                                                 <div class="form-field">
-                                                    <select name="select2" id="select2" required>
-                                                        <option value="">ID Type</option>
-                                                        <option value="us">United States</option>
-                                                        <option value="uk">United Kigdom</option>
-                                                        <option value="cn">Chine</option>
-                                                        <option value="DE">Germany</option>
+                                                    <select name="was_mentor" id="was_mentor"
+                                                        required>
+                                                        <option value="">Select an option</option>
+                                                        <option value="career_guidance">Career Guidance</option>
+                                                        <option value="technical_skills">Technical Skills</option>
+                                                        <option value="soft_skills">Soft Skills</option>
+                                                        <option value="other">Other</option>
                                                     </select>
                                                     <span></span>
                                                 </div>
@@ -226,10 +246,11 @@
                                         </div>
                                         <div class="tab-50 sm-100 col-md-8">
                                             <div class="single-field">
-                                                <label class="label-heading">Federal Taxpayer Registry</label>
+                                                <label class="label-heading">If the answer is "Yes," please detail
+                                                    the programs you have participated in </label>
                                                 <div class="form-field">
-                                                    <input type="text" name="idnumber" placeholder="XAXX010101XXX"
-                                                        pattern="[0-9]+" required />
+                                                    <input type="text" name="detail_programs"
+                                                        placeholder="Enter your programs">
                                                     <span></span>
                                                 </div>
                                             </div>
@@ -237,17 +258,48 @@
                                     </div>
                                     <div class="single-field">
                                         <label class="label-heading">
-                                            Main differentiator
+                                            LinkedIn Handle
                                         </label>
                                         <div class="form-field">
-                                            <textarea id="description" name="description" rows="10"
-                                                required></textarea>
+                                            <input type="text" id="linkedin_handle" name="linkedin_handle"
+                                                placeholder="Enter your LinkedIn handle">
                                         </div>
-                                        <p class="field-text">
-                                            Main challenge, current disadvantage of the company
-                                        </p>
                                     </div>
-                                    <div class="single-field">
+                                    <div class="main-heading">
+                                        <h1>Mentorship Areas</h1>
+                                    </div>
+                                    <div class="row">
+                                        <div class="tab-50 sm-100 col-md-4">
+                                            <div class="single-field">
+                                                <label class="label-heading">
+                                                    In which specific areas would you like to provide mentorship?
+                                                </label>
+                                                <div class="form-field">
+                                                    <select name="area_mentorship"
+                                                        id="area_mentorship" required>
+                                                        <option value="">Select an option</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No</option>
+                                                    </select>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-50 sm-100 col-md-4">
+                                            <div class="single-field">
+                                                <label class="label-heading">
+                                                    If you answered 'other' to the previous question, please specify
+                                                    more about it in the field below.
+                                                </label>
+                                                <div class="form-field">
+                                                    <input type="text" id="specify_other_area"
+                                                        name="specify_other_area">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- <div class="single-field">
                                         <label class="label-heading">
                                             Pitch deck Attachments (optional)
                                         </label>
@@ -258,7 +310,7 @@
                                                 <input class="file" type="file" name="file" />
                                             </label>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="next-previous-btn">
                                         <button type="button" class="prev">
                                             Previous Step

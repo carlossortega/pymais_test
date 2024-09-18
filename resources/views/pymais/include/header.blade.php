@@ -138,12 +138,12 @@
                                 <div class="ep-header__inner-right">
                                     <nav class="ep-header__navigation">
                                         <ul class="ep-header__menu ep-header__menu--style2">
-                                            <li class="active">
+                                            {{-- <li class="active">
                                                 <a href="{{route('home')}}">{{__('Home')}}</a>
-                                            </li>
+                                            </li> --}}
                                             <li class="active">
-                                                <a>{{__('Sign up')}}</a>
-                                                <ul class="sub-menu">
+                                                <a href="{{route('participant.signup')}}">{{__('Sign up')}}</a>
+                                                {{-- <ul class="sub-menu">
                                                     <li>
                                                         <a href="javascript:void">{{__('Participant Signup')}}</a>
                                                     </li>
@@ -153,7 +153,7 @@
                                                     <li>
                                                         <a href="javascript:void">{{__('Corporate Signup')}}</a>
                                                     </li>
-                                                </ul>
+                                                </ul> --}}
                                             </li>
                                             {{--  <li>
                                                 <a href="#">Courses <i class="fi fi-ss-angle-small-down"></i>
