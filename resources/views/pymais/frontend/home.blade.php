@@ -990,29 +990,70 @@
                     <!-- End Blog Area -->
                     <!-- Start Brand -->
                     <div class="ep-brand section-gap pt-0">
-                        <div class="container ep-container">
+                        {{-- QUITAR ESTILO DE COLOR EN EL DIV --}}
+                        <div style="background-color: blue" class="container ep-container">
+                        {{-- QUITAR ESTILO DE COLOR EN EL DIV --}}
                             <div class="row">
                                 <div class="col-12">
                                     <div class="owl-carousel ep-brand__slider">
                                         <!-- Single Brand -->
                                         <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                            <img src="{{asset('assets/frontend/pymais/images/brand/brand-2/1.svg')}}" alt="brand-logo" />
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/microsoft.png')}}" alt="brand-logo" />
                                         </a>
                                         <!-- Single Brand -->
                                         <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                            <img src="{{asset('assets/frontend/pymais/images/brand/brand-2/2.svg')}}" alt="brand-logo" />
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/decj_soft.png')}}" alt="brand-logo" />
                                         </a>
                                         <!-- Single Brand -->
                                         <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                            <img src="{{asset('assets/frontend/pymais/images/brand/brand-2/3.svg')}}" alt="brand-logo" />
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/fechac_perse.png')}}" alt="brand-logo" />
                                         </a>
                                         <!-- Single Brand -->
                                         <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                            <img src="{{asset('assets/frontend/pymais/images/brand/brand-2/4.svg')}}" alt="brand-logo" />
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/fix_nm.png')}}" alt="brand-logo" />
                                         </a>
                                         <!-- Single Brand -->
                                         <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                            <img src="{{asset('assets/frontend/pymais/images/brand/brand-2/5.svg')}}" alt="brand-logo" />
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/fletes_mexico.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/flo_networks.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/high_desert.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/hunt.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/kelly_tomblin.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/mt_net.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/novamex.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/pioneers_21.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/sunflower_bank.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/technology_hub.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/tecma.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/the_city_of_eptx.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/the_electric_company.png')}}" alt="brand-logo" />
+                                        </a>
+                                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                            <img src="{{asset('assets/frontend/pymais/images/collab/weststar_bank.png')}}" alt="brand-logo" />
                                         </a>
                                     </div>
                                 </div>

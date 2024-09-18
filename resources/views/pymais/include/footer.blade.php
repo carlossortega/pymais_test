@@ -10,7 +10,8 @@
                                 <img src="{{asset('assets/frontend/pymais/images/logo-2.svg')}}" alt="footer-logo" />
                             </a>
                         </div>
-                        <p class="ep-footer__text mg-top-46"> It is a long established fact that a reader will be distracted </p>
+                        <p class="ep-footer__text mg-top-46"> Modernize, engage and promote: A proven acceleration program to strengthen & professionalize industry supply chain.
+                        </p>
                         <div class="ep-footer__social mg-top-42">
                             <h5 class="ep-footer__social-title">Follow Us</h5>
                             <ul>
@@ -40,60 +41,40 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="ep-footer__widget footer-services--style2">
-                        <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Services </h4>
+                        <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Useful Links </h4>
                         <ul class="ep-footer__links-list ep-footer__links-list--style2">
                             <li>
                                 <a href="service.html">
-                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>Reliable Rentals </a>
+                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>Become a participant </a>
                             </li>
                             <li>
                                 <a href="service.html">
-                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>Golden Key Properties </a>
+                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>All courses </a>
                             </li>
                             <li>
                                 <a href="service.html">
-                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>Swift Home Sales </a>
-                            </li>
-                            <li>
-                                <a href="service.html">
-                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>Elite Realty Services </a>
-                            </li>
-                            <li>
-                                <a href="service.html">
-                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>Dream Property Solutions </a>
+                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>Sign up </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="ep-footer__widget footer-contact">
-                        <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Contact </h4>
+                        <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Help </h4>
                         <div class="ep-footer__contact">
                             <div class="ep-footer__contact-single">
-                                <div class="ep-footer__contact-icon">
-                                    <i class="fi fi-rs-marker ep6-color"></i>
-                                </div>
                                 <div class="ep-footer__contact-info">
-                                    <p>Address</p>
-                                    <span>66 Broklyant, New York India</span>
+                                    <span>Contact Us</span>
                                 </div>
                             </div>
                             <div class="ep-footer__contact-single">
-                                <div class="ep-footer__contact-icon">
-                                    <i class="fi fi-rr-phone-call ep6-color"></i>
-                                </div>
-                                <div class="ep-footer__contact-info ep-footer__contact-info--style2">
-                                    <p>Phone Number</p>
-                                    <a href="tel:012 345 678 9101">012 345 678 9101</a>
+                                <div class="ep-footer__contact-info">
+                                    <span>About Us</span>
                                 </div>
                             </div>
                             <div class="ep-footer__contact-single">
-                                <div class="ep-footer__contact-icon">
-                                    <i class="fi fi-rr-envelope ep6-color"></i>
-                                </div>
-                                <div class="ep-footer__contact-info ep-footer__contact-info--style2">
-                                    <p>Emaill</p>
-                                    <a href="mailto:codeglim@gmail.com">codeglim@gmail.com</a>
+                                <div class="ep-footer__contact-info">
+                                    <span>FAQ</span>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +83,7 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="ep-footer__widget footer-newsletter">
                         <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Newsletter </h4>
-                        <p class="ep-footer__text m-0"> It is a long established fact that a reader will be distracted </p>
+                        <p class="ep-footer__text m-0"> Subscribe to our newletter and stay up with the latest news. </p>
                         <form action="#" method="post" class="ep-footer__newsletter ep-footer__newsletter--style2 mg-top-30">
                             <input type="email" name="email" placeholder="Your e-mail" required />
                             <button type="submit">
@@ -139,6 +120,6 @@
         </div>
     </div>
     <div class="ep-footer__brand">
-        <img src="{{asset('assets/frontend/pymais/images/footer/footer-brand-name.svg')}}" alt="footer-brand-name" />
+        <img src="{{asset('assets/frontend/pymais/images/logo-2.svg')}}" alt="footer-brand-name" />
     </div>
 </footer>
