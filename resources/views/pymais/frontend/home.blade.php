@@ -357,7 +357,7 @@
                                     <div class="ep-event__card">
                                         <a href="https://es.linkedin.com/learning/que-es-la-ia-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
 " class="ep-event__img">
-                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
+                                            <img src="{{asset('assets/frontend/pymais/images/curso-1.jpeg')}}" alt="event-img" />
                                         </a>
                                         <div class="ep-event__info">
                                             <a href="https://es.linkedin.com/learning/que-es-la-ia-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
