@@ -84,7 +84,8 @@
                     <div class="ep-footer__widget footer-newsletter">
                         <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Newsletter </h4>
                         <p class="ep-footer__text m-0"> Subscribe to our newletter and stay up with the latest news. </p>
-                        <form action="#" method="post" class="ep-footer__newsletter ep-footer__newsletter--style2 mg-top-30">
+                        <form action="{{ route('newsletter.store') }}" method="post" class="ep-footer__newsletter ep-footer__newsletter--style2 mg-top-30">
+                            @csrf
                             <input type="email" name="email" placeholder="Your e-mail" required />
                             <button type="submit">
                                 <i class="fi fi-ss-paper-plane"></i>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\Mailer;
 use App\Models\Newsletter;
-use App\Models\Newslettersubscriber;
+use App\Models\NewsletterSubscriber;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
