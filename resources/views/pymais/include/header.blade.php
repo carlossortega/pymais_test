@@ -22,6 +22,20 @@
                                 <li>
                                     <a href="{{route('home')}}">{{__('Home')}}</a>
                                 </li>
+                                <li>
+                                    <a href="{{route('home')}}">{{__('Sign up')}}</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{route('home')}}">{{__('Participant Signup')}}</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('home')}}">{{__('Instructor Signup')}}</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('home')}}">{{__('Corporate Signup')}}</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 {{--  <li>
                                     <a class="menu-arrow" href="javascript:void(0)">Courses</a>
                                     <ul class="sub-menu">
@@ -127,6 +141,20 @@
                                             <li class="active">
                                                 <a href="{{route('home')}}">{{__('Home')}}</a>
                                             </li>
+                                            <li class="active">
+                                                <a href="{{route('home')}}">{{__('Sign up')}}</a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="{{route('home')}}">{{__('Participant Signup')}}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{route('home')}}">{{__('Instructor Signup')}}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{route('home')}}">{{__('Corporate Signup')}}</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                             {{--  <li>
                                                 <a href="#">Courses <i class="fi fi-ss-angle-small-down"></i>
                                                 </a>
@@ -210,10 +238,10 @@
                                             </li>  --}}
                                         </ul>
                                     </nav>
-                                    <div class="ep-header__btn">
+                                    {{-- <div class="ep-header__btn">
                                         <a href="about.html" class="ep-btn ep5-bg">Read More <i class="fi fi-rs-arrow-small-right"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <!-- Mobile Menu Button -->
                                 <button type="button" class="mobile-menu-offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal">
