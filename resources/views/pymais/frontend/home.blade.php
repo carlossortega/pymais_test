@@ -341,15 +341,15 @@
                     </section>
                     <!-- End Group Study Area -->
                     <!-- Start Event Area -->
-                    <section class="ep-event section-gap section-bg-1 position-relative">
+                    <section class="ep-event ep-team--style2 section-gap position-relative">
                         <div class="container ep-container">
                             <div class="col-12">
                                 <div class="ep-section-head ep-section-head--style2">
-                                    <h3 class="ep-section-head__color-title ep1-color ep1-border-color"> 6.Our event </h3>
-                                    <div class="ep-section-head__inner">
-                                        <h2 class="ep-section-head__big-title ep-split-text left"> Stay Updated on <br /> Upcoming Events </h2>
+                                    <h3 class="ep-section-head__color-title ep1-color ep1-border-color">{{__('Courses')}}</h3>
+                                    {{--  <div class="ep-section-head__inner">
+                                        <h2 class="ep-section-head__big-title ep-split-text left">  </h2>
                                         <p class="ep-section-head__text mg-top-30"> Lorem ipsum dolor sit amet consectetur. A lectus mi <br /> ultricies dictum facilisis of sem. Imperdiet an massa turpis </p>
-                                    </div>
+                                    </div>  --}}
                                 </div>
                             </div>
                         </div>
@@ -361,67 +361,52 @@
                                 <div class="owl-carousel ep-event__slider">
                                     <!-- Single Event -->
                                     <div class="ep-event__card">
-                                        <a href="event-details.html" class="ep-event__img">
-                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/1.png')}}" alt="event-img" />
-                                        </a>
-                                        <div class="ep-event__info">
-                                            <div class="ep-event__date ep6-bg">25 Dec</div>
-                                            <div class="ep-event__location">
-                                                <i class="fi fi-rs-marker ep6-color"></i>Mirpur Bangladesh
-                                            </div>
-                                            <a href="event-details.html" class="ep-event__title">A Place for Little Explor</a>
-                                        </div>
-                                    </div>
-                                    <!-- Single Event -->
-                                    <div class="ep-event__card">
-                                        <a href="event-details.html" class="ep-event__img">
+                                        <a href="#" class="ep-event__img">
                                             <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
                                         </a>
                                         <div class="ep-event__info">
-                                            <div class="ep-event__date ep6-bg">25 Dec</div>
-                                            <div class="ep-event__location">
-                                                <i class="fi fi-rs-marker ep6-color"></i>Mirpur Bangladesh
-                                            </div>
-                                            <a href="event-details.html" class="ep-event__title">Education foundation</a>
+                                            <a href="#" class="ep-event__title">Education foundation</a>
+                                            <p class="ep-event__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde, alias iusto cum, reprehenderit aspernatur necessitatibus quod deleniti ad, assumenda accusantium aliquid iste magnam doloribus voluptas facilis at. Aspernatur, nemo.</p>
                                         </div>
                                     </div>
                                     <!-- Single Event -->
                                     <div class="ep-event__card">
-                                        <a href="event-details.html" class="ep-event__img">
-                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/3.png')}}" alt="event-img" />
+                                        <a href="#" class="ep-event__img">
+                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
                                         </a>
                                         <div class="ep-event__info">
-                                            <div class="ep-event__date ep6-bg">25 Dec</div>
-                                            <div class="ep-event__location">
-                                                <i class="fi fi-rs-marker ep6-color"></i>Mirpur Bangladesh
-                                            </div>
-                                            <a href="event-details.html" class="ep-event__title">A Place for Little Explor</a>
+                                            <a href="#" class="ep-event__title">Education foundation</a>
+                                            <p class="ep-event__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde, alias iusto cum, reprehenderit aspernatur necessitatibus quod deleniti ad, assumenda accusantium aliquid iste magnam doloribus voluptas facilis at. Aspernatur, nemo.</p>
                                         </div>
                                     </div>
                                     <!-- Single Event -->
                                     <div class="ep-event__card">
-                                        <a href="event-details.html" class="ep-event__img">
-                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/4.png')}}" alt="event-img" />
+                                        <a href="#" class="ep-event__img">
+                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
                                         </a>
                                         <div class="ep-event__info">
-                                            <div class="ep-event__date ep6-bg">25 Dec</div>
-                                            <div class="ep-event__location">
-                                                <i class="fi fi-rs-marker ep6-color"></i>Mirpur Bangladesh
-                                            </div>
-                                            <a href="event-details.html" class="ep-event__title">Education foundation</a>
+                                            <a href="#" class="ep-event__title">Education foundation</a>
+                                            <p class="ep-event__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde, alias iusto cum, reprehenderit aspernatur necessitatibus quod deleniti ad, assumenda accusantium aliquid iste magnam doloribus voluptas facilis at. Aspernatur, nemo.</p>
                                         </div>
                                     </div>
                                     <!-- Single Event -->
                                     <div class="ep-event__card">
-                                        <a href="event-details.html" class="ep-event__img">
-                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/3.png')}}" alt="event-img" />
+                                        <a href="#" class="ep-event__img">
+                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
                                         </a>
                                         <div class="ep-event__info">
-                                            <div class="ep-event__date ep6-bg">25 Dec</div>
-                                            <div class="ep-event__location">
-                                                <i class="fi fi-rs-marker ep6-color"></i>Mirpur Bangladesh
-                                            </div>
-                                            <a href="event-details.html" class="ep-event__title">A Place for Little Explor</a>
+                                            <a href="#" class="ep-event__title">Education foundation</a>
+                                            <p class="ep-event__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde, alias iusto cum, reprehenderit aspernatur necessitatibus quod deleniti ad, assumenda accusantium aliquid iste magnam doloribus voluptas facilis at. Aspernatur, nemo.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Single Event -->
+                                    <div class="ep-event__card">
+                                        <a href="#" class="ep-event__img">
+                                            <img src="{{asset('assets/frontend/pymais/images/event/event-1/2.png')}}" alt="event-img" />
+                                        </a>
+                                        <div class="ep-event__info">
+                                            <a href="#" class="ep-event__title">Education foundation</a>
+                                            <p class="ep-event__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde, alias iusto cum, reprehenderit aspernatur necessitatibus quod deleniti ad, assumenda accusantium aliquid iste magnam doloribus voluptas facilis at. Aspernatur, nemo.</p>
                                         </div>
                                     </div>
                                 </div>

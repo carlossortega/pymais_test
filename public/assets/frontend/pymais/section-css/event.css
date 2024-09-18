@@ -81,6 +81,14 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+
+.ep-event__p {
+    font-size: 14px;
+    color: var(--ep-secondary-color) !important;
+}
+.ep-event__p:hover {
+    color: var(--ep-white-color) !important;
+}
 .ep-event__card:hover .ep-event__title,
 .ep-event__card:hover .ep-event__location,
 .ep-event__card:hover .ep-event__location i {
