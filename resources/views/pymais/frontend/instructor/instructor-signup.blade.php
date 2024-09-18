@@ -23,23 +23,23 @@
                         </div>
                         <div class="leftback step-1-inner">
                             <div class="child-wrap">
-                                <h3 class="showfield">Hi, Type of Legal Entity?</h3>
+                                <h3 class="showfield">SELECT USER TYPE</h3>
                                 <div class="showfield form-field">
                                     <select id="move" name="request">
                                         <option value="">-Select</option>
-                                        <option value="Request for Author Collaboration">
-                                            Sole proprietorship
+                                        <option value="instructor">
+                                            INSTRUCTOR
                                         </option>
-                                        <option value="Request for Partnership">
-                                            General Partnership
-                                        </option>
+                                        {{-- <option value="participant">
+                                            PARTICIPANT
+                                        </option> --}}
                                     </select>
                                     <span></span>
                                 </div>
-                                <p class="showfield field-text">
+                                {{-- <p class="showfield field-text">
                                     Please enter the details of your request. A member of our
                                     support staff will respond as soon as possible.
-                                </p>
+                                </p> --}}
                             </div>
                         </div>
                     </div>
@@ -48,47 +48,69 @@
                     <div class="parent-wrap">
                         <div class="main-heading">
                             <span>Submit Request</span>
-                            <h1>Request for Author Collaboration</h1>
+                            <h1>Applicant information</h1>
                         </div>
                         <div class="step-num">Step 2</div>
                         <div class="leftback step-2-inner" id="step2">
                             <div class="child-wrap">
                                 <div class="showfield">
                                     <div class="single-field">
-                                        <label class="label-heading">Hi, Type of Business?</label>
-                                        <div class="form-field">
-                                            <select id="select1" name="select1">
-                                                <option>Professional Accounting Services</option>
-                                                <option>Professional Law Services</option>
-                                            </select>
-                                            <span></span>
+                                        <div class="single-field">
+                                            <label class="label-heading">Full Name</label>
+                                            <div class="form-field">
+                                                <input type="text" id="full_name" name="full_name" placeholder="Your Name"
+                                                    required />
+                                                <span></span>
+                                            </div>
+                                            <p class="field-text">What is your full name?</p>
                                         </div>
-                                        <p class="field-text">
-                                            Please note, this request form is for Authors who sell
-                                            items on Envato
-                                        </p>
-                                    </div>
-                                    <div class="single-field">
-                                        <label class="label-heading">Your Name</label>
-                                        <div class="form-field">
-                                            <input type="text" id="name" name="name" placeholder="Your Name"
-                                                required />
-                                            <span></span>
+
+                                        <div class="single-field">
+                                            <label class="label-heading">Email</label>
+                                            <div class="form-field">
+                                                <input type="text" name="mail-email" id="mail-email" placeholder="Your Email"
+                                                    required />
+                                                <span></span>
+                                            </div>
                                         </div>
-                                        <p class="field-text">What is your full name?</p>
-                                    </div>
-                                    <div class="single-field">
-                                        <label class="label-heading">Your Company Email</label>
-                                        <div class="form-field">
-                                            <input type="text" name="mail" id="mail-email" placeholder="Your Email"
-                                                required />
-                                            <span></span>
+
+                                        <div class="single-field">
+                                            <label class="label-heading">
+                                                Phone Number
+                                            </label>
+                                            <div class="form-field">
+                                                <input type="tel" id="phone_number" name="phone_number"
+                                                    placeholder="Enter your phone number" required>
+                                                <span></span>
+                                            </div>
                                         </div>
-                                        <p class="field-text">
-                                            Please provide the email address associated with your
-                                            Envato account (if applicable).
-                                        </p>
+
+                                        <div class="single-field">
+                                            <label class="label-heading">
+                                                Country
+                                            </label>
+                                            <div class="form-field">
+                                                <input type="text" id="country" name="country"
+                                                    placeholder="Enter your country" required>
+                                                <span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="single-field">
+                                            <label class="label-heading">
+                                                City
+                                            </label>
+                                            <div class="form-field">
+                                                <input type="text" id="city" name="city"
+                                                    placeholder="Enter your city " required>
+                                                <span></span>
+                                            </div>
+                                        </div>
                                     </div>
+
+
+
+
                                     <!--<div class="single-field">
                                         <label class="label-heading">Who will sign the contract?</label>
                                         <div class="row">
@@ -139,7 +161,7 @@
                                             </div>
                                         </div>
                                     </div>-->
-                                    <div class="single-field">
+                                    {{-- <div class="single-field">
                                         <label class="label-heading">
                                             Location and fiscal domicile
                                         </label>
@@ -153,7 +175,7 @@
                                             collaborating with or giving the rights to use your
                                             item.
                                         </p>
-                                    </div>
+                                    </div> --}}
                                     <div class="next-previous-btn">
                                         <button type="button" id="step2btn" class="next">
                                             Next Step
@@ -172,7 +194,7 @@
                     <div class="parent-wrap">
                         <div class="main-heading">
                             <span>Submit Request</span>
-                            <h1>Request for Author Collaboration</h1>
+                            <h1>Professional Experience</h1>
                         </div>
                         <div class="step-num">Step 3</div>
                         <div class="leftback step-3-inner" id="step3">

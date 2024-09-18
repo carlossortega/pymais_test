@@ -58,4 +58,5 @@ Route::controller(InstallController::class)->group(function () {
     Route::any('install/finalizing_setup', 'finalizingSetup')->name('finalizing_setup');
     Route::get('install/success', 'success')->name('success');
 });
-//Installation routes
+//Forms routes
+Route::post('save-application', [saveFileController::class, 'saveFile'])->name('save.application');

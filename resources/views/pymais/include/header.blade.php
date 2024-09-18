@@ -23,7 +23,7 @@
                                     <a href="{{route('home')}}">{{__('Home')}}</a>
                                 </li>
                                 <li>
-                                    <a href="javascritp:void">{{__('Sign up')}}</a>
+                                    <a>{{__('Sign up')}}</a>
                                     <ul class="sub-menu">
                                         <li>
                                             <a href="javascript:void">{{__('Participant Signup')}}</a>
@@ -142,7 +142,7 @@
                                                 <a href="{{route('home')}}">{{__('Home')}}</a>
                                             </li>
                                             <li class="active">
-                                                <a href="javascritp:void">{{__('Sign up')}}</a>
+                                                <a>{{__('Sign up')}}</a>
                                                 <ul class="sub-menu">
                                                     <li>
                                                         <a href="javascript:void">{{__('Participant Signup')}}</a>
