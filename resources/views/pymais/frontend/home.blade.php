@@ -54,9 +54,9 @@
                                             </div>
                                             <div class="overview-card__info">
                                                 <h4>
-                                                    <span>2</span>k+
+                                                    <span>30</span>k+
                                                 </h4>
-                                                <p>Full Time Student</p>
+                                                <p>{{__("Projected SME's")}}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -159,6 +159,7 @@
                                     </div>
                                 </div>
                             </div>
+                            {{--  Business Enhancer  --}}
                             <div class="row align-items-center">
                                 <div class="col-lg-6 col-12">
                                     <div class="ep-section__content ep-section__content--style2">
@@ -220,8 +221,83 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
+
+                            {{--  Market Access & Specialization  --}}
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-12">
+                                    <div class="ep-section__img ep-section__img--style2 position-relative">
+                                        <div class="ep-section__img-main">
+                                            <img src="{{asset('assets/frontend/pymais/images/home/home-02.jpg')}}" alt="about-img" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="ep-section__content ep-section__content--style2">
+                                        <h3 class="ep-section__title ep-split-text left">2. {{__('Market Access & Specialization')}} </h3>
+                                        <p class="ep-section__text"> {{__("Promoting SMEs' value propositions to potential binational industry customers through speed dating and demo day's sessions furthermore participating companies will have the opportunity to take specialization content according to their development needs.")}} </p>
+                                        <p class="ep-section__text"><small>{{__("(To access this stage SME's must pay a 350 USD annual membership, 4 sessions live mentoring, platform exposure, continuous learning, up to 5 participants per SME).")}}</small></p>
+                                        <ul class="nav nav-tabs mt-5 ep-product-tab-list" id="productTabs" role="tablist">
+                                            <li class="nav-item">
+                                                <button class="nav-link active" id="visibility-tab" data-bs-toggle="tab" data-bs-target="#visibility" role="tab">2.1 {{__('On-going Visibility')}}</button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button class="nav-link" id="specialization-tab" data-bs-toggle="tab" data-bs-target="#specialization" role="tab">2.2 {{__('Specialization Opportunities')}}</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content mt-4" id="productTabsContent">
+                                            <div class="tab-pane fade show active" id="visibility" role="tabpanel" aria-labelledby="visibility-tab">
+                                                <div class="ep-product-tab-inside">
+                                                    <div class="ep-product-tab-inside__content">
+                                                        <p class="ep-product-single__tab-text"> {{__('Participating companies that complete Primer and Accelerating programs will have the chance to be continuously exposed through online and in-person events, such as:')}} </p>
+                                                        <ul class="mt-3">
+                                                            <li>- <strong>{{__('Continuous exposure on the platform:')}}</strong> {{__('Tailored to their line of business, participants will have a constant presence on our platform, increasing their reach.')}}</li>
+                                                            <li>- {{__('Business sessions.')}}
+                                                                <ul>
+                                                                    <li><strong>{{__('Virtual Demo Days: ')}}</strong>Participants will present 1-minute pitch videos, highlighting their value propositions.</li>
+                                                                    <li><strong>{{__('Speed dating meeting/interviews (online and in-person):')}}</strong>These sessions will allow participants to engage in business conversations at different levels:
+                                                                        <ul>
+                                                                            <li>- Local</li>
+                                                                            <li>- Regional</li>
+                                                                            <li>- {{__('National')}}</li>
+                                                                            <li>- {{__('Binational')}}</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                        <p class="ep-product-single__tab-text mg-top-20"> </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="specialization" role="tabpanel" aria-labelledby="specialization">
+                                                <div class="ep-product-tab-inside">
+                                                    <div class="ep-product-tab-inside__content">
+                                                        <p class="ep-product-single__tab-text"> {{__('During the program participating companies will be able to take specialization and certification content according to their industry vertical of interest e.g.')}} </p>
+                                                        <ul class="mt-3">
+                                                            <li>- {{__('Automotive')}}</li>
+                                                            <li>- {{__('Bio-medical')}}</li>
+                                                            <li>- {{__('Electronics')}}</li>
+                                                            <li>- {{__('IT')}}</li>
+                                                            <li>- {{__('Aerospace-aeronautical')}}</li>
+                                                            <li>- {{__('Advanced Technologies')}}</li>
+                                                            <li>- {{__('Cybersecurity')}}</li>
+                                                            <li>- {{__('AI')}}</li>
+                                                        </ul>
+                                                        <p class="ep-product-single__tab-text mg-top-20">{{__('Furthermore participating companies may take key updating content such as LinkedIn courses anytime.')}}</p>
+
+                                                        <div class="ep-section__btn">
+                                                            <a href="#" class="ep-btn border-btn">{{__('About us')}} <i class="fi fi-rs-arrow-small-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </section>
                     <section class="ep-group-study position-relative section-gap mg-btm-120 pt-0">
