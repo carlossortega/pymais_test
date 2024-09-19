@@ -4,7 +4,7 @@
           <div class="row">
               <div class="col-lg-4 col-md-4">
                   <div class="footer-content">
-                      <img src="{{ get_image(get_frontend_settings('light_logo')) }}" alt="logo">
+                      <img src="{{ asset('assets/frontend/pymais/images/logo.svg') }}" alt="logo">
                       <p class="description">
                           {{ get_phrase('It is a long established fact that a reader will be the distract by the read content of a page layout.') }}
                       </p>
