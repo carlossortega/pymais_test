@@ -19,8 +19,6 @@ Route::controller(HomeController::class)->group(function () {
 });
 
 
-
-
 // course page
 Route::controller(CourseController::class)->group(function () {
     Route::get('courses/{category?}', 'index')->name('courses');

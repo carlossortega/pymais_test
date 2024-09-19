@@ -2,25 +2,24 @@
 
 @section('content')
     <!-- Start Hero Area -->
-    <section class="ep-hero ep-hero--style2 hero-bg background-image"
-        style="background-image: url('{{ asset('assets/frontend/pymais/images/hero/home-2/bg.png') }}')">
+    <section class="ep-hero ep-hero--style2 hero-bg" style="background-color: #f2f2f2">
         <div class="container ep-container">
             <div class="row align-items-center">
                 <div class="col-lg-12 col-xl-6 col-12">
                     <div class="ep-hero__content ep-hero__content--style2">
-                        <h1 class="ep-hero__title ep-split-text left"> {{ __('Welcome to PYMAis Platform') }}</h1>
+                        <h1 class="ep-hero__title ep-split-text left"> {{ __('Welcome to PYMAIS') }}</h1>
                         <p class="ep-hero__text">
                             {{ __('An innovative training program to accelerate the growth of manufacturing industry supply chain businesses, to strengthen and professionalize them based on real demands of each region.') }}
                         </p>
                         <div class="">
-                            <a href="#" class="btn btn-primary">{{ __('Apply now') }}</a>
+                            <a href="#" class="pymais-button-gradient">{{ __('Apply now') }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12 offset-xl-1 col-xl-5 col-12 order-top">
                     <div class="ep-hero__widget ep-hero__widget-style2 position-relative">
                         <div class="ep-hero__img">
-                            <img src="{{ asset('assets/frontend/pymais/images/welcome.jpeg') }}" alt="hero-img" />
+                            <img src="{{ asset('assets/frontend/pymais/images/welcome.jpg') }}" alt="hero-img" />
                         </div>
                     </div>
                 </div>
@@ -398,10 +397,6 @@
             <div class="col-12">
                 <div class="ep-section-head ep-section-head--style2">
                     <h3 class="ep-section-head__color-title ep1-color ep1-border-color">{{ __('Other Resources') }}</h3>
-                    {{--  <div class="ep-section-head__inner">
-                                        <h2 class="ep-section-head__big-title ep-split-text left">  </h2>
-                                        <p class="ep-section-head__text mg-top-30"> Lorem ipsum dolor sit amet consectetur. A lectus mi <br /> ultricies dictum facilisis of sem. Imperdiet an massa turpis </p>
-                                    </div>  --}}
                 </div>
             </div>
         </div>
@@ -411,148 +406,49 @@
             </div>
             <div class="row">
                 <div class="owl-carousel ep-event__slider">
-                    <!-- Single Event -->
-                    <div class="ep-event__card">
-                        <a href="https://es.linkedin.com/learning/que-es-la-ia-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
-"
-                            class="ep-event__img">
-                            <img src="{{ asset('assets/frontend/pymais/images/curso-1.jpeg') }}" alt="event-img" />
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://es.linkedin.com/learning/que-es-la-ia-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
-"
-                                class="ep-event__title">Clase online</a>
-                            <a
-                                href="https://es.linkedin.com/learning/que-es-la-ia-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
-">
-                                <p class="ep-event__p">Qué es la IA generativa</p>
+                    @php
+                        // Obtén los cursos únicos y activos
+                        $featured_courses = DB::table('courses')
+                            ->where('status', 'active')
+                            ->distinct('id') // Asegúrate de obtener cursos únicos
+                            ->latest('id')
+                            ->take(4) // Limita la consulta a los 4 más recientes
+                            ->get();
+                    @endphp
+                    @foreach ($featured_courses as $row)
+                        <!-- Single Event -->
+                        <div class="ep-event__card">
+                            <a href="{{ route('course.details', $row->slug) }}" class="ep-event__img">
+                                <img src="{{ get_image($row->thumbnail) }}" alt="event-img" />
                             </a>
+                            @php
+                                // Calcula la calificación promedio del curso
+                                $ratings = DB::table('reviews')
+                                    ->where('course_id', $row->id)
+                                    ->pluck('rating')
+                                    ->toArray();
+                                $average_rating = count($ratings) > 0 ? array_sum($ratings) / count($ratings) : 0;
+                                $full_stars = floor($average_rating);
+                                $has_half_star = $average_rating - $full_stars >= 0.5;
+                                $review_count = count($ratings);
+                            @endphp
+                            <div class="ep-event__info">
+                                <a href="{{ route('course.details', $row->slug) }}" class="ep-event__title">{{ ucfirst($row->title) }}</a>
+                                <a href="{{ route('course.details', $row->slug) }}">
+                                    <p class="ep-event__p">
+                                        {{ \Illuminate\Support\Str::words(strip_tags($row->description), 15, '...') }}
+                                    </p>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Single Event -->
-                    <div class="ep-event__card">
-                        <a href="https://es.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning"
-                            class="ep-event__img">
-                            <img src="{{ asset('assets/frontend/pymais/images/event/event-1/2.png') }}"
-                                alt="event-img" />
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://es.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
-"
-                                class="ep-event__title">Clase online</a>
-                            <a
-                                href="https://es.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa?trk=learning-path&upsellOrderOrigin=default_guest_learning
-">
-                                <p class="ep-event__p"> Prompt Engineering: Aprende a hablar con una inteligencia
-                                    artificial generativa</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single Event -->
-                    <div class="ep-event__card">
-                        <a href="https://es.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning"
-                            class="ep-event__img">
-                            <img src="{{ asset('assets/frontend/pymais/images/event/event-1/2.png') }}"
-                                alt="event-img" />
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="#https://es.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning
-"
-                                class="ep-event__title">Clase online</a>
-                            <a
-                                href="https://es.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning
-">
-                                <p class="ep-event__p">Agiliza tu trabajo con el chat de Microsoft Copilot</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single Event -->
-                    <div class="ep-event__card">
-                        <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning"
-                            class="ep-event__img">
-                            <img src="{{ asset('assets/frontend/pymais/images/event/event-1/2.png') }}"
-                                alt="event-img" />
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning"
-                                class="ep-event__title">Clase online</a>
-                            <a
-                                href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning">
-                                <p class="ep-event__p">Descubre Microsoft 365 Copilot</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single Event -->
-                    <div class="ep-event__card">
-                        <a href="https://learn.microsoft.com/es-mx/ai/" class="ep-event__img">
-                            <img src="{{ asset('assets/frontend/pymais/images/event/event-1/2.png') }}"
-                                alt="event-img" />
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://learn.microsoft.com/es-mx/ai/" class="ep-event__title">Microsoft Learn</a>
-                            <a href="https://learn.microsoft.com/es-mx/ai/">
-                                <p class="ep-event__p">Preparación para la IA de Microsoft</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single Event -->
-                    <div class="ep-event__card">
-                        <a href="https://es.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics.teams.cdn.office.net%7Cre-other"
-                            class="ep-event__img">
-                            <img src="{{ asset('assets/frontend/pymais/images/event/event-1/2.png') }}"
-                                alt="event-img" />
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://es.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics.teams.cdn.office.net%7Cre-other"
-                                class="ep-event__title">Itinerario de aprendizaje </a>
-                            <a
-                                href="https://es.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics.teams.cdn.office.net%7Cre-other">
-                                <p class="ep-event__p">Fundamentos profesionales de IA generativa, por Microsoft y LinkedIn
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single Event -->
-                    <div class="ep-event__card">
-                        <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning"
-                            class="ep-event__img">
-                            <img src="{{ asset('assets/frontend/pymais/images/event/event-1/2.png') }}"
-                                alt="event-img" />
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="#https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning"
-                                class="ep-event__title">Clase online</a>
-                            <a
-                                href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning">
-                                <p class="ep-event__p">Descubre Microsoft 365 Copilot</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single Event -->
-                    <div class="ep-event__card">
-                        <a href="#https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning"
-                            class="ep-event__img">
-                            <img src="{{ asset('assets/frontend/pymais/images/event/event-1/2.png') }}"
-                                alt="event-img" />
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning
-"
-                                class="ep-event__title">Clase online</a>
-                            <a
-                                href="https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning
-">
-                                <p class="ep-event__p">Copilot en PowerPoint: crea presentaciones impactantes con
-                                    inteligencia artificial</p>
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </section>
+
     <!-- End Event Area -->
-    <!-- Start Faq Area -->
+
     <!-- Start Brand -->
     <div class="container">
         <div class="ep-brand section-gap pt-0">
@@ -565,89 +461,92 @@
                 </div>
             </div>
             {{-- QUITAR ESTILO DE COLOR EN EL DIV --}}
-        <div style="background-color: #3C6EE2" class="container ep-container">
-            {{-- QUITAR ESTILO DE COLOR EN EL DIV --}}
-            <div class="row">
-                <div class="col-12">
-                    <div class="owl-carousel ep-brand__slider">
-                        <!-- Single Brand -->
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/microsoft.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <!-- Single Brand -->
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/decj_soft.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <!-- Single Brand -->
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/fechac_perse.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <!-- Single Brand -->
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/fix_nm.png') }}" alt="brand-logo" />
-                        </a>
-                        <!-- Single Brand -->
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/fletes_mexico.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/flo_networks.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/high_desert.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/hunt.png') }}" alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/kelly_tomblin.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/mt_net.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/novamex.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/pioneers_21.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/sunflower_bank.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/technology_hub.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/tecma.png') }}" alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/the_city_of_eptx.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/the_electric_company.png') }}"
-                                alt="brand-logo" />
-                        </a>
-                        <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/weststar_bank.png') }}"
-                                alt="brand-logo" />
-                        </a>
+            <div style="background-color: #3C6EE2; padding:15px" class="container ep-container">
+                {{-- QUITAR ESTILO DE COLOR EN EL DIV --}}
+                <div class="row">
+                    <div class="col-12">
+                        <div class="owl-carousel ep-brand__slider">
+                            <!-- Single Brand -->
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/microsoft.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <!-- Single Brand -->
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/decj_soft.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <!-- Single Brand -->
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/fechac_perse.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <!-- Single Brand -->
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/fix_nm.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <!-- Single Brand -->
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/fletes_mexico.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/flo_networks.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/high_desert.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/hunt.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/kelly_tomblin.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/mt_net.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/novamex.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/pioneers_21.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/sunflower_bank.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/technology_hub.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/tecma.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/the_city_of_eptx.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/the_electric_company.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/weststar_bank.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
 

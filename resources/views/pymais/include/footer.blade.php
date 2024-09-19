@@ -3,7 +3,7 @@
     <div class="container ep-container">
         <div class="ep-footer__top">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="ep-footer__widget footer-about">
                         <div class="ep-footer__logo ep-footer__logo--style2">
                             <a href="index.html">
@@ -39,26 +39,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="ep-footer__widget footer-services--style2">
                         <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Useful Links </h4>
                         <ul class="ep-footer__links-list ep-footer__links-list--style2">
                             <li>
-                                <a href="service.html">
-                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>Become a participant </a>
+                                <a href="#">
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>Become a participant </a>
                             </li>
                             <li>
-                                <a href="service.html">
-                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>All courses </a>
+                                <a href="ß">
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>All courses </a>
                             </li>
                             <li>
-                                <a href="service.html">
-                                    <i class="fi fi-br-angle-double-small-right ep6-color"></i>Sign up </a>
+                                <a href="ß">
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>Sign up </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12">
                     <div class="ep-footer__widget footer-contact">
                         <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Help </h4>
                         <div class="ep-footer__contact">
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
+                {{--  <div class="col-lg-3 col-md-6 col-12">
                     <div class="ep-footer__widget footer-newsletter">
                         <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Newsletter </h4>
                         <p class="ep-footer__text m-0"> Subscribe to our newletter and stay up with the latest news. </p>
@@ -92,14 +92,14 @@
                             </button>
                         </form>
                     </div>
-                </div>
+                </div>  --}}
             </div>
         </div>
         <div class="ep-footer__bottom">
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <div class="ep-footer__copyright">
-                        <p> © <a PYMAis @php echo date('Y'); @endphp | All Rights Reserved </p>
+                        <p> © PYMAIS @php echo date('Y'); @endphp | All Rights Reserved </p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
@@ -112,7 +112,7 @@
                                 <a href="#">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="contact.html">Contact Us</a>
+                                <a href="#">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -121,6 +121,6 @@
         </div>
     </div>
     <div class="ep-footer__brand">
-        <img src="{{asset('assets/frontend/pymais/images/logo-2.svg')}}" alt="footer-brand-name" />
+        {{--  <img src="{{asset('assets/frontend/pymais/images/logo-2.svg')}}" alt="footer-brand-name" />  --}}
     </div>
 </footer>

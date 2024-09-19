@@ -3,7 +3,7 @@
 ==============================================================================================*/
 
 .ep-footer {
-  background: var(--ep-secondary-color);
+  background: #e2e2e2;
   z-index: 2;
   overflow: hidden;
 }
@@ -19,7 +19,7 @@
 }
 
 .ep-footer__text {
-  color: var(--ep-white-color);
+  color: var(--ep-title-color);
   margin-top: 32px;
   opacity: 0.8;
 }
@@ -38,14 +38,14 @@
 }
 
 .ep-footer__contact-info p {
-  color: var(--ep-white-color);
+  color: var(--ep-title-color);
   margin-bottom: 4px;
 }
 
 .ep-footer__contact-info span,
 .ep-footer__contact-info a {
   display: block;
-  color: var(--ep-white-color);
+  color: var(--ep-title-color);
   opacity: 0.8;
 }
 .ep-footer__contact-info a:hover {
@@ -62,7 +62,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
-  color: var(--ep-white-color);
+  color: var(--ep-title-color);
   margin-bottom: 48px;
 }
 
@@ -71,11 +71,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
-  color: var(--ep-white-color);
+  color: var(--ep-title-color);
   opacity: 0.8;
 }
 .ep-footer__links-list li a:hover {
-  color: var(--ep-primary-color-5);
+  color: var(--ep-primary-color-2);
   margin-left: 4px;
 }
 .ep-footer__links-list li {
@@ -131,7 +131,7 @@
 }
 
 .ep-footer__social-title {
-  color: var(--ep-white-color);
+  color: var(--ep-title-color);
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -160,7 +160,7 @@
 }
 
 .ep-footer__social ul li a:hover {
-  background: var(--ep-primary-color-3);
+  background: var(--ep-primary-color-2);
   color: ;
   border: 1px solid transparent;
 }
@@ -175,7 +175,7 @@
 }
 
 .ep-footer__copyright p {
-  color: var(--ep-white-color);
+  color: var(--ep-title-color);
   opacity: 0.8;
 }
 .ep-footer__copyright a:hover {
@@ -195,7 +195,7 @@
 }
 
 .ep-footer__bottom-link ul li a {
-  color: var(--ep-white-color);
+  color: var(--ep-title-color);
   opacity: 0.8;
   line-height: 28px;
 }
@@ -278,7 +278,7 @@
 }
 .ep-footer__links-list--style2 li a:hover,
 .ep-footer__contact-info--style2 a:hover {
-  color: var(--ep-primary-color-6);
+  color: var(--ep-primary-color-2);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {

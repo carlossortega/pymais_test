@@ -907,6 +907,17 @@ p {
   border-bottom: 1px solid var(--ep-paragraph-color);
 }
 
+/* Color 10 */
+.ep10-color {
+    color: var(--ep-title-color);
+  }
+  .ep10-bg {
+    background-color: var(--ep-title-color);
+  }
+  .ep10-border-color {
+    border-bottom: 1px solid var(--ep-title-color);
+  }
+
 /* Display Flex End Between  */
 .d-flex-end-between {
   display: flex;
