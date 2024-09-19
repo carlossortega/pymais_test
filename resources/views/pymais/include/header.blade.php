@@ -22,20 +22,12 @@
                                 <li>
                                     <a href="{{route('home')}}">{{__('Home')}}</a>
                                 </li>
-                                <li>
-                                    <a>{{__('Sign up')}}</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="javascript:void">{{__('Participant Signup')}}</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('instructor.signup')}}">{{__('Instructor Signup')}}</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void">{{__('Corporate Signup')}}</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                {{-- Ocultar el elemento "Sign up" si el usuario está en la ruta sme.signup --}}
+                                @if (Route::currentRouteName() !== 'register')
+                                    <li class="active">
+                                        <a href="{{route('register')}}">{{__('Sign up')}}</a>
+                                    </li>
+                                @endif
                                 {{--  <li>
                                     <a class="menu-arrow" href="javascript:void(0)">Courses</a>
                                     <ul class="sub-menu">
@@ -141,20 +133,12 @@
                                             {{-- <li class="active">
                                                 <a href="{{route('home')}}">{{__('Home')}}</a>
                                             </li> --}}
-                                            <li class="active">
-                                                <a href="{{route('participant.signup')}}">{{__('Sign up')}}</a>
-                                                {{-- <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="javascript:void">{{__('Participant Signup')}}</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{route('instructor.signup')}}">{{__('Instructor Signup')}}</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void">{{__('Corporate Signup')}}</a>
-                                                    </li>
-                                                </ul> --}}
-                                            </li>
+                                            {{-- Ocultar el elemento "Sign up" si el usuario está en la ruta sme.signup --}}
+                                            @if (Route::currentRouteName() !== 'register')
+                                                <li class="active">
+                                                    <a href="{{route('register')}}">{{__('Sign up')}}</a>
+                                                </li>
+                                            @endif
                                             {{--  <li>
                                                 <a href="#">Courses <i class="fi fi-ss-angle-small-down"></i>
                                                 </a>

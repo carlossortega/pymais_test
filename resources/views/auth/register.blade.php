@@ -13,15 +13,11 @@
     <section class="login-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-md-6">
-                    <div class="login-img">
-                        <img src="{{ asset('assets/frontend/' . get_frontend_settings('theme') . '/image/signup.gif') }}" alt="register-banner">
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6">
+
+                <div class="col-lg-12 col-md-12">
                     <form action="{{ route('register') }}" class="global-form login-form mt-25" method="post">@csrf
-                        <h4 class="g-title">{{ get_phrase('Sign Up') }}</h4>
-                        <p class="description">{{ get_phrase('See your growth and get consulting support! ') }}</p>
+                        <h4 class="g-title text-center">{{ get_phrase('Sign Up') }}</h4>
+                        <p class="description text-center">{{ get_phrase('See your growth and get consulting support! ') }}</p>
                         <div class="form-group mb-5">
                             <label for="" class="form-label">{{ get_phrase('Name') }}</label>
                             <input type="text" name="name" class="form-control" placeholder="Your Name">

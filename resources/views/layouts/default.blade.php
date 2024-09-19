@@ -74,9 +74,6 @@
 
 <body>
     <!-- Start Header -->
-    <section class="py-20 bd-b-one bd-6e798a-30">
-        @include('frontend.default.header')
-    </section>
 
     <section class="py-30">
         @include('frontend.default.menu_header')

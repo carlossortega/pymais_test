@@ -22,17 +22,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="icofont-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
                                         <i class="icofont-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icofont-pinterest"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -44,40 +34,37 @@
                         <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Useful Links </h4>
                         <ul class="ep-footer__links-list ep-footer__links-list--style2">
                             <li>
-                                <a href="#">
+                                <a href="{{route('register')}}">
                                     <i class="fi fi-br-angle-double-small-right ep10-color"></i>Become a participant </a>
                             </li>
                             <li>
-                                <a href="ß">
+                                <a href="#">
                                     <i class="fi fi-br-angle-double-small-right ep10-color"></i>All courses </a>
                             </li>
                             <li>
-                                <a href="ß">
+                                <a href="#">
                                     <i class="fi fi-br-angle-double-small-right ep10-color"></i>Sign up </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="ep-footer__widget footer-contact">
+                    <div class="ep-footer__widget footer-services--style2">
                         <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Help </h4>
-                        <div class="ep-footer__contact">
-                            <div class="ep-footer__contact-single">
-                                <div class="ep-footer__contact-info">
-                                    <span>Contact Us</span>
-                                </div>
-                            </div>
-                            <div class="ep-footer__contact-single">
-                                <div class="ep-footer__contact-info">
-                                    <span>About Us</span>
-                                </div>
-                            </div>
-                            <div class="ep-footer__contact-single">
-                                <div class="ep-footer__contact-info">
-                                    <span>FAQ</span>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="ep-footer__links-list ep-footer__links-list--style2">
+                            <li>
+                                <a href="{{route('register')}}">
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>Contact Us </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>About Us </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>FAQ </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 {{--  <div class="col-lg-3 col-md-6 col-12">

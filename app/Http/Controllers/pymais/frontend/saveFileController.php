@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class saveFileController extends Controller
 {
-    public function saveFile(Request $request){
+    public function saveFileInstructor(Request $request){
         //validate data before saving
         $request->validate([
             'full_name' => 'required',
@@ -53,5 +53,13 @@ class saveFileController extends Controller
 
         //return a success message
         return back()->with('success', 'Your application has been submitted successfully. We will get back to you soon.');
+    }
+
+    public function saveFileSME(Request $request){
+        $request->validate([
+            'contact_name' => 'required',
+            'position' => 'required',
+            'phone' => 'required',
+        ]);
     }
 }

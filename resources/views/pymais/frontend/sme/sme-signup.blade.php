@@ -28,8 +28,8 @@
                                 <div class="showfield form-field">
                                     <select id="move" name="request">
                                         <option value="">-Select</option>
-                                        <option value="instructor">
-                                            INSTRUCTOR
+                                        <option value="sme">
+                                            SME
                                         </option>
                                         {{-- <option value="participant">
                                             PARTICIPANT
@@ -49,7 +49,7 @@
                     <div class="parent-wrap">
                         <div class="main-heading">
                             <span>Submit Request</span>
-                            <h1>Applicant information</h1>
+                            <h1>SME information</h1>
                         </div>
                         <div class="step-num">Step 2</div>
                         <div class="leftback step-2-inner" id="step2">
@@ -57,13 +57,44 @@
                                 <div class="showfield">
                                     <div class="single-field">
                                         <div class="single-field">
-                                            <label class="label-heading">Full Name</label>
+                                            <label class="label-heading">{{__('Main contact name')}}</label>
                                             <div class="form-field">
-                                                <input type="text" id="full_name" name="full_name" placeholder="Your Name"
-                                                    required />
+                                                <input type="text" id="contact_name" name="contact_name" placeholder="Enter the contact name" required />
                                                 <span></span>
                                             </div>
-                                            <p class="field-text">What is your full name?</p>
+                                        </div>
+
+                                        <div class="single-field">
+                                            <label class="label-heading">
+                                                {{__('Position in company')}}
+                                            </label>
+                                            <div class="form-field">
+                                                <input type="tel" id="position" name="position"
+                                                    placeholder="Enter your position in company" required>
+                                                <span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="single-field">
+                                            <label class="label-heading">
+                                                {{__('Phone Number')}}
+                                            </label>
+                                            <div class="form-field">
+                                                <input type="tel" id="phone" name="phone"
+                                                    placeholder="Enter your phone number" required>
+                                                <span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="single-field">
+                                            <label class="label-heading">
+                                                {{__('Cellphone Number')}}
+                                            </label>
+                                            <div class="form-field">
+                                                <input type="tel" id="phone" name="phone"
+                                                    placeholder="Enter your phone number" required>
+                                                <span></span>
+                                            </div>
                                         </div>
 
                                         <div class="single-field">
@@ -71,17 +102,6 @@
                                             <div class="form-field">
                                                 <input type="text" name="mail-email" id="mail-email" placeholder="Your Email"
                                                     required />
-                                                <span></span>
-                                            </div>
-                                        </div>
-
-                                        <div class="single-field">
-                                            <label class="label-heading">
-                                                Phone Number
-                                            </label>
-                                            <div class="form-field">
-                                                <input type="tel" id="phone_number" name="phone_number"
-                                                    placeholder="Enter your phone number" required>
                                                 <span></span>
                                             </div>
                                         </div>

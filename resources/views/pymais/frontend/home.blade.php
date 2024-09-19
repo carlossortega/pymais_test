@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="ep-section-head ep-section-head--style2">
-                        <h3 class="ep-section-head__color-title ep5-color ep1-border-color"> {{ __('What do we offer?') }}
+                        <h3 class="ep-section-head__color-title ep5-color"> {{ __('What do we offer?') }}
                         </h3>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                             </ul>
                         </div>
                         <div class="ep-section__btn">
-                            <a href="#" class="ep-btn border-btn pymais-20">{{ __('Why This Program') }} <i class="fi fi-rs-arrow-small-right"></i></a>
+                            <a href="#" class="ep-btn border-btn pymais-20">{{ __('Why PYMAIS') }} <i class="fi fi-rs-arrow-small-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-4 col-md-8 col-12">
                     <div class="ep-section-head text-center">
-                        <h3 class="ep-section-head__big-title ep-split-text left">{{ __('Profiles') }}
+                        <h3 class="ep-section-head__big-title ep-split-text left">{{ __('This program is for you if you are') }}
                         </h3>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                 <!-- Single Card -->
                 <div class="col-lg-3 col-xl-3 col-md-3 col-12">
                     <a href="#" class="ep-category__card wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                        <div class="ep-category__icon ep1-bg">
+                        <div class="ep-category__icon ep2-bg">
                             <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}"
                                 alt="category-icon" />
                         </div>
@@ -106,7 +106,7 @@
                 <!-- Single Card -->
                 <div class="col-lg-3 col-xl-3 col-md-3 col-12">
                     <a href="#" class="ep-category__card wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
-                        <div class="ep-category__icon ep4-bg">
+                        <div class="ep-category__icon ep2-bg">
                             <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}"
                                 alt="category-icon" />
                         </div>
@@ -120,7 +120,7 @@
                 <!-- Single Card -->
                 <div class="col-lg-3 col-xl-3 col-md-3 col-12">
                     <a href="#" class="ep-category__card wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
-                        <div class="ep-category__icon ep4-bg">
+                        <div class="ep-category__icon ep2-bg">
                             <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}"
                                 alt="category-icon" />
                         </div>
@@ -140,26 +140,26 @@
             <div class="row">
                 <div class="col-12">
                     <div class="ep-section-head ep-section-head--style2">
-                        <h3 class="ep-section-head__color-title ep5-color ep1-border-color"> {{ __('The program') }} </h3>
+                        <h3 class="ep-section-head__color-title ep5-color"> {{ __('The program') }} </h3>
                     </div>
                 </div>
             </div>
             {{--  Business Enhancer  --}}
             <div class="row align-items-center">
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-12 col-12">
                     <div class="ep-section__content ep-section__content--style2">
-                        <h3 class="ep-section__title ep-split-text left">1. {{ __('Business Enhancer') }} </h3>
+                        <h3 class="ep-section__title ep-split-text text-center">{{ __('Business Enhancer') }} </h3>
                         <p class="ep-section__text">
                             {{ __('Helping SMEs accelerate AI and tech adoption along with other crucial business functions.') }}
                         </p>
                         <ul class="nav nav-tabs mt-5 ep-product-tab-list" id="productTabs" role="tablist">
                             <li class="nav-item">
                                 <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
-                                    data-bs-target="#description" role="tab">1.1 {{ __('Primer Program') }}</button>
+                                    data-bs-target="#description" role="tab">{{ __('Primer Program') }}</button>
                             </li>
                             <li class="nav-item">
                                 <button class="nav-link" id="additional-info-tab" data-bs-toggle="tab"
-                                    data-bs-target="#additional-info" role="tab">1.2
+                                    data-bs-target="#additional-info" role="tab">
                                     {{ __('Accelerating Program') }}</button>
                             </li>
                         </ul>
@@ -213,27 +213,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-12">
-                    <div class="ep-section__img ep-section__img--style2 position-relative">
-                        <div class="ep-section__img-main">
-                            <img src="{{ asset('assets/frontend/pymais/images/home/home-01.jpg') }}" alt="about-img" />
-                        </div>
-                    </div>
-                </div>
             </div>
 
             {{--  Market Access & Specialization  --}}
             <div class="row align-items-center">
-                <div class="col-lg-6 col-12">
-                    <div class="ep-section__img ep-section__img--style2 position-relative">
-                        <div class="ep-section__img-main">
-                            <img src="{{ asset('assets/frontend/pymais/images/home/home-02.jpg') }}" alt="about-img" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-12 col-12">
                     <div class="ep-section__content ep-section__content--style2">
-                        <h3 class="ep-section__title ep-split-text left">2. {{ __('Market Access & Specialization') }}
+                        <h3 class="ep-section__title ep-split-text text-center">{{ __('Market Access & Specialization') }}
                         </h3>
                         <p class="ep-section__text">
                             {{ __("Promoting SMEs' value propositions to potential binational industry customers through speed dating and demo day's sessions furthermore participating companies will have the opportunity to take specialization content according to their development needs.") }}
@@ -244,12 +230,12 @@
                         <ul class="nav nav-tabs mt-5 ep-product-tab-list" id="productTabs" role="tablist">
                             <li class="nav-item">
                                 <button class="nav-link active" id="visibility-tab" data-bs-toggle="tab"
-                                    data-bs-target="#visibility" role="tab">2.1
+                                    data-bs-target="#visibility" role="tab">
                                     {{ __('On-going Visibility') }}</button>
                             </li>
                             <li class="nav-item">
                                 <button class="nav-link" id="specialization-tab" data-bs-toggle="tab"
-                                    data-bs-target="#specialization" role="tab">2.2
+                                    data-bs-target="#specialization" role="tab">
                                     {{ __('Specialization Opportunities') }}</button>
                             </li>
                         </ul>
@@ -323,6 +309,7 @@
 
         </div>
     </section>
+    <!-- Video Area -->
     <section class="ep-group-study position-relative section-gap mg-btm-120 pt-0">
 
         <div class="container ep-container">
@@ -336,16 +323,16 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="ep-section-head ep-section-head--style2">
-                            <h3 class="ep-section-head__color-title ep9-color ep9-border-color">{{ __('PYMAis') }}</h3>
+                            <h3 class="ep-section-head__color-title ep9-color ep9-border-color">{{ __('PYMAIS') }}</h3>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-xl-4 col-12">
                         <div class="ep-section__content ep-section__content--style2">
-                            <h3 class="ep-section__title ep-split-text left">{{ __('How PYMAis works?') }} </h3>
+                            <h3 class="ep-section__title ep-split-text left">{{ __('How PYMAIS works?') }} </h3>
                             <p class="ep-section__text">
-                                {{ __('PyMAis Platform is a training program that accelerates the growth of SMEs in the manufacturing supply chain by helping them take advantage of nearshoring opportunities and improve the MX-US value chains. It focuses on strengthening and professionalizing these businesses, aligning them with the specific demands and needs of each region to capitalize on opportunities in emerging markets.') }}
+                                {{ __('PyMAIS Platform is a training program that accelerates the growth of SMEs in the manufacturing supply chain by helping them take advantage of nearshoring opportunities and improve the MX-US value chains. It focuses on strengthening and professionalizing these businesses, aligning them with the specific demands and needs of each region to capitalize on opportunities in emerging markets.') }}
                             </p>
                             {{--  <div class="ep-section__btn">
                                                 <a href="#" class="ep-btn border-btn">Read More <i class="fi fi-rs-arrow-small-right"></i>
@@ -372,7 +359,7 @@
         <div class="container ep-container">
             <div class="col-12">
                 <div class="ep-section-head ep-section-head--style2">
-                    <h3 class="ep-section-head__color-title ep1-color ep1-border-color">{{ __('Courses') }}</h3>
+                    <h3 class="ep-section-head__color-title ep5-color">{{ __('Courses') }}</h3>
                 </div>
             </div>
         </div>
@@ -431,8 +418,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="ep-section-head ep-section-head--style2">
-                        <h3 class="ep-section-head__color-title ep5-color ep1-border-color"> {{ __('In partnership with') }}
-                        </h3>
+                        <h3 class="ep-section-head__color-title ep5-color"> {{ __('In partnership with') }}</h3>
                     </div>
                 </div>
             </div>

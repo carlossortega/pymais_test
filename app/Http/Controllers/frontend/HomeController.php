@@ -35,8 +35,8 @@ class HomeController extends Controller
         return view('pymais.frontend.instructor.instructor-signup');
     }
 
-    public function participant_signup(){
-        return view('pymais.frontend.participant.participant-signup');
+    public function sme_signup(){
+        return view('pymais.frontend.sme.sme-signup');
     }
 
     public function thanks(){
