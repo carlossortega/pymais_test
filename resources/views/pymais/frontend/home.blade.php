@@ -39,51 +39,27 @@
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-6 col-12">
-                    <div class="ep-section__img ep-section__img--style2 position-relative">
-                        <div class="ep-section__img-main">
-                            <img src="{{ asset('assets/images/meeting.jpeg') }}" alt="about-img" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-12 col-12 text-center">
                     <div class="ep-section__content ep-section__content--style2">
-                        <h3 class="ep-section__title ep-split-text left"> {{ __('Value offer') }} </h3>
-                        <p class="ep-section__text"> {{ __('Strengthen supply chain integration through six key areas:') }}
-                        </p>
-                        <div class="ep-section__widget ep-section__widget--style2">
-                            <ul class="ep-feature-list">
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>{{ __('Innovation') }}
-                                </li>
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>{{ __('Scalability And Growth') }}
-                                </li>
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>{{ __('Digital Transformation') }}
-                                </li>
-                            </ul>
-                            <ul class="ep-feature-list">
-                                <li>
-                                    <i
-                                        class="fi fi-ss-check-circle"></i>{{ __('Modernization And Improvement Of Operations') }}
-                                </li>
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>{{ __('Financial Preparedness') }}
-                                </li>
-                                <li>
-                                    <i class="fi fi-ss-check-circle"></i>{{ __('Make SMEs Visible Within Value Chains') }}
-                                </li>
+                        <h3 class="ep-section__title ep-split-text left"> {{ __('About PYMAIS') }} </h3>
+                        <p class="ep-section__text"> {{ __('Strengthen supply chain integration through six key areas:') }}</p>
+                        <div class="pymais-section__widget">
+                            <ul class="pymais-feature-list">
+                                <li><i class="fi fi-ss-check-circle"></i>{{ __('Innovation') }}</li>
+                                <li><i class="fi fi-ss-check-circle"></i>{{ __('Scalability And Growth') }}</li>
+                                <li><i class="fi fi-ss-check-circle"></i>{{ __('Digital Transformation') }}</li>
+                                <li><i class="fi fi-ss-check-circle"></i>{{ __('Modernization And Improvement Of Operations') }}</li>
+                                <li><i class="fi fi-ss-check-circle"></i>{{ __('Financial Preparedness') }}</li>
+                                <li><i class="fi fi-ss-check-circle"></i>{{ __('Make SMEs Visible Within Value Chains') }}</li>
                             </ul>
                         </div>
                         <div class="ep-section__btn">
-                            <a href="#" class="ep-btn border-btn">{{ __('Why This Program') }} <i
-                                    class="fi fi-rs-arrow-small-right"></i>
-                            </a>
+                            <a href="#" class="ep-btn border-btn pymais-20">{{ __('Why This Program') }} <i class="fi fi-rs-arrow-small-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <!-- End Start About Area -->
@@ -391,12 +367,12 @@
         </div>
     </section>
     <!-- End Group Study Area -->
-    <!-- Start Event Area -->
+    <!-- Start Courses Area -->
     <section class="ep-event ep-team--style2 section-gap position-relative">
         <div class="container ep-container">
             <div class="col-12">
                 <div class="ep-section-head ep-section-head--style2">
-                    <h3 class="ep-section-head__color-title ep1-color ep1-border-color">{{ __('Other Resources') }}</h3>
+                    <h3 class="ep-section-head__color-title ep1-color ep1-border-color">{{ __('Courses') }}</h3>
                 </div>
             </div>
         </div>
@@ -447,15 +423,15 @@
         </div>
     </section>
 
-    <!-- End Event Area -->
+    <!-- End Courses Area -->
 
-    <!-- Start Brand -->
+    <!-- Start Partnership -->
     <div class="container">
         <div class="ep-brand section-gap pt-0">
             <div class="row">
                 <div class="col-12">
                     <div class="ep-section-head ep-section-head--style2">
-                        <h3 class="ep-section-head__color-title ep5-color ep1-border-color"> {{ __('Supported by') }}
+                        <h3 class="ep-section-head__color-title ep5-color ep1-border-color"> {{ __('In partnership with') }}
                         </h3>
                     </div>
                 </div>
@@ -551,5 +527,5 @@
 
 
     </div>
-    <!-- End Start Brand -->
+    <!-- End Start Partnership -->
 @endsection

@@ -370,6 +370,55 @@
     background: linear-gradient(to right, #3C6EE2, #2849E6); /* Efecto al pasar el ratón */
 }
 
+.pymais-20{
+    font-size: 20px;
+}
+
+/* Contenedor principal de las listas centrado */
+.pymais-section__widget {
+    display: flex;
+    justify-content: center;   /* Centra el contenedor */
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  /* Lista con 2 columnas y 3 filas */
+  .pymais-feature-list {
+    display: grid;                               /* Usamos grid para controlar la disposición de columnas y filas */
+    grid-template-columns: repeat(2, auto);      /* 2 columnas */
+    grid-template-rows: repeat(3, auto);         /* 3 filas */
+    gap: 20px;                                   /* Espacio entre los elementos */
+    list-style-type: none;                       /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    justify-content: center;                     /* Centra las columnas dentro del contenedor */
+  }
+
+  /* Estilo de los elementos de la lista */
+  .pymais-feature-list li {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    gap: 8px;
+  }
+
+  /* Estilo de los íconos */
+  .pymais-feature-list li i {
+    color: var(--ep-primary-color-5);
+    font-size: 24px;
+    position: relative;
+    top: 2px;
+  }
+
+  /* El último <li> no debe tener margen inferior */
+  .pymais-feature-list li:last-child {
+    margin-bottom: 0;
+  }
+
+
+
 /*============================================================================================
 	End Hero Area
 ==============================================================================================*/
