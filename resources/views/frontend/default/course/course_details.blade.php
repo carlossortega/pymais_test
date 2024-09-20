@@ -35,7 +35,7 @@
                         </nav>
                     </div>
 
-                    {{--  <div class="course-details pe-auto pe-lg-5">
+                    <div class="course-details pe-auto pe-lg-5">
 
                         <h2 class="g-title ellipsis-line-4">{{ $course_details->title }}</h2>
                         <p class="g-text text-dark ellipsis-line-2">
@@ -44,13 +44,13 @@
 
                         <div class="row row-gap-4">
                             <div class="col-6 col-sm-6 col-md-4">
-                                <a class="d-flex align-items-center text-dark" href="{{ route('instructor.details', ['name' => Str::slug($course_details->creator->name), 'id' => $course_details->creator->id]) }}">
+                                {{--  <a class="d-flex align-items-center text-dark" href="{{ route('instructor.details', ['name' => Str::slug($course_details->creator->name), 'id' => $course_details->creator->id]) }}">
                                     <img class="pro-32 me-2" src="{{ get_image(course_by_instructor($course_details->id)->photo) }}" alt="instructor-image">
                                     {{ course_by_instructor($course_details->id)->name }}
-                                </a>
+                                </a>  --}}
                             </div>
                             <div class="col-6 col-sm-6 col-md-4 text-dark">
-                                <p class="d-flex align-items-center">
+                                {{--  <p class="d-flex align-items-center">
                                     @if ($total > 0)
                                         <span class="d-inline-block mx-2">{{ number_format(round($average_rating), 1) }}</span>
                                         @for ($i = 0; $i < $average_rating; $i++)
@@ -61,29 +61,29 @@
                                         <span class="d-inline-block mx-2">0</span>
                                         <i class="fa fa-star text-secondary"></i>
                                     @endif
-                                </p>
+                                </p>  --}}
                             </div>
                             <div class="col-6 col-sm-6 col-md-4 d-flex align-items-center text-dark">
-                                <img class="pro-20 me-2" src="{{ asset('assets/frontend/default/image/language.png') }}" alt="...">
-                                {{ ucfirst($course_details->language) }}
+                                {{--  <img class="pro-20 me-2" src="{{ asset('assets/frontend/default/image/language.png') }}" alt="...">
+                                {{ ucfirst($course_details->language) }}  --}}
                             </div>
                             <div class="col-6 col-sm-6 col-md-4 d-flex align-items-center text-dark">
-                                <img class="pro-20 me-2" src="{{ asset('assets/frontend/default/image/g3.png') }}" alt="...">
-                                {{ get_phrase('Certificate Course') }}
+                                {{--  <img class="pro-20 me-2" src="{{ asset('assets/frontend/default/image/g3.png') }}" alt="...">
+                                {{ get_phrase('Certificate Course') }}  --}}
                             </div>
                             <div class="col-6 col-sm-6 col-md-4 d-flex align-items-center text-dark">
-                                <img class="pro-20 me-2" src="{{ asset('assets/frontend/default/image/g2.png') }}" alt="...">
-                                {{ total_enroll($course_details->id) }} {{ get_phrase('Students') }}
+                                {{--  <img class="pro-20 me-2" src="{{ asset('assets/frontend/default/image/g2.png') }}" alt="...">
+                                {{ total_enroll($course_details->id) }} {{ get_phrase('Students') }}  --}}
                             </div>
                             <div class="col-6 col-sm-6 col-md-4 d-flex align-items-center text-dark">
-                                <img class="pro-20 me-2" src="{{ asset('assets/frontend/default/image/g1.png') }}" alt="...">
-                                {{ total_durations($course_details->id) }}
+                                {{--  <img class="pro-20 me-2" src="{{ asset('assets/frontend/default/image/g1.png') }}" alt="...">
+                                {{ total_durations($course_details->id) }}  --}}
                             </div>
                         </div>
 
 
 
-                    </div>  --}}
+                    </div>
                 </div>
             </div>
         </div>
