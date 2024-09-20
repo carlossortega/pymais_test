@@ -53,7 +53,7 @@
                         <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Help </h4>
                         <ul class="ep-footer__links-list ep-footer__links-list--style2">
                             <li>
-                                <a href="{{route('register')}}">
+                                <a href="#">
                                     <i class="fi fi-br-angle-double-small-right ep10-color"></i>Contact Us </a>
                             </li>
                             <li>

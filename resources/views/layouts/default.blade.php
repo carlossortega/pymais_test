@@ -6,7 +6,7 @@
     @stack('meta')
 
     <!-- fav icon -->
-    <link rel="shortcut icon" href="{{ asset(get_frontend_settings('favicon')) }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/frontend/pymais/images/favicon.svg') }}" />
 
     <!-- owl carousel -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/default/css/owl.carousel.min.css') }}">

@@ -14,65 +14,28 @@
                           <li><a href="{{ get_frontend_settings('facebook') }}"><i class="fa-brands fa-facebook-f"></i></a></li>
                           <li><a href="{{ get_frontend_settings('linkedin') }}"><i class="fa-brands fa-linkedin-in"></i></a></li>
                       </ul>
-                      <div class="gradient-border2">
-                          <a href="{{ route('contact.us') }}" class="gradient-border-btn">
-                              {{ get_phrase('Contact with Us') }}
-                              <i class="fa-solid fa-arrow-right-long ms-2"></i></a>
-                      </div>
                   </div>
               </div>
               <div class="col-lg-8 col-md-8">
                   <div class="row">
-                      <div class="col-lg-3 col-md-6">
+                      <div class="col-lg-6 col-md-6">
                           <div class="footer-widget">
-                              <h4>{{ get_phrase('Top Categories') }}</h4>
+                              <h4>{{ get_phrase('Useful Links') }}</h4>
                               <ul>
-                                  @foreach (top_categories() as $category)
-                                      <li>
-                                          <a href="{{ route('courses', $category->slug) }}">
-                                              {{ ucfirst($category->title) }}</a>
-                                      </li>
-                                  @endforeach
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="col-lg-3 col-md-6">
-                          <div class="footer-widget">
-                              <h4>{{ get_phrase('Useful links') }}</h4>
-                              <ul>
-                                  <li><a href="{{ route('courses') }}">{{ get_phrase('Course') }}</a></li>
-                                  <li><a href="{{ route('blogs') }}">{{ get_phrase('Blog') }}</a></li>
+                                <li><a href="{{route('register')}}">{{get_phrase('Become a participant')}}</a></li>
+                                <li><a href="#">{{get_phrase('All courses')}}</a></li>
+                                <li><a href="{{route('sme.signup')}}">{{get_phrase('Sign up')}}</a></li>
                               </ul>
                           </div>
                       </div>
                       <div class="col-lg-6 col-md-6">
                           <div class="footer-widget">
-                              <h4>{{ get_phrase('Company') }}</h4>
+                              <h4>{{ get_phrase('Help') }}</h4>
                               <ul>
-                                  <li>
-                                      <a href="#">
-                                          {{ get_phrase('Phone : ') }}
-                                          {{ get_settings('phone') }}
-                                      </a>
-                                  </li>
-                                  <li>
-                                      <a href="#">
-                                          {{ get_phrase('Email : ') }}
-                                          {{ get_settings('system_email') }}
-                                      </a>
-                                  </li>
+                                  <li><a href="{{ route('contact.us') }}">{{ get_phrase('Contact Us') }}</a></li>
+                                  <li><a href="{{ route('about.us') }}">{{ get_phrase('About Us') }}</a></li>
+                                  <li><a href="#">{{ get_phrase('FAQ') }}</a></li>
                               </ul>
-                              <div class="newslater-bottom">
-                                  <h4>{{ get_phrase('Newsletter') }}</h4>
-                                  <p class="description">
-                                      {{ get_phrase("Subscribe to stay tuned for new web design and latest updates. Let's do it!") }}
-                                  </p>
-                                  <form action="{{ route('newsletter.store') }}" method="post" class="newslater-form">
-                                      @csrf
-                                      <input type="text" name="email" class="form-control" placeholder="{{ get_phrase('Email address') }}">
-                                      <button class="eBtn gradient">{{ get_phrase('Submit') }}</button>
-                                  </form>
-                              </div>
                           </div>
                       </div>
                   </div>
@@ -92,7 +55,7 @@
                   </div>
                   <div class="col-lg-4">
                       <div class="copyright-text">
-                          <p>{{ get_phrase('© 2023 All Rights Reserved') }}</p>
+                          <p>© PYMAIS @php echo date('Y')@endphp {{ get_phrase('All Rights Reserved') }}</p>
                       </div>
                   </div>
               </div>
