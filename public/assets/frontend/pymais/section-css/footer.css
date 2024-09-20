@@ -155,6 +155,7 @@
   border: 1px solid #4f536c;
   text-align: center;
   line-height: 33px;
+  background: var(--ep-primary-color-2);
   color: var(--ep-white-color);
   font-size: 13px;
 }

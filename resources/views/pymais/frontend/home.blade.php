@@ -1,5 +1,45 @@
 @extends('layouts.pymais')
 
+@push('accordion-css')
+<!-- CSS for Accordion -->
+<style>
+    .pymais-accordion-card {
+        border: 1px solid #e0e0e0;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .pymais-accordion-header {
+        cursor: pointer;
+        padding: 10px 0;
+    }
+
+    .pymais-accordion-title {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    .pymais-accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+
+    .pymais-accordion-content p {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .pymais-accordion-card.active .pymais-accordion-content {
+        max-height: none;
+        /* Allow the full content to be visible */
+        overflow: visible;
+        transition: max-height 0.5s ease-in;
+    }
+</style>
+@endpush
+
 @section('content')
     <!-- Start Hero Area -->
     <section class="ep-hero ep-hero--style2 hero-bg" style="background-color: #f2f2f2">
@@ -30,14 +70,6 @@
     <!-- Start About Area -->
     <section class="ep-about ep-about--style2 ep-section section-gap position-relative">
         <div class="container ep-container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="ep-section-head ep-section-head--style2">
-                        <h3 class="ep-section-head__color-title ep5-color"> {{ __('What do we offer?') }}
-                        </h3>
-                    </div>
-                </div>
-            </div>
             <div class="row align-items-center">
                 <div class="col-lg-12 col-12 text-center">
                     <div class="ep-section__content ep-section__content--style2">
@@ -69,7 +101,7 @@
     </section>
     <!-- End Start About Area -->
     <!-- Start Profile Area -->
-    <section class="ep-category section-gap pt-0">
+    {{--  <section class="ep-category section-gap pt-0">
         <div class="container ep-container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-4 col-md-8 col-12">
@@ -132,14 +164,98 @@
                         </div>
                         <div class="ep-category__info">
                             <h3>{{ __('Allies') }}</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia iste? Assumenda iusto, corrupti quia nulla temporibus voluptate nostrum dolorem eligendi aspernatur dolore minus voluptates delectus natus est in enim!</p>
                         </div>
                     </a>
                 </div>
 
             </div>
         </div>
+    </section>  --}}
+
+    <!-- Start Profile Area -->
+    <section class="ep-category section-gap pt-0">
+        <div class="container ep-container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-4 col-md-8 col-12">
+                    <div class="ep-section-head text-center">
+                        <h3 class="ep-section-head__big-title ep-split-text left">
+                            {{ __('This program is for you if you are') }}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Single Card with Accordion -->
+                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
+                    <div class="pymais-accordion-card">
+                        <div class="ep-category__icon ep2-bg">
+                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}"
+                                alt="category-icon" />
+                        </div>
+                        <div class="pymais-accordion-header">
+                            <h3 class="pymais-accordion-title">{{ __('SMEs') }}</h3>
+                        </div>
+                        <div class="pymais-accordion-content">
+                            <p>{{ __('The ideal participant is an SME with at least 2 years of successful operation, a scalable business model, interest in the industrial market, focus on innovation, and willingness to collaborate with mentors.') }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Card with Accordion -->
+                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
+                    <div class="pymais-accordion-card">
+                        <div class="ep-category__icon ep2-bg">
+                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}"
+                                alt="category-icon" />
+                        </div>
+                        <div class="pymais-accordion-header">
+                            <h3 class="pymais-accordion-title">{{ __('Mentor') }}</h3>
+                        </div>
+                        <div class="pymais-accordion-content">
+                            <p>{{ __('The ideal mentor has expertise in management, finance, or technology, understands the industrial sector, excels in virtual mentoring, and is committed to fostering SME growth through motivation and tangible results.') }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Card with Accordion -->
+                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
+                    <div class="pymais-accordion-card">
+                        <div class="ep-category__icon ep2-bg">
+                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}"
+                                alt="category-icon" />
+                        </div>
+                        <div class="pymais-accordion-header">
+                            <h3 class="pymais-accordion-title">{{ __('Corporate') }}</h3>
+                        </div>
+                        <div class="pymais-accordion-content">
+                            <p>{{ __('The ideal tractor company is a large corporation aiming to diversify its supply chain, invest in innovative SMEs, and has experience integrating new suppliers, with a focus on strategic collaboration and regional development.') }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Card with Accordion -->
+                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
+                    <div class="pymais-accordion-card">
+                        <div class="ep-category__icon ep2-bg">
+                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}"
+                                alt="category-icon" />
+                        </div>
+                        <div class="pymais-accordion-header">
+                            <h3 class="pymais-accordion-title">{{ __('Allies') }}</h3>
+                        </div>
+                        <div class="pymais-accordion-content">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia iste? Assumenda
+                                iusto, corrupti quia nulla temporibus voluptate nostrum dolorem eligendi aspernatur dolore
+                                minus voluptates delectus natus est in enim!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- End  Profile Area -->
+    <!-- End Profile Area -->
+
     <!-- Start Group Study Area -->
     <section class="ep-about ep-about--style2 ep-section section-gap position-relative">
         <div class="container ep-container">
@@ -420,8 +536,8 @@
     <!-- End Courses Area -->
 
     <!-- Start Newsletter Area -->
-    <!-- Start Newsletter Area -->
-    <section class="pymais-newsletter pymais-newsletter--style2 section-gap position-relative" style="background-color: #f2f2f2">
+    <section class="pymais-newsletter pymais-newsletter--style2 section-gap position-relative"
+        style="background-color: #f2f2f2">
         <div class="container pymais-container">
             <div class="row align-items-center">
                 <!-- Left Column: Newsletter Area -->
@@ -434,15 +550,17 @@
                         </p>
                     </div>
                     <div class="pymais-newsletter__form">
-                        <form action="{{route('newsletter.store')}}" class="pymais-newsletter__form" method="post">
+                        <form action="{{ route('newsletter.store') }}" class="pymais-newsletter__form" method="post">
                             @csrf
                             <!-- Email input -->
-                            <input type="email" name="email" placeholder="{{ __('Enter your email') }}" class="pymais-newsletter-input" />
+                            <input type="email" name="email" placeholder="{{ __('Enter your email') }}"
+                                class="pymais-newsletter-input" />
 
                             <!-- Checkbox for terms and conditions -->
                             <div class="pymais-newsletter-checkbox">
                                 <input type="checkbox" id="accept-terms" name="accept-terms" required>
-                                <label for="accept-terms"><span class="small">{{ __('I accept the terms and conditions') }}</span></label>
+                                <label for="accept-terms"><span
+                                        class="small">{{ __('I accept the terms and conditions') }}</span></label>
                             </div>
 
                             <!-- Submit button -->
@@ -454,16 +572,14 @@
                 <!-- Right Column: Logo -->
                 <div class="col-lg-6 col-xl-6 col-12 d-flex justify-content-center align-items-center">
                     <div class="pymais-logo-container">
-                        <img src="{{asset('assets/frontend/pymais/images/favicon.svg')}}" alt="Logo" class="pymais-newsletter-logo" />
+                        <img src="{{ asset('assets/frontend/pymais/images/favicon.svg') }}" alt="Logo"
+                            class="pymais-newsletter-logo" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- End Newsletter Area -->
-
-    <!-- End Newsletter Area -->
-
 
     <!-- Start Partnership -->
     <div class="container mt-60">
@@ -568,3 +684,36 @@
     </div>
     <!-- End Start Partnership -->
 @endsection
+
+@push('accordion-js')
+
+<!-- JavaScript for Accordion with Dynamic Height -->
+    <script>
+        document.querySelectorAll('.pymais-accordion-title').forEach(function(title) {
+            title.addEventListener('click', function() {
+                var card = this.parentElement.parentElement;
+                var content = card.querySelector('.pymais-accordion-content');
+
+                // Toggle active class on the card
+                card.classList.toggle('active');
+
+                if (card.classList.contains('active')) {
+                    // Expande la altura del contenido basado en su altura real
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } else {
+                    // Colapsa el contenido
+                    content.style.maxHeight = 0;
+                }
+
+                // Cierra otros acordeones
+                document.querySelectorAll('.pymais-accordion-card').forEach(function(otherCard) {
+                    if (otherCard !== card) {
+                        otherCard.classList.remove('active');
+                        otherCard.querySelector('.pymais-accordion-content').style.maxHeight = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+@endpush

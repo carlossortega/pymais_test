@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/pymais/style.css') }}">
 
     @stack('form-css')
+    @stack('accordion-css')
 
 </head>
 
@@ -117,6 +118,7 @@
     @include('frontend.default.toaster')
 
     @stack('form-js')
+    @stack('accordion-js')
 </body>
 
 </html>
