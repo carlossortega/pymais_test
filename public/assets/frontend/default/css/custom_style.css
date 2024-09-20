@@ -6308,7 +6308,7 @@ i[class^="fi-rr-"]:before, i[class*=" fi-rr-"]:before, span[class^="fi-rr-"]:bef
 }
 
 .profile-banner-area {
-    background: linear-gradient(90deg, #8ca3ff 26%, #d58dff 93%);
+    background: linear-gradient(90deg, #8ca3ff 26%, #2849E6 93%);
     width: 100%;
     height: 310px;
     position: relative;
@@ -6332,7 +6332,7 @@ i[class^="fi-rr-"]:before, i[class*=" fi-rr-"]:before, span[class^="fi-rr-"]:bef
 }
 
 .breadcum-area {
-    background: linear-gradient(90deg, #8ca3ff 26%, #d58dff 93%);
+    background: linear-gradient(90deg, #8ca3ff 26%, #2849E6 93%);
     position: relative;
     z-index: 0;
 }

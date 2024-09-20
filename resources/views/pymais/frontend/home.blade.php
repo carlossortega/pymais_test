@@ -92,7 +92,7 @@
                             </ul>
                         </div>
                         <div class="ep-section__btn">
-                            <a href="#" class="ep-btn border-btn pymais-20">{{ __('Why PYMAIS') }} <i
+                            <a href="{{asset('pdfs/PYMAIS.pdf')}}" class="ep-btn border-btn pymais-20" target="_blank">{{ __('Why PYMAIS') }} <i
                                     class="fi fi-rs-arrow-small-right"></i></a>
                         </div>
                     </div>
@@ -265,7 +265,7 @@
                                         </p>
 
                                         <div class="ep-section__btn">
-                                            <a href="#" class="ep-btn border-btn">{{ __('See full curriculum') }}
+                                            <a href="{{asset('pdfs/Full-Curriculum.pdf')}}" class="ep-btn border-btn" target="_blank">{{ __('See full curriculum') }}
                                                 <i class="fi fi-rs-arrow-small-right"></i>
                                             </a>
                                         </div>
