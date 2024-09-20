@@ -19,10 +19,10 @@
                         @csrf
                         <h4 class="g-title text-center">{{ get_phrase('Sign Up') }}</h4>
                         <p class="description text-center">{{ get_phrase('See your growth and get consulting support! ') }}</p>
-{{-- ################################### PERSONAL DETAILS ################################### --}}
-{{-- ####################################### ROW START ###################################### --}}
+    {{-- ################################### PERSONAL DETAILS ################################### --}}
+    {{-- ####################################### ROW START ###################################### --}}
                         <div class="row">
-{{-- ######################################## COL 1 ######################################## --}}
+    {{-- ######################################## COL 1 ######################################## --}}
                             <div class="col-md-4">
                                 {{-- 1 --}}
                                 <div class="form-group mb-5">
@@ -43,7 +43,7 @@
                                     @enderror
                                 </div>
                             </div>
-{{-- ######################################## COL 2 ######################################## --}}
+    {{-- ######################################## COL 2 ######################################## --}}
                             <div class="col-md-4">
                                 {{-- 1 --}}
                                 <div class="form-group mb-5">
@@ -64,11 +64,11 @@
                                     @enderror
                                 </div>
                             </div>
-{{-- ######################################## COL 3 ######################################## --}}
+    {{-- ######################################## COL 3 ######################################## --}}
                             <div class="col-md-4">
                                 {{-- 1 --}}
                                 <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Cellphone Number') }}</label>
+                                    <label for="" class="form-label">{{ get_phrase('Cellphone') }}</label>
                                     <input type="text" name="cellphone" class="form-control" placeholder="Enter your cellphone number">
 
                                     @error('cellphone')
@@ -77,18 +77,18 @@
                                 </div>
                             </div>
                         </div>
-{{-- ################################### COMPANY DETAILS ################################### --}}
+    {{-- ################################### COMPANY DETAILS ################################### --}}
                         <h4 class="g-title text-center">{{ get_phrase('Company details') }}</h4>
-{{-- ###################################### ROW START ###################################### --}}
+    {{-- ###################################### ROW START ###################################### --}}
                         <div class="row">
-{{-- ######################################## COL 1 ######################################## --}}
+    {{-- ######################################## COL 1 ######################################## --}}
                             <div class="col-md-4">
                                 {{-- 1 --}}
                                 <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Commercial Name') }}</label>
-                                    <input type="text" name="comercial_name" class="form-control" placeholder="Enter your company comercial name">
+                                    <label for="" class="form-label">{{ get_phrase('Company name') }}</label>
+                                    <input type="text" name="razon_social" class="form-control" placeholder="Enter company name">
 
-                                    @error('comercial_name')
+                                    @error('razon_social')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
@@ -148,26 +148,17 @@
                                 </div>
                                 {{-- 8 --}}
                                 <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Companies you supply to') }}</label>
-                                    <input type="text" name="companies_supply" class="form-control" placeholder="Enter the name of the companies you supply to">
+                                    <label for="" class="form-label">{{ get_phrase('Companies you supply for') }}</label>
+                                    <input type="text" name="companies_supply" class="form-control" placeholder="Enter the companies you supply for">
 
                                     @error('companies_supply')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
                             </div>
-{{-- ######################################## COL 2 ######################################## --}}
+    {{-- ######################################## COL 2 ######################################## --}}
                             <div class="col-md-4">
                                 {{-- 1 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Company name') }}</label>
-                                    <input type="text" name="razon_social" class="form-control" placeholder="Enter company name">
-
-                                    @error('razon_social')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 2 --}}
                                 <div class="form-group mb-5">
                                     <label for="" class="form-label">{{ get_phrase('Fiscal Number (RFC)') }}</label>
                                     <input type="text" name="RFC" class="form-control" placeholder="Enter company fiscal number">
@@ -176,7 +167,7 @@
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
-                                {{-- 3 --}}
+                                {{-- 2 --}}
                                 <div class="form-group mb-5">
                                     <label for="" class="form-label">{{ get_phrase('Address') }}</label>
                                     <input type="text" name="address" class="form-control" placeholder="(Enter Street, number, ZipCode, City)">
@@ -185,7 +176,7 @@
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
-                                {{-- 4 --}}
+                                {{-- 3 --}}
                                 <div class="form-group mb-5">
                                     <label for="" class="form-label">{{ get_phrase('Instagram') }}</label>
                                     <input type="text" name="instagram" class="form-control" placeholder="Enter Instagram link">
@@ -194,7 +185,7 @@
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
-                                {{-- 5 --}}
+                                {{-- 4 --}}
                                 <div class="form-group mb-5">
                                     <label for="" class="form-label">{{ get_phrase('Total employees') }}</label>
                                     <input type="text" name="employees" class="form-control" placeholder="Enter the total employees">
@@ -203,7 +194,7 @@
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
-                                {{-- 6 --}}
+                                {{-- 5 --}}
                                 <div class="form-group mb-5">
                                     <label for="" class="form-label">{{ get_phrase('Operation start date') }}</label>
                                     <input type="text" name="operation_start_date" class="form-control" placeholder="Enter operation start date">
@@ -212,7 +203,7 @@
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
-                                {{-- 7 --}}
+                                {{-- 6 --}}
                                 <div class="form-group mb-5">
                                     <label for="" class="form-label">{{ get_phrase('Main customers') }}</label>
                                     <input type="text" name="customers" class="form-control" placeholder="Enter your main customers">
@@ -221,17 +212,17 @@
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
-                                {{-- 8 --}}
+                                {{-- 7 --}}
                                 <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Have you previously participated in an improvement program') }}</label>
-                                    <input type="text" name="has_participated" class="form-control" placeholder="">
+                                    <label for="" class="form-label">{{ get_phrase('Have you ever participated in an improvement program') }}</label>
+                                    <input type="text" name="has_participated" class="form-control">
 
                                     @error('has_participated')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
                             </div>
-{{-- ######################################## COL 3 ######################################## --}}
+    {{-- ######################################## COL 3 ######################################## --}}
                             <div class="col-md-4">
                                 {{-- 1 --}}
                                 <div class="form-group mb-5">
@@ -272,7 +263,7 @@
                                 {{-- 5 --}}
                                 <div class="form-group mb-5">
                                     <label for="" class="form-label">{{ get_phrase('Number of employees in Mexico') }}</label>
-                                    <input type="text" name="employees_mexico" class="form-control" placeholder="Enter number of employees in Mexico">
+                                    <input type="text" name="employees_mexico" class="form-control">
 
                                     @error('employees_mexico')
                                         <small class="text-danger">{{ $message }}</small>
@@ -289,8 +280,8 @@
                                 </div>
                                 {{-- 7 --}}
                                 <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Are you a current regional manufacturing supplier?') }}</label>
-                                    <input type="text" name="is_supplier" class="form-control" placeholder="Are you a current regional manufacturing supplier?">
+                                    <label for="" class="form-label">{{ get_phrase('Are you a regional manufacturing supplier?') }}</label>
+                                    <input type="text" name="is_supplier" class="form-control">
 
                                     @error('is_supplier')
                                         <small class="text-danger">{{ $message }}</small>
@@ -298,7 +289,7 @@
                                 </div>
                             </div>
                         </div>
-{{-- ################################### ROW END ################################### --}}
+    {{-- ################################### ROW END ################################### --}}
                         <button type="submit" class="eBtn gradient w-100">{{ get_phrase('Sign Up') }}</button>
                         <p class="mt-20">{{ get_phrase('Already have account.') }} <a href="{{ route('login') }}">{{ get_phrase('Sign in') }}</a></p>
                     </form>

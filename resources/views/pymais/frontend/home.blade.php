@@ -4,10 +4,10 @@
 <!-- CSS for Accordion -->
 <style>
     .pymais-accordion-card {
-        border: 1px solid #e0e0e0;
+        border: 1px solid #e0e0e0 !important;
         margin-bottom: 1rem;
         padding: 1rem;
-        border-radius: 8px;
+        border-radius: 8px !important;
     }
 
     .pymais-accordion-header {
@@ -17,6 +17,8 @@
 
     .pymais-accordion-title {
         font-size: 1.25rem;
+        cursor: pointer;
+        padding: 10px 0;
         margin: 0;
     }
 
@@ -28,7 +30,7 @@
 
     .pymais-accordion-content p {
         margin: 0;
-        padding: 10px 0;
+        padding: 0px 10px !important;
     }
 
     .pymais-accordion-card.active .pymais-accordion-content {
@@ -113,67 +115,84 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row accordion accordion-flush"
+             id="accordionExample">
                 <!-- Single Card with Accordion -->
                 <div class="col-lg-3 col-xl-3 col-md-3 col-12">
-                    <div class="pymais-accordion-card">
-                        <div class="ep-category__icon ep2-bg">
-                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}"
-                                alt="category-icon" />
+                    <div class="accordion-item pymais-accordion-card">
+                        <div class="text-center pymais-accordion-title">
+                            <div class="accordion-header" id="headingOne">
+                                <div data-bs-toggle="collapse"  data-bs-target="#collapseOne"  aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="ep-category__icon ep2-bg">
+                                        <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}"
+                                            alt="category-icon" />
+                                    </div>
+                                    <h3 class="pymais-accordion-title">{{ __('SMEs') }}</h3>
+                                </div>
+                            </div>
                         </div>
-                        <div class="pymais-accordion-header text-center">
-                            <h3 class="pymais-accordion-title">{{ __('SMEs') }}</h3>
-                        </div>
-                        <div class="pymais-accordion-content">
-                            <p>{{ __('The ideal participant is an SME with at least 2 years of successful operation, a scalable business model, interest in the industrial market, focus on innovation, and willingness to collaborate with mentors.') }}
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <p class="accordion-body">{{ __('The ideal participant is an SME with at least 2 years of successful operation, a scalable business model, interest in the industrial market, focus on innovation, and willingness to collaborate with mentors.') }}
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- Single Card with Accordion -->
                 <div class="col-lg-3 col-xl-3 col-md-3 col-12">
-                    <div class="pymais-accordion-card">
-                        <div class="ep-category__icon ep2-bg">
-                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}"
-                                alt="category-icon" />
+                    <div class="accordion-item pymais-accordion-card">
+                        <div class="pymais-accordion-title text-center">
+                            <div class="accordion-header" id="headingTwo">
+                                <div data-bs-toggle="collapse"  data-bs-target="#collapseTwo"  aria-expanded="true" aria-controls="collapseTwo">
+                                    <div class="ep-category__icon ep2-bg">
+                                        <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}"
+                                            alt="category-icon" />
+                                    </div>
+                                    <h3 class="pymais-accordion-title">{{ __('Mentor') }}</h3>
+                                </div>
+                            </div>
                         </div>
-                        <div class="pymais-accordion-header text-center">
-                            <h3 class="pymais-accordion-title">{{ __('Mentor') }}</h3>
-                        </div>
-                        <div class="pymais-accordion-content">
-                            <p>{{ __('The ideal mentor has expertise in management, finance, or technology, understands the industrial sector, excels in virtual mentoring, and is committed to fostering SME growth through motivation and tangible results.') }}
+                        <div id="collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <p class="accordion-body">{{ __('The ideal mentor has expertise in management, finance, or technology, understands the industrial sector, excels in virtual mentoring, and is committed to fostering SME growth through motivation and tangible results.') }}
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- Single Card with Accordion -->
                 <div class="col-lg-3 col-xl-3 col-md-3 col-12">
-                    <div class="pymais-accordion-card">
-                        <div class="ep-category__icon ep2-bg">
-                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}"
-                                alt="category-icon" />
+                    <div class="accordion-item pymais-accordion-card">
+                        <div class="pymais-accordion-title text-center">
+                            <div class="accordion-header" id="headingThree">
+                                <div data-bs-toggle="collapse"  data-bs-target="#collapseThree"  aria-expanded="true" aria-controls="collapseThree">
+                                    <div class="ep-category__icon ep2-bg">
+                                        <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}"
+                                            alt="category-icon" />
+                                    </div>
+                                    <h3 class="pymais-accordion-title">{{ __('Corporate') }}</h3>
+                                </div>
+                            </div>
                         </div>
-                        <div class="pymais-accordion-header text-center">
-                            <h3 class="pymais-accordion-title">{{ __('Corporate') }}</h3>
-                        </div>
-                        <div class="pymais-accordion-content">
-                            <p>{{ __('The ideal tractor company is a large corporation aiming to diversify its supply chain, invest in innovative SMEs, and has experience integrating new suppliers, with a focus on strategic collaboration and regional development.') }}
+                        <div id="collapseThree" class="accordion-collapse collapse hide" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <p class="accordion-body">{{ __('The ideal tractor company is a large corporation aiming to diversify its supply chain, invest in innovative SMEs, and has experience integrating new suppliers, with a focus on strategic collaboration and regional development.') }}
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- Single Card with Accordion -->
                 <div class="col-lg-3 col-xl-3 col-md-3 col-12">
-                    <div class="pymais-accordion-card">
-                        <div class="ep-category__icon ep2-bg">
-                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}"
-                                alt="category-icon" />
+                    <div class="accordion-item pymais-accordion-card">
+                        <div class="pymais-accordion-title text-center">
+                            <div class="accordion-header" id="headingFour">
+                                <div data-bs-toggle="collapse"  data-bs-target="#collapseFour"  aria-expanded="true" aria-controls="collapseFour">
+                                    <div class="ep-category__icon ep2-bg">
+                                        <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}"
+                                            alt="category-icon" />
+                                    </div>
+                                    <h3 class="pymais-accordion-title">{{ __('Allies') }}</h3>
+                                </div>
+                            </div>
                         </div>
-                        <div class="pymais-accordion-header text-center">
-                            <h3 class="pymais-accordion-title">{{ __('Allies') }}</h3>
-                        </div>
-                        <div class="pymais-accordion-content">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia iste? Assumenda
+                        <div id="collapseFour" class="accordion-collapse collapse hide" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                            <p class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia iste? Assumenda
                                 iusto, corrupti quia nulla temporibus voluptate nostrum dolorem eligendi aspernatur dolore
                                 minus voluptates delectus natus est in enim!</p>
                         </div>
