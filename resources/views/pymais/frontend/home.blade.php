@@ -193,7 +193,7 @@
                             <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}"
                                 alt="category-icon" />
                         </div>
-                        <div class="pymais-accordion-header">
+                        <div class="pymais-accordion-header text-center">
                             <h3 class="pymais-accordion-title">{{ __('SMEs') }}</h3>
                         </div>
                         <div class="pymais-accordion-content">
@@ -209,7 +209,7 @@
                             <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}"
                                 alt="category-icon" />
                         </div>
-                        <div class="pymais-accordion-header">
+                        <div class="pymais-accordion-header text-center">
                             <h3 class="pymais-accordion-title">{{ __('Mentor') }}</h3>
                         </div>
                         <div class="pymais-accordion-content">
@@ -225,7 +225,7 @@
                             <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}"
                                 alt="category-icon" />
                         </div>
-                        <div class="pymais-accordion-header">
+                        <div class="pymais-accordion-header text-center">
                             <h3 class="pymais-accordion-title">{{ __('Corporate') }}</h3>
                         </div>
                         <div class="pymais-accordion-content">
@@ -241,7 +241,7 @@
                             <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}"
                                 alt="category-icon" />
                         </div>
-                        <div class="pymais-accordion-header">
+                        <div class="pymais-accordion-header text-center">
                             <h3 class="pymais-accordion-title">{{ __('Allies') }}</h3>
                         </div>
                         <div class="pymais-accordion-content">
