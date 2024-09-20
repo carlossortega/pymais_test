@@ -100,78 +100,6 @@
         </div>
     </section>
     <!-- End Start About Area -->
-    <!-- Start Profile Area -->
-    {{--  <section class="ep-category section-gap pt-0">
-        <div class="container ep-container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-xl-4 col-md-8 col-12">
-                    <div class="ep-section-head text-center">
-                        <h3 class="ep-section-head__big-title ep-split-text left">
-                            {{ __('This program is for you if you are') }}
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Single Card -->
-                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
-                    <a href="#" class="ep-category__card wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
-                        <div class="ep-category__icon ep2-bg">
-                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}"
-                                alt="category-icon" />
-                        </div>
-                        <div class="ep-category__info">
-                            <h3>{{ __('SMEs') }}</h3>
-                            <p>{{ __('The ideal participant is an SME with at least 2 years of successful operation, a scalable business model, interest in the industrial market, focus on innovation, and willingness to collaborate with mentors.') }}
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <!-- Single Card -->
-                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
-                    <a href="#" class="ep-category__card wow fadeInUp" data-wow-delay=".5s" data-wow-duration="1s">
-                        <div class="ep-category__icon ep2-bg">
-                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}"
-                                alt="category-icon" />
-                        </div>
-                        <div class="ep-category__info">
-                            <h3>{{ __('Mentor') }}</h3>
-                            <p>{{ __('The ideal mentor has expertise in management, finance, or technology, understands the industrial sector, excels in virtual mentoring, and is committed to fostering SME growth through motivation and tangible results.') }}
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <!-- Single Card -->
-                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
-                    <a href="#" class="ep-category__card wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
-                        <div class="ep-category__icon ep2-bg">
-                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}"
-                                alt="category-icon" />
-                        </div>
-                        <div class="ep-category__info">
-                            <h3>{{ __('Corporate') }}</h3>
-                            <p>{{ __('The ideal tractor company is a large corporation aiming to diversify its supply chain, invest in innovative SMEs, and has experience integrating new suppliers, with a focus on strategic collaboration and regional development.') }}
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <!-- Single Card -->
-                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
-                    <a href="#" class="ep-category__card wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
-                        <div class="ep-category__icon ep2-bg">
-                            <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}"
-                                alt="category-icon" />
-                        </div>
-                        <div class="ep-category__info">
-                            <h3>{{ __('Allies') }}</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia iste? Assumenda iusto, corrupti quia nulla temporibus voluptate nostrum dolorem eligendi aspernatur dolore minus voluptates delectus natus est in enim!</p>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>  --}}
 
     <!-- Start Profile Area -->
     <section class="ep-category section-gap pt-0">
@@ -259,13 +187,6 @@
     <!-- Start Group Study Area -->
     <section class="ep-about ep-about--style2 ep-section section-gap position-relative">
         <div class="container ep-container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="ep-section-head ep-section-head--style2">
-                        <h3 class="ep-section-head__color-title ep5-color"> {{ __('The program') }} </h3>
-                    </div>
-                </div>
-            </div>
             {{--  Business Enhancer  --}}
             <div class="row align-items-center">
                 <div class="col-lg-12 col-12">

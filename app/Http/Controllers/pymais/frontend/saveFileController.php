@@ -5,6 +5,8 @@ namespace App\Http\Controllers\pymais\frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class saveFileController extends Controller
 {
@@ -128,6 +130,14 @@ class saveFileController extends Controller
 
         Storage::disk('local')->put('sme_applications/' . $filename, $content);
 
-        return back()->with('success', 'Your application has been submitted successfully. We will get back to you soon.');
+        // Registrar al nuevo usuario en la plataforma
+        User::create([
+            'name' => $name,
+            'email' => $email,
+            'password' => Hash::make($password),
+            'role' => 'student',
+        ]);
+
+        return redirect()->route('my.profile')->with('success', 'Your application has been submitted successfully.');
     }
 }
