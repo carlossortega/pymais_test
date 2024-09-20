@@ -53,7 +53,7 @@
                         <span class="ep-hero__text">
                             {{ __('An innovative training program to accelerate the growth of manufacturing industry supply chain businesses, to strengthen and professionalize them based on real demands of each region.') }}
                         </span>
-                        <div class="">
+                        <div class="ep-hero_cta">
                             <a href="#" class="pymais-button-gradient">{{ __('Apply now') }}</a>
                         </div>
                     </div>
