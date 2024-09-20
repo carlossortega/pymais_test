@@ -63,6 +63,8 @@
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
+
+
                             </div>
     {{-- ######################################## COL 3 ######################################## --}}
                             <div class="col-md-4">
@@ -74,6 +76,12 @@
                                     @error('cellphone')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
+
+                                </div>
+
+                                <div class="form-group mb-5">
+                                    <label for="" class="form-label">{{ get_phrase('Company Phone -Ext') }}</label>
+                                    <input type="text" name="company_phone" class="form-control" placeholder="Enter company phone">
                                 </div>
                             </div>
                         </div>

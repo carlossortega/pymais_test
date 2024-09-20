@@ -49,11 +49,11 @@
             <div class="row align-items-center">
                 <div class="col-lg-12 col-xl-6 col-12">
                     <div class="ep-hero__content ep-hero__content--style2">
-                        <h1 class="ep-hero__title ep-split-text left"> {{ __('Welcome to') }} <span class="ep-hero__title ep-split-text" style="color:#506CC9;">PYMAIS</span></h1> 
+                        <h1 class="ep-hero__title ep-split-text left"> {{ __('Welcome to') }} <span class="ep-hero__title ep-split-text" style="color:#506CC9;">PYMAIS</span></h1>
                         <span class="ep-hero__text">
                             {{ __('An innovative training program to accelerate the growth of manufacturing industry supply chain businesses, to strengthen and professionalize them based on real demands of each region.') }}
                         </span>
-                        <div class="ep-hero_cta">
+                        <div class="mt-3">
                             <a href="#" class="pymais-button-gradient">{{ __('Apply now') }}</a>
                         </div>
                     </div>
@@ -75,8 +75,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-12 col-12 text-center">
                     <div class="ep-section__content ep-section__content--style2">
-                        <h3 class="ep-section__title ep-split-text left"> {{ __('About PYMAIS') }} </h3>
-                        <p class="ep-section__text"> {{ __('Strengthen supply chain integration through six key areas:') }}
+                        <h3 class="ep-section__title ep-split-text left"> {{ __('About ') }} <span style="color:#2849E6">PYMAIS</span></h3>
+                        <p class="ep-section__text"> {{ __('PYMAIS Platform accelerates SME growth in the manufacturing supply chain by strengthening and aligning them with regional demands, enhancing MX-US value chains, and capitalizing on nearshoring opportunities.') }}
                         </p>
                         <div class="pymais-section__widget">
                             <ul class="pymais-feature-list">
@@ -107,7 +107,7 @@
     <section class="ep-category section-gap pt-0">
         <div class="container ep-container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-xl-4 col-md-8 col-12">
+                <div class="col-lg-12 col-xl-12 col-md-12 col-12">
                     <div class="ep-section-head text-center">
                         <h3 class="ep-section-head__big-title ep-split-text left">
                             {{ __('This program is for you if you are') }}
@@ -210,6 +210,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12 col-12">
                     <div class="ep-section__content ep-section__content--style2">
+                        <h3 class="text-center" style="color:#2849E6"> <u>1</u></h3>
                         <h3 class="ep-section__title ep-split-text text-center">{{ __('Business Enhancer') }} </h3>
                         <p class="ep-section__text">
                             {{ __('Helping SMEs accelerate AI and tech adoption along with other crucial business functions.') }}
@@ -281,6 +282,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12 col-12">
                     <div class="ep-section__content ep-section__content--style2">
+                        <h3 class="text-center" style="color:#2849E6"><u>2</u></h3>
                         <h3 class="ep-section__title ep-split-text text-center">{{ __('Market Access & Specialization') }}
                         </h3>
                         <p class="ep-section__text">
@@ -382,19 +384,13 @@
                 <div class="ep-group-study__shape updown-ani">
                     <img src="{{ asset('assets/frontend/pymais/images/group-study/shape.svg') }}" alt="arrow-icon" />
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="ep-section-head ep-section-head--style2">
-                            <h3 class="ep-section-head__color-title ep9-color ep9-border-color">{{ __('PYMAIS') }}</h3>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="row">
                     <div class="col-lg-6 col-xl-4 col-12">
                         <div class="ep-section__content ep-section__content--style2">
-                            <h3 class="ep-section__title ep-split-text left">{{ __('How PYMAIS works?') }} </h3>
+                            <h3 class="ep-section__title ep-split-text left">{{ __('How PYMAIS works') }} </h3>
                             <p class="ep-section__text">
-                                {{ __('PyMAIS Platform is a training program that accelerates the growth of SMEs in the manufacturing supply chain by helping them take advantage of nearshoring opportunities and improve the MX-US value chains. It focuses on strengthening and professionalizing these businesses, aligning them with the specific demands and needs of each region to capitalize on opportunities in emerging markets.') }}
+                                {{ __('PYMAIS Platform is a training program that accelerates the growth of SMEs in the manufacturing supply chain by helping them take advantage of nearshoring opportunities and improve the MX-US value chains. It focuses on strengthening and professionalizing these businesses, aligning them with the specific demands and needs of each region to capitalize on opportunities in emerging markets.') }}
                             </p>
                             {{--  <div class="ep-section__btn">
                                                 <a href="#" class="ep-btn border-btn">Read More <i class="fi fi-rs-arrow-small-right"></i>
@@ -422,7 +418,8 @@
         <div class="container ep-container">
             <div class="col-12">
                 <div class="ep-section-head ep-section-head--style2">
-                    <h3 class="ep-section-head__color-title ep5-color">{{ __('Courses') }}</h3>
+                    <h3 class="ep-section-head__color-title ep5-color text-center">{{ __('Get started with') }}</h3>
+                    <h6 class="text-center">Key resources</h6>
                 </div>
             </div>
         </div>
@@ -503,8 +500,9 @@
                             </div>
 
                             <!-- Submit button -->
-                            <button type="submit"
-                                class="pymais-btn pymais-button-gradient pymais-newsletter-btn">{{ __('Submit') }}</button>
+                            <button type="submit" class="pymais-btn pymais-button-gradient">
+                                {{ __('Submit') }}
+                            </button>
                         </form>
                     </div>
                 </div>
