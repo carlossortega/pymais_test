@@ -41,30 +41,30 @@
     }
 </style>
 @endpush
-
 @section('content')
     <!-- Start Hero Area -->
-    <section class="ep-hero ep-hero--style2 hero-bg" style="background-color: #f2f2f2">
+    <section class="ep-hero ep-hero--style2 hero-bg particle-container" style="background-color: #f2f2f2">
+        <div id="particles-js"></div>
         <div class="container ep-container">
             <div class="row align-items-center">
                 <div class="col-lg-12 col-xl-6 col-12">
                     <div class="ep-hero__content ep-hero__content--style2">
-                        <h1 class="ep-hero__title ep-split-text left"> {{ __('Welcome to PYMAIS') }}</h1>
-                        <p class="ep-hero__text">
+                        <h1 class="ep-hero__title ep-split-text left"> {{ __('Welcome to') }} <span class="ep-hero__title ep-split-text" style="color:#506CC9;">PYMAIS</span></h1> 
+                        <span class="ep-hero__text">
                             {{ __('An innovative training program to accelerate the growth of manufacturing industry supply chain businesses, to strengthen and professionalize them based on real demands of each region.') }}
-                        </p>
+                        </span>
                         <div class="">
                             <a href="#" class="pymais-button-gradient">{{ __('Apply now') }}</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12 offset-xl-1 col-xl-5 col-12 order-top">
+                <!-- <div class="col-lg-12 offset-xl-1 col-xl-5 col-12 order-top">
                     <div class="ep-hero__widget ep-hero__widget-style2 position-relative">
                         <div class="ep-hero__img">
                             <img src="{{ asset('assets/frontend/pymais/images/welcome.jpg') }}" alt="hero-img" />
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -657,3 +657,127 @@
     </script>
 
 @endpush
+    <link rel="stylesheet" href="{{ asset('assets/frontend/pymais/plugins/css/particles.css') }}"/>
+    <script src="{{ asset('assets/frontend/pymais/plugins/js/particles.js') }}"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        particlesJS('particles-js',
+        {
+            "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                "enable": true,
+                "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#3C6EE2"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                "width": 0,
+                "color": "#000000"
+                },
+                "polygon": {
+                "nb_sides": 5
+                },
+                "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+                }
+            },
+            "size": {
+                "value": 2,
+                "random": true,
+                "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#5f8cde",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+                }
+            }
+            },
+            "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                "enable": false,
+                "mode": "repulse"
+                },
+                "onclick": {
+                "enable": false,
+                "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
+                },
+                "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+                },
+                "repulse": {
+                "distance": 200
+                },
+                "push": {
+                "particles_nb": 4
+                },
+                "remove": {
+                "particles_nb": 2
+                }
+            }
+            },
+            "retina_detect": true,
+            "config_demo": {
+            "hide_card": false,
+            "background_color": "#101010",
+            "background_image": "",
+            "background_position": "50% 50%",
+            "background_repeat": "no-repeat",
+            "background_size": "cover"
+            }
+        });
+    }
+    );
+    </script>
