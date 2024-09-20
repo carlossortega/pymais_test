@@ -216,7 +216,7 @@
       Event Slider JS
     ================================================================================*/
     $(".ep-event__slider").owlCarousel({
-      items: 4,
+      items: 3,
       autoplay: false,
       loop: true,
       touchDrag: true,
@@ -247,9 +247,6 @@
         },
         1200: {
           items: 3,
-        },
-        1570: {
-          items: 4,
         },
       },
     });

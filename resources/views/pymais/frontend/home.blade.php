@@ -131,7 +131,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse hide" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <p class="accordion-body">{{ __('The ideal participant is an SME with at least 2 years of successful operation, a scalable business model, interest in the industrial market, focus on innovation, and willingness to collaborate with mentors.') }}
                             </p>
                         </div>
@@ -438,7 +438,6 @@
                             ->where('status', 'active')
                             ->distinct('id') // Asegúrate de obtener cursos únicos
                             ->latest('id')
-                            ->take(4) // Limita la consulta a los 4 más recientes
                             ->get();
                     @endphp
                     @foreach ($featured_courses as $row)
@@ -484,16 +483,16 @@
                 <div class="col-lg-6 col-xl-6 col-12">
                     <div class="pymais-newsletter__content">
                         <h3 class="pymais-newsletter__title pymais-split-text left">
-                            {{ __('Subscribe to our newsletter') }}</h3>
+                            {{ __('Empowering SMEs for the future') }}</h3>
                         <p class="pymais-newsletter__text mb-3">
-                            {{ __('Stay up to date with the latest news and updates from PYMAIS.') }}
+                            {{ __('Sign up to be the first to access our groundbreaking platform, and be at the forefront of innovation and growth!') }}
                         </p>
                     </div>
                     <div class="pymais-newsletter__form">
                         <form action="{{ route('newsletter.store') }}" class="pymais-newsletter__form" method="post">
                             @csrf
                             <!-- Email input -->
-                            <input type="email" name="email" placeholder="{{ __('Enter your email') }}"
+                            <input type="email" name="email" placeholder="{{ __('Email address:') }}"
                                 class="pymais-newsletter-input" />
 
                             <!-- Checkbox for terms and conditions -->
@@ -505,7 +504,7 @@
 
                             <!-- Submit button -->
                             <button type="submit"
-                                class="pymais-btn pymais-button-gradient pymais-newsletter-btn">{{ __('Subscribe') }}</button>
+                                class="pymais-btn pymais-button-gradient pymais-newsletter-btn">{{ __('Submit') }}</button>
                         </form>
                     </div>
                 </div>
@@ -527,7 +526,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="ep-section-head ep-section-head--style2">
-                        <h3 class="ep-section-head__color-title ep5-color"> {{ __('In partnership with') }}</h3>
+                        <h3 id="partnership" class="ep-section__title"> {{ __('In partnership with') }} </h3>
                     </div>
                 </div>
             </div>
