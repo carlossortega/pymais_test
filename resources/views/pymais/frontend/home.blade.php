@@ -155,12 +155,12 @@
                         <ul class="nav nav-tabs mt-5 ep-product-tab-list" id="productTabs" role="tablist">
                             <li class="nav-item">
                                 <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
-                                    data-bs-target="#description" role="tab">{{ __('Primer Program') }}</button>
+                                    data-bs-target="#description" role="tab">{{ __('Primer') }}</button>
                             </li>
                             <li class="nav-item">
                                 <button class="nav-link" id="additional-info-tab" data-bs-toggle="tab"
                                     data-bs-target="#additional-info" role="tab">
-                                    {{ __('Accelerating Program') }}</button>
+                                    {{ __('Accelerating') }}</button>
                             </li>
                         </ul>
                         <div class="tab-content mt-4" id="productTabsContent">

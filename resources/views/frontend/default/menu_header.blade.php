@@ -18,116 +18,19 @@
                 <div class="header-menu d-flex justify-content-end me-lg-auto ms-lg-0 ms-auto mt-2 pt-1">
                     <div class="nav-menu w-100">
                         <ul class="primary-menu main-menu-ul d-flex align-items-center w-100">
-                            <li><a href="{{ route('home') }}" class="@if ($current_route == 'home') active @endif">{{ get_phrase('Home') }}</a></li>
-                            <li class="have-mega-menu"><a class="menu-parent-a @if ($current_route == 'courses') active @endif" href="{{ route('courses') }}">{{ get_phrase('Courses') }}</a>
-                                <ul class="mega-dropdown-menu mega main-mega-menu">
-                                    <div class="mega-menu-items">
-                                        <ul class="mega_list">
-                                            @foreach ($parent_categories->take(10) as $parent_category)
-                                                @php
-                                                    $child_categories = App\Models\Category::where('parent_id', $parent_category->id);
-                                                @endphp
-                                                <li>
-                                                    <a href="{{ route('courses', $parent_category->slug) }}">
-                                                        <span class="me-3"><i class="{{ $parent_category->icon }}"></i></span>
-                                                        <span class="me-auto">{{ ucfirst($parent_category->title) }}</span>
-                                                        @if ($child_categories->count() > 0)
-                                                            <span><i class="fi fi-sr-angle-small-right"></i></span>
-                                                        @endif
-                                                    </a>
 
-                                                    @if ($child_categories->count() > 0)
-                                                        <ul class="child_category_menu">
-                                                            @foreach ($child_categories->get() as $child_category)
-                                                                <li>
-                                                                    <a href="{{ route('courses', $child_category->slug) }}">
-                                                                        {{ ucfirst($child_category->title) }}
-                                                                    </a>
-                                                                </li>
-                                                            @endforeach
-                                                        </ul>
-                                                    @endif
-                                                </li>
-                                            @endforeach
-                                            <li>
-                                                <a href="{{ route('courses') }}">
-                                                    <span class="me-3"><i class="fas fa-list-ul"></i></span>
-                                                    <span class="me-auto">{{ get_phrase('All Courses') }}</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </ul>
-                            </li>
-                            {{-- <li class="pe-2 ps-5"><a href="{{ route('bootcamps') }}" class="@if ($current_route == 'bootcamps' || $current_route == 'bootcamp.details') active @endif">{{ get_phrase('Bootcamp') }}</a></li>
-                            <li><a href="{{ route('team.packages') }}" class="@if ($current_route == 'team.packages' || $current_route == 'team.package.details') active @endif">{{ get_phrase('Team Training') }}</a></li> --}}
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-sm-5 col-md-3 col-xl-4 ms-lg-0 col-auto ms-auto">
-                <form action="{{ route('courses') }}" method="get" class="Esearch_entry d-none d-sm-inline-block w-100 ms-4 mt-2">
-                    <input type="text" name="search" class="form-control" placeholder="{{ get_phrase('Search...') }}" @if (request()->has('search')) value="{{ request()->input('search') }}" @endif>
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-                <div class="floating-searchbar d-inline-block d-sm-none @auth loged-in @endauth">
-                    <button type="button" class="mt-1 py-3" onclick="this.parentElement.querySelector('form').classList.toggle('show')"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <form action="{{ route('courses') }}" method="get">
-                        <input type="text" name="search" class="form-control" @if (request()->has('search')) value="{{ request()->input('search') }}" @endif placeholder="{{ get_phrase('Search courses') }}">
-                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </div>
+
+
             </div>
             <div class="ms-lg-auto col-auto pt-1">
                 <div class="primary-end d-flex align-items-center @auth pt-1 @endif">
                     <div class="d-flex align-items-center gap-2">
 
-                        @isset(auth()->user()->id)
-                            <a href="{{ route('cart') }}" class="me-2 me-md-4 position-relative" data-bs-toggle="tooltip" data-bs-title="{{ get_phrase('Cart') }}" data-bs-placement="bottom">
-                                @php
-                                    $numberof_wishlist_item = App\Models\CartItem::where('user_id', auth()->user()->id)->count();
-                                @endphp
-                                @if ($numberof_wishlist_item > 0)
-                                    <span class="cart-top-number">
-                                        {{ $numberof_wishlist_item }}
-                                    </span>
-                                @endif
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 2H3.74001C4.82001 2 5.67 2.93 5.58 4L4.75 13.96C4.61 15.59 5.89999 16.99 7.53999 16.99H18.19C19.63 16.99 20.89 15.81 21 14.38L21.54 6.88C21.66 5.22 20.4 3.87 18.73 3.87H5.82001" stroke="#192335" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M16.25 22C16.9404 22 17.5 21.4404 17.5 20.75C17.5 20.0596 16.9404 19.5 16.25 19.5C15.5596 19.5 15 20.0596 15 20.75C15 21.4404 15.5596 22 16.25 22Z" stroke="#192335" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M8.25 22C8.94036 22 9.5 21.4404 9.5 20.75C9.5 20.0596 8.94036 19.5 8.25 19.5C7.55964 19.5 7 20.0596 7 20.75C7 21.4404 7.55964 22 8.25 22Z" stroke="#192335" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M9 8H21" stroke="#192335" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-
-                            <a href="{{ route('wishlist') }}" class="me-2 position-relative d-none d-lg-inline-block" data-bs-toggle="tooltip" data-bs-title="{{ get_phrase('Wishlist') }}" data-bs-placement="bottom">
-                                @php
-                                    $numberof_wishlist_item = App\Models\Wishlist::where('user_id', auth()->user()->id)->count();
-                                @endphp
-                                @if ($numberof_wishlist_item > 0)
-                                    <span class="cart-top-number">
-                                        {{ $numberof_wishlist_item }}
-                                    </span>
-                                @endif
-                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9.8966 17.1611C9.6825 17.1611 9.46744 17.1226 9.25142 17.0457C9.03539 16.9688 8.84532 16.8483 8.68122 16.6842L7.24472 15.3784C5.47164 13.7618 3.88862 12.1736 2.49567 10.614C1.10273 9.0544 0.40625 7.38357 0.40625 5.60154C0.40625 4.18232 0.884775 2.99419 1.84182 2.03714C2.79887 1.08009 3.98701 0.601562 5.40622 0.601562C6.21262 0.601562 7.0091 0.787464 7.79565 1.15926C8.58218 1.53106 9.28571 2.13491 9.90622 2.97081C10.5267 2.13491 11.2303 1.53106 12.0168 1.15926C12.8033 0.787464 13.5998 0.601562 14.4062 0.601562C15.8254 0.601562 17.0136 1.08009 17.9706 2.03714C18.9277 2.99419 19.4062 4.18232 19.4062 5.60154C19.4062 7.4028 18.6979 9.09222 17.2812 10.6698C15.8645 12.2474 14.285 13.822 12.5427 15.3938L11.1216 16.6842C10.9575 16.8483 10.7658 16.9688 10.5466 17.0457C10.3274 17.1226 10.1107 17.1611 9.8966 17.1611ZM9.187 4.49001C8.64598 3.66565 8.07643 3.06148 7.47835 2.67751C6.88027 2.29353 6.18956 2.10154 5.40622 2.10154C4.40622 2.10154 3.57289 2.43487 2.90622 3.10154C2.23956 3.7682 1.90622 4.60154 1.90622 5.60154C1.90622 6.4041 2.16487 7.24321 2.68217 8.11884C3.19947 8.99447 3.84882 9.86497 4.63022 10.7303C5.41164 11.5957 6.25812 12.4412 7.16965 13.2669C8.08118 14.0925 8.92606 14.8598 9.70427 15.5688C9.76197 15.6201 9.82929 15.6458 9.90622 15.6458C9.98316 15.6458 10.0505 15.6201 10.1082 15.5688C10.8864 14.8598 11.7313 14.0925 12.6428 13.2669C13.5543 12.4412 14.4008 11.5957 15.1822 10.7303C15.9636 9.86497 16.613 8.99447 17.1303 8.11884C17.6476 7.24321 17.9062 6.4041 17.9062 5.60154C17.9062 4.60154 17.5729 3.7682 16.9062 3.10154C16.2396 2.43487 15.4062 2.10154 14.4062 2.10154C13.6229 2.10154 12.9322 2.29353 12.3341 2.67751C11.736 3.06148 11.1665 3.66565 10.6254 4.49001C10.5408 4.61821 10.4344 4.71437 10.3062 4.77849C10.178 4.84259 10.0447 4.87464 9.90622 4.87464C9.76777 4.87464 9.63444 4.84259 9.50622 4.77849C9.37802 4.71437 9.27162 4.61821 9.187 4.49001Z"
-                                        fill="#192335" />
-                                </svg>
-                            </a>
-                        @else
-                            <a href="{{ route('cart') }}" class="ms-4 me-4 me-md-5 position-relative" data-bs-toggle="tooltip" data-bs-title="{{ get_phrase('Cart') }}" data-bs-placement="bottom">
-                                    <span class="cart-top-number">
-                                        0
-                                    </span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 2H3.74001C4.82001 2 5.67 2.93 5.58 4L4.75 13.96C4.61 15.59 5.89999 16.99 7.53999 16.99H18.19C19.63 16.99 20.89 15.81 21 14.38L21.54 6.88C21.66 5.22 20.4 3.87 18.73 3.87H5.82001" stroke="#192335" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M16.25 22C16.9404 22 17.5 21.4404 17.5 20.75C17.5 20.0596 16.9404 19.5 16.25 19.5C15.5596 19.5 15 20.0596 15 20.75C15 21.4404 15.5596 22 16.25 22Z" stroke="#192335" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M8.25 22C8.94036 22 9.5 21.4404 9.5 20.75C9.5 20.0596 8.94036 19.5 8.25 19.5C7.55964 19.5 7 20.0596 7 20.75C7 21.4404 7.55964 22 8.25 22Z" stroke="#192335" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M9 8H21" stroke="#192335" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        @endisset
 
                     </div>
 

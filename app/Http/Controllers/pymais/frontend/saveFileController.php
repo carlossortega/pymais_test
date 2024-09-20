@@ -15,7 +15,7 @@ class saveFileController extends Controller
             'phone_number' => 'required',
             'country' => 'required',
             'city' => 'required',
-            'professional_title' => 'required',
+            'professional_title' => 'nullable',
             'years_experience' => 'required',
             'was_mentor' => 'required',
             'detail_programs' => 'nullable',
@@ -24,6 +24,7 @@ class saveFileController extends Controller
             'specify_other_area' => 'nullable',
             'hours_available_week' => 'required',
             'in_person_virtual' => 'required',
+            'password' => 'required',
         ]);
 
         //get data from the form
@@ -57,9 +58,75 @@ class saveFileController extends Controller
 
     public function saveFileSME(Request $request){
         $request->validate([
-            'contact_name' => 'required',
+            'name' => 'required',
             'position' => 'required',
-            'phone' => 'required',
+            'company_phone' => 'required',
+            'cellphone' => 'required',
+            'email' => 'required|email',
+            'comercial_name' => 'nullable',
+            'fiscal_name' => 'nullable',
+            'RFC' => 'nullable',
+            'razon_social' => 'nullable',
+            'fiscal_name_usa' => 'nullable',
+            'naics' => 'nullable',
+            'fein' => 'nullable',
+            'tax_id' => 'nullable',
+            'address' => 'required',
+            'facebook' => 'nullable',
+            'linkedin' => 'nullable',
+            'instagram' => 'nullable',
+            'website' => 'nullable',
+            'products_services' => 'required',
+            'employees' => 'required',
+            'employees_mexico' => 'nullable',
+            'employees_usa' => 'nullable',
+            'operation_start_date' => 'required',
+            'annual_sales' => 'required',
+            'certifications' => 'nullable',
+            'customers' => 'required',
+            'is_supplier' => 'required',
+            'companies_supply' => 'nullable',
+            'has_participated' => 'required',
+            'password' => 'required',
         ]);
+
+        $name = $request->name;
+        $position = $request->position;
+        $company_phone = $request->company_phone;
+        $cellphone = $request->cellphone;
+        $email = $request->email;
+        $comercial_name = $request->comercial_name;
+        $fiscal_name = $request->fiscal_name;
+        $RFC = $request->RFC;
+        $razon_social = $request->razon_social;
+        $fiscal_name_usa = $request->fiscal_name_usa;
+        $naics = $request->naics;
+        $fein = $request->fein;
+        $tax_id = $request->tax_id;
+        $address = $request->address;
+        $facebook = $request->facebook;
+        $linkedin = $request->linkedin;
+        $instagram = $request->instagram;
+        $website = $request->website;
+        $products_services = $request->products_services;
+        $employees = $request->employees;
+        $employees_mexico = $request->employees_mexico;
+        $employees_usa = $request->employees_usa;
+        $operation_start_date = $request->operation_start_date;
+        $annual_sales = $request->annual_sales;
+        $certifications = $request->certifications;
+        $customers = $request->customers;
+        $is_supplier = $request->is_supplier;
+        $companies_supply = $request->companies_supply;
+        $has_participated = $request->has_participated;
+        $password = $request->password;
+
+        $content = "Name: $name\nPosition: $position\nCompany Phone: $company_phone\nCellphone: $cellphone\nEmail: $email\nComercial Name: $comercial_name\nFiscal Name: $fiscal_name\nRFC: $RFC\nRazon Social: $razon_social\nFiscal Name USA: $fiscal_name_usa\nNAICS: $naics\nFEIN: $fein\nTax ID: $tax_id\nAddress: $address\nFacebook: $facebook\nLinkedIn: $linkedin\nInstagram: $instagram\nWebsite: $website\nProducts and Services: $products_services\nEmployees: $employees\nEmployees Mexico: $employees_mexico\nEmployees USA: $employees_usa\nOperation Start Date: $operation_start_date\nAnnual Sales: $annual_sales\nCertifications: $certifications\nCustomers: $customers\nIs Supplier: $is_supplier\nCompanies Supply: $companies_supply\nHas Participated: $has_participated\n Password: $password\n";
+
+        $filename = 'sme_application_' . now()->format('Y-m-d_H-i-s') . '.txt';
+
+        Storage::disk('local')->put('sme_applications/' . $filename, $content);
+
+        return back()->with('success', 'Your application has been submitted successfully. We will get back to you soon.');
     }
 }
