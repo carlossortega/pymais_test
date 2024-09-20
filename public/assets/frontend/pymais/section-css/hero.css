@@ -417,6 +417,53 @@
     margin-bottom: 0;
   }
 
+/* Input ocupa todo el ancho de la columna */
+.pymais-newsletter-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Checkbox de términos y condiciones */
+.pymais-newsletter-checkbox {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.pymais-newsletter-checkbox input {
+    margin-right: 10px;
+}
+
+/* Botón ajustado al 100% del ancho */
+.pymais-newsletter-btn {
+    width: 100%;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Logo centrado y ajustado para ocupar la mayor parte del espacio */
+.pymais-logo-container {
+    text-align: center;
+}
+
+.pymais-newsletter-logo {
+    width: 100%;
+    max-width: 800px; /* Ajusta según sea necesario */
+    height: auto;
+    display: block;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
 
 
 /*============================================================================================

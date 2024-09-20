@@ -42,19 +42,24 @@
                 <div class="col-lg-12 col-12 text-center">
                     <div class="ep-section__content ep-section__content--style2">
                         <h3 class="ep-section__title ep-split-text left"> {{ __('About PYMAIS') }} </h3>
-                        <p class="ep-section__text"> {{ __('Strengthen supply chain integration through six key areas:') }}</p>
+                        <p class="ep-section__text"> {{ __('Strengthen supply chain integration through six key areas:') }}
+                        </p>
                         <div class="pymais-section__widget">
                             <ul class="pymais-feature-list">
                                 <li><i class="fi fi-ss-check-circle"></i>{{ __('Innovation') }}</li>
                                 <li><i class="fi fi-ss-check-circle"></i>{{ __('Scalability And Growth') }}</li>
                                 <li><i class="fi fi-ss-check-circle"></i>{{ __('Digital Transformation') }}</li>
-                                <li><i class="fi fi-ss-check-circle"></i>{{ __('Modernization And Improvement Of Operations') }}</li>
+                                <li><i
+                                        class="fi fi-ss-check-circle"></i>{{ __('Modernization And Improvement Of Operations') }}
+                                </li>
                                 <li><i class="fi fi-ss-check-circle"></i>{{ __('Financial Preparedness') }}</li>
-                                <li><i class="fi fi-ss-check-circle"></i>{{ __('Make SMEs Visible Within Value Chains') }}</li>
+                                <li><i class="fi fi-ss-check-circle"></i>{{ __('Make SMEs Visible Within Value Chains') }}
+                                </li>
                             </ul>
                         </div>
                         <div class="ep-section__btn">
-                            <a href="#" class="ep-btn border-btn pymais-20">{{ __('Why PYMAIS') }} <i class="fi fi-rs-arrow-small-right"></i></a>
+                            <a href="#" class="ep-btn border-btn pymais-20">{{ __('Why PYMAIS') }} <i
+                                    class="fi fi-rs-arrow-small-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +74,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-4 col-md-8 col-12">
                     <div class="ep-section-head text-center">
-                        <h3 class="ep-section-head__big-title ep-split-text left">{{ __('This program is for you if you are') }}
+                        <h3 class="ep-section-head__big-title ep-split-text left">
+                            {{ __('This program is for you if you are') }}
                         </h3>
                     </div>
                 </div>
@@ -354,6 +360,7 @@
         </div>
     </section>
     <!-- End Group Study Area -->
+
     <!-- Start Courses Area -->
     <section class="ep-event ep-team--style2 section-gap position-relative">
         <div class="container ep-container">
@@ -396,7 +403,8 @@
                                 $review_count = count($ratings);
                             @endphp
                             <div class="ep-event__info">
-                                <a href="{{ route('course.details', $row->slug) }}" class="ep-event__title">{{ ucfirst($row->title) }}</a>
+                                <a href="{{ route('course.details', $row->slug) }}"
+                                    class="ep-event__title">{{ ucfirst($row->title) }}</a>
                                 <a href="{{ route('course.details', $row->slug) }}">
                                     <p class="ep-event__p">
                                         {{ \Illuminate\Support\Str::words(strip_tags($row->description), 15, '...') }}
@@ -409,11 +417,56 @@
             </div>
         </div>
     </section>
-
     <!-- End Courses Area -->
 
+    <!-- Start Newsletter Area -->
+    <!-- Start Newsletter Area -->
+    <section class="pymais-newsletter pymais-newsletter--style2 section-gap position-relative" style="background-color: #f2f2f2">
+        <div class="container pymais-container">
+            <div class="row align-items-center">
+                <!-- Left Column: Newsletter Area -->
+                <div class="col-lg-6 col-xl-6 col-12">
+                    <div class="pymais-newsletter__content">
+                        <h3 class="pymais-newsletter__title pymais-split-text left">
+                            {{ __('Subscribe to our newsletter') }}</h3>
+                        <p class="pymais-newsletter__text mb-3">
+                            {{ __('Stay up to date with the latest news and updates from PYMAIS.') }}
+                        </p>
+                    </div>
+                    <div class="pymais-newsletter__form">
+                        <form action="{{route('newsletter.store')}}" class="pymais-newsletter__form" method="post">
+                            @csrf
+                            <!-- Email input -->
+                            <input type="email" name="email" placeholder="{{ __('Enter your email') }}" class="pymais-newsletter-input" />
+
+                            <!-- Checkbox for terms and conditions -->
+                            <div class="pymais-newsletter-checkbox">
+                                <input type="checkbox" id="accept-terms" name="accept-terms" required>
+                                <label for="accept-terms"><span class="small">{{ __('I accept the terms and conditions') }}</span></label>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit"
+                                class="pymais-btn pymais-button-gradient pymais-newsletter-btn">{{ __('Subscribe') }}</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Right Column: Logo -->
+                <div class="col-lg-6 col-xl-6 col-12 d-flex justify-content-center align-items-center">
+                    <div class="pymais-logo-container">
+                        <img src="{{asset('assets/frontend/pymais/images/favicon.svg')}}" alt="Logo" class="pymais-newsletter-logo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Newsletter Area -->
+
+    <!-- End Newsletter Area -->
+
+
     <!-- Start Partnership -->
-    <div class="container">
+    <div class="container mt-60">
         <div class="ep-brand section-gap pt-0">
             <div class="row">
                 <div class="col-12">

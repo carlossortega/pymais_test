@@ -28,6 +28,6 @@ class NewsletterController extends Controller
 
         // redirect back
         Session::flash('success', get_phrase('You have successfully subscribed.'));
-        return redirect()->back();
+        return back()->with('success', 'Thank you for subscribing! You will now receive our latest news and updates directly in your inbox.');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\pymais\frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class saveFileController extends Controller
 {

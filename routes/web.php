@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\pymais\frontend\saveFileController;
 
 //Cache clear route
 Route::get('/clear-cache', function () {
@@ -59,4 +60,4 @@ Route::controller(InstallController::class)->group(function () {
     Route::get('install/success', 'success')->name('success');
 });
 //Forms routes
-Route::post('save-application', [saveFileController::class, 'saveFile'])->name('save.application');
+Route::post('save-sme-application', [saveFileController::class, 'saveFileSME'])->name('save.application');

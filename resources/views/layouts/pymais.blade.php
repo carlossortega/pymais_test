@@ -113,6 +113,9 @@
     <!-- Main JS -->
     <script src="{{ asset('assets/frontend/pymais/plugins/js/active.js') }}"></script>
 
+    <!-- toster file -->
+    @include('frontend.default.toaster')
+
     @stack('form-js')
 </body>
 
