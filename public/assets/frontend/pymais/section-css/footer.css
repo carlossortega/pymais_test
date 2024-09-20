@@ -158,6 +158,7 @@
   background: var(--ep-primary-color-2);
   color: var(--ep-white-color);
   font-size: 13px;
+  padding-top: 25%;
 }
 
 .ep-footer__social ul li a:hover {
