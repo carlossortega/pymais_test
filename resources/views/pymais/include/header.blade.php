@@ -120,11 +120,10 @@
                     <div class="ep-header__inner ep-header__inner--style2">
                         <div class="row align-items-center">
                             <div class="col-lg-2 col-6">
-                                <div class="ep-logo">
-                                    <a href="{{route('home')}}">
-                                        <img src="{{asset('assets/frontend/pymais/images/logo.svg')}}" alt="logo" />
-                                    </a>
-                                </div>
+                                <a class="ep-logo-a" href="{{ route('home') }}">
+                                    <div class="ep-logo">
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-lg-10 col-6">
                                 <div class="ep-header__inner-right">
