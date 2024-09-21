@@ -134,6 +134,7 @@
                         <div id="collapseOne" class="accordion-collapse collapse hide" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <p class="accordion-body">{{ __('By joining PYMAIS, you will be able to accelerate the growth of your SME through specialized training, mentoring, key certifications and connections with large companies. This will help you expand your operations and strengthen your competitiveness in the MX-US market.') }}
                             <br><br>{{ __('To participate, your company must be an established SME with at least 2 years of operation, have a scalable business model and be interested in selling to the industry, and be committed to innovation and collaboration.') }}    
+                            <a href="{{ asset('pdfs/PARTICIPANT.pdf') }}" class="mt-3 ep-btn border-btn" target="_blank">{{ __('More Information') }} </a></i>
                         </p>
                         </div>
                     </div>
@@ -155,6 +156,7 @@
                         <div id="collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <p class="accordion-body">{{ __('As a PYMAIS mentor, you will have the opportunity to share your knowledge with growing SMEs, impact their development, and expand your network. You will also position yourself as a leader in your sector and gain access to valuable collaboration opportunities.') }}
                             <br><br>{{ __('To be a mentor, you need professional experience in key areas, industry sector knowledge, virtual mentoring skills and a focus on practical results that help SMEs grow.') }}
+                            <a href="{{ asset('pdfs/MENTOR.pdf') }}" class="mt-3 ep-btn border-btn" target="_blank">{{ __('More Information') }} </a></i>
                         </p>
                         </div>
                     </div>
@@ -176,6 +178,7 @@
                         <div id="collapseThree" class="accordion-collapse collapse hide" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <p class="accordion-body">{{ __('By joining PYMAIS as a traction company, you will be able to access a network of innovative SMEs, diversify your supply chain and explore nearshoring opportunities through virtual sessions. You will also strengthen your market position and contribute to regional economic development.')}} 
                                <br><br> {{ __('To participate, you must be a corporate with an interest in acquiring products or investing in SMEs, with experience in supplier integration and a commitment to innovation and strategic collaboration.') }}
+                               <a href="{{ asset('pdfs/CORPORATE.pdf') }}" class="mt-3 ep-btn border-btn" target="_blank">{{ __('More Information') }} </a></i>
                             </p>
                         </div>
                     </div>
@@ -197,7 +200,8 @@
                         <div id="collapseFour" class="accordion-collapse collapse hide" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                             <p class="accordion-body">{{ __('By joining PYMAIS as an ally or partner, you will be able to collaborate in the growth of SMEs, position your brand in an environment of innovation and generate new business opportunities. You will contribute to economic development and create synergies with key market players.') }}
                             <br><br>{{ __('To become an ally, you need to be an organization interested in supporting SMEs, preferably with experience in technology, finance, education or industry, and contribute resources, knowledge or connections that will boost their growth and professionalization.') }}
-                            </p>
+                            <a href="{{ asset('pdfs/PARTNER_ALLY.pdf') }}" class="mt-3 ep-btn border-btn" target="_blank">{{ __('More Information') }} </a></i>
+                        </p>
                         </div>
                     </div>
                 </div>
