@@ -548,12 +548,12 @@
                             </a>
                             <!-- Single Brand -->
                             <a href="https://funax.org/" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/logo_funax_vertical.png') }}"
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/LOGO-FUNAX-ACTUALIZACION-HORIZONTAL-ESP-01.png') }}"
                                     alt="brand-logo" />
                             </a>
                             <!-- Single Brand -->
                             <a href="https://tb-xl.com/" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/TheBridgeAcceleratorR.png') }}"
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/THEBRIDGE_LOGO-01.png') }}"
                                     alt="brand-logo" />
                             </a>
                             <!-- Single Brand -->
