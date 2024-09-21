@@ -377,7 +377,7 @@
   padding: 15px 25px;
 }
 #productTabs li button.active {
-	background: var(--ep-primary-color-3);
+	background: linear-gradient(to right, #3C6EE2, #2849E6);
 	color: #fff;
 }
 .mg-top-20{
