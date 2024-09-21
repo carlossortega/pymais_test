@@ -40,7 +40,7 @@
 
 </head>
 
-<body class="ep-magic-cursor">
+<body>
 
     <!-- Start Preloader  -->
     <div id="preloader">
@@ -51,17 +51,6 @@
         </div>
     </div>
     <!-- End Preloader -->
-
-    <!-- Start Cursor To Top  -->
-    <div class="cursor"></div>
-    <div class="cursor2"></div>
-    <!-- End Cursor To Top -->
-
-    <!-- Start Begin Magic Cursor -->
-    <div id="magic-cursor">
-        <div id="ball"></div>
-    </div>
-    <!-- End Begin Magic Cursor -->
 
     <!-- Start Back To Top  -->
     <div class="progress-wrap">

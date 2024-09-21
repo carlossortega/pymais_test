@@ -542,26 +542,44 @@
                     <div class="col-12">
                         <div class="owl-carousel ep-brand__slider">
                             <!-- Single Brand -->
+                            <a href="https://www.microsoft.com/en-us/corporate-responsibility/techspark" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/Microsoft_Logo.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <!-- Single Brand -->
+                            <a href="https://funax.org/" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/logo_funax_vertical.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <!-- Single Brand -->
+                            <a href="https://tb-xl.com/" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/TheBridgeAcceleratorR.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+                            <!-- Single Brand -->
+                            <a href="https://t-hub.mx/" class="ep-brand__logo ep-brand__logo--style2">
+                                <img src="{{ asset('assets/frontend/pymais/images/collab/logo-thub-01.png') }}"
+                                    alt="brand-logo" />
+                            </a>
+
+
+{{-- 
                             <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                                 <img src="{{ asset('assets/frontend/pymais/images/collab/microsoft.png') }}"
                                     alt="brand-logo" />
                             </a>
-                            <!-- Single Brand -->
                             <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                                 <img src="{{ asset('assets/frontend/pymais/images/collab/decj_soft.png') }}"
                                     alt="brand-logo" />
                             </a>
-                            <!-- Single Brand -->
                             <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                                 <img src="{{ asset('assets/frontend/pymais/images/collab/fechac_perse.png') }}"
                                     alt="brand-logo" />
                             </a>
-                            <!-- Single Brand -->
                             <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                                 <img src="{{ asset('assets/frontend/pymais/images/collab/fix_nm.png') }}"
                                     alt="brand-logo" />
                             </a>
-                            <!-- Single Brand -->
                             <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                                 <img src="{{ asset('assets/frontend/pymais/images/collab/fletes_mexico.png') }}"
                                     alt="brand-logo" />
@@ -617,7 +635,7 @@
                             <a href="#" class="ep-brand__logo ep-brand__logo--style2">
                                 <img src="{{ asset('assets/frontend/pymais/images/collab/weststar_bank.png') }}"
                                     alt="brand-logo" />
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                 </div>

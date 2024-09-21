@@ -118,7 +118,7 @@
       Brand Slider JS
     ================================================================================*/
     $(".ep-brand__slider").owlCarousel({
-      items: 6,
+      items: 4,
       autoplay: true,
       loop: true,
       touchDrag: true,
@@ -145,10 +145,7 @@
         },
         1024: {
           items: 4,
-        },
-        1280: {
-          items: 6,
-        },
+        }
       },
     });
 
