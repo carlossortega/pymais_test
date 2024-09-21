@@ -13,14 +13,14 @@
   display:inline;
 }
 .ep-logo {
-  background-image: url('/assets/frontend/pymais/images/logo_white.png'); /* Replace with your image path */
+  background-image: url('../images/logo_white.png'); /* Replace with your image path */
   background-size: contain;
   background-repeat: no-repeat;
   width: 250px;
   min-height: 42px;
 }
 .ep-header__middle.sticky .ep-logo {
-  background-image: url('/assets/frontend/pymais/images/logo.svg'); /* Replace with your image path */
+  background-image: url('../images/logo.svg'); /* Replace with your image path */
 }
 
 .ep-topbar__column2 {
