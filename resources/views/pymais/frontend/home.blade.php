@@ -1,45 +1,60 @@
 @extends('layouts.pymais')
 
 @push('accordion-css')
-<!-- CSS for Accordion -->
-<style>
-    .pymais-accordion-card {
-        border: 1px solid #e0e0e0 !important;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        border-radius: 8px !important;
-    }
+    <!-- CSS for Accordion -->
+    <style>
+        .pymais-accordion-card {
+            border: 1px solid #e0e0e0 !important;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px !important;
+            transition: background-color 0.3s ease;
+        }
 
-    .pymais-accordion-header {
-        cursor: pointer;
-        padding: 10px 0;
-    }
+        .pymais-accordion-header {
+            cursor: pointer;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
 
-    .pymais-accordion-title {
-        font-size: 1.25rem;
-        cursor: pointer;
-        padding: 10px 0;
-        margin: 0;
-    }
+        .pymais-accordion-title {
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 10px 0;
+            margin: 0;
+        }
 
-    .pymais-accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-out;
-    }
+        .pymais-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
 
-    .pymais-accordion-content p {
-        margin: 0;
-        padding: 0px 10px !important;
-    }
+        .pymais-accordion-content p {
+            margin: 0;
+            padding: 0px 10px !important;
+        }
 
-    .pymais-accordion-card.active .pymais-accordion-content {
-        max-height: none;
-        /* Allow the full content to be visible */
-        overflow: visible;
-        transition: max-height 0.5s ease-in;
-    }
-</style>
+        .pymais-accordion-card.active .pymais-accordion-content {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.5s ease-in;
+        }
+
+        /* Efecto de hover para la tarjeta */
+        .pymais-accordion-card:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Efecto de hover para los iconos dentro de la tarjeta */
+        .pymais-accordion-card:hover .icon-class {
+            background-color: #ddd;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+
+
 @endpush
 @section('content')
     <!-- Start Hero Area -->
@@ -49,7 +64,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-12 col-xl-6 col-12">
                     <div class="ep-hero__content ep-hero__content--style2">
-                        <h1 class="ep-hero__title ep-split-text left"> {{ __('Welcome to') }} <span class="ep-hero__title ep-split-text" style="color:#506CC9;">PYMAIS</span></h1>
+                        <h1 class="ep-hero__title ep-split-text left"> {{ __('Welcome to') }} <span
+                                class="ep-hero__title ep-split-text" style="color:#506CC9;">PYMAIS</span></h1>
                         <span class="ep-hero__text">
                             {{ __('An innovative training program to accelerate the growth of manufacturing industry supply chain businesses, to strengthen and professionalize them based on real demands of each region.') }}
                         </span>
@@ -59,12 +75,12 @@
                     </div>
                 </div>
                 <!-- <div class="col-lg-12 offset-xl-1 col-xl-5 col-12 order-top">
-                    <div class="ep-hero__widget ep-hero__widget-style2 position-relative">
-                        <div class="ep-hero__img">
-                            <img src="{{ asset('assets/frontend/pymais/images/welcome.jpg') }}" alt="hero-img" />
-                        </div>
-                    </div>
-                </div> -->
+                            <div class="ep-hero__widget ep-hero__widget-style2 position-relative">
+                                <div class="ep-hero__img">
+                                    <img src="{{ asset('assets/frontend/pymais/images/welcome.jpg') }}" alt="hero-img" />
+                                </div>
+                            </div>
+                        </div> -->
             </div>
         </div>
     </section>
@@ -75,8 +91,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-12 col-12 text-center">
                     <div class="ep-section__content ep-section__content--style2">
-                        <h3 class="ep-section__title ep-split-text left"> {{ __('About ') }} <span style="color:#2849E6">PYMAIS</span></h3>
-                        <p class="ep-section__text"> {{ __('PYMAIS Platform accelerates SME growth in the manufacturing supply chain by strengthening and aligning them with regional demands, enhancing MX-US value chains, and capitalizing on nearshoring opportunities.') }}
+                        <h3 class="ep-section__title ep-split-text left"> {{ __('About ') }} <span
+                                style="color:#2849E6">PYMAIS</span></h3>
+                        <p class="ep-section__text">
+                            {{ __('PYMAIS Platform accelerates SME growth in the manufacturing supply chain by strengthening and aligning them with regional demands, enhancing MX-US value chains, and capitalizing on nearshoring opportunities.') }}
                         </p>
                         <div class="pymais-section__widget">
                             <ul class="pymais-feature-list">
@@ -92,8 +110,8 @@
                             </ul>
                         </div>
                         <div class="ep-section__btn">
-                            <a href="{{asset('pdfs/PYMAIS.pdf')}}" class="ep-btn border-btn pymais-20" target="_blank">{{ __('Why PYMAIS') }} <i
-                                    class="fi fi-rs-arrow-small-right"></i></a>
+                            <a href="{{ asset('pdfs/PYMAIS.pdf') }}" class="ep-btn border-btn pymais-20"
+                                target="_blank">{{ __('Why PYMAIS') }} <i class="fi fi-rs-arrow-small-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -103,26 +121,26 @@
     </section>
     <!-- End Start About Area -->
 
-    <!-- Start Profile Area -->
+    <!-- Start Accordion Profile Area -->
     <section class="ep-category section-gap pt-0">
         <div class="container ep-container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-50">
                 <div class="col-lg-12 col-xl-12 col-md-12 col-12">
-                    <div class="ep-section-head text-center">
+                    <div class="ep-section-head text-center 0">
                         <h3 class="ep-section-head__big-title ep-split-text left">
                             {{ __('This program is for you if you are') }}
                         </h3>
                     </div>
                 </div>
             </div>
-            <div class="row accordion accordion-flush"
-             id="accordionExample">
+            <div class="row accordion accordion-flush" id="accordionExample">
                 <!-- Single Card with Accordion -->
                 <div class="col-lg-3 col-xl-3 col-md-3 col-12">
                     <div class="accordion-item pymais-accordion-card">
                         <div class="text-center pymais-accordion-title">
                             <div class="accordion-header" id="headingOne">
-                                <div data-bs-toggle="collapse"  data-bs-target="#collapseOne"  aria-expanded="true" aria-controls="collapseOne">
+                                <div data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
                                     <div class="ep-category__icon ep2-bg">
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}"
                                             alt="category-icon" />
@@ -131,11 +149,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="collapseOne" class="accordion-collapse collapse hide" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <p class="accordion-body">{{ __('By joining PYMAIS, you will be able to accelerate the growth of your SME through specialized training, mentoring, key certifications and connections with large companies. This will help you expand your operations and strengthen your competitiveness in the MX-US market.') }}
-                            <br><br>{{ __('To participate, your company must be an established SME with at least 2 years of operation, have a scalable business model and be interested in selling to the industry, and be committed to innovation and collaboration.') }}    
-                            <a href="{{ asset('pdfs/PARTICIPANT.pdf') }}" class="mt-3 ep-btn border-btn" target="_blank">{{ __('More Information') }} </a></i>
-                        </p>
+                        <div id="collapseOne" class="accordion-collapse collapse hide" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <p class="accordion-body text-center">
+                                {{ __('By joining PYMAIS, you will be able to accelerate the growth of your SME through specialized training, mentoring, key certifications and connections with large companies. This will help you expand your operations and strengthen your competitiveness in the MX-US market.') }}
+                                <br><br>{{ __('To participate, your company must be an established SME with at least 2 years of operation, have a scalable business model and be interested in selling to the industry, and be committed to innovation and collaboration.') }}
+                                <a href="{{ asset('pdfs/PARTICIPANT.pdf') }}" class="mt-3 ep-btn border-btn"
+                                    target="_blank">{{ __('More Information') }} </a></i>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +165,8 @@
                     <div class="accordion-item pymais-accordion-card">
                         <div class="pymais-accordion-title text-center">
                             <div class="accordion-header" id="headingTwo">
-                                <div data-bs-toggle="collapse"  data-bs-target="#collapseTwo"  aria-expanded="true" aria-controls="collapseTwo">
+                                <div data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                                    aria-controls="collapseTwo">
                                     <div class="ep-category__icon ep2-bg">
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}"
                                             alt="category-icon" />
@@ -153,11 +175,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <p class="accordion-body">{{ __('As a PYMAIS mentor, you will have the opportunity to share your knowledge with growing SMEs, impact their development, and expand your network. You will also position yourself as a leader in your sector and gain access to valuable collaboration opportunities.') }}
-                            <br><br>{{ __('To be a mentor, you need professional experience in key areas, industry sector knowledge, virtual mentoring skills and a focus on practical results that help SMEs grow.') }}
-                            <a href="{{ asset('pdfs/MENTOR.pdf') }}" class="mt-3 ep-btn border-btn" target="_blank">{{ __('More Information') }} </a></i>
-                        </p>
+                        <div id="collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <p class="accordion-body text-center">
+                                {{ __('As a PYMAIS mentor, you will have the opportunity to share your knowledge with growing SMEs, impact their development, and expand your network. You will also position yourself as a leader in your sector and gain access to valuable collaboration opportunities.') }}
+                                <br><br>{{ __('To be a mentor, you need professional experience in key areas, industry sector knowledge, virtual mentoring skills and a focus on practical results that help SMEs grow.') }}
+                                <a href="{{ asset('pdfs/MENTOR.pdf') }}" class="mt-3 ep-btn border-btn"
+                                    target="_blank">{{ __('More Information') }} </a></i>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -166,7 +191,8 @@
                     <div class="accordion-item pymais-accordion-card">
                         <div class="pymais-accordion-title text-center">
                             <div class="accordion-header" id="headingThree">
-                                <div data-bs-toggle="collapse"  data-bs-target="#collapseThree"  aria-expanded="true" aria-controls="collapseThree">
+                                <div data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
+                                    aria-controls="collapseThree">
                                     <div class="ep-category__icon ep2-bg">
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}"
                                             alt="category-icon" />
@@ -175,10 +201,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="collapseThree" class="accordion-collapse collapse hide" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <p class="accordion-body">{{ __('By joining PYMAIS as a traction company, you will be able to access a network of innovative SMEs, diversify your supply chain and explore nearshoring opportunities through virtual sessions. You will also strengthen your market position and contribute to regional economic development.')}} 
-                               <br><br> {{ __('To participate, you must be a corporate with an interest in acquiring products or investing in SMEs, with experience in supplier integration and a commitment to innovation and strategic collaboration.') }}
-                               <a href="{{ asset('pdfs/CORPORATE.pdf') }}" class="mt-3 ep-btn border-btn" target="_blank">{{ __('More Information') }} </a></i>
+                        <div id="collapseThree" class="accordion-collapse collapse hide" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <p class="accordion-body text-center">
+                                {{ __('By joining PYMAIS as a traction company, you will be able to access a network of innovative SMEs, diversify your supply chain and explore nearshoring opportunities through virtual sessions. You will also strengthen your market position and contribute to regional economic development.') }}
+                                <br><br>
+                                {{ __('To participate, you must be a corporate with an interest in acquiring products or investing in SMEs, with experience in supplier integration and a commitment to innovation and strategic collaboration.') }}
+                                <a href="{{ asset('pdfs/CORPORATE.pdf') }}" class="mt-3 ep-btn border-btn"
+                                    target="_blank">{{ __('More Information') }} </a></i>
                             </p>
                         </div>
                     </div>
@@ -188,7 +218,8 @@
                     <div class="accordion-item pymais-accordion-card">
                         <div class="pymais-accordion-title text-center">
                             <div class="accordion-header" id="headingFour">
-                                <div data-bs-toggle="collapse"  data-bs-target="#collapseFour"  aria-expanded="true" aria-controls="collapseFour">
+                                <div data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true"
+                                    aria-controls="collapseFour">
                                     <div class="ep-category__icon ep2-bg">
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}"
                                             alt="category-icon" />
@@ -197,18 +228,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="collapseFour" class="accordion-collapse collapse hide" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                            <p class="accordion-body">{{ __('By joining PYMAIS as an ally or partner, you will be able to collaborate in the growth of SMEs, position your brand in an environment of innovation and generate new business opportunities. You will contribute to economic development and create synergies with key market players.') }}
-                            <br><br>{{ __('To become an ally, you need to be an organization interested in supporting SMEs, preferably with experience in technology, finance, education or industry, and contribute resources, knowledge or connections that will boost their growth and professionalization.') }}
-                            <a href="{{ asset('pdfs/PARTNER_ALLY.pdf') }}" class="mt-3 ep-btn border-btn" target="_blank">{{ __('More Information') }} </a></i>
-                        </p>
+                        <div id="collapseFour" class="accordion-collapse collapse hide" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <p class="accordion-body text-center">
+                                {{ __('By joining PYMAIS as an ally or partner, you will be able to collaborate in the growth of SMEs, position your brand in an environment of innovation and generate new business opportunities. You will contribute to economic development and create synergies with key market players.') }}
+                                <br><br>{{ __('To become an ally, you need to be an organization interested in supporting SMEs, preferably with experience in technology, finance, education or industry, and contribute resources, knowledge or connections that will boost their growth and professionalization.') }}
+                                <a href="{{ asset('pdfs/PARTNER_ALLY.pdf') }}" class="mt-3 ep-btn border-btn"
+                                    target="_blank">{{ __('More Information') }} </a></i>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Profile Area -->
+    <!-- End Accordion Profile Area -->
 
     <!-- Start Group Study Area -->
     <section class="ep-about ep-about--style2 ep-section section-gap position-relative">
@@ -219,7 +253,7 @@
                     <div class="ep-section__content ep-section__content--style2">
                         <h3 class="text-center" style="color:#2849E6"> <u>1</u></h3>
                         <h3 class="ep-section__title ep-split-text text-center">{{ __('Business Enhancer') }} </h3>
-                        <p class="ep-section__text">
+                        <p class="ep-section__text text-center">
                             {{ __('Helping SMEs accelerate AI and tech adoption along with other crucial business functions.') }}
                         </p>
                         <ul class="nav nav-tabs mt-5 ep-product-tab-list" id="productTabs" role="tablist">
@@ -273,7 +307,8 @@
                                         </p>
 
                                         <div class="ep-section__btn">
-                                            <a href="{{asset('pdfs/Full-Curriculum.pdf')}}" class="ep-btn border-btn" target="_blank">{{ __('See full curriculum') }}
+                                            <a href="{{ asset('pdfs/Full-Curriculum.pdf') }}" class="ep-btn border-btn"
+                                                target="_blank">{{ __('See full curriculum') }}
                                                 <i class="fi fi-rs-arrow-small-right"></i>
                                             </a>
                                         </div>
@@ -365,14 +400,14 @@
                                             {{ __('Furthermore participating companies may take key updating content such as LinkedIn courses anytime.') }}
                                         </p>
 
-                                        <div class="ep-section__btn">
-                                            <a href="#" class="ep-btn border-btn">{{ __('About us') }} <i
-                                                    class="fi fi-rs-arrow-small-right"></i>
-                                            </a>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <a href="#" class="pymais-button-gradient">{{ __('Apply now') }}</a>
                         </div>
                     </div>
                 </div>
@@ -484,7 +519,7 @@
         <div class="container pymais-container">
             <div class="row align-items-center">
                 <!-- Left Column: Newsletter Area -->
-                <div class="col-lg-6 col-xl-6 col-12">
+                <div class="col-lg-6 col-xl-6 col-12 offset-md-1">
                     <div class="pymais-newsletter__content">
                         <h3 class="pymais-newsletter__title pymais-split-text left">
                             {{ __('Empowering SMEs for the future') }}</h3>
@@ -514,7 +549,7 @@
                     </div>
                 </div>
                 <!-- Right Column: Logo -->
-                <div class="col-lg-6 col-xl-6 col-12 d-flex justify-content-center align-items-center">
+                <div class="col-lg-5 col-xl-5 col-12 d-flex justify-content-center align-items-center">
                     <div class="pymais-logo-container">
                         <img src="{{ asset('assets/frontend/pymais/images/favicon.svg') }}" alt="Logo"
                             class="pymais-newsletter-logo" />
@@ -536,110 +571,33 @@
                 </div>
             </div>
             {{-- QUITAR ESTILO DE COLOR EN EL DIV --}}
-            <div style="background-color: #3C6EE2; padding:15px" class="container ep-container">
-                {{-- QUITAR ESTILO DE COLOR EN EL DIV --}}
+            <div class="container ep-container">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="owl-carousel ep-brand__slider">
-                            <!-- Single Brand -->
-                            <a href="https://www.microsoft.com/en-us/corporate-responsibility/techspark" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/Microsoft_Logo.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <!-- Single Brand -->
-                            <a href="https://funax.org/" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/LOGO-FUNAX-ACTUALIZACION-HORIZONTAL-ESP-01.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <!-- Single Brand -->
-                            <a href="https://tb-xl.com/" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/THEBRIDGE_LOGO-01.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <!-- Single Brand -->
-                            <a href="https://t-hub.mx/" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/logo-thub-01.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-
-
-{{-- 
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/microsoft.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/decj_soft.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/fechac_perse.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/fix_nm.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/fletes_mexico.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/flo_networks.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/high_desert.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/hunt.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/kelly_tomblin.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/mt_net.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/novamex.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/pioneers_21.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/sunflower_bank.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/technology_hub.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/tecma.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/the_city_of_eptx.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/the_electric_company.png') }}"
-                                    alt="brand-logo" />
-                            </a>
-                            <a href="#" class="ep-brand__logo ep-brand__logo--style2">
-                                <img src="{{ asset('assets/frontend/pymais/images/collab/weststar_bank.png') }}"
-                                    alt="brand-logo" />
-                            </a> --}}
-                        </div>
+                    <div class="col-md-2 offset-md-1">
+                        <a href="https://www.microsoft.com/en-us/corporate-responsibility/techspark"
+                            class="ep-brand__logo ep-brand__logo--style2">
+                            <img src="{{ asset('assets/frontend/pymais/images/collab/Microsoft_Logo.png') }}" alt="brand-logo" />
+                        </a>
+                    </div>
+                    <div class="col-md-2 offset-md-1">
+                        <a href="https://funax.org/" class="ep-brand__logo ep-brand__logo--style2">
+                            <img src="{{ asset('assets/frontend/pymais/images/collab/LOGO-FUNAX-ACTUALIZACION-HORIZONTAL-ESP-01.png') }}"
+                                alt="brand-logo" />
+                        </a>
+                    </div>
+                    <div class="col-md-2 offset-md-1">
+                        <a href="https://tb-xl.com/" class="ep-brand__logo ep-brand__logo--style2">
+                            <img src="{{ asset('assets/frontend/pymais/images/collab/THEBRIDGE_LOGO-01.png') }}" alt="brand-logo" />
+                        </a>
+                    </div>
+                    <div class="col-md-2 offset-md-1">
+                        <a href="https://t-hub.mx/" class="ep-brand__logo ep-brand__logo--style2">
+                            <img src="{{ asset('assets/frontend/pymais/images/collab/logo-thub-01.png') }}" alt="brand-logo" />
+                        </a>
                     </div>
                 </div>
             </div>
+
         </div>
 
 
@@ -648,8 +606,7 @@
 @endsection
 
 @push('accordion-js')
-
-<!-- JavaScript for Accordion with Dynamic Height -->
+    <!-- JavaScript for Accordion with Dynamic Height -->
     <script>
         document.querySelectorAll('.pymais-accordion-title').forEach(function(title) {
             title.addEventListener('click', function() {
@@ -679,127 +636,126 @@
     </script>
 
 @endpush
-    <link rel="stylesheet" href="{{ asset('assets/frontend/pymais/plugins/css/particles.css') }}"/>
-    <script src="{{ asset('assets/frontend/pymais/plugins/js/particles.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('assets/frontend/pymais/plugins/css/particles.css') }}" />
+<script src="{{ asset('assets/frontend/pymais/plugins/js/particles.js') }}"></script>
+
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        particlesJS('particles-js',
-        {
-            "particles": {
-            "number": {
-                "value": 80,
-                "density": {
-                "enable": true,
-                "value_area": 800
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#3C6EE2"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        },
+                        "image": {
+                            "src": "img/github.svg",
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 2,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#5f8cde",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 6,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": false,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": false,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true,
+                "config_demo": {
+                    "hide_card": false,
+                    "background_color": "#101010",
+                    "background_image": "",
+                    "background_position": "50% 50%",
+                    "background_repeat": "no-repeat",
+                    "background_size": "cover"
                 }
-            },
-            "color": {
-                "value": "#3C6EE2"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                "width": 0,
-                "color": "#000000"
-                },
-                "polygon": {
-                "nb_sides": 5
-                },
-                "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-                }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": false,
-                "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-                }
-            },
-            "size": {
-                "value": 2,
-                "random": true,
-                "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#5f8cde",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 6,
-                "direction": "none",
-                "random": false,
-                "straight": false,
-                "out_mode": "out",
-                "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-                }
-            }
-            },
-            "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                "enable": false,
-                "mode": "repulse"
-                },
-                "onclick": {
-                "enable": false,
-                "mode": "push"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                "distance": 400,
-                "line_linked": {
-                    "opacity": 1
-                }
-                },
-                "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-                },
-                "repulse": {
-                "distance": 200
-                },
-                "push": {
-                "particles_nb": 4
-                },
-                "remove": {
-                "particles_nb": 2
-                }
-            }
-            },
-            "retina_detect": true,
-            "config_demo": {
-            "hide_card": false,
-            "background_color": "#101010",
-            "background_image": "",
-            "background_position": "50% 50%",
-            "background_repeat": "no-repeat",
-            "background_size": "cover"
-            }
+            });
         });
-    }
-    );
     </script>
