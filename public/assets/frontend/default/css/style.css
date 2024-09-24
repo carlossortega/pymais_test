@@ -5149,6 +5149,38 @@ a#team-training-header-menu-icon svg{
     display: block;
     margin-bottom: -1.5px;
 }
+
+.pymais-button-gradient {
+    background: linear-gradient(to right, #2849E6, #3C6EE2);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 20px;
+    position: relative;
+}
+
+.pymais-button-gradient:hover {
+    background: linear-gradient(to right, #3C6EE2, #2849E6); /* Efecto al pasar el ratón */
+    color: #f2f2f2;
+}
+
+.pymais-padding-section {
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.pymais-input-background {
+    background-color: #f2f2f2;
+    /* border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: var(--text-color); */
+}
 /* Buttons Css End ***
 *********************/
 /* Sham ended */

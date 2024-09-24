@@ -61,36 +61,36 @@ class saveFileController extends Controller
 
     public function saveFileSME(Request $request){
         $request->validate([
-            'name' => 'required',
+            'name' => 'required', //
             'position' => 'required',
             'company_phone' => 'required',
             'cellphone' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email', //
             'comercial_name' => 'nullable',
             'fiscal_name' => 'nullable',
             'RFC' => 'nullable',
-            'razon_social' => 'nullable',
+            'razon_social' => 'nullable',//
             'fiscal_name_usa' => 'nullable',
             'naics' => 'nullable',
             'fein' => 'nullable',
             'tax_id' => 'nullable',
-            'address' => 'required',
+            'address' => 'nullable',
             'facebook' => 'nullable',
             'linkedin' => 'nullable',
             'instagram' => 'nullable',
             'website' => 'nullable',
-            'products_services' => 'required',
-            'employees' => 'required',
+            'products_services' => 'nullable',
+            'employees' => 'nullable',
             'employees_mexico' => 'nullable',
             'employees_usa' => 'nullable',
-            'operation_start_date' => 'required',
-            'annual_sales' => 'required',
+            'operation_start_date' => 'nullable',
+            'annual_sales' => 'nullable',
             'certifications' => 'nullable',
-            'customers' => 'required',
-            'is_supplier' => 'required',
+            'customers' => 'nullable',
+            'is_supplier' => 'nullable',
             'companies_supply' => 'nullable',
-            'has_participated' => 'required',
-            'password' => 'required',
+            'has_participated' => 'nullable',
+            'password' => 'required', //
         ]);
 
         $name = $request->name;

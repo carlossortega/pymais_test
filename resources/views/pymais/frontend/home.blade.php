@@ -252,7 +252,7 @@
                     <div class="ep-section__content ep-section__content--style2">
                         <h3 class="ep-section__title ep-split-text text-center">{{ __('Program Outline') }} </h3>
                         <h3 class="text-center" style="color:#2849E6"> <u>1</u></h3>
-                        <h3 class="ep-section__title ep-split-text text-center">{{ __('Business Enhancer') }} </h3>
+                        <h3 class="ep-section__title ep-split-text text-center" style="font-size: 30px">{{ __('Business Enhancer') }} </h3>
                         <p class="ep-section__text text-center">
                             {{ __('Helping SMEs accelerate AI and tech adoption along with other crucial business functions.') }}
                         </p>
@@ -325,7 +325,7 @@
                 <div class="col-lg-12 col-12">
                     <div class="ep-section__content ep-section__content--style2">
                         <h3 class="text-center" style="color:#2849E6"><u>2</u></h3>
-                        <h3 class="ep-section__title ep-split-text text-center">{{ __('Market Access & Specialization') }}
+                        <h3 class="ep-section__title ep-split-text text-center" style="font-size: 30px">{{ __('Market Access & Specialization') }}
                         </h3>
                         <p class="ep-section__text">
                             {{ __("Promoting SMEs' value propositions to potential binational industry customers through speed dating and demo day's sessions furthermore participating companies will have the opportunity to take specialization content according to their development needs.") }}

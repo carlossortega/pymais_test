@@ -334,8 +334,9 @@
                         </div>
                         {{-- ################################### ROW END ################################### --}}
                         <button type="submit" class="eBtn gradient w-100">{{ get_phrase('Sign Up') }}</button>
-                        <p class="mt-20">{{ get_phrase('Already have account.') }} <a
-                                href="{{ route('login') }}">{{ get_phrase('Sign in') }}</a></p>
+                        <p class="mt-20">{{ get_phrase('Already have account.') }}
+                            <a href="{{ route('login') }}">{{ get_phrase('Sign in') }}</a>
+                        </p>
                     </form>
                 </div>
             </div>

@@ -3,60 +3,9 @@
 @push('meta')@endpush
 @push('css')
     <style>
-        .form-icons .right {
-            right: 20px;
-            cursor: pointer !important;
+        body {
+            background-color: #f2f2f2 !important;
         }
-
-        /* Style the form */
-#regForm {
-    background-color: #ffffff;
-    margin: 100px auto;
-    padding: 40px;
-    width: 70%;
-    min-width: 300px;
-  }
-
-  /* Style the input fields */
-  input {
-    padding: 10px;
-    width: 100%;
-    font-size: 17px;
-    font-family: Raleway;
-    border: 1px solid #aaaaaa;
-  }
-
-  /* Mark input boxes that gets an error on validation: */
-  input.invalid {
-    background-color: #ffdddd;
-  }
-
-  /* Hide all steps by default: */
-  .tab {
-    display: none;
-  }
-
-  /* Make circles that indicate the steps of the form: */
-  .step {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbbbbb;
-    border: none;
-    border-radius: 50%;
-    display: inline-block;
-    opacity: 0.5;
-  }
-
-  /* Mark the active step: */
-  .step.active {
-    opacity: 1;
-  }
-
-  /* Mark the steps that are finished and valid: */
-  .step.finish {
-    background-color: #04AA6D;
-  }
     </style>
 @endpush
 @section('content')
@@ -65,49 +14,134 @@
             <div class="row">
 
                 <div class="col-lg-12 col-md-12">
-                    <form id="regForm" action="{{ route('save.application') }}" class="global-form login-form">
+                    <form action="{{ route('save.application') }}" class="global-form login-form mt-25" method="post">
                         @csrf
-                        <h4 class="g-title text-center">{{ get_phrase('Sign Up') }}</h4>
+                        <h3 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('Sign up') }}</h3>
 
-                        <!-- One "tab" for each step in the form: -->
-                        <div class="tab">Name:
-                          <p><input placeholder="First name..." oninput="this.className = ''"></p>
-                          <p><input placeholder="Last name..." oninput="this.className = ''"></p>
+                        {{--  Sing up information  --}}
+                        <div class="pymais-padding-section">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Full Name') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                        aria-label="Full Name" name="name" autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Email') }}</label>
+                                    <input type="email" class="form-control pymais-input-background" aria-label="Email"
+                                        name="email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Password') }}</label>
+                                    <input type="password" class="form-control pymais-input-background"
+                                        aria-label="Password" name="password">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Cellphone') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                        aria-label="Cellphone" name="cellphone">
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="tab">Contact Info:
-                          <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
-                          <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+                        <h3 class="g-title" style="color:#2849E6; margin-bottom: 60px; margin-top: 60px">
+                            {{ __('Company details') }}</h3>
+                        {{--  Company details  --}}
+                        <div class="pymais-padding-section">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Company name') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                        aria-label="Company Name" name="razon_social">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Position in company') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                        aria-label="Position in company" name="position">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Company Phone -Ext') }}</label>
+                                    <input type="text" name="company_phone" class="form-control pymais-input-background">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Fiscal number') }} (RFC)</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                        aria-label="Fiscal number" name="RFC">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Fiscal name') }} (USA)</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                        aria-label="Fiscal name" name="fiscal_name_usa">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Tax ID') }}</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Tax id"
+                                        name="taxid">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Naics') }}</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Naics"
+                                        name="naics">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>{{ __('Address') }}</label>
+                                    <textarea type="text" class="form-control pymais-input-background" aria-label="Address" name="address"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="g-title" style="color:#2849E6; margin-bottom: 60px; margin-top: 60px">
+                            {{ __('Social media') }}</h3>
+                        {{--  Social media  --}}
+                        <div class="pymais-padding-section mb-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Linkedin</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Linkedin"
+                                        name="linkedin">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Instagram</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                        aria-label="Instagram" name="instagram">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Facebook</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Facebook"
+                                        name="facebook">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Website') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                        aria-label="Website" name="website">
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="tab">Birthday:
-                          <p><input placeholder="dd" oninput="this.className = ''"></p>
-                          <p><input placeholder="mm" oninput="this.className = ''"></p>
-                          <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+                        <div class="row">
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6 d-grid gap-2">
+                                <button type="submit" class="pymais-button-gradient btn-lg">
+                                    {{ get_phrase('Sign Up') }}
+                                </button>
+                                <p class="mt-20">{{ get_phrase('Already have account.') }}
+                                    <a href="{{ route('login') }}">{{ get_phrase('Sign in') }}</a>
+                                </p>
+                            </div>
                         </div>
 
-                        <div class="tab">Login Info:
-                          <p><input placeholder="Username..." oninput="this.className = ''"></p>
-                          <p><input placeholder="Password..." oninput="this.className = ''"></p>
-                        </div>
-
-                        <div style="overflow:auto;">
-                          <div style="float:right;">
-                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-                          </div>
-                        </div>
-
-                        <!-- Circles which indicates the steps of the form: -->
-                        <div style="text-align:center;margin-top:40px;">
-                          <span class="step"></span>
-                          <span class="step"></span>
-                          <span class="step"></span>
-                          <span class="step"></span>
-                        </div>
-
-                        </form>
-                    {{--   --}}
+                    </form>
 
                 </div>
             </div>
@@ -143,79 +177,5 @@
                 }
             });
         });
-    </script>
-    <script>
-        var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
-
-function showTab(n) {
-  // This function will display the specified tab of the form ...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  // ... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-  // ... and run a function that displays the correct step indicator:
-  fixStepIndicator(n)
-}
-
-function nextPrev(n) {
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form... :
-  if (currentTab >= x.length) {
-    //...the form gets submitted:
-    document.getElementById("regForm").submit();
-    return false;
-  }
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
-
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false:
-      valid = false;
-    }
-  }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-  return valid; // return the valid status
-}
-
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
-  }
-  //... and adds the "active" class to the current step:
-  x[n].className += " active";
-}
     </script>
 @endpush
