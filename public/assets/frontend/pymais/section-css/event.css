@@ -28,7 +28,7 @@
 
 .ep-event__img img {
   width: 100% !important;
-  height: 538px !important;
+  height: 300px !important;
   border-radius: 20px;
   object-fit: cover;
   transition: all 0.4s ease;

@@ -7,6 +7,56 @@
             right: 20px;
             cursor: pointer !important;
         }
+
+        /* Style the form */
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+  }
+
+  /* Style the input fields */
+  input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+  }
+
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04AA6D;
+  }
     </style>
 @endpush
 @section('content')
@@ -15,292 +65,50 @@
             <div class="row">
 
                 <div class="col-lg-12 col-md-12">
-                    <form action="{{ route('save.application') }}" class="global-form login-form mt-25" method="post">
+                    <form id="regForm" action="{{ route('save.application') }}" class="global-form login-form">
                         @csrf
                         <h4 class="g-title text-center">{{ get_phrase('Sign Up') }}</h4>
-                        <p class="description text-center">{{ get_phrase('See your growth and get consulting support! ') }}</p>
-    {{-- ################################### PERSONAL DETAILS ################################### --}}
-    {{-- ####################################### ROW START ###################################### --}}
-                        <div class="row">
-    {{-- ######################################## COL 1 ######################################## --}}
-                            <div class="col-md-4">
-                                {{-- 1 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Full name') }}</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Enter your name">
 
-                                    @error('name')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 2 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Password') }}</label>
-                                    <input type="password" name="password" class="form-control" placeholder="*********">
-
-                                    @error('password')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                            </div>
-    {{-- ######################################## COL 2 ######################################## --}}
-                            <div class="col-md-4">
-                                {{-- 1 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Email') }}</label>
-                                    <input type="email" name="email" class="form-control" placeholder="Enter your email">
-
-                                    @error('email')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 2 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Position in company') }}</label>
-                                    <input type="text" name="position" class="form-control" placeholder="Enter your position">
-
-                                    @error('position')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-
-
-                            </div>
-    {{-- ######################################## COL 3 ######################################## --}}
-                            <div class="col-md-4">
-                                {{-- 1 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Cellphone') }}</label>
-                                    <input type="text" name="cellphone" class="form-control" placeholder="Enter your cellphone number">
-
-                                    @error('cellphone')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-
-                                </div>
-
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Company Phone -Ext') }}</label>
-                                    <input type="text" name="company_phone" class="form-control" placeholder="Enter company phone">
-                                </div>
-                            </div>
+                        <!-- One "tab" for each step in the form: -->
+                        <div class="tab">Name:
+                          <p><input placeholder="First name..." oninput="this.className = ''"></p>
+                          <p><input placeholder="Last name..." oninput="this.className = ''"></p>
                         </div>
-    {{-- ################################### COMPANY DETAILS ################################### --}}
-                        <h4 class="g-title text-center">{{ get_phrase('Company details') }}</h4>
-    {{-- ###################################### ROW START ###################################### --}}
-                        <div class="row">
-    {{-- ######################################## COL 1 ######################################## --}}
-                            <div class="col-md-4">
-                                {{-- 1 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Company name') }}</label>
-                                    <input type="text" name="razon_social" class="form-control" placeholder="Enter company name">
 
-                                    @error('razon_social')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 2 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Fiscal Name (Mexico)') }}</label>
-                                    <input type="text" name="fiscal_name" class="form-control" placeholder="Enter fiscal name">
-
-                                    @error('fiscal_name')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 3 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Tax ID') }}</label>
-                                    <input type="text" name="taxid" class="form-control" placeholder="Enter Tax ID">
-
-                                    @error('taxid')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 4 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Linkedin') }}</label>
-                                    <input type="text" name="linkedin" class="form-control" placeholder="Enter Linkedin handle">
-
-                                    @error('linkedin')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 5 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Main products or services') }}</label>
-                                    <input type="text" name="products_services" class="form-control" placeholder="Enter main products or services">
-
-                                    @error('products_services')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 6 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Number of employees in USA') }}</label>
-                                    <input type="text" name="employees_usa" class="form-control" placeholder="Enter number of employees in USA">
-
-                                    @error('employees_usa')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 7 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Certifications (Current)') }}</label>
-                                    <input type="text" name="certifications" class="form-control" placeholder="Enter Certifications">
-
-                                    @error('certifications')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 8 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Companies you supply for') }}</label>
-                                    <input type="text" name="companies_supply" class="form-control" placeholder="Enter the companies you supply for">
-
-                                    @error('companies_supply')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                            </div>
-    {{-- ######################################## COL 2 ######################################## --}}
-                            <div class="col-md-4">
-                                {{-- 1 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Fiscal Number (RFC)') }}</label>
-                                    <input type="text" name="RFC" class="form-control" placeholder="Enter company fiscal number">
-
-                                    @error('RFC')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 2 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Address') }}</label>
-                                    <input type="text" name="address" class="form-control" placeholder="(Enter Street, number, ZipCode, City)">
-
-                                    @error('address')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 3 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Instagram') }}</label>
-                                    <input type="text" name="instagram" class="form-control" placeholder="Enter Instagram link">
-
-                                    @error('instagram')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 4 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Total employees') }}</label>
-                                    <input type="text" name="employees" class="form-control" placeholder="Enter the total employees">
-
-                                    @error('employees')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 5 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Operation start date') }}</label>
-                                    <input type="text" name="operation_start_date" class="form-control" placeholder="Enter operation start date">
-
-                                    @error('operation_start_date')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 6 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Main customers') }}</label>
-                                    <input type="text" name="customers" class="form-control" placeholder="Enter your main customers">
-
-                                    @error('customers')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 7 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Have you ever participated in an improvement program') }}</label>
-                                    <input type="text" name="has_participated" class="form-control">
-
-                                    @error('has_participated')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                            </div>
-    {{-- ######################################## COL 3 ######################################## --}}
-                            <div class="col-md-4">
-                                {{-- 1 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Fiscal Name (USA)') }}</label>
-                                    <input type="text" name="fiscal_name_usa" class="form-control" placeholder="Enter your fiscal name">
-
-                                    @error('fiscal_name_usa')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 2 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('NAICS') }}</label>
-                                    <input type="text" name="naics" class="form-control" placeholder="Enter your NAICS">
-
-                                    @error('naics')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 3 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Facebook') }}</label>
-                                    <input type="text" name="facebook" class="form-control" placeholder="Enter Facebook page">
-
-                                    @error('facebook')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 4 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Website') }}</label>
-                                    <input type="text" name="website" class="form-control" placeholder="Enter Website">
-
-                                    @error('website')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 5 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Number of employees in Mexico') }}</label>
-                                    <input type="text" name="employees_mexico" class="form-control">
-
-                                    @error('employees_mexico')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 6 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Annual Sales (past three years average)') }}</label>
-                                    <input type="text" name="annual_sales" class="form-control" placeholder="Enter the Annual Sales">
-
-                                    @error('annual_sales')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                {{-- 7 --}}
-                                <div class="form-group mb-5">
-                                    <label for="" class="form-label">{{ get_phrase('Are you a regional manufacturing supplier?') }}</label>
-                                    <input type="text" name="is_supplier" class="form-control">
-
-                                    @error('is_supplier')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                            </div>
+                        <div class="tab">Contact Info:
+                          <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
+                          <p><input placeholder="Phone..." oninput="this.className = ''"></p>
                         </div>
-    {{-- ################################### ROW END ################################### --}}
-                        <button type="submit" class="eBtn gradient w-100">{{ get_phrase('Sign Up') }}</button>
-                        <p class="mt-20">{{ get_phrase('Already have account.') }} <a href="{{ route('login') }}">{{ get_phrase('Sign in') }}</a></p>
-                    </form>
+
+                        <div class="tab">Birthday:
+                          <p><input placeholder="dd" oninput="this.className = ''"></p>
+                          <p><input placeholder="mm" oninput="this.className = ''"></p>
+                          <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+                        </div>
+
+                        <div class="tab">Login Info:
+                          <p><input placeholder="Username..." oninput="this.className = ''"></p>
+                          <p><input placeholder="Password..." oninput="this.className = ''"></p>
+                        </div>
+
+                        <div style="overflow:auto;">
+                          <div style="float:right;">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                          </div>
+                        </div>
+
+                        <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:40px;">
+                          <span class="step"></span>
+                          <span class="step"></span>
+                          <span class="step"></span>
+                          <span class="step"></span>
+                        </div>
+
+                        </form>
+                    {{--   --}}
+
                 </div>
             </div>
         </div>
@@ -335,5 +143,79 @@
                 }
             });
         });
+    </script>
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  // ... and run a function that displays the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
+}
     </script>
 @endpush
