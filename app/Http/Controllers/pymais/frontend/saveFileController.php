@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class saveFileController extends Controller
 {
@@ -131,13 +132,15 @@ class saveFileController extends Controller
         Storage::disk('local')->put('sme_applications/' . $filename, $content);
 
         // Registrar al nuevo usuario en la plataforma
-        User::create([
+        $user = User::create([
             'name' => $name,
             'email' => $email,
             'password' => Hash::make($password),
             'role' => 'student',
         ]);
 
-        return redirect()->route('my.profile')->with('success', 'Your application has been submitted successfully.');
+        // Auth::login($user);
+
+        return redirect()->route('login')->with('success', 'You have registered successfully, now please log in with your user data.');
     }
 }
