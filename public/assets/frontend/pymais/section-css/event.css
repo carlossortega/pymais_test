@@ -28,7 +28,7 @@
 
 .ep-event__img img {
   width: 100% !important;
-  height: 300px !important;
+  height: 500px !important;
   border-radius: 20px;
   object-fit: cover;
   transition: all 0.4s ease;
@@ -132,8 +132,8 @@
   border-radius: 100%;
   display: inline-block;
   cursor: pointer;
-  color: var(--ep-primary-color-6) !important;
-  background: #e1f0ed;
+  color: #3C6EE2;
+  background: #f2f2f2;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -141,7 +141,7 @@
   transition: all 0.4s ease;
 }
 .owl-carousel.ep-event__slider .owl-nav button:hover {
-  background: var(--ep-primary-color-6);
+  background: #3C6EE2;
   color: var(--ep-white-color) !important;
 }
 .owl-carousel.ep-event__slider .owl-nav button i {

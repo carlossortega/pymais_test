@@ -53,7 +53,6 @@
             transition: background-color 0.3s ease;
         }
     </style>
-
 @endpush
 @section('content')
     <!-- Start Hero Area -->
@@ -74,12 +73,12 @@
                     </div>
                 </div>
                 <!-- <div class="col-lg-12 offset-xl-1 col-xl-5 col-12 order-top">
-                            <div class="ep-hero__widget ep-hero__widget-style2 position-relative">
-                                <div class="ep-hero__img">
-                                    <img src="{{ asset('assets/frontend/pymais/images/welcome.jpg') }}" alt="hero-img" />
+                                <div class="ep-hero__widget ep-hero__widget-style2 position-relative">
+                                    <div class="ep-hero__img">
+                                        <img src="{{ asset('assets/frontend/pymais/images/welcome.jpg') }}" alt="hero-img" />
+                                    </div>
                                 </div>
-                            </div>
-                        </div> -->
+                            </div> -->
             </div>
         </div>
     </section>
@@ -252,7 +251,8 @@
                     <div class="ep-section__content ep-section__content--style2">
                         <h3 class="ep-section__title ep-split-text text-center">{{ __('Program Outline') }} </h3>
                         <h3 class="text-center" style="color:#2849E6"> <u>1</u></h3>
-                        <h3 class="ep-section__title ep-split-text text-center" style="font-size: 30px">{{ __('Business Enhancer') }} </h3>
+                        <h3 class="ep-section__title ep-split-text text-center" style="font-size: 30px">
+                            {{ __('Business Enhancer') }} </h3>
                         <p class="ep-section__text text-center">
                             {{ __('Helping SMEs accelerate AI and tech adoption along with other crucial business functions.') }}
                         </p>
@@ -325,7 +325,8 @@
                 <div class="col-lg-12 col-12">
                     <div class="ep-section__content ep-section__content--style2">
                         <h3 class="text-center" style="color:#2849E6"><u>2</u></h3>
-                        <h3 class="ep-section__title ep-split-text text-center" style="font-size: 30px">{{ __('Market Access & Specialization') }}
+                        <h3 class="ep-section__title ep-split-text text-center" style="font-size: 30px">
+                            {{ __('Market Access & Specialization') }}
                         </h3>
                         <p class="ep-section__text">
                             {{ __("Promoting SMEs' value propositions to potential binational industry customers through speed dating and demo day's sessions furthermore participating companies will have the opportunity to take specialization content according to their development needs.") }}
@@ -455,6 +456,8 @@
     </section>
     <!-- End Group Study Area -->
 
+    <?php
+    /*
     <!-- Start Courses Area -->
     <section class="ep-event ep-team--style2 section-gap position-relative">
         <div class="container ep-container">
@@ -507,6 +510,119 @@
                             </div>
                         </div>
                     @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Courses Area -->
+    */
+    ?>
+
+    <!-- Start Courses Area -->
+    <section class="ep-event ep-team--style2 section-gap position-relative">
+        <div class="container ep-container">
+            <div class="col-12">
+                <div class="ep-section-head ep-section-head--style2">
+                    <h3 class="ep-section__title ep-split-text text-center"> {{ __('Get Started With ') }}</h3>
+                    <h5 class="text-center" style="color:#2849E6">Key resources</h5>
+                </div>
+            </div>
+        </div>
+        <div class="ep-event__container">
+            <div class="ep-event__shape updown-ani">
+                <img src="{{ asset('assets/frontend/pymais/images/event/event-1/arrow.svg') }}" alt="arrow-icon" />
+            </div>
+            <div class="row">
+                <div class="owl-carousel ep-event__slider">
+                    <!-- Single Event -->
+                    <div class="ep-event__card">
+                        <a href="https://www.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot/saca-partido-a-la-inteligencia-artificial-en-tu-trabajo" class="ep-event__img" target="_blank">
+                            <img src="{{asset('assets/frontend/pymais/images/resources/01.jpg')}}" alt="event-img" />
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="https://www.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot/saca-partido-a-la-inteligencia-artificial-en-tu-trabajo" class="ep-event__title" target="_blank">{{__('Microsoft Copilot: Boost your Productivity')}}</a>
+                            <a href="https://www.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot/saca-partido-a-la-inteligencia-artificial-en-tu-trabajo" target="_blank">
+                                <p class="ep-event__p">
+                                    {{__('Learn how Microsoft Copilot can simplify and streamline your daily tasks, from generating ideas to automating processes. This course will guide you from the basics to making Copilot a key assistant to improve your productivity and optimize your workflow.')}}
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Single Event -->
+                    <div class="ep-event__card">
+                        <a href="https://www.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial/la-ia-llega-a-powerpoint-para-cambiar-tu-modo-de-trabajar-y-aumentar-tu-productividad" class="ep-event__img" target="_blank">
+                            <img src="{{asset('assets/frontend/pymais/images/resources/02.jpg')}}" alt="event-img" />
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="https://www.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial/la-ia-llega-a-powerpoint-para-cambiar-tu-modo-de-trabajar-y-aumentar-tu-productividad" class="ep-event__title" target="_blank">{{__('Unlock the Power of Copilot: in PowerPoint with Microsoft 365')}}</a>
+                            <a href="https://www.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial/la-ia-llega-a-powerpoint-para-cambiar-tu-modo-de-trabajar-y-aumentar-tu-productividad" target="_blank">
+                                <p class="ep-event__p">
+                                    {{__('Discover how Copilot can transform your PowerPoint presentations, regardless of experience. Learn to create, edit, and optimize slides efficiently with AI, and boost your productivity using natural language commands. Practical demos included, even without prior access to Copilot.')}}
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Single Event -->
+                    <div class="ep-event__card">
+                        <a href="https://www.linkedin.com/learning/descubre-microsoft-365-copilot/la-ia-llega-a-microsoft-365-de-la-mano-de-copilot" class="ep-event__img" target="_blank">
+                            <img src="{{asset('assets/frontend/pymais/images/resources/03.jpg')}}" alt="event-img" />
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="https://www.linkedin.com/learning/descubre-microsoft-365-copilot/la-ia-llega-a-microsoft-365-de-la-mano-de-copilot" class="ep-event__title" target="_blank">{{__('Master Microsoft 365 Copilot: Boost your Productivity with AI ')}}</a>
+                            <a href="https://www.linkedin.com/learning/descubre-microsoft-365-copilot/la-ia-llega-a-microsoft-365-de-la-mano-de-copilot" target="_blank">
+                                <p class="ep-event__p">
+                                    {{__('Explore how Microsoft 365 Copilot can transform your daily tasks. This course, designed for all levels, teaches you how to leverage AI in applications such as Word, Excel, PowerPoint, Outlook, and more, improving your efficiency and productivity at work. ')}}
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Single Event -->
+                    <div class="ep-event__card">
+                        <a href="https://www.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics%2Eteams%2Ecdn%2Eoffice%2Enet%7Cre-other&originalSubdomain=es" class="ep-event__img" target="_blank">
+                            <img src="{{asset('assets/frontend/pymais/images/resources/04.jpg')}}" alt="event-img" />
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="https://www.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics%2Eteams%2Ecdn%2Eoffice%2Enet%7Cre-other&originalSubdomain=es" class="ep-event__title" target="_blank">{{__('Key Skills to Apply Generative AI in your Career ')}}</a>
+                            <a href="https://www.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics%2Eteams%2Ecdn%2Eoffice%2Enet%7Cre-other&originalSubdomain=es" target="_blank">
+                                <p class="ep-event__p">
+                                    {{__('Learn the fundamentals of artificial intelligence and master generative AI models. This course will guide you in the ethical use of generative AI and its impact on the work environment, helping you to apply these tools in your career.')}}
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Single Event -->
+                    <div class="ep-event__card">
+                        <a href="https://www.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa/introduccion-a-promt-engineering" class="ep-event__img" target="_blank">
+                            <img src="{{asset('assets/frontend/pymais/images/resources/05.jpg')}}" alt="event-img" />
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="https://www.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa/introduccion-a-promt-engineering" class="ep-event__title" target="_blank">{{__('Effective Communication with AI: Fundamentals of Prompt Engineering')}}</a>
+                            <a href="https://www.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa/introduccion-a-promt-engineering" target="_blank">
+                                <p class="ep-event__p">
+                                    {{__('Learn how to interact with AI without previous experience. Discover the basics of prompt engineering, its applications, and how to optimize your orders to obtain better results in your projects.')}}
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Single Event -->
+                    <div class="ep-event__card">
+                        <a href="https://www.linkedin.com/learning/que-es-la-ia-generativa/la-ia-generativa-es-una-herramienta-al-servicio-de-la-humanidad" class="ep-event__img" target="_blank">
+                            <img src="{{asset('assets/frontend/pymais/images/resources/06.jpg')}}" alt="event-img" />
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="https://www.linkedin.com/learning/que-es-la-ia-generativa/la-ia-generativa-es-una-herramienta-al-servicio-de-la-humanidad" class="ep-event__title" target="_blank">{{__('The Generative AI Revolution: Adapt your Career to the Future')}}</a>
+                            <a href="https://www.linkedin.com/learning/que-es-la-ia-generativa/la-ia-generativa-es-una-herramienta-al-servicio-de-la-humanidad" target="_blank">
+                                <p class="ep-event__p">
+                                    {{__('Generative AI is transforming industries such as film, medicine, marketing and more. This course will help you learn how to adapt to this creative revolution and take advantage of its benefits, positioning you as a leader in your industry.')}}
+                                </p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -576,7 +692,8 @@
                     <div class="col-md-2 offset-md-1">
                         <a href="https://www.microsoft.com/en-us/corporate-responsibility/techspark"
                             class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/Microsoft_Logo.png') }}" alt="brand-logo" />
+                            <img src="{{ asset('assets/frontend/pymais/images/collab/Microsoft_Logo.png') }}"
+                                alt="brand-logo" />
                         </a>
                     </div>
                     <div class="col-md-2 offset-md-1">
@@ -587,12 +704,14 @@
                     </div>
                     <div class="col-md-2 offset-md-1">
                         <a href="https://tb-xl.com/" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/THEBRIDGE_LOGO-01.png') }}" alt="brand-logo" />
+                            <img src="{{ asset('assets/frontend/pymais/images/collab/THEBRIDGE_LOGO-01.png') }}"
+                                alt="brand-logo" />
                         </a>
                     </div>
                     <div class="col-md-2 offset-md-1">
                         <a href="https://t-hub.mx/" class="ep-brand__logo ep-brand__logo--style2">
-                            <img src="{{ asset('assets/frontend/pymais/images/collab/logo-thub-01.png') }}" alt="brand-logo" />
+                            <img src="{{ asset('assets/frontend/pymais/images/collab/logo-thub-01.png') }}"
+                                alt="brand-logo" />
                         </a>
                     </div>
                 </div>
@@ -634,128 +753,127 @@
             });
         });
     </script>
-
 @endpush
 <link rel="stylesheet" href="{{ asset('assets/frontend/pymais/plugins/css/particles.css') }}" />
 <script src="{{ asset('assets/frontend/pymais/plugins/js/particles.js') }}"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            particlesJS('particles-js', {
-                "particles": {
-                    "number": {
-                        "value": 80,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#3C6EE2"
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        },
-                        "polygon": {
-                            "nb_sides": 5
-                        },
-                        "image": {
-                            "src": "img/github.svg",
-                            "width": 100,
-                            "height": 100
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": false,
-                        "anim": {
-                            "enable": false,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 2,
-                        "random": true,
-                        "anim": {
-                            "enable": false,
-                            "speed": 40,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
                         "enable": true,
-                        "distance": 150,
-                        "color": "#5f8cde",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 6,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "attract": {
-                            "enable": false,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
+                        "value_area": 800
                     }
                 },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": false,
-                            "mode": "repulse"
-                        },
-                        "onclick": {
-                            "enable": false,
-                            "mode": "push"
-                        },
-                        "resize": true
+                "color": {
+                    "value": "#3C6EE2"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
                     },
-                    "modes": {
-                        "grab": {
-                            "distance": 400,
-                            "line_linked": {
-                                "opacity": 1
-                            }
-                        },
-                        "bubble": {
-                            "distance": 400,
-                            "size": 40,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 200
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                        "remove": {
-                            "particles_nb": 2
-                        }
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
                     }
                 },
-                "retina_detect": true,
-                "config_demo": {
-                    "hide_card": false,
-                    "background_color": "#101010",
-                    "background_image": "",
-                    "background_position": "50% 50%",
-                    "background_repeat": "no-repeat",
-                    "background_size": "cover"
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 2,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#5f8cde",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
                 }
-            });
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": false,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true,
+            "config_demo": {
+                "hide_card": false,
+                "background_color": "#101010",
+                "background_image": "",
+                "background_position": "50% 50%",
+                "background_repeat": "no-repeat",
+                "background_size": "cover"
+            }
         });
-    </script>
+    });
+</script>
