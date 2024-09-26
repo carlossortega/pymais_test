@@ -456,8 +456,7 @@
     </section>
     <!-- End Group Study Area -->
 
-    <?php
-    /*
+
     <!-- Start Courses Area -->
     <section class="ep-event ep-team--style2 section-gap position-relative">
         <div class="container ep-container">
@@ -515,10 +514,11 @@
         </div>
     </section>
     <!-- End Courses Area -->
-    */
-    ?>
 
-    <!-- Start Courses Area -->
+
+    <?php
+    /*
+    <!-- Start Resources Area -->
     <section class="ep-event ep-team--style2 section-gap position-relative">
         <div class="container ep-container">
             <div class="col-12">
@@ -627,7 +627,9 @@
             </div>
         </div>
     </section>
-    <!-- End Courses Area -->
+    <!-- End Resources Area -->
+    */
+    ?>
 
     <!-- Start Newsletter Area -->
     <section class="pymais-newsletter pymais-newsletter--style2 section-gap position-relative"
