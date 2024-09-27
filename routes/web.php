@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\pymais\frontend\saveFileController;
+use App\Http\Controllers\Controller;
 
 //Cache clear route
 Route::get('/clear-cache', function () {
@@ -18,6 +19,8 @@ Route::get('/clear-cache', function () {
 
     return 'Application cache cleared';
 });
+
+Route::get('/set_language/{lang}', [App\Http\Controllers\Controller::class, 'set_language'])->name('set_language');
 
 Route::get('home/switch/{id}', [HomeController::class, 'homepage_switcher'])->name('home.switch');
 

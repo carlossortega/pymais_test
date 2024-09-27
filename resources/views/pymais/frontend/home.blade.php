@@ -443,7 +443,7 @@
                     </div>
                     <div class="col-lg-6 col-xl-6 offset-xl-2 col-12">
                         <div class="ep-group-study__video background-image ep-hobble position-relative"
-                            style="background-image: url('{{ asset('assets/frontend/pymais/images/home/home-03.jpg') }}');">
+                            style="background-image: url('{{ asset('assets/frontend/pymais/images/home/home-04.jpg') }}');">
                             <a href="{{ asset('assets/frontend/pymais/video/PYMAIS-spanish.mp4') }}"
                                 class="ep-video__btn popup-video ep-hover-layer-2">
                                 <i class="fi fi-sr-play"></i>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="no-js" lang="es">
 
 <head>
     <!-- Meta Tags -->

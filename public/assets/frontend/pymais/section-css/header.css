@@ -30,6 +30,10 @@
   color: #2849E6 !important;
 }
 
+.ep-header__middle.sticky .sub-menu {
+    background: white;
+  }
+
 .ep-topbar__column2 {
 	display: flex;
 	align-items: center;
@@ -267,7 +271,8 @@
 }
 .ep-header__menu li .sub-menu {
 	position: absolute;
-	background: var(--ep-white-color);
+	/* background: var(--ep-white-color); */
+	background: #2849E6;
 	min-width: 240px;
 	transition: all 0.3s ease-out 0s;
 	top: 100%;

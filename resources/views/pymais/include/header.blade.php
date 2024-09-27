@@ -138,6 +138,18 @@
                                                     <a href="{{route('register')}}">{{__('Sign up')}}</a>
                                                 </li>
                                             @endif
+                                            <li>
+                                                <a href="#">{{__('Language')}} <i class="fi fi-ss-angle-small-down"></i>
+                                                </a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="{{ route('set_language', ['es']) }}">{{__('Spanish')}}</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('set_language', ['en']) }}">{{__('English')}}</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                             {{--  <li>
                                                 <a href="#">Courses <i class="fi fi-ss-angle-small-down"></i>
                                                 </a>
