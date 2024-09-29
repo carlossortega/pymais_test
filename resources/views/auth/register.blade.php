@@ -16,111 +16,115 @@
                 <div class="col-lg-12 col-md-12">
                     <form action="{{ route('save.application') }}" class="global-form login-form mt-25" method="post">
                         @csrf
-                        <h3 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('Sign up') }}</h3>
 
-                        {{--  Sing up information  --}}
+
+                        <h3 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('Main Contact') }}</h3>
+
+                        {{--  Main Contact  --}}
                         <div class="pymais-padding-section">
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Full Name') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Full Name" name="name" autofocus>
+                                           aria-label="Full Name" name="contact_name" autofocus>
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Email') }}</label>
                                     <input type="email" class="form-control pymais-input-background" aria-label="Email"
-                                        name="email">
+                                           name="company_email">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>{{ __('Password') }}</label>
-                                    <input type="password" class="form-control pymais-input-background"
-                                        aria-label="Password" name="password">
-                                </div>
-                                <div class="col-md-6">
                                     <label>{{ __('Cellphone') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Cellphone" name="cellphone">
+                                           aria-label="Cellphone" name="cellphone">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Position') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                           aria-label="Position" name="contact_position">
                                 </div>
                             </div>
                         </div>
 
+
                         <h3 class="g-title" style="color:#2849E6; margin-bottom: 60px; margin-top: 60px">
-                            {{ __('Company details') }}</h3>
+                            {{ __('Company Information') }}</h3>
                         {{--  Company details  --}}
                         <div class="pymais-padding-section">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>{{ __('Company name') }}</label>
+                                    <label>{{ __('Company Name') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Company Name" name="razon_social">
+                                        aria-label="Company Name" name="company_name">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>{{ __('Position in company') }}</label>
+                                    <label>{{ __('Fiscal Number') }} </label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Position in company" name="position">
+                                        aria-label="RFC" name="rfc">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>{{ __('Company Phone -Ext') }}</label>
-                                    <input type="text" name="company_phone" class="form-control pymais-input-background">
+                                    <label>{{ __('Trade Name') }}</label>
+                                    <input type="text" name="trade_name" class="form-control pymais-input-background">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Contact email') }}</label>
+                                    <input type="email" class="form-control pymais-input-background"
+                                           aria-label="contact_email" name="contact_email">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>{{ __('Fiscal number') }} (RFC)</label>
+                                    <label>{{ __('Phone') }} </label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Fiscal number" name="RFC">
+                                        aria-label="Phone" name="phone">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>{{ __('Fiscal name') }} (USA)</label>
-                                    <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Fiscal name" name="fiscal_name_usa">
+                                    <label>{{ __('Naics Code') }}</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Naics Code"
+                                           name="naics_code">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>{{ __('Tax ID') }}</label>
-                                    <input type="text" class="form-control pymais-input-background" aria-label="Tax id"
-                                        name="taxid">
+                                    <label>{{ __('Products and/or Services') }}</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Products Services"
+                                           name="products_services">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>{{ __('Naics') }}</label>
-                                    <input type="text" class="form-control pymais-input-background" aria-label="Naics"
-                                        name="naics">
+                                    <label>{{ __('Number of employees') }}</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Number Employees"
+                                           name="number_employees">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <label>{{ __('Address') }}</label>
-                                    <textarea type="text" class="form-control pymais-input-background" aria-label="Address" name="address"></textarea>
+                                <div class="col-md-6">
+                                    <label>{{ __('Seniority in the company') }}</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Seniority"
+                                           name="seniority">
                                 </div>
                             </div>
                         </div>
                         <h3 class="g-title" style="color:#2849E6; margin-bottom: 60px; margin-top: 60px">
-                            {{ __('Social media') }}</h3>
+                            {{ __('Digital Precense') }}</h3>
                         {{--  Social media  --}}
                         <div class="pymais-padding-section mb-5">
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Linkedin</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Linkedin"
-                                        name="linkedin">
+                                        name="company_linkedin">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>Instagram</label>
+                                    <label>{{ __('Social Networking') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Instagram" name="instagram">
+                                        aria-label="Socila Networking" name="social_networking">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <label>Facebook</label>
-                                    <input type="text" class="form-control pymais-input-background" aria-label="Facebook"
-                                        name="facebook">
-                                </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Website') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
@@ -129,7 +133,46 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <h3 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('User Regitration') }}</h3>
+
+                        {{--  Sing up information  --}}
+                        <div class="pymais-padding-section">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Participants name') }} ({{ __('First and last name')}})</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                           aria-label="Participant Name" name="name" autofocus>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Position') }}</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Position"
+                                           name="position">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Email') }}</label>
+                                    <input type="email" class="form-control pymais-input-background" aria-label="Email"
+                                           name="email">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Password') }}</label>
+                                    <input type="password" class="form-control pymais-input-background"
+                                           aria-label="Password" name="password">
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label>{{ __('Linkedin') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                           aria-label="Linkedin" name="linkedin">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
                             <div class="col-md-6"></div>
                             <div class="col-md-6 d-grid gap-2">
                                 <button type="submit" class="pymais-button-gradient btn-lg">
