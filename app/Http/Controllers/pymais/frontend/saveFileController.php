@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\pymais\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Company;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\EmailVerificationPromptController;
 
 class saveFileController extends Controller
 {
@@ -62,84 +64,98 @@ class saveFileController extends Controller
 
     public function saveFileSME(Request $request){
         $request->validate([
-            'name' => 'required', //
-            'position' => 'required',
+            'contact_name' => 'required',
+            'contact_email' => 'required|email',
+            'contact_phone' => 'required',
+            'contact_position' => 'required',
+            'company_name' => 'required',
+            'rfc' => 'required',
+            'trade_name' => 'required',
+            'contact_mail' => 'required|email',
             'company_phone' => 'required',
-            'cellphone' => 'required',
-            'email' => 'required|email', //
-            'comercial_name' => 'nullable',
-            'fiscal_name' => 'nullable',
-            'RFC' => 'nullable',
-            'razon_social' => 'nullable',//
-            'fiscal_name_usa' => 'nullable',
-            'naics' => 'nullable',
-            'fein' => 'nullable',
-            'tax_id' => 'nullable',
-            'address' => 'nullable',
-            'facebook' => 'nullable',
-            'linkedin' => 'nullable',
-            'instagram' => 'nullable',
-            'website' => 'nullable',
-            'products_services' => 'nullable',
-            'employees' => 'nullable',
-            'employees_mexico' => 'nullable',
-            'employees_usa' => 'nullable',
-            'operation_start_date' => 'nullable',
-            'annual_sales' => 'nullable',
-            'certifications' => 'nullable',
-            'customers' => 'nullable',
-            'is_supplier' => 'nullable',
-            'companies_supply' => 'nullable',
-            'has_participated' => 'nullable',
-            'password' => 'required', //
+            'naics_code' => 'required',
+            'products_services' => 'required',
+            'number_employees' => 'required',
+            'seniority' => 'required',
+            'company_linkedin' => 'required',
+            'social_networking' => 'required',
+            'website' => 'required',
+            'name' => 'required',
+            'position' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'user_phone' => 'required',
+            'user_linkedin' => 'nullable',
+            'password' => 'required',
         ]);
 
-        $name = $request->name;
-        $position = $request->position;
+        $contact_name = $request->contact_name;
+        $contact_email = $request->contact_email;
+        $contact_phone = $request->contact_phone;
+        $contact_position = $request->contact_position;
+        $company_name = $request->company_name;
+        $rfc = $request->rfc;
+        $trade_name = $request->trade_name;
+        $contact_mail = $request->contact_mail;
         $company_phone = $request->company_phone;
-        $cellphone = $request->cellphone;
-        $email = $request->email;
-        $comercial_name = $request->comercial_name;
-        $fiscal_name = $request->fiscal_name;
-        $RFC = $request->RFC;
-        $razon_social = $request->razon_social;
-        $fiscal_name_usa = $request->fiscal_name_usa;
-        $naics = $request->naics;
-        $fein = $request->fein;
-        $tax_id = $request->tax_id;
-        $address = $request->address;
-        $facebook = $request->facebook;
-        $linkedin = $request->linkedin;
-        $instagram = $request->instagram;
-        $website = $request->website;
+        $naics_code = $request->naics_code;
         $products_services = $request->products_services;
-        $employees = $request->employees;
-        $employees_mexico = $request->employees_mexico;
-        $employees_usa = $request->employees_usa;
-        $operation_start_date = $request->operation_start_date;
-        $annual_sales = $request->annual_sales;
-        $certifications = $request->certifications;
-        $customers = $request->customers;
-        $is_supplier = $request->is_supplier;
-        $companies_supply = $request->companies_supply;
-        $has_participated = $request->has_participated;
+        $number_employees = $request->number_employees;
+        $seniority = $request->seniority;
+        $company_linkedin = $request->company_linkedin;
+        $social_networking = $request->social_networking;
+        $website = $request->website;
+        $name = $request->name;
+        $position = $request->position;;
+        $email = $request->email;;
+        $user_phone = $request->user_phone;
+        $user_linkedin = $request->user_linkedin;
         $password = $request->password;
 
-        $content = "Name: $name\nPosition: $position\nCompany Phone: $company_phone\nCellphone: $cellphone\nEmail: $email\nComercial Name: $comercial_name\nFiscal Name: $fiscal_name\nRFC: $RFC\nRazon Social: $razon_social\nFiscal Name USA: $fiscal_name_usa\nNAICS: $naics\nFEIN: $fein\nTax ID: $tax_id\nAddress: $address\nFacebook: $facebook\nLinkedIn: $linkedin\nInstagram: $instagram\nWebsite: $website\nProducts and Services: $products_services\nEmployees: $employees\nEmployees Mexico: $employees_mexico\nEmployees USA: $employees_usa\nOperation Start Date: $operation_start_date\nAnnual Sales: $annual_sales\nCertifications: $certifications\nCustomers: $customers\nIs Supplier: $is_supplier\nCompanies Supply: $companies_supply\nHas Participated: $has_participated\n Password: $password\n";
-
+        $content = "Contact Name: $contact_name\nContact Email: $contact_email\nContact Phone: $contact_phone\nContact Position: $contact_position\nCompany Name: $company_name\nRFC: $rfc\nTrade Name: $trade_name\nCompany Email: $contact_email\nCompany Phone: $company_phone\nNAICS: $naics_code\nProducts and/or Services: $products_services\nNumber Employees: $number_employees\n Seniority: $seniority\n Company Linkedin: $company_linkedin\nSocial Networking: $social_networking\nWebsite: $website\nName: $name\nPosition: $position\nEmail: $email\nPhone: $user_phone\nLinkedin: $user_linkedin\nPassword: $password";
+        
         $filename = 'sme_application_' . now()->format('Y-m-d_H-i-s') . '.txt';
 
         Storage::disk('local')->put('sme_applications/' . $filename, $content);
 
-        // Registrar al nuevo usuario en la plataforma
-        $user = User::create([
-            'name' => $name,
-            'email' => $email,
-            'password' => Hash::make($password),
-            'role' => 'student',
+        // Registrar compañia en la plataforma
+        $company = Company::create([
+            'company_name' => $company_name,
+            'rfc' => $rfc,
+            'trade_name' => $trade_name,
+            'company_email' => $contact_mail,
+            'phone' => $company_phone,
+            'naics_code' => $naics_code,
+            'products_services' => $products_services,
+            'number_employees' => $number_employees,
+            'company_seniority' => $seniority,
+            'contact_name' => $contact_name,
+            'contact_email' => $contact_email,
+            'contact_phone' => $contact_phone,
+            'contact_position' => $contact_position,
+            'company_linkedin' => $company_linkedin,
+            'company_social_net' => $social_networking,
+            'company_website' => $website,
         ]);
 
+        $company_id = $company->id;
+
+        // Registrar al nuevo usuario en la plataforma en relación a la compañia
+        $user = User::create([
+            'role' => 'student',
+            'email' => $email,
+            'status' => 1,
+            'name' => $name,
+            'phone' => $user_phone,
+            'linkedin' => $user_linkedin,
+            'password' => Hash::make($password),
+            'position' => $position,
+            'company_id' => $company_id,
+        ]);
+
+        
         // Auth::login($user);
+
+        dd(auth()->user());
 
         return redirect()->route('login')->with('success', 'You have registered successfully, now please log in with your user data.');
     }

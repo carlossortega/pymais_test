@@ -31,14 +31,14 @@
                                 <div class="col-md-6">
                                     <label>{{ __('Email') }}</label>
                                     <input type="email" class="form-control pymais-input-background" aria-label="Email"
-                                           name="company_email">
+                                           name="contact_email">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>{{ __('Cellphone') }}</label>
+                                    <label>{{ __('Phone / Cellphone') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                           aria-label="Cellphone" name="cellphone">
+                                           aria-label="Phone / Cellphone" name="contact_phone">
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Position') }}</label>
@@ -60,7 +60,7 @@
                                         aria-label="Company Name" name="company_name">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>{{ __('Fiscal Number') }} </label>
+                                    <label>{{ __('Fiscal number') }} </label>
                                     <input type="text" class="form-control pymais-input-background"
                                         aria-label="RFC" name="rfc">
                                 </div>
@@ -68,22 +68,22 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Trade Name') }}</label>
-                                    <input type="text" name="trade_name" class="form-control pymais-input-background">
+                                    <input type="text" aria-label="Trade Name" name="trade_name" class="form-control pymais-input-background">
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Contact email') }}</label>
                                     <input type="email" class="form-control pymais-input-background"
-                                           aria-label="contact_email" name="contact_email">
+                                           aria-label="Contact Email" name="contact_mail">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Phone') }} </label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Phone" name="phone">
+                                        aria-label="Phone" name="company_phone">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>{{ __('Naics Code') }}</label>
+                                    <label>{{ __('NAICS Code') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Naics Code"
                                            name="naics_code">
                                 </div>
@@ -156,18 +156,21 @@
                                            name="email">
                                 </div>
                                 <div class="col-md-6">
-                                    <label>{{ __('Password') }}</label>
-                                    <input type="password" class="form-control pymais-input-background"
-                                           aria-label="Password" name="password">
+                                    <label>{{ __('Phone') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                           aria-label="Phone" name="user_phone">
                                 </div>
-
                             </div>
                             <div class="row">
-
                                 <div class="col-md-6">
                                     <label>{{ __('Linkedin') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                           aria-label="Linkedin" name="linkedin">
+                                           aria-label="Linkedin" name="user_linkedin">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Password') }}</label>
+                                    <input type="password" class="form-control pymais-input-background"
+                                           aria-label="Password" name="password">
                                 </div>
                             </div>
                         </div>
