@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@push('title', get_phrase('My courses'))
+@push('title', __('My Courses'))
 @push('meta')@endpush
 @push('css')@endpush
 @section('content')
@@ -10,7 +10,7 @@
                 @include('frontend.default.student.left_sidebar')
 
                 <div class="col-lg-9 px-4">
-                    <h4 class="g-title">{{ get_phrase('My Courses') }}</h4>
+                    <h4 class="g-title">{{ __('My Courses') }}</h4>
                     <div class="row mt-5">
                         @foreach ($my_courses as $course)
                             <div class="col-lg-4 col-md-4 col-sm-6 mb-30">
@@ -30,7 +30,7 @@
                                         </div>
                                         <div class="single-progress">
                                             <div class="d-flex justify-content-between align-items-center mb-10">
-                                                <h5>{{ get_phrase('Progress') }}</h5>
+                                                <h5>{{ __('Progress') }}</h5>
                                                 <p>{{ progress_bar($course->course_id) }}%</p>
                                             </div>
                                             <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
@@ -61,7 +61,7 @@
 
                                         @endphp
                                         <a href="{{ $url }}" class="eBtn learn-btn w-100 text-center mt-20 f-500">
-                                            {{ get_phrase('Continue Courses') }}
+                                            {{ __('Continue Course') }}
                                         </a>
                                     </div>
                                 </div>
