@@ -10,10 +10,10 @@
                                 <img src="{{asset('assets/frontend/pymais/images/logo-2.svg')}}" alt="footer-logo" />
                             </a>
                         </div>
-                        <p class="ep-footer__text mg-top-46"> Modernize, engage and promote: A proven acceleration program to strengthen & professionalize industry supply chain.
+                        <p class="ep-footer__text mg-top-46"> {{__('Modernize, engage and promote: A proven acceleration program to strengthen & professionalize industry supply chain.')}}
                         </p>
                         <div class="ep-footer__social mg-top-42">
-                            <h5 class="ep-footer__social-title">Follow Us</h5>
+                            <h5 class="ep-footer__social-title">{{__('Follow Us')}}</h5>
                             <ul>
                                 <li>
                                     <a href="#">
@@ -31,38 +31,38 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="ep-footer__widget footer-services--style2">
-                        <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Useful Links </h4>
+                        <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> {{__('Useful Links')}} </h4>
                         <ul class="ep-footer__links-list ep-footer__links-list--style2">
                             <li>
                                 <a href="{{route('register')}}">
-                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>Become a participant </a>
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('Become a participant')}} </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>All courses </a>
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('All courses')}} </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>Sign up </a>
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('Sign up')}} </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="ep-footer__widget footer-services--style2">
-                        <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> Help </h4>
+                        <h4 class="ep-footer__widget-title ep-footer__widget-title--style2"> {{__('Help')}} </h4>
                         <ul class="ep-footer__links-list ep-footer__links-list--style2">
                             <li>
                                 <a href="#">
-                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>Contact Us </a>
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('Contact Us')}} </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>About Us </a>
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('About Us')}} </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>FAQ </a>
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('FAQ')}} </a>
                             </li>
                         </ul>
                     </div>
@@ -86,20 +86,20 @@
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <div class="ep-footer__copyright">
-                        <p> © PYMAIS @php echo date('Y'); @endphp | All Rights Reserved </p>
+                        <p> © PYMAIS @php echo date('Y'); @endphp | {{__('All Rights Reserved')}} </p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="ep-footer__bottom-link">
                         <ul>
                             <li>
-                                <a href="#">Terms & Conditions</a>
+                                <a href="#"> {{__('Terms & Conditions')}} </a>
                             </li>
                             <li>
-                                <a href="#">Privacy Policy</a>
+                                <a href="#">{{__('Privacy Policy')}}</a>
                             </li>
                             <li>
-                                <a href="#">Contact Us</a>
+                                <a href="#">{{__('Contact Us')}}</a>
                             </li>
                         </ul>
                     </div>

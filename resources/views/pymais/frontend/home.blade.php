@@ -65,7 +65,7 @@
                         <h1 class="ep-hero__title ep-split-text left"> {{ __('Welcome to') }} <span
                                 class="ep-hero__title ep-split-text" style="color:#506CC9;">PYMAIS</span></h1>
                         <span class="ep-hero__text">
-                            {{ __('An innovative training program to accelerate the growth of manufacturing industry supply chain businesses, to strengthen and professionalize them based on real demands of each region.') }}
+                            {{ __('Empowering SMEs by integrating AI to enhance their operations and efficiency, also connecting them with large manufacturers in North America. Accelerating their growth, strengthening and professionalizing them based on the real demands of each region.') }}
                         </span>
                         <div class="mt-3">
                             <a href="#" class="pymais-button-gradient">{{ __('Apply now') }}</a>
@@ -92,7 +92,7 @@
                         <h3 class="ep-section__title ep-split-text left"> {{ __('About ') }} <span
                                 style="color:#2849E6">PYMAIS</span></h3>
                         <p class="ep-section__text">
-                            {{ __('PYMAIS Platform accelerates SME growth in the manufacturing supply chain by strengthening and aligning them with regional demands, enhancing MX-US value chains, and capitalizing on nearshoring opportunities.') }}
+                            {{ __('The PyMAis platform is a groundbreaking initiative aimed at empowering Mexican small and medium-sized enterprises (SMEs) through advanced technologies, particularly artificial intelligence (AI). This program focuses on helping companies enhance their operations, allowing them to optimize processes and increase efficiency. Additionally, PYMAIS fosters strong business connections and opens opportunities for SMEs to become suppliers to major manufacturers across North America, driving growth and innovation in the region.') }}
                         </p>
                         <div class="pymais-section__widget">
                             <ul class="pymais-feature-list">
@@ -108,8 +108,10 @@
                             </ul>
                         </div>
                         <div class="ep-section__btn">
-                            <a href="{{ asset('pdfs/PYMAIS.pdf') }}" class="ep-btn border-btn pymais-20"
-                                target="_blank">{{ __('Why PYMAIS') }} <i class="fi fi-rs-arrow-small-right"></i></a>
+                            <a href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/PYMAIS-es.pdf' : 'pdfs/PYMAIS-en.pdf') }}"
+                               class="ep-btn border-btn pymais-20" target="_blank">
+                               {{ __('Why PYMAIS') }} <i class="fi fi-rs-arrow-small-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +145,7 @@
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}"
                                             alt="category-icon" />
                                     </div>
-                                    <h3 class="pymais-accordion-title">{{ __('SMEs') }}</h3>
+                                    <h3 class="pymais-accordion-title">{{ __('Participant') }}</h3>
                                 </div>
                             </div>
                         </div>
@@ -152,7 +154,7 @@
                             <p class="accordion-body text-center">
                                 {{ __('By joining PYMAIS, you will be able to accelerate the growth of your SME through specialized training, mentoring, key certifications and connections with large companies. This will help you expand your operations and strengthen your competitiveness in the MX-US market.') }}
                                 <br><br>{{ __('To participate, your company must be an established SME with at least 2 years of operation, have a scalable business model and be interested in selling to the industry, and be committed to innovation and collaboration.') }}
-                                <a href="{{ asset('pdfs/PARTICIPANT.pdf') }}" class="mt-3 pymais-button-gradient"
+                                <a href="{{ asset('pdfs/Participant.pdf') }}" class="mt-3 pymais-button-gradient"
                                     target="_blank">{{ __('More Information') }} </a></i>
                             </p>
                         </div>
@@ -169,16 +171,16 @@
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}"
                                             alt="category-icon" />
                                     </div>
-                                    <h3 class="pymais-accordion-title">{{ __('Mentor') }}</h3>
+                                    <h3 class="pymais-accordion-title">{{ __('Consultant') }}</h3>
                                 </div>
                             </div>
                         </div>
                         <div id="collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <p class="accordion-body text-center">
-                                {{ __('As a PYMAIS mentor, you will have the opportunity to share your knowledge with growing SMEs, impact their development, and expand your network. You will also position yourself as a leader in your sector and gain access to valuable collaboration opportunities.') }}
-                                <br><br>{{ __('To be a mentor, you need professional experience in key areas, industry sector knowledge, virtual mentoring skills and a focus on practical results that help SMEs grow.') }}
-                                <a href="{{ asset('pdfs/MENTOR.pdf') }}" class="mt-3 pymais-button-gradient"
+                                {{ __('As a PYMAIS consultant, you will have the opportunity to share your knowledge with growing SMEs, impact their development, and expand your network. You will also position yourself as a leader in your sector and gain access to valuable collaboration opportunities.') }}
+                                <br><br>{{ __('To be a consultant, you need professional experience in key areas, industry sector knowledge, virtual mentoring skills and a focus on practical results that help SMEs grow.') }}
+                                <a href="{{ asset('pdfs/consultan.pdf') }}" class="mt-3 pymais-button-gradient"
                                     target="_blank">{{ __('More Information') }} </a></i>
                             </p>
                         </div>
@@ -205,7 +207,7 @@
                                 {{ __('By joining PYMAIS as a traction company, you will be able to access a network of innovative SMEs, diversify your supply chain and explore nearshoring opportunities through virtual sessions. You will also strengthen your market position and contribute to regional economic development.') }}
                                 <br><br>
                                 {{ __('To participate, you must be a corporate with an interest in acquiring products or investing in SMEs, with experience in supplier integration and a commitment to innovation and strategic collaboration.') }}
-                                <a href="{{ asset('pdfs/CORPORATE.pdf') }}" class="mt-3 pymais-button-gradient"
+                                <a href="{{ asset('pdfs/corporate.pdf') }}" class="mt-3 pymais-button-gradient"
                                     target="_blank">{{ __('More Information') }} </a></i>
                             </p>
                         </div>
@@ -222,16 +224,16 @@
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}"
                                             alt="category-icon" />
                                     </div>
-                                    <h3 class="pymais-accordion-title">{{ __('Allies') }}</h3>
+                                    <h3 class="pymais-accordion-title">{{ __('Partner / Ally') }}</h3>
                                 </div>
                             </div>
                         </div>
                         <div id="collapseFour" class="accordion-collapse collapse hide" aria-labelledby="headingFour"
                             data-bs-parent="#accordionExample">
                             <p class="accordion-body text-center">
-                                {{ __('By joining PYMAIS as an ally or partner, you will be able to collaborate in the growth of SMEs, position your brand in an environment of innovation and generate new business opportunities. You will contribute to economic development and create synergies with key market players.') }}
+                                {{ __('By joining PYMAIS as an ally, you will be able to support the growth of SMEs in the manufacturing supply chain, contribute to regional economic development, and position yourself as a leader in your sector. You will also gain access to a network of innovative companies and valuable collaboration opportunities.') }}
                                 <br><br>{{ __('To become an ally, you need to be an organization interested in supporting SMEs, preferably with experience in technology, finance, education or industry, and contribute resources, knowledge or connections that will boost their growth and professionalization.') }}
-                                <a href="{{ asset('pdfs/PARTNER_ALLY.pdf') }}" class="mt-3 pymais-button-gradient"
+                                <a href="{{ asset('pdfs/partner.pdf') }}" class="mt-3 pymais-button-gradient"
                                     target="_blank">{{ __('More Information') }} </a></i>
                             </p>
                         </div>
@@ -273,16 +275,16 @@
                                 <div class="ep-product-tab-inside">
                                     <div class="ep-product-tab-inside__content">
                                         <p class="ep-product-single__tab-text">
-                                            {{ __('Through asynchronous online sessions, participating companies will become aware of US - Mexico business opportunities and will be equipped with six 1-hour topics.') }}
+                                            {{ __('The Primer Program is designed to introduce SMEs to key business opportunities between the US and Mexico, helping them navigate industry trends and digital transformation. Through asynchronous online sessions, participants will explore six foundational topics: an overview of US-Mexico business opportunities, industry trends, generative AI, cybersecurity and data protection, sustainability, and open innovation. These 1-hour sessions equip companies with the essential knowledge to understand the evolving business landscape and leverage AI for growth. Optional online mentoring is available to provide additional guidance and support throughout the program.') }}
                                         </p>
-                                        <ul class="mt-3">
+                                        {{--  <ul class="mt-3">
                                             <li>- {{ __('US - Mexico Business Opportunities Overview') }}</li>
                                             <li>- {{ __('Industry Trends + Digital Transformation') }}</li>
                                             <li>- {{ __('Generative AI') }}</li>
                                             <li>- {{ __('Cybersecurity and Data Protection') }}</li>
                                             <li>- {{ __('Sustainability') }}</li>
                                             <li>- {{ __('Open Innovation') }}</li>
-                                        </ul>
+                                        </ul>  --}}
                                         <p class="ep-product-single__tab-text mg-top-20"> </p>
                                     </div>
                                 </div>
@@ -292,9 +294,9 @@
                                 <div class="ep-product-tab-inside">
                                     <div class="ep-product-tab-inside__content">
                                         <p class="ep-product-single__tab-text">
-                                            {{ __('After the Primer program participants will accelerate their business model by receiving 5 modules of online asynchronous sessions plus optional online synchronic mentoring activities to improve their value proposition.') }}
+                                            {{ __('The Accelerating Program helps SMEs refine and scale their business models through 40 in-depth online sessions. Key modules focus on innovation, scalability, digital transformation, operations, and financial readiness, all integrated with AI tools. Participants can further enhance their learning through optional live mentoring, providing personalized guidance to accelerate growth and improve their value proposition.') }}
                                         </p>
-                                        <p class="ep-product-single__tab-text">{{ __("Program's key modules:") }}</p>
+                                        {{--  <p class="ep-product-single__tab-text">{{ __("Program's key modules:") }}</p>
                                         <ul class="mt-3">
                                             <li>- {{ __('Innovation') }}</li>
                                             <li>- {{ __('Scalability and Growth') }}</li>
@@ -304,7 +306,7 @@
                                         </ul>
                                         <p class="ep-product-single__tab-text mg-top-20">
                                             {{ __('During each of the modules deployment AI tools will be included as part of the programming, learning and activities.') }}
-                                        </p>
+                                        </p>  --}}
 
                                         <div class="ep-section__btn">
                                             <a href="{{ asset('pdfs/Full-Curriculum.pdf') }}" class="ep-btn border-btn"
@@ -332,7 +334,7 @@
                             {{ __("Promoting SMEs' value propositions to potential binational industry customers through speed dating and demo day's sessions furthermore participating companies will have the opportunity to take specialization content according to their development needs.") }}
                         </p>
                         <p class="ep-section__text">
-                            <small>{{ __("(To access this stage SME's must pay a 350 USD annual membership, 4 sessions live mentoring, platform exposure, continuous learning, up to 5 participants per SME).") }}</small>
+                            <small>{{ __("(To access this stage SME's must pay a 350 USD annual membership, 4 sessions live mentoring, platform exposure, continuous learning, up to 5 participants per SME)") }}.</small>
                         </p>
                         <ul class="nav nav-tabs mt-5 ep-product-tab-list" id="productTabs" role="tablist">
                             <li class="nav-item">
@@ -352,17 +354,15 @@
                                 <div class="ep-product-tab-inside">
                                     <div class="ep-product-tab-inside__content">
                                         <p class="ep-product-single__tab-text">
-                                            {{ __('Participating companies that complete Primer and Accelerating programs will have the chance to be continuously exposed through online and in-person events, such as:') }}
+                                            {{ __('Ongoing Visibility ensures that SMEs stay connected and visible to key binational industry stakeholders. Through speed dating, business matching, demo days, and networking opportunities, participating companies can promote their value propositions to potential customers. The program also includes continuous follow-up on key performance indicators (KPIs), helping SMEs maintain engagement and build lasting industry relationships.') }}
                                         </p>
-                                        <ul class="mt-3">
+                                        {{--  <ul class="mt-3">
                                             <li>- <strong>{{ __('Continuous exposure on the platform:') }}</strong>
                                                 {{ __('Tailored to their line of business, participants will have a constant presence on our platform, increasing their reach.') }}
                                             </li>
                                             <li>- {{ __('Business sessions.') }}
                                                 <ul>
-                                                    <li><strong>{{ __('Virtual Demo Days: ') }}</strong>Participants will
-                                                        present 1-minute pitch videos, highlighting their value
-                                                        propositions.</li>
+                                                    <li><strong>{{ __('Virtual Demo Days: ') }}</strong> {{__('Participants will present 1-minute pitch videos, highlighting their value propositions.')}}</li>
                                                     <li><strong>{{ __('Speed dating meeting/interviews (online and in-person):') }}</strong>These
                                                         sessions will allow participants to engage in business conversations
                                                         at different levels:
@@ -375,7 +375,7 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                        </ul>
+                                        </ul>  --}}
                                         <p class="ep-product-single__tab-text mg-top-20"> </p>
                                     </div>
                                 </div>
@@ -385,9 +385,9 @@
                                 <div class="ep-product-tab-inside">
                                     <div class="ep-product-tab-inside__content">
                                         <p class="ep-product-single__tab-text">
-                                            {{ __('During the program participating companies will be able to take specialization and certification content according to their industry vertical of interest e.g.') }}
+                                            {{ __('Specialization Opportunities provide SMEs with access to tailored content and certifications aligned with their industry needs. Participants can focus on key sectors such as automotive, biomedical, electronics, IT, aerospace, AI, and cybersecurity. In addition, companies can continuously update their knowledge through platforms like LinkedIn Learning. These specialization tracks help SMEs enhance their expertise and stay competitive in their respective markets.') }}
                                         </p>
-                                        <ul class="mt-3">
+                                        {{--  <ul class="mt-3">
                                             <li>- {{ __('Automotive') }}</li>
                                             <li>- {{ __('Bio-medical') }}</li>
                                             <li>- {{ __('Electronics') }}</li>
@@ -399,7 +399,7 @@
                                         </ul>
                                         <p class="ep-product-single__tab-text mg-top-20">
                                             {{ __('Furthermore participating companies may take key updating content such as LinkedIn courses anytime.') }}
-                                        </p>
+                                        </p>  --}}
 
 
                                     </div>
@@ -463,7 +463,7 @@
             <div class="col-12">
                 <div class="ep-section-head ep-section-head--style2">
                     <h3 class="ep-section__title ep-split-text text-center"> {{ __('Get Started With ') }}</h3>
-                    <h5 class="text-center" style="color:#2849E6">Key resources</h5>
+                    <h5 class="text-center" style="color:#2849E6">{{__('Key resources')}}</h5>
                 </div>
             </div>
         </div>
@@ -684,7 +684,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="ep-section-head ep-section-head--style2">
-                        <h3 id="partnership" class="ep-section__title"> {{ __('In partnership with') }} </h3>
+                        <h3 id="partnership" class="ep-section__title"> {!! __('In partnership with') !!}: </h3>
                     </div>
                 </div>
             </div>
