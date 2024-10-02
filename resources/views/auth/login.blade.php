@@ -1,5 +1,5 @@
 @extends('layouts' . '.' . get_frontend_settings('theme'))
-@push('title', get_phrase('Log In'))
+@push('title', __('Login'))
 @push('meta')@endpush
 @push('css')
     <style>
@@ -23,26 +23,26 @@
                     <div class="col-lg-5 col-md-6">
                         <form action="{{ route('login') }}" class="global-form login-form mt-25" method="POST">
                             @csrf
-                            <h4 class="g-title">{{ get_phrase('Login') }}</h4>
-                            <p class="description">{{ get_phrase('See your growth and get consulting support!') }} </p>
+                            <h4 class="g-title">{{ __('Login') }}</h4>
+                            <p class="description">{{ __('See your growth and get consulting support') }}!</p>
                             <div class="form-group">
-                                <label for="email" class="form-label">{{ get_phrase('Email') }}</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="{{ get_phrase('Your Email') }}">
+                                <label for="email" class="form-label">{{ __('Email') }}</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="{{ __('Your Email') }}">
                             </div>
                             <div class="form-group">
-                                <label for="" class="form-label">{{ get_phrase('Password') }}</label>
+                                <label for="" class="form-label">{{ __('Password') }}</label>
                                 <input type="password" id="password" name="password" class="form-control" placeholder="*********">
                             </div>
                             <div class="form-group mb-25 d-flex justify-content-between align-items-center remember-me">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">{{ get_phrase('Remember Me') }}</label>
+                                    <label class="form-check-label" for="flexCheckChecked">{{ __('Remember Me') }}</label>
                                 </div>
-                                <a href="{{route('password.request')}}">{{ get_phrase('Forget Password?') }}</a>
+                                <a href="{{route('password.request')}}">{{ __('Forgot Password') }}?</a>
                             </div>
-                            <button type="submit" class="eBtn gradient w-100">{{ get_phrase('Login') }}</button>
-                            <p class="mt-20">{{ get_phrase('Not have an account yet?') }}
-                                <a href="{{ route('register') }}">{{ get_phrase('Create Account') }}</a>
+                            <button type="submit" class="eBtn gradient w-100">{{ __('Login') }}</button>
+                            <p class="mt-20">{{ __('Not have an account yet') }}?
+                                <a href="{{ route('register') }}">{{ __('Create Account') }}</a>
                             </p>
                         </form>
                     </div>

@@ -86,6 +86,7 @@ class saveFileController extends Controller
             'user_phone' => 'required',
             'user_linkedin' => 'nullable',
             'password' => 'required',
+            'confirm_password' => 'required|same:password'
         ]);
 
         $contact_name = $request->contact_name;
@@ -152,7 +153,6 @@ class saveFileController extends Controller
             'company_id' => $company_id,
         ]);
 
-        
         // Auth::login($user);
 
         return redirect()->route('login')->with('success', 'You have registered successfully, now please log in with your user data.');

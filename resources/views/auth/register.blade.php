@@ -1,5 +1,5 @@
 @extends('layouts.' . get_frontend_settings('theme'))
-@push('title', get_phrase('Sign Up'))
+@push('title', __('Sign up'))
 @push('meta')@endpush
 @push('css')
     <style>
@@ -169,8 +169,28 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Password') }}</label>
-                                    <input type="password" class="form-control pymais-input-background"
-                                           aria-label="Password" name="password">
+                                    <div class="input-group justify-content-end">
+                                        <input type="password" class="form-control pymais-input-background rounded-4"
+                                            id="password" aria-label="Password" name="password">
+                                        <div class="input-group-append position-absolute mt-3" style="z-index: 99">
+                                            <button id="showPassword" class="btn btn-outline-secondary" type="button">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6"></div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Confirm password') }}</label>
+                                    <div class="input-group justify-content-end">
+                                        <input type="password" class="form-control pymais-input-background rounded-4"
+                                            id="confirmPassword" aria-label="Confirm Password" name="confirm_password">
+                                        <div class="input-group-append position-absolute mt-3" style="z-index: 99">
+                                            <button id="showConfirmPassword" class="btn btn-outline-secondary" type="button">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -179,10 +199,10 @@
                             <div class="col-md-6"></div>
                             <div class="col-md-6 d-grid gap-2">
                                 <button type="submit" class="pymais-button-gradient btn-lg">
-                                    {{ get_phrase('Sign Up') }}
+                                    {{ __('Sign up') }}
                                 </button>
-                                <p class="mt-20">{{ get_phrase('Already have account.') }}
-                                    <a href="{{ route('login') }}">{{ get_phrase('Sign in') }}</a>
+                                <p class="mt-20">{{ __('Already have account') }}.
+                                    <a href="{{ route('login') }}">{{ __('Sign in') }}</a>
                                 </p>
                             </div>
                         </div>
@@ -197,31 +217,25 @@
 @push('js')
     <script>
         "use strict";
-
         $(document).ready(function() {
-            $('#showpassword').on('click', function(e) {
-                e.preventDefault();
-                const type = $('#password').attr('type');
+            function togglePasswordBtn(btnId, inputId) {
+                $(btnId).on('click', function(e) {
+                    e.preventDefault();
+                    const passwordInput = $(inputId);
+                    const type = passwordInput.attr('type');
 
-                if (type == 'password') {
-                    $('#password').attr('type', 'text');
-                } else {
-                    $('#password').attr('type', 'password');
-                }
-            });
-        });
+                    if (type == 'password') {
+                        passwordInput.attr('type', 'text');
+                        $(this).find('i').removeClass('fa-eye').addClass('fa-eye-slash');
+                    } else {
+                        passwordInput.attr('type', 'password');
+                        $(this).find('i').removeClass('fa-eye-slash').addClass('fa-eye');
+                    }
+                });
+            }
 
-        $(document).ready(function() {
-            $('#showcpassword').on('click', function(e) {
-                e.preventDefault();
-                const type = $('#cpassword').attr('type');
-
-                if (type == 'password') {
-                    $('#cpassword').attr('type', 'text');
-                } else {
-                    $('#cpassword').attr('type', 'password');
-                }
-            });
+            togglePasswordBtn('#showPassword', '#password');
+            togglePasswordBtn('#showConfirmPassword', '#confirmPassword');
         });
     </script>
 @endpush
