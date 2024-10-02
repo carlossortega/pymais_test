@@ -155,8 +155,6 @@ class saveFileController extends Controller
         
         // Auth::login($user);
 
-        dd(auth()->user());
-
         return redirect()->route('login')->with('success', 'You have registered successfully, now please log in with your user data.');
     }
 }
