@@ -1,5 +1,5 @@
 @extends('layouts' . '.' . get_frontend_settings('theme'))
-@push('title', get_phrase('Forgot Password'))
+@push('title', get_phrase('Verify Email'))
 @push('meta')@endpush
 @push('css')
 @endpush
