@@ -43,7 +43,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('Sign up')}} </a>
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('Sign Up')}} </a>
                             </li>
                         </ul>
                     </div>

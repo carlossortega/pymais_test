@@ -8,7 +8,7 @@
   position: absolute;
   content: "";
   width: 1472px;
-  height: 560px;
+  height: 650px;
   background: var(--ep-offwhite-color);
   left: 50%;
   bottom: -120px;
@@ -40,14 +40,14 @@
 }
 
 .ep-group-study__video {
-  width: 630px;
-  height: 620px;
+  width: 560px;
+  height: 540px;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
   background: var(--ep-white-color);
   border: 8px solid var(--ep-white-color);
-  margin-top: -278px;
+  margin-top: -230px;
 }
 .ep-group-study__video::before {
   position: absolute;
