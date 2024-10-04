@@ -133,6 +133,11 @@
                                                 <a href="{{route('home')}}">{{__('Home')}}</a>
                                             </li> --}}
                                             {{-- Ocultar el elemento "Sign Up" si el usuario está en la ruta sme.signup --}}
+                                            @if (Route::currentRouteName() !== 'login')
+                                                <li class="active">
+                                                    <a href="{{route('login')}}">{{__('Sign In')}}</a>
+                                                </li>
+                                            @endif
                                             @if (Route::currentRouteName() !== 'register')
                                                 <li class="active">
                                                     <a href="{{route('register')}}">{{__('Sign Up')}}</a>

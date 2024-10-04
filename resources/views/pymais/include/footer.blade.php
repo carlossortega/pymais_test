@@ -6,7 +6,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="ep-footer__widget footer-about">
                         <div class="ep-footer__logo ep-footer__logo--style2">
-                            <a href="index.html">
+                            <a href="#">
                                 <img src="{{asset('assets/frontend/pymais/images/logo-2.svg')}}" alt="footer-logo" />
                             </a>
                         </div>
@@ -38,12 +38,8 @@
                                     <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('Become a participant')}} </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('All courses')}} </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('Sign Up')}} </a>
+                                <a href="/login">
+                                    <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('Sign In')}} </a>
                             </li>
                         </ul>
                     </div>
@@ -56,10 +52,10 @@
                                 <a href="#">
                                     <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('Contact Us')}} </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#">
                                     <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('About Us')}} </a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="#">
                                     <i class="fi fi-br-angle-double-small-right ep10-color"></i>{{__('FAQ')}} </a>

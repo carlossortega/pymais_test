@@ -12,11 +12,13 @@
     <section class="login-area">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-12 col-md-12">
                     <form action="{{ route('save.application') }}" class="global-form login-form mt-25" method="post">
                         @csrf
-
+                        <div class="row d-flex text-center">
+                            <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('SME Form') }}</h1>
+                        </div>
+    
                         <h2 style="margin-bottom: 60px">{{ __('Please fill in the following information to continue with the registration') }}.</h2>
                         
                         
@@ -310,6 +312,7 @@
                                     </button>
                                 </div>
                             </div>
+                            
                             <div class="d-flex align-items-center" style="margin-top: 60px;">
                                 <input type="checkbox" id="toggleInputs" class="m-3" name="accept_terms"
                                     style="width: 20px; height: 20px; cursor: pointer; position: relative; margin-top; 20px">
@@ -324,7 +327,7 @@
                                     {{ __('Submit') }}
                                 </button>
                                 <p class="mt-20">{{ __('Already have account') }}.
-                                    <a href="{{ route('login') }}">{{ __('Sign in') }}</a>
+                                    <a href="{{ route('login') }}">{{ __('Sign In') }}</a>
                                 </p>
                             </div>
                         </div>
@@ -339,11 +342,20 @@
 @push('js')
     <script>
         "use strict";
+        let participants = [];
+
         $(document).ready(function() {
             $('#toggleInputs').change(function() {
                 $('#additionalInputs').toggle(this.checked);
             });
 
+            $('#showParticipantModal').on('click', function() {
+                var modal = new bootstrap.Modal(document.getElementById('participantModal'));
+                modal.show();
+            });
+
+
+            
             function togglePasswordBtn(btnId, inputId) {
                 $(btnId).on('click', function(e) {
                     e.preventDefault();
