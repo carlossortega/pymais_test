@@ -6,7 +6,7 @@
         .pymais-accordion-card {
             border: 1px solid #e0e0e0 !important;
             margin-bottom: 1rem;
-            /*padding: 1rem;*/
+            padding: 1rem;
             border-radius: 8px !important;
             transition: background-color 0.3s ease;
         }
@@ -21,7 +21,7 @@
         .pymais-accordion-title {
             font-size: 1.25rem;
             cursor: pointer;
-            padding: 25px 0;
+            padding: 10px 0;
             margin: 0;
         }
 
@@ -122,7 +122,7 @@
     <!-- End Start About Area -->
 
     <!-- Start Accordion Profile Area -->
-    <section class="ep-category pt-0">
+    <section class="ep-category section-gap pt-0">
         <div class="container ep-container">
             <div class="row justify-content-center mb-50">
                 <div class="col-lg-12 col-xl-12 col-md-12 col-12">
@@ -141,7 +141,7 @@
                             <div class="accordion-header" id="headingOne">
                                 <div data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">
-                                    <div class="ep-category__icon ep5-bg">
+                                    <div class="ep-category__icon ep2-bg">
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}"
                                             alt="category-icon" />
                                     </div>
@@ -167,7 +167,7 @@
                             <div class="accordion-header" id="headingTwo">
                                 <div data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
                                     aria-controls="collapseTwo">
-                                    <div class="ep-category__icon ep5-bg">
+                                    <div class="ep-category__icon ep2-bg">
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}"
                                             alt="category-icon" />
                                     </div>
@@ -193,7 +193,7 @@
                             <div class="accordion-header" id="headingThree">
                                 <div data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
                                     aria-controls="collapseThree">
-                                    <div class="ep-category__icon ep5-bg">
+                                    <div class="ep-category__icon ep2-bg">
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}"
                                             alt="category-icon" />
                                     </div>
@@ -220,7 +220,7 @@
                             <div class="accordion-header" id="headingFour">
                                 <div data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true"
                                     aria-controls="collapseFour">
-                                    <div class="ep-category__icon ep5-bg">
+                                    <div class="ep-category__icon ep2-bg">
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}"
                                             alt="category-icon" />
                                     </div>
@@ -320,7 +320,7 @@
                         </div>
                     </div>
                 </div>
-            </div><br><br>
+            </div>
 
             {{--  Market Access & Specialization  --}}
             <div class="row align-items-center">
@@ -406,27 +406,23 @@
                                 </div>
                             </div>
                         </div>
-                        <!--
-                        <div class="mt-3">
-                            <a href="#" class="pymais-button-gradient">{{ __('Apply now') }}</a>
+
+                        <div class="mt-3 d-flex justify-content-center">
+                            <div class="ep-section__btn">
+                                <a href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/ESP_Contenido_del_programa.pdf' : 'pdfs/one_pager_pymais.pdf') }}"
+                                class="ep-btn border-btn pymais-20" target="_blank">
+                                {{ __('Download full program outline') }} <i class="fi fi-rs-arrow-small-right"></i>
+                                </a>
+                            </div>
                         </div>
-                                        -->
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-12 col-12 text-center">
-                    <div class="ep-section__btn">
-                        <a href="#" class="ep-btn border-btn pymais-20" target="_blank">
-                           {{ __('Download full program outline') }} <i class="fi fi-rs-arrow-small-right"></i>
-                        </a>
-                    </div>
-                </div>            
-            </div>
+
         </div>
     </section>
     <!-- Video Area -->
-    <section class="ep-group-study position-relative  mg-btm-120 pt-0">
+    <section class="ep-group-study position-relative section-gap mg-btm-120 pt-0">
 
         <div class="container ep-container">
             <div class="ep-group-study__inner position-relative">
@@ -440,9 +436,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-xl-4 col-12">
                         <div class="ep-section__content ep-section__content--style2">
-                            <!-- <h3 class="ep-section__title ep-split-text left">{{ __('How PYMAIS works') }} </h3> -->
-                            <h3 class="ep-section__title ep-split-text left">{{ __('How') }} <span
-                            style="color:#2849E6">PYMAIS</span> {{ __('works') }}</h3> 
+                            <h3 class="ep-section__title ep-split-text left">{{ __('How PYMAIS works') }} </h3>
                             <p class="ep-section__text">
                                 {{ __('PYMAIS Platform is a training program that accelerates the growth of SMEs in the manufacturing supply chain by helping them take advantage of nearshoring opportunities and improve the MX-US value chains. It focuses on strengthening and professionalizing these businesses, aligning them with the specific demands and needs of each region to capitalize on opportunities in emerging markets.') }}
                             </p>
@@ -453,8 +447,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-6 offset-xl-2 col-12">
-                        <!-- <div class="ep-group-study__video background-image ep-hobble position-relative" -->
-                        <div class="ep-group-study__video background-image position-relative"
+                        <div class="ep-group-study__video background-image ep-hobble position-relative"
                             style="background-image: url('{{ asset('assets/frontend/pymais/images/home/home-04.jpg') }}');">
                             <a href="{{ asset('assets/frontend/pymais/video/PYMAIS-spanish.mp4') }}"
                                 class="ep-video__btn popup-video ep-hover-layer-2">
@@ -474,8 +467,8 @@
         <div class="container ep-container">
             <div class="col-12">
                 <div class="ep-section-head ep-section-head--style2">
-                    <h3 class="ep-section__title ep-split-text text-center"> {{ __('Get started with ') }}</h3>
-                    <h5 class="text-center" style="color:#2849E6">{{__('Key Resources')}}</h5>
+                    <h3 class="ep-section__title ep-split-text text-center"> {{ __('Get Started With ') }}</h3>
+                    <h5 class="text-center" style="color:#2849E6">{{__('Key resources')}}</h5>
                 </div>
             </div>
         </div>
@@ -483,7 +476,7 @@
             <div class="ep-event__shape updown-ani">
                 <img src="{{ asset('assets/frontend/pymais/images/event/event-1/arrow.svg') }}" alt="arrow-icon" />
             </div>
-            <div class="row container">
+            <div class="row">
                 <div class="owl-carousel ep-event__slider">
                     @php
                         // Obtén los cursos únicos y activos
@@ -497,7 +490,7 @@
                         <!-- Single Event -->
                         <div class="ep-event__card">
                             <a href="{{ route('course.details', $row->slug) }}" class="ep-event__img">
-                                <img src="{{ get_image($row->thumbnail) }}" alt="event-img" />                                
+                                <img src="{{ get_image($row->thumbnail) }}" alt="event-img" />
                             </a>
                             @php
                                 // Calcula la calificación promedio del curso
@@ -512,10 +505,10 @@
                             @endphp
                             <div class="ep-event__info">
                                 <a href="{{ route('course.details', $row->slug) }}"
-                                    class="ep-event__title text-center">{{ ucfirst($row->title) }}</a>
+                                    class="ep-event__title">{{ ucfirst($row->title) }}</a>
                                 <a href="{{ route('course.details', $row->slug) }}">
                                     <p class="ep-event__p">
-                                        {{ \Illuminate\Support\Str::words(strip_tags($row->description), 20, '...') }}
+                                        {{ \Illuminate\Support\Str::words(strip_tags($row->description), 15, '...') }}
                                     </p>
                                 </a>
                             </div>
@@ -702,27 +695,27 @@
             </div>
             {{-- QUITAR ESTILO DE COLOR EN EL DIV --}}
             <div class="container ep-container">
-                <div class="row justify-content-center">
-                    <div class="col-md-2 ">
+                <div class="row">
+                    <div class="col-md-2 offset-md-1">
                         <a href="https://www.microsoft.com/en-us/corporate-responsibility/techspark"
                             class="ep-brand__logo ep-brand__logo--style2">
                             <img src="{{ asset('assets/frontend/pymais/images/collab/Microsoft_Logo.png') }}"
                                 alt="brand-logo" />
                         </a>
                     </div>
-                    <div class="col-md-2 ">
+                    <div class="col-md-2 offset-md-1">
                         <a href="https://funax.org/" class="ep-brand__logo ep-brand__logo--style2">
                             <img src="{{ asset('assets/frontend/pymais/images/collab/LOGO-FUNAX-ACTUALIZACION-HORIZONTAL-ESP-01.png') }}"
                                 alt="brand-logo" />
                         </a>
                     </div>
-                    <div class="col-md-2 ">
+                    <div class="col-md-2 offset-md-1">
                         <a href="https://tb-xl.com/" class="ep-brand__logo ep-brand__logo--style2">
                             <img src="{{ asset('assets/frontend/pymais/images/collab/THEBRIDGE_LOGO-01.png') }}"
                                 alt="brand-logo" />
                         </a>
                     </div>
-                    <div class="col-md-2 ">
+                    <div class="col-md-2 offset-md-1">
                         <a href="https://t-hub.mx/" class="ep-brand__logo ep-brand__logo--style2">
                             <img src="{{ asset('assets/frontend/pymais/images/collab/logo-thub-01.png') }}"
                                 alt="brand-logo" />
