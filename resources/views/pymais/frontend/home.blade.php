@@ -70,7 +70,7 @@
                             {{ __('Empowering SMEs by integrating AI to enhance their operations and efficiency, also connecting them with large manufacturers in North America. Accelerating their growth, strengthening and professionalizing them based on the real demands of each region.') }}
                         </span>
                         <div class="mt-3">
-                            <a href="#" class="pymais-button-gradient">{{ __('Apply now') }}</a>
+                            <a href="/register" class="pymais-button-gradient">{{ __('Apply now') }}</a>
                         </div>
                     </div>
                 </div>
