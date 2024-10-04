@@ -478,44 +478,126 @@
             <div class="ep-event__shape updown-ani">
                 <img src="{{ asset('assets/frontend/pymais/images/event/event-1/arrow.svg') }}" alt="arrow-icon" />
             </div>
-            <div class="row">
+            <div class="row container">
                 <div class="owl-carousel ep-event__slider">
-                    @php
-                        // Obtén los cursos únicos y activos
-                        $featured_courses = DB::table('courses')
-                            ->where('status', 'active')
-                            ->distinct('id') // Asegúrate de obtener cursos únicos
-                            ->latest('id')
-                            ->get();
-                    @endphp
-                    @foreach ($featured_courses as $row)
-                        <!-- Single Event -->
-                        <div class="ep-event__card">
-                            <a href="{{ route('course.details', $row->slug) }}" class="ep-event__img">
-                                <img src="{{ get_image($row->thumbnail) }}" alt="event-img" />
+                    
+                    <!-- Tarjeta 1 -->
+                    <div class="ep-event__card">
+                        <a href="https://es.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img" target="_blank">
+                            <img src="{{ asset('assets/frontend/pymais/images/resources/1.jpg') }}" alt="event-img" />                                
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="https://es.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__title text-center" target="_blank">
+                            {{__('Microsoft Copilot: Boost your Productivity')}}
                             </a>
-                            @php
-                                // Calcula la calificación promedio del curso
-                                $ratings = DB::table('reviews')
-                                    ->where('course_id', $row->id)
-                                    ->pluck('rating')
-                                    ->toArray();
-                                $average_rating = count($ratings) > 0 ? array_sum($ratings) / count($ratings) : 0;
-                                $full_stars = floor($average_rating);
-                                $has_half_star = $average_rating - $full_stars >= 0.5;
-                                $review_count = count($ratings);
-                            @endphp
-                            <div class="ep-event__info">
-                                <a href="{{ route('course.details', $row->slug) }}"
-                                    class="ep-event__title">{{ ucfirst($row->title) }}</a>
-                                <a href="{{ route('course.details', $row->slug) }}">
-                                    <p class="ep-event__p">
-                                        {{ \Illuminate\Support\Str::words(strip_tags($row->description), 15, '...') }}
-                                    </p>
-                                </a>
-                            </div>
+                            <p class="ep-event__p">
+                            Instructora. Elena Santos de Paz <br>
+                            Periodista
+                            </p>
+                            <p class="ep-event__p">
+                            {{ \Illuminate\Support\Str::words(strip_tags( __('Learn how Microsoft Copilot can simplify and streamline your daily tasks, from generating ideas to automating processes. This course will guide you from the basics to making Copilot a key assistant to improve your productivity and optimize your workflow.')), 20, '...') }}
+                            </p>
                         </div>
-                    @endforeach
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="ep-event__card">
+                        <a href="#" target="_blank" class="ep-event__img">
+                        <img src="{{ asset('assets/frontend/pymais/images/resources/2.jpg') }}" alt="event-img" />                                
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            {{__('Unlock the Power of Copilot: in PowerPoint with Microsoft 365')}}
+                            </a>
+                            <p class="ep-event__p">
+                            Instructora. Isabel Fernández Gutiérrez  <br>
+                            Instructora MOS
+                            </p>
+                            <p class="ep-event__p">
+                            {{ \Illuminate\Support\Str::words(strip_tags( __('Discover how Copilot can transform your PowerPoint presentations, regardless of experience. Learn to create, edit, and optimize slides efficiently with AI, and boost your productivity using natural language commands. Practical demos included, even without prior access to Copilot.')), 20, '...') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="ep-event__card">
+                        <a href="#" class="ep-event__img" target="_blank">
+                        <img src="{{ asset('assets/frontend/pymais/images/resources/3.jpg') }}" alt="event-img" />                                                           
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            {{__('Master Microsoft 365 Copilot: Boost your Productivity with AI')}}
+                            </a>
+                            <p class="ep-event__p">
+                            Instructora. Isabel Fernández Gutiérrez  <br>
+                            Instructora MOS
+                            </p>
+                            <p class="ep-event__p">
+                            {{ \Illuminate\Support\Str::words(strip_tags( __('Explore how Microsoft 365 Copilot can transform your daily tasks. This course, designed for all levels, teaches you how to leverage AI in applications such as Word, Excel, PowerPoint, Outlook, and more, improving your efficiency and productivity at work.')), 20, '...') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="ep-event__card">
+                        <a href="#" class="ep-event__img" target="_blank"> 
+                        <img src="{{ asset('assets/frontend/pymais/images/resources/4.jpg') }}" alt="event-img" />                                
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            {{__('Key Skills to Apply Generative AI in your Career')}}
+                            </a>
+                            <p class="ep-event__p">
+                            Instructores. Pinar Seyhan Demirdag  <br>
+                            Ashley Kennedy <br>
+                            Elena Santos de Paz <br>
+                            Isabel Fernández Gutiérrez <br>
+                            Vilas Dhar <br>
+                            Paula García Esteban <br>
+                            </p>
+                            <p class="ep-event__p">
+                            {{ \Illuminate\Support\Str::words(strip_tags( __('Learn the fundamentals of artificial intelligence and master generative AI models. This course will guide you in the ethical use of generative AI and its impact on the work environment, helping you to apply these tools in your career.')), 20, '...') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="ep-event__card">
+                        <a href="#" class="ep-event__img" target="_blank">
+                        <img src="{{ asset('assets/frontend/pymais/images/resources/5.jpg') }}" alt="event-img" />                                                               
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            {{__('Effective Communication with AI: Fundamentals of Prompt Engineering')}}
+                            </a>
+                            <p class="ep-event__p">
+                            Instructor. Victoria Ángela Pérez Aneiros  <br>
+                            Experta en redacción y corrección de textos
+                            </p>
+                            <p class="ep-event__p">
+                            {{ \Illuminate\Support\Str::words(strip_tags( __('Learn how to interact with AI without previous experience. Discover the basics of prompt engineering, its applications, and how to optimize your orders to obtain better results in your projects.')), 20, '...') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6 -->
+                    <div class="ep-event__card">
+                        <a href="#" class="ep-event__img" target="_blank">
+                        <img src="{{ asset('assets/frontend/pymais/images/resources/6.jpg') }}" alt="event-img" />                                                           
+                        </a>
+                        <div class="ep-event__info">
+                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            {{__('The Generative AI Revolution: Adapt your Career to the Future')}}
+                            </a>
+                            <p class="ep-event__p">
+                            Instructor. Pinar Seyhan Demirdag  <br>
+                            Director de IA en Cuebric | Artista | Experto en IA generativa
+                            </p>
+                            <p class="ep-event__p">
+                            {{ \Illuminate\Support\Str::words(strip_tags( __('Generative AI is transforming industries such as film, medicine, marketing and more. This course will help you learn how to adapt to this creative revolution and take advantage of its benefits, positioning you as a leader in your industry.')), 20, '...') }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
