@@ -52,12 +52,14 @@
             background-color: #ddd;
             transition: background-color 0.3s ease;
         }
+     
     </style>
 @endpush
 @section('content')
     <!-- Start Hero Area -->
     <section class="ep-hero ep-hero--style2 hero-bg particle-container" style="background-color: #f2f2f2">
         <div id="particles-js"></div>
+        <div id="apppymais"> </div>
         <div class="container ep-container">
             <div class="row align-items-center">
                 <div class="col-lg-12 col-xl-6 col-12">
@@ -128,7 +130,7 @@
                 <div class="col-lg-12 col-xl-12 col-md-12 col-12">
                     <div class="ep-section-head text-center 0">
                         <h3 class="ep-section-head__big-title ep-split-text left">
-                            {{ __('This program is for you') }}
+                            {{ __('This program is for you if you are') }}
                         </h3>
                     </div>
                 </div>
@@ -145,7 +147,7 @@
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}"
                                             alt="category-icon" />
                                     </div>
-                                    <h3 class="pymais-accordion-title">{{ __('Participant') }}</h3>
+                                    <h3 class="pymais-accordion-title">{{ __('SMEs') }}</h3>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +156,7 @@
                             <p class="accordion-body text-center">
                                 {{ __('By joining PYMAIS, you will be able to accelerate the growth of your SME through specialized training, mentoring, key certifications and connections with large companies. This will help you expand your operations and strengthen your competitiveness in the MX-US market.') }}
                                 <br><br>{{ __('To participate, your company must be an established SME with at least 2 years of operation, have a scalable business model and be interested in selling to the industry, and be committed to innovation and collaboration.') }}
-                                <a href="{{ asset('pdfs/Participant.pdf') }}" class="mt-3 pymais-button-gradient"
+                                <a  href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/Participante.pdf' : 'pdfs/Participant.pdf') }}" class="mt-3 pymais-button-gradient"
                                     target="_blank">{{ __('More Information') }} </a></i>
                             </p>
                         </div>
@@ -180,7 +182,7 @@
                             <p class="accordion-body text-center">
                                 {{ __('As a PYMAIS consultant, you will have the opportunity to share your knowledge with growing SMEs, impact their development, and expand your network. You will also position yourself as a leader in your sector and gain access to valuable collaboration opportunities.') }}
                                 <br><br>{{ __('To be a consultant, you need professional experience in key areas, industry sector knowledge, virtual mentoring skills and a focus on practical results that help SMEs grow.') }}
-                                <a href="{{ asset('pdfs/consultan.pdf') }}" class="mt-3 pymais-button-gradient"
+                                <a href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/Consultor.pdf' : 'pdfs/consultan.pdf') }}" class="mt-3 pymais-button-gradient"
                                     target="_blank">{{ __('More Information') }} </a></i>
                             </p>
                         </div>
@@ -207,7 +209,7 @@
                                 {{ __('By joining PYMAIS as a traction company, you will be able to access a network of innovative SMEs, diversify your supply chain and explore nearshoring opportunities through virtual sessions. You will also strengthen your market position and contribute to regional economic development.') }}
                                 <br><br>
                                 {{ __('To participate, you must be a corporate with an interest in acquiring products or investing in SMEs, with experience in supplier integration and a commitment to innovation and strategic collaboration.') }}
-                                <a href="{{ asset('pdfs/corporate.pdf') }}" class="mt-3 pymais-button-gradient"
+                                <a href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/Corporativos.pdf' : 'pdfs/corporate.pdf') }}" class="mt-3 pymais-button-gradient"
                                     target="_blank">{{ __('More Information') }} </a></i>
                             </p>
                         </div>
@@ -224,16 +226,16 @@
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}"
                                             alt="category-icon" />
                                     </div>
-                                    <h3 class="pymais-accordion-title">{{ __('Partner / Ally') }}</h3>
+                                    <h3 class="pymais-accordion-title">{{ __('Allies and partners') }}</h3>
                                 </div>
                             </div>
                         </div>
                         <div id="collapseFour" class="accordion-collapse collapse hide" aria-labelledby="headingFour"
                             data-bs-parent="#accordionExample">
                             <p class="accordion-body text-center">
-                                {{ __('By joining PYMAIS as an ally, you will be able to support the growth of SMEs in the manufacturing supply chain, contribute to regional economic development, and position yourself as a leader in your sector. You will also gain access to a network of innovative companies and valuable collaboration opportunities.') }}
+                                {{ __('By joining PYMAIS as an ally or partner, you will be able to collaborate in the growth of SMEs, position your brand in an environment of innovation and generate new business opportunities. You will contribute to economic development and create synergies with key market players.') }}
                                 <br><br>{{ __('To become an ally, you need to be an organization interested in supporting SMEs, preferably with experience in technology, finance, education or industry, and contribute resources, knowledge or connections that will boost their growth and professionalization.') }}
-                                <a href="{{ asset('pdfs/partner.pdf') }}" class="mt-3 pymais-button-gradient"
+                                    <a href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/Socio.pdf' : 'pdfs/partner.pdf') }}" class="mt-3 pymais-button-gradient"
                                     target="_blank">{{ __('More Information') }} </a></i>
                             </p>
                         </div>
@@ -444,8 +446,8 @@
                     <div class="col-lg-6 col-xl-6 offset-xl-2 col-12">
                         <div class="ep-group-study__video background-image ep-hobble position-relative"
                             style="background-image: url('{{ asset('assets/frontend/pymais/images/home/home-04.jpg') }}');">
-                            <a href="{{ asset('assets/frontend/pymais/video/PYMAIS-spanish.mp4') }}"
-                                class="ep-video__btn popup-video ep-hover-layer-2">
+                            <a href="{{ asset('assets/frontend/pymais/images/video/PYMAIS.mp4') }}"
+                                class="ep-video__btn popup-video ">
                                 <i class="fi fi-sr-play"></i>
                             </a>
                         </div>

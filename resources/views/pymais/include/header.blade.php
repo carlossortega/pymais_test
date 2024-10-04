@@ -25,7 +25,7 @@
                                 {{-- Ocultar el elemento "Sign up" si el usuario está en la ruta sme.signup --}}
                                 @if (Route::currentRouteName() !== 'register')
                                     <li class="active">
-                                        <a href="{{route('register')}}">{{__('Sign up')}}</a>
+                                        <a href="{{route('register')}}">{{__('Sign Up')}}</a>
                                     </li>
                                 @endif
                                 {{--  <li>
@@ -135,7 +135,7 @@
                                             {{-- Ocultar el elemento "Sign up" si el usuario está en la ruta sme.signup --}}
                                             @if (Route::currentRouteName() !== 'register')
                                                 <li class="active">
-                                                    <a href="{{route('register')}}">{{__('Sign up')}}</a>
+                                                    <a href="{{route('register')}}">{{__('Sign Up')}}</a>
                                                 </li>
                                             @endif
                                             <li>
