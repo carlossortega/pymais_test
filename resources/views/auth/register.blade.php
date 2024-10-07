@@ -260,8 +260,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Email') }}</label>
-                                    <input type="email" class="form-control pymais-input-background" aria-label="Email"
-                                           name="email">
+                                    <input type="email" class="form-control pymais-input-background"
+                                           aria-label="Email" name="email">
                                 </div>
                             </div>
                             <div class="row">
