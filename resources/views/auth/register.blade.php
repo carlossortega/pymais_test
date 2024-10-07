@@ -283,8 +283,8 @@
                                 <div class="col-md-6">
                                     <label>{{ __('Password') }}</label>
                                     <div class="input-group justify-content-end">
-                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('password') border border-danger @enderror"
-                                            id="password" aria-label="Password" name="password" value="{{ old('password') }}">
+                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('password1') border border-danger @enderror"
+                                            id="password" aria-label="Password" name="password1" value="{{ old('password1') }}">
                                         <div class="input-group-append position-absolute mt-3" style="z-index: 99">
                                             <button id="showPassword" class="btn btn-outline-secondary w-25 rounded-circle d-flex justify-content-center" type="button">
                                                 <i class="fas fa-eye"></i>
@@ -322,7 +322,11 @@
                             <div class="d-flex align-items-center" style="margin-top: 60px;">
                                 <input type="checkbox" id="toggleInputs" class="m-3 @error('accept_terms') border border-danger @enderror" name="accept_terms" 
                                     style="width: 20px; height: 20px; cursor: pointer; position: relative; margin-top; 20px">
-                                <label for="toggleInputs" class="mt-2 ms-2">{{ __('I accept') }} <span class="text-info">{{ __('terms and conditions') }}.</span></label>
+                                <label for="toggleInputs" class="mt-2 ms-2">{{ __('I accept') }}
+                                <a href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/Terminos_y_Condiciones.pdf' : 'pdfs/Terminos_y_Condiciones.pdf') }}"
+                                    class="text-info" target="_blank">
+                                    {{ __('terms and conditions') }}
+                                </a>
                             </div>
                             @error('accept_terms') <p class="text-danger ms-2 mb-3">{{ __('Confirm terms and conditions') }}</p> @enderror
                         </div>

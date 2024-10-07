@@ -428,7 +428,7 @@
         </div>
     </section>
     <!-- Video Area -->
-    <section class="ep-group-study position-relative section-gap mg-btm-120 pt-0">
+    <section class="ep-group-study position-relative section-gap mg-btm-120 pt-5">
 
         <div class="container ep-container">
             <div class="ep-group-study__inner position-relative">

@@ -35,7 +35,7 @@ class saveFileController extends Controller
 
         //get data from the form
         $full_name = $request->full_name;
-        $email = $request->mail-email;
+        $email = $request->mail->email;
         $phone_number = $request->phone_number;
         $country = $request->country;
         $city = $request->city;
@@ -99,8 +99,8 @@ class saveFileController extends Controller
             'email' => 'required|email|unique:users,email',
             'user_phone' => 'nullable',
             'user_linkedin' => 'nullable',
-            'password' => 'required',
-            'confirm_password' => 'required|same:password',
+            'password1' => 'required',
+            'confirm_password' => 'required|same:password1',
             'accept_terms' => 'required'
         ]);
 
@@ -141,7 +141,7 @@ class saveFileController extends Controller
         $email = $request->email;
         $user_phone = $request->user_phone;
         $user_linkedin = $request->user_linkedin;
-        $password = $request->password;
+        $password = $request->password1;
         $accept_terms = $request->accept_terms;
 
         $content = "Contact Name: $contact_name\nContact Last Name: $contact_last_name\nContact Email: $contact_email\nContact Phone: $contact_phone\nContact Position: $contact_position\nContact Area Position: $contact_area_position\nContact LinkedIn: $contact_linkedin\nTrade Name: $trade_name\nRFC: $rfc\nLegal Name: $legal_name\nCompany Contact Phone: $company_contact_phone\nCompany Contact Mail: $company_contact_mail\nNAICS: $naics_code\nNumber Employees: $number_employees\nSeniority: $seniority\nSector: $sector\nProducts and/or Services: $products_services\nStreet: $street\nNumber: $number\nPostal Code: $postal_code\nNeighborhood: $neighborhood\nCity: $city\nState: $state\nIncorporated United States: $incorporated_united_states\nCompany Name: $company_name\nBusiness Line: $business_line\nCompany Linkedin: $company_linkedin\nWebsite: $website\nSocial Networking: $social_networking\nName: $name\nLast Name: $last_name\nPosition: $position\nEmail: $email\nPhone: $user_phone\nLinkedin: $user_linkedin\nPassword: $password";
