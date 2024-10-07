@@ -109,7 +109,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>{{ __('NAICS Code') }}</label>
+                                    <label>{{ __('NAICS Code') }}</label> <a href="https://www.naics.com/search/" style="color:blue" target="_blank">{{ __('Search') }}</a>
                                     <input type="text" class="form-control pymais-input-background" aria-label="NAICS Code"
                                            name="naics_code">
                                 </div>
@@ -198,7 +198,7 @@
 
 
                         <h3 class="g-title" style="color:#2849E6; margin-bottom: 20px; margin-top: 60px">
-                            {{ __('Digital Precense') }}</h3>
+                            {{ __('Digital Presence') }}</h3>
                         {{--  Social media  --}}
                         <p class="description">{{ __('In which digital platforms can your company be found?') }}.</p>
 

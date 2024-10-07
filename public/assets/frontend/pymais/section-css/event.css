@@ -87,11 +87,17 @@
     font-size: 14px;
     color: var(--ep-secondary-color) !important;
 }
+.ep-event__autor {  
+  line-height: 16px;
+    font-size: 14px;
+    color: var(--ep-primary-color-9) !important;
+}
 .ep-event__p:hover {
     color: var(--ep-white-color) !important;
 }
 .ep-event__card:hover .ep-event__title,
 .ep-event__card:hover .ep-event__location,
+.ep-event__card:hover .ep-event__p,
 .ep-event__card:hover .ep-event__location i {
   color: var(--ep-white-color) !important;
 }
