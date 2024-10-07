@@ -22,7 +22,7 @@
                               <ul>
                                 <li><a href="{{route('register')}}">{{__('Become a participant')}}</a></li>
                                 <li><a href="#">{{__('All courses')}}</a></li>
-                                <li><a href="{{route('register')}}">{{__('Sign up')}}</a></li>
+                                <li><a href="{{route('register')}}">{{__('Sign Up')}}</a></li>
                               </ul>
                           </div>
                       </div>

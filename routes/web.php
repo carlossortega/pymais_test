@@ -34,7 +34,7 @@ Route::get('/dashboard', function () {
     if (auth()->user()->role == 'admin') {
         return redirect(route('admin.dashboard'));
     }elseif (auth()->user()->role == 'student') {
-        return redirect(route('my.profile'));
+        return redirect(route('my.courses'));
     } else {
         return redirect(route('home'));
     }

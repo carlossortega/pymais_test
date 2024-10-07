@@ -6,6 +6,7 @@
 /* How to use? : Check the GitHub README
 /* v2.0.0
 /* ----------------------------------------------- */
+
 var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
@@ -90,8 +91,8 @@ var pJS = function(tag_id, params){
       detect_on: 'canvas',
       events: {
         onhover: {
-          enable: false,
-          mode: 'grab'
+          enable: true,
+          mode: 'repulse'
         },
         onclick: {
           enable: true,

@@ -83,6 +83,7 @@
 }
 
 .ep-event__p {
+  line-height: 16px;
     font-size: 14px;
     color: var(--ep-secondary-color) !important;
 }

@@ -13,7 +13,7 @@
   display:inline;
 }
 .ep-logo {
-  background-image: url('../images/logo_white.png'); /* Replace with your image path */
+  background-image: url('../images/logo_light.png'); /* Replace with your image path */
   background-size: contain;
   background-repeat: no-repeat;
   width: 250px;
@@ -24,7 +24,8 @@
 }
 
 .ep-header__navigation a{
-  color:white !important;
+  /* color:white !important; */
+  color:#2849E6 !important;
 }
 .ep-header__middle.sticky .ep-header__navigation a{
   color: #2849E6 !important;
@@ -272,7 +273,7 @@
 .ep-header__menu li .sub-menu {
 	position: absolute;
 	/* background: var(--ep-white-color); */
-	background: #2849E6;
+	background: white;
 	min-width: 240px;
 	transition: all 0.3s ease-out 0s;
 	top: 100%;
