@@ -173,7 +173,7 @@
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}"
                                             alt="category-icon" />
                                     </div>
-                                    <h3 class="pymais-accordion-title">{{ __('Consultant') }}</h3>
+                                    <h3 class="pymais-accordion-title">{{ __('Consultant and mentors') }}</h3>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +199,7 @@
                                         <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}"
                                             alt="category-icon" />
                                     </div>
-                                    <h3 class="pymais-accordion-title">{{ __('Corporate') }}</h3>
+                                    <h3 class="pymais-accordion-title">{{ __('Industry and corporate') }}</h3>
                                 </div>
                             </div>
                         </div>

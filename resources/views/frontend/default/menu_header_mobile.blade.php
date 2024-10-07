@@ -66,7 +66,7 @@
             </div>
             @guest
                 <div class="btn-off">
-                    <a href="{{ route('login') }}" class="eBtn btn gradient mb-3">{{ get_phrase('Login') }}</a>
+                    <a href="{{ route('login') }}" class="eBtn btn gradient mb-3">{{ get_phrase('Sign In') }}</a>
                     <a href="{{ route('register') }}" class="eBtn btn gradient sign">{{ get_phrase('Sign Up') }}</a>
                 </div>
             @endguest
