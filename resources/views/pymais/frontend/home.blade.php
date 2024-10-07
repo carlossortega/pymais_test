@@ -91,8 +91,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-12 col-12 text-center">
                     <div class="ep-section__content ep-section__content--style2">
-                        <h3 class="ep-section__title ep-split-text left"> {{ __('About ') }} <span
-                                style="color:#2849E6">PYMAIS</span></h3>
+                        <h3 class="ep-section__title ep-split-text left"> {{ __('About ') }} 
+                            <span style="color:#2849E6">PYMAIS</span>
+                        </h3>
                         <p class="ep-section__text">
                             {{ __('The PyMAis platform is a groundbreaking initiative aimed at empowering Mexican small and medium-sized enterprises (SMEs) through advanced technologies, particularly artificial intelligence (AI). This program focuses on helping companies enhance their operations, allowing them to optimize processes and increase efficiency. Additionally, PYMAIS fosters strong business connections and opens opportunities for SMEs to become suppliers to major manufacturers across North America, driving growth and innovation in the region.') }}
                         </p>
@@ -484,125 +485,176 @@
             <div class="row container">
                 <div class="owl-carousel ep-event__slider">
                     
-                    <!-- Tarjeta 1 -->
-                    <div class="ep-event__card">
-                        <a href="https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img" target="_blank">
-                            <img src="{{ asset('assets/frontend/pymais/images/resources/1.jpg') }}" alt="event-img" />                                
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__title text-center" target="_blank">
-                            {{__('Microsoft Copilot: Boost your Productivity')}}
-                            </a>
-                            <p class="ep-event__autor">
-                            Instructora. Elena Santos de Paz <br>
-                            Periodista
-                            </p>
-                            <p class="ep-event__p">
-                            {{ \Illuminate\Support\Str::words(strip_tags( __('Learn how Microsoft Copilot can simplify and streamline your daily tasks, from generating ideas to automating processes. This course will guide you from the basics to making Copilot a key assistant to improve your productivity and optimize your workflow.')), 20, '...') }}
-                            </p>
+                    <!-- Tarjeta 1 -->       
+                    @if (isset(auth()->user()->id))
+                        <a href="https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning" target="_blank">
+                    @else                                                    
+                        @if (!request()->is('login'))
+                            <a href="{{ route('login') }}">                            
+                        @endif                        
+                    @endif                     
+                        <div class="ep-event__card">
+                            <div class="ep-event__img">
+                                <img src="{{ asset('assets/frontend/pymais/images/resources/1.jpg') }}" alt="event-img" />                                
+                            </div>
+                            <div class="ep-event__info">
+                                <div class="ep-event__title text-center"">
+                                {{__('Microsoft Copilot: Boost your Productivity')}}
+                                </div>
+                                <p class="ep-event__autor">
+                                Instructora. Elena Santos de Paz <br>
+                                Periodista
+                                </p>
+                                <p class="ep-event__p">
+                                {{ \Illuminate\Support\Str::words(strip_tags( __('Learn how Microsoft Copilot can simplify and streamline your daily tasks, from generating ideas to automating processes. This course will guide you from the basics to making Copilot a key assistant to improve your productivity and optimize your workflow.')), 20, '...') }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Tarjeta 2 -->
-                    <div class="ep-event__card">
-                        <a href="https://www.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial/la-ia-llega-a-powerpoint-para-cambiar-tu-modo-de-trabajar-y-aumentar-tu-productividad " target="_blank" class="ep-event__img">
-                        <img src="{{ asset('assets/frontend/pymais/images/resources/2.jpg') }}" alt="event-img" />                                
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://www.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial/la-ia-llega-a-powerpoint-para-cambiar-tu-modo-de-trabajar-y-aumentar-tu-productividad" class="ep-event__title text-center" target="_blank">
-                            {{__('Unlock the Power of Copilot: in PowerPoint with Microsoft 365')}}
-                            </a>
-                            <p class="ep-event__autor">
-                            Instructora. Isabel Fernández Gutiérrez  <br>
-                            Instructora MOS
-                            </p>
-                            <p class="ep-event__p">
-                            {{ \Illuminate\Support\Str::words(strip_tags( __('Discover how Copilot can transform your PowerPoint presentations, regardless of experience. Learn to create, edit, and optimize slides efficiently with AI, and boost your productivity using natural language commands. Practical demos included, even without prior access to Copilot.')), 20, '...') }}
-                            </p>
+                    
+                    @if (isset(auth()->user()->id))
+                        <a href="https://www.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial/la-ia-llega-a-powerpoint-para-cambiar-tu-modo-de-trabajar-y-aumentar-tu-productividad" target="_blank">
+                    @else                                                    
+                        @if (!request()->is('login'))
+                            <a href="{{ route('login') }}">                            
+                        @endif                        
+                    @endif                     
+                        <div class="ep-event__card">
+                            <div class="ep-event__img">
+                                <img src="{{ asset('assets/frontend/pymais/images/resources/2.jpg') }}" alt="event-img" />                                
+                            </div>
+                            <div class="ep-event__info">
+                                <div class="ep-event__title text-center"">
+                                {{__('Unlock the Power of Copilot: in PowerPoint with Microsoft 365')}}
+                                </div>
+                                <p class="ep-event__autor">
+                                Instructora. Isabel Fernández Gutiérrez  <br>
+                                Instructora MOS
+                                </p>
+                                <p class="ep-event__p">
+                                {{ \Illuminate\Support\Str::words(strip_tags( __('Discover how Copilot can transform your PowerPoint presentations, regardless of experience. Learn to create, edit, and optimize slides efficiently with AI, and boost your productivity using natural language commands. Practical demos included, even without prior access to Copilot.')), 20, '...') }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Tarjeta 3 -->
-                    <div class="ep-event__card">
-                        <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img" target="_blank">
-                        <a href="https://www.linkedin.com/learning/descubre-microsoft-365-copilot/la-ia-llega-a-microsoft-365-de-la-mano-de-copilot " class="ep-event__img" target="_blank">
-                        <img src="{{ asset('assets/frontend/pymais/images/resources/3.jpg') }}" alt="event-img" />                                                           
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__title text-center" target="_blank">
-                            <a href="https://www.linkedin.com/learning/descubre-microsoft-365-copilot/la-ia-llega-a-microsoft-365-de-la-mano-de-copilot" class="ep-event__title text-center" target="_blank">
-                            {{__('Master Microsoft 365 Copilot: Boost your Productivity with AI')}}
-                            </a>
-                            <p class="ep-event__autor">
-                            Instructora. Isabel Fernández Gutiérrez  <br>
-                            Instructora MOS
-                            </p>
-                            <p class="ep-event__p">
-                            {{ \Illuminate\Support\Str::words(strip_tags( __('Explore how Microsoft 365 Copilot can transform your daily tasks. This course, designed for all levels, teaches you how to leverage AI in applications such as Word, Excel, PowerPoint, Outlook, and more, improving your efficiency and productivity at work.')), 20, '...') }}
-                            </p>
+                    
+                    @if (isset(auth()->user()->id))
+                        <a href="https://www.linkedin.com/learning/descubre-microsoft-365-copilot/la-ia-llega-a-microsoft-365-de-la-mano-de-copilot" target="_blank">
+                    @else                                                    
+                        @if (!request()->is('login'))
+                            <a href="{{ route('login') }}">                            
+                        @endif                        
+                    @endif                     
+                        <div class="ep-event__card">
+                            <div class="ep-event__img">
+                                <img src="{{ asset('assets/frontend/pymais/images/resources/3.jpg') }}" alt="event-img" />                                
+                            </div>
+                            <div class="ep-event__info">
+                                <div class="ep-event__title text-center"">
+                                {{__('Master Microsoft 365 Copilot: Boost your Productivity with AI')}}
+                                </div>
+                                <p class="ep-event__autor">
+                                Instructora. Isabel Fernández Gutiérrez  <br>
+                                Instructora MOS
+                                </p>
+                                <p class="ep-event__p">
+                                {{ \Illuminate\Support\Str::words(strip_tags( __('Explore how Microsoft 365 Copilot can transform your daily tasks. This course, designed for all levels, teaches you how to leverage AI in applications such as Word, Excel, PowerPoint, Outlook, and more, improving your efficiency and productivity at work.')), 20, '...') }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Tarjeta 4 -->
-                    <div class="ep-event__card">
-                        <a href="https://www.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics%2Eteams%2Ecdn%2Eoffice%2Enet%7Cre-other&originalSubdomain=es " class="ep-event__img" target="_blank"> 
-                        <img src="{{ asset('assets/frontend/pymais/images/resources/4.jpg') }}" alt="event-img" />                                
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://www.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics%2Eteams%2Ecdn%2Eoffice%2Enet%7Cre-other&originalSubdomain=es" class="ep-event__title text-center" target="_blank">
-                            {{__('Key Skills to Apply Generative AI in your Career')}}
-                            </a>
-                            <p class="ep-event__autor">
-                            Instructores. Pinar Seyhan Demirdag  <br>
-                            Ashley Kennedy <br>
-                            Elena Santos de Paz <br>
-                            Isabel Fernández Gutiérrez <br>
-                            Vilas Dhar <br>
-                            Paula García Esteban <br>
-                            </p>
-                            <p class="ep-event__p">
-                            {{ \Illuminate\Support\Str::words(strip_tags( __('Learn the fundamentals of artificial intelligence and master generative AI models. This course will guide you in the ethical use of generative AI and its impact on the work environment, helping you to apply these tools in your career.')), 20, '...') }}
-                            </p>
+                    
+                    @if (isset(auth()->user()->id))
+                        <a href="https://www.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics%2Eteams%2Ecdn%2Eoffice%2Enet%7Cre-other&originalSubdomain=es" target="_blank">
+                    @else                                                    
+                        @if (!request()->is('login'))
+                            <a href="{{ route('login') }}">                            
+                        @endif                        
+                    @endif                     
+                        <div class="ep-event__card">
+                            <div class="ep-event__img">
+                                <img src="{{ asset('assets/frontend/pymais/images/resources/4.jpg') }}" alt="event-img" />                                
+                            </div>
+                            <div class="ep-event__info">
+                                <div class="ep-event__title text-center"">
+                                {{__('Key Skills to Apply Generative AI in your Career')}}
+                                </div>
+                                <p class="ep-event__autor">
+                                Instructores. Pinar Seyhan Demirdag  <br>
+                                Ashley Kennedy <br>
+                                Elena Santos de Paz <br>
+                                Isabel Fernández Gutiérrez <br>
+                                Vilas Dhar <br>
+                                Paula García Esteban <br>
+                                </p>
+                                <p class="ep-event__p">
+                                {{ \Illuminate\Support\Str::words(strip_tags( __('Learn the fundamentals of artificial intelligence and master generative AI models. This course will guide you in the ethical use of generative AI and its impact on the work environment, helping you to apply these tools in your career.')), 20, '...') }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Tarjeta 5 -->
-                    <div class="ep-event__card">
-                        <a href="https://www.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa/introduccion-a-promt-engineering " class="ep-event__img" target="_blank">
-                        <img src="{{ asset('assets/frontend/pymais/images/resources/5.jpg') }}" alt="event-img" />                                                               
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://www.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa/introduccion-a-promt-engineering" class="ep-event__title text-center" target="_blank">
-                            {{__('Effective Communication with AI: Fundamentals of Prompt Engineering')}}
-                            </a>
-                            <p class="ep-event__autor ">
-                            Instructor. Victoria Ángela Pérez Aneiros  <br>
-                            Experta en redacción y corrección de textos
-                            </p>
-                            <p class="ep-event__p">
-                            {{ \Illuminate\Support\Str::words(strip_tags( __('Learn how to interact with AI without previous experience. Discover the basics of prompt engineering, its applications, and how to optimize your orders to obtain better results in your projects.')), 20, '...') }}
-                            </p>
+                    
+                    @if (isset(auth()->user()->id))
+                        <a href="https://www.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa/introduccion-a-promt-engineering" target="_blank">
+                    @else                                                    
+                        @if (!request()->is('login'))
+                            <a href="{{ route('login') }}">                            
+                        @endif                        
+                    @endif                     
+                        <div class="ep-event__card">
+                            <div class="ep-event__img">
+                                <img src="{{ asset('assets/frontend/pymais/images/resources/5.jpg') }}" alt="event-img" />                                
+                            </div>
+                            <div class="ep-event__info">
+                                <div class="ep-event__title text-center"">
+                                {{__('Effective Communication with AI: Fundamentals of Prompt Engineering')}}
+                                </div>
+                                <p class="ep-event__autor ">
+                                Instructor. Victoria Ángela Pérez Aneiros  <br>
+                                Experta en redacción y corrección de textos
+                                </p>
+                                <p class="ep-event__p">
+                                {{ \Illuminate\Support\Str::words(strip_tags( __('Learn how to interact with AI without previous experience. Discover the basics of prompt engineering, its applications, and how to optimize your orders to obtain better results in your projects.')), 20, '...') }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Tarjeta 6 -->
-                    <div class="ep-event__card">
-                        <a href="https://www.linkedin.com/learning/que-es-la-ia-generativa/la-ia-generativa-es-una-herramienta-al-servicio-de-la-humanidad " class="ep-event__img" target="_blank">
-                        <img src="{{ asset('assets/frontend/pymais/images/resources/6.jpg') }}" alt="event-img" />                                                           
-                        </a>
-                        <div class="ep-event__info">
-                            <a href="https://www.linkedin.com/learning/que-es-la-ia-generativa/la-ia-generativa-es-una-herramienta-al-servicio-de-la-humanidad " class="ep-event__title text-center" target="_blank">
-                            {{__('The Generative AI Revolution: Adapt your Career to the Future')}}
-                            </a>
-                            <p class="ep-event__autor">
-                            Instructor. Pinar Seyhan Demirdag  <br>
-                            Director de IA en Cuebric | Artista | Experto en IA generativa
-                            </p>
-                            <p class="ep-event__p">
-                            {{ \Illuminate\Support\Str::words(strip_tags( __('Generative AI is transforming industries such as film, medicine, marketing and more. This course will help you learn how to adapt to this creative revolution and take advantage of its benefits, positioning you as a leader in your industry.')), 20, '...') }}
-                            </p>
+                    
+                    @if (isset(auth()->user()->id))
+                        <a href="https://www.linkedin.com/learning/que-es-la-ia-generativa/la-ia-generativa-es-una-herramienta-al-servicio-de-la-humanidad" target="_blank">
+                    @else                                                    
+                        @if (!request()->is('login'))
+                            <a href="{{ route('login') }}">                            
+                        @endif                        
+                    @endif                     
+                        <div class="ep-event__card">
+                            <div class="ep-event__img">
+                                <img src="{{ asset('assets/frontend/pymais/images/resources/6.jpg') }}" alt="event-img" />                                
+                            </div>
+                            <div class="ep-event__info">
+                                <div class="ep-event__title text-center"">
+                                {{__('The Generative AI Revolution: Adapt your Career to the Future')}}
+                                </div>
+                                <p class="ep-event__autor">
+                                Instructor. Pinar Seyhan Demirdag  <br>
+                                Director de IA en Cuebric | Artista | Experto en IA generativa
+                                </p>
+                                <p class="ep-event__p">
+                                {{ \Illuminate\Support\Str::words(strip_tags( __('Generative AI is transforming industries such as film, medicine, marketing and more. This course will help you learn how to adapt to this creative revolution and take advantage of its benefits, positioning you as a leader in your industry.')), 20, '...') }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
