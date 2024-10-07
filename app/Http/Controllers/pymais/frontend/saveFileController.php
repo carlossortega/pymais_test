@@ -104,8 +104,6 @@ class saveFileController extends Controller
             'accept_terms' => 'required'
         ]);
 
-        dd('register');
-
         $contact_name = $request->contact_name;
         $contact_last_name = $request->contact_last_name;
         $contact_email = $request->contact_email;
