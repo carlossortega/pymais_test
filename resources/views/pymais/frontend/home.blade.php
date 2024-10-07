@@ -502,11 +502,11 @@
 
                     <!-- Tarjeta 2 -->
                     <div class="ep-event__card">
-                        <a href="#" target="_blank" class="ep-event__img">
+                        <a href="https://www.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial/la-ia-llega-a-powerpoint-para-cambiar-tu-modo-de-trabajar-y-aumentar-tu-productividad " target="_blank" class="ep-event__img">
                         <img src="{{ asset('assets/frontend/pymais/images/resources/2.jpg') }}" alt="event-img" />                                
                         </a>
                         <div class="ep-event__info">
-                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            <a href="https://www.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial/la-ia-llega-a-powerpoint-para-cambiar-tu-modo-de-trabajar-y-aumentar-tu-productividad" class="ep-event__title text-center" target="_blank">
                             {{__('Unlock the Power of Copilot: in PowerPoint with Microsoft 365')}}
                             </a>
                             <p class="ep-event__p">
@@ -521,11 +521,11 @@
 
                     <!-- Tarjeta 3 -->
                     <div class="ep-event__card">
-                        <a href="#" class="ep-event__img" target="_blank">
+                        <a href="https://www.linkedin.com/learning/descubre-microsoft-365-copilot/la-ia-llega-a-microsoft-365-de-la-mano-de-copilot " class="ep-event__img" target="_blank">
                         <img src="{{ asset('assets/frontend/pymais/images/resources/3.jpg') }}" alt="event-img" />                                                           
                         </a>
                         <div class="ep-event__info">
-                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            <a href="https://www.linkedin.com/learning/descubre-microsoft-365-copilot/la-ia-llega-a-microsoft-365-de-la-mano-de-copilot" class="ep-event__title text-center" target="_blank">
                             {{__('Master Microsoft 365 Copilot: Boost your Productivity with AI')}}
                             </a>
                             <p class="ep-event__p">
@@ -540,11 +540,11 @@
 
                     <!-- Tarjeta 4 -->
                     <div class="ep-event__card">
-                        <a href="#" class="ep-event__img" target="_blank"> 
+                        <a href="https://www.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics%2Eteams%2Ecdn%2Eoffice%2Enet%7Cre-other&originalSubdomain=es " class="ep-event__img" target="_blank"> 
                         <img src="{{ asset('assets/frontend/pymais/images/resources/4.jpg') }}" alt="event-img" />                                
                         </a>
                         <div class="ep-event__info">
-                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            <a href="https://www.linkedin.com/learning/paths/fundamentos-profesionales-de-ia-generativa-por-microsoft-y-linkedin?src=re-other&veh=statics%2Eteams%2Ecdn%2Eoffice%2Enet%7Cre-other&originalSubdomain=es" class="ep-event__title text-center" target="_blank">
                             {{__('Key Skills to Apply Generative AI in your Career')}}
                             </a>
                             <p class="ep-event__p">
@@ -563,11 +563,11 @@
 
                     <!-- Tarjeta 5 -->
                     <div class="ep-event__card">
-                        <a href="#" class="ep-event__img" target="_blank">
+                        <a href="https://www.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa/introduccion-a-promt-engineering " class="ep-event__img" target="_blank">
                         <img src="{{ asset('assets/frontend/pymais/images/resources/5.jpg') }}" alt="event-img" />                                                               
                         </a>
                         <div class="ep-event__info">
-                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            <a href="https://www.linkedin.com/learning/prompt-engineering-aprende-a-hablar-con-una-inteligencia-artificial-generativa/introduccion-a-promt-engineering" class="ep-event__title text-center" target="_blank">
                             {{__('Effective Communication with AI: Fundamentals of Prompt Engineering')}}
                             </a>
                             <p class="ep-event__p">
@@ -582,11 +582,11 @@
 
                     <!-- Tarjeta 6 -->
                     <div class="ep-event__card">
-                        <a href="#" class="ep-event__img" target="_blank">
+                        <a href="https://www.linkedin.com/learning/que-es-la-ia-generativa/la-ia-generativa-es-una-herramienta-al-servicio-de-la-humanidad " class="ep-event__img" target="_blank">
                         <img src="{{ asset('assets/frontend/pymais/images/resources/6.jpg') }}" alt="event-img" />                                                           
                         </a>
                         <div class="ep-event__info">
-                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            <a href="https://www.linkedin.com/learning/que-es-la-ia-generativa/la-ia-generativa-es-una-herramienta-al-servicio-de-la-humanidad " class="ep-event__title text-center" target="_blank">
                             {{__('The Generative AI Revolution: Adapt your Career to the Future')}}
                             </a>
                             <p class="ep-event__p">
