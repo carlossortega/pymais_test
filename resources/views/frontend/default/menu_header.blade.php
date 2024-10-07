@@ -152,7 +152,7 @@
                         @endif
                     @else
                         @if (!request()->is('login'))
-                            <a href="{{ route('login') }}" class="d-none d-lg-inline-block eBtn btn gradient mb-1">{{ __('Login') }}</a> 
+                            <a href="{{ route('login') }}" class="d-none d-lg-inline-block eBtn btn gradient mb-1">{{ __('Sign In') }}</a> 
                         @endif
                     @endif 
                     <span class="toggle-bar text-dark ms-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" 

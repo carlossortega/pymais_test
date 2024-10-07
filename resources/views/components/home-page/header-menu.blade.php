@@ -245,7 +245,7 @@
                             </ul>
                         </div>
                     @else
-                        <a href="{{ route('login') }}" class="d-none d-lg-inline-block eBtn btn gradient mb-1">{{ get_phrase('Login') }}</a> @endif <span class="toggle-bar
+                        <a href="{{ route('login') }}" class="d-none d-lg-inline-block eBtn btn gradient mb-1">{{ get_phrase('Sign In') }}</a> @endif <span class="toggle-bar
                     text-dark ms-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-sharp fa-solid fa-bars"></i></span>
                 </div>
             </div>
