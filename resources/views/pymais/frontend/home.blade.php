@@ -310,12 +310,16 @@
                                             {{ __('During each of the modules deployment AI tools will be included as part of the programming, learning and activities.') }}
                                         </p>  --}}
 
+                                        
                                         <div class="ep-section__btn">
+                                            <!--
                                             <a href="{{ asset('pdfs/Full-Curriculum.pdf') }}" class="ep-btn border-btn"
                                                 target="_blank">{{ __('See full curriculum') }}
                                                 <i class="fi fi-rs-arrow-small-right"></i>
                                             </a>
+                                            -->
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -483,14 +487,14 @@
                     
                     <!-- Tarjeta 1 -->
                     <div class="ep-event__card">
-                        <a href="https://es.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img" target="_blank">
+                        <a href="https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img" target="_blank">
                             <img src="{{ asset('assets/frontend/pymais/images/resources/1.jpg') }}" alt="event-img" />                                
                         </a>
                         <div class="ep-event__info">
-                            <a href="https://es.linkedin.com/learning/agiliza-tu-trabajo-con-el-chat-de-microsoft-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__title text-center" target="_blank">
+                            <a href="https://es.linkedin.com/learning/copilot-en-powerpoint-crea-presentaciones-impactantes-con-inteligencia-artificial?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__title text-center" target="_blank">
                             {{__('Microsoft Copilot: Boost your Productivity')}}
                             </a>
-                            <p class="ep-event__p">
+                            <p class="ep-event__autor">
                             Instructora. Elena Santos de Paz <br>
                             Periodista
                             </p>
@@ -509,7 +513,7 @@
                             <a href="#" class="ep-event__title text-center" target="_blank">
                             {{__('Unlock the Power of Copilot: in PowerPoint with Microsoft 365')}}
                             </a>
-                            <p class="ep-event__p">
+                            <p class="ep-event__autor">
                             Instructora. Isabel Fernández Gutiérrez  <br>
                             Instructora MOS
                             </p>
@@ -521,14 +525,14 @@
 
                     <!-- Tarjeta 3 -->
                     <div class="ep-event__card">
-                        <a href="#" class="ep-event__img" target="_blank">
+                        <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__img" target="_blank">
                         <img src="{{ asset('assets/frontend/pymais/images/resources/3.jpg') }}" alt="event-img" />                                                           
                         </a>
                         <div class="ep-event__info">
-                            <a href="#" class="ep-event__title text-center" target="_blank">
+                            <a href="https://es.linkedin.com/learning/descubre-microsoft-365-copilot?trk=learning-path&upsellOrderOrigin=default_guest_learning" class="ep-event__title text-center" target="_blank">
                             {{__('Master Microsoft 365 Copilot: Boost your Productivity with AI')}}
                             </a>
-                            <p class="ep-event__p">
+                            <p class="ep-event__autor">
                             Instructora. Isabel Fernández Gutiérrez  <br>
                             Instructora MOS
                             </p>
@@ -547,7 +551,7 @@
                             <a href="#" class="ep-event__title text-center" target="_blank">
                             {{__('Key Skills to Apply Generative AI in your Career')}}
                             </a>
-                            <p class="ep-event__p">
+                            <p class="ep-event__autor">
                             Instructores. Pinar Seyhan Demirdag  <br>
                             Ashley Kennedy <br>
                             Elena Santos de Paz <br>
@@ -570,7 +574,7 @@
                             <a href="#" class="ep-event__title text-center" target="_blank">
                             {{__('Effective Communication with AI: Fundamentals of Prompt Engineering')}}
                             </a>
-                            <p class="ep-event__p">
+                            <p class="ep-event__autor ">
                             Instructor. Victoria Ángela Pérez Aneiros  <br>
                             Experta en redacción y corrección de textos
                             </p>
@@ -589,7 +593,7 @@
                             <a href="#" class="ep-event__title text-center" target="_blank">
                             {{__('The Generative AI Revolution: Adapt your Career to the Future')}}
                             </a>
-                            <p class="ep-event__p">
+                            <p class="ep-event__autor">
                             Instructor. Pinar Seyhan Demirdag  <br>
                             Director de IA en Cuebric | Artista | Experto en IA generativa
                             </p>

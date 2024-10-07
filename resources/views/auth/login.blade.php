@@ -27,11 +27,13 @@
                             <p class="description">{{ __('See your growth and get consulting support') }}!</p>
                             <div class="form-group">
                                 <label for="email" class="form-label">{{ __('Email') }}</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="{{ __('Your Email') }}">
+                                <input type="email" id="email" name="email" class="form-control @error('email') border border-danger @enderror" placeholder="{{ __('Your Email') }}">
+                                @error('email') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                             </div>
                             <div class="form-group">
                                 <label for="" class="form-label">{{ __('Password') }}</label>
-                                <input type="password" id="password" name="password" class="form-control" placeholder="*********">
+                                <input type="password" id="password" name="password" class="form-control @error('password') border border-danger @enderror" placeholder="*********">
+                                @error('password') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                             </div>
                             <div class="form-group mb-25 d-flex justify-content-between align-items-center remember-me">
                                 <div class="form-check">

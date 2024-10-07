@@ -16,12 +16,12 @@
                             <h5 class="ep-footer__social-title">{{__('Follow Us')}}</h5>
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/pymais" target="_blank" >
                                         <i class="icofont-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.linkedin.com/company/pymais" target="_blank" >
                                         <i class="icofont-linkedin"></i>
                                     </a>
                                 </li>

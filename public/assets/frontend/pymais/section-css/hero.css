@@ -359,7 +359,8 @@
 }
 
 .pymais-button-gradient {
-    background: linear-gradient(to right, #2849E6, #3C6EE2);
+    /*background: linear-gradient(to right, #2849E6, #3C6EE2);*/
+    background: #2849E6;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -371,7 +372,8 @@
 }
 
 .pymais-button-gradient:hover {
-    background: linear-gradient(to right, #3C6EE2, #2849E6); /* Efecto al pasar el ratón */
+    /*background: linear-gradient(to right, #3C6EE2, #2849E6); /* Efecto al pasar el ratón */
+    background: #2849E6;
     color: #f2f2f2;
 }
 

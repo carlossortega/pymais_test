@@ -230,15 +230,18 @@ img {
     display: inline-block;
 }
 .gradient {
+    /* Gradiante anterior
     background-image: linear-gradient(
         to right,
         #2f57ef 0%,
         #c664ff 51%,
         #c664ff 100%
     );
-    transition: 0.5s;
+    */
+    background: #2849E6;
+    /*transition: 0.5s;*/
     background-size: 200% auto;
-    box-shadow: 0 0 20px #eee;
+    /*box-shadow: 0 0 20px #eee;*/
 }
 .shadow-none {
     box-shadow: none !important;
@@ -246,6 +249,7 @@ img {
 .gradient:hover {
     background-position: right center;
     color: #fff;
+    background: #2849E6;
     text-decoration: none;
 }
 .section-padding {

@@ -31,43 +31,44 @@
                                 <div class="col-md-6">
                                     <label>{{ __('Name') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                           aria-label="Name" name="contact_name" autofocus>
+                                           aria-label="Name" name="contact_name" autofocus value="{{ old('contact_name') }}">
+                                           @error('contact_name') <div class="bg-info">{{ __('The contact name is required') }}</div> @enderror
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Last name') }}(s)</label>
-                                    <input type="email" class="form-control pymais-input-background" aria-label="Last name"
-                                           name="contact_last_name">
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Last name"
+                                           name="contact_last_name" value="{{ old('contact_last_name') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Email') }}</label>
                                     <input type="email" class="form-control pymais-input-background" aria-label="Email"
-                                        name="contact_email">
+                                        name="contact_email" value="{{ old('contact_email') }}">
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Phone') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Phone" name="contact_phone">
+                                        aria-label="Phone" name="contact_phone" value="{{ old('contact_phone') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Position') }}</label>
-                                    <input type="email" class="form-control pymais-input-background" aria-label="Position"
-                                        name="contact_position">
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Position"
+                                        name="contact_position" value="{{ old('contact_position') }}">
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Job area (e.g. Sales)') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Area of the post" name="contact_area_position">
+                                        aria-label="Area of the post" name="contact_area_position" value="{{ old('contact_area_position') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('LinkedIn profile') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="LinkedIn profile" name="contact_linkedin">
+                                        aria-label="LinkedIn profile" name="contact_linkedin" value="{{ old('contact_linkedin') }}">
                                 </div>
                             </div>
                         </div>
@@ -81,61 +82,61 @@
                                 <div class="col-md-12">
                                     <label>{{ __('Trade Name') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Trade Name" name="trade_name">
+                                        aria-label="Trade Name" name="trade_name" value="{{ old('trade_name') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('RFC') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="RFC" name="rfc">
+                                        aria-label="RFC" name="rfc" value="{{ old('rfc') }}">
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Legal Name') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Legal Name" name="legal_name">
+                                        aria-label="Legal Name" name="legal_name" value="{{ old('legal_name') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Contact phone') }}</label>
-                                    <input type="text" aria-label="Contact phone" name="company_contact_phone" class="form-control pymais-input-background">
+                                    <input type="text" aria-label="Contact phone" name="company_contact_phone" class="form-control pymais-input-background" value="{{ old('company_contact_phone') }}">
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Contact email') }}</label>
                                     <input type="email" class="form-control pymais-input-background"
-                                           aria-label="Contact email" name="company_contact_mail">
+                                           aria-label="Contact email" name="company_contact_mail" value="{{ old('company_contact_mail') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>{{ __('NAICS Code') }}</label>
+                                    <label>{{ __('NAICS Code') }}</label> <a href="https://www.naics.com/search/" style="color:blue" target="_blank">{{ __('Search') }}</a>
                                     <input type="text" class="form-control pymais-input-background" aria-label="NAICS Code"
-                                           name="naics_code">
+                                           name="naics_code" value="{{ old('naics_code') }}">
                                 </div>
                                 <div class="col-md-3">
                                     <label>{{ __('Number of employees') }} </label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Number of employees" name="number_employees">
+                                        aria-label="Number of employees" name="number_employees" value="{{ old('number_employees') }}">
                                 </div>
                                 <div class="col-md-3">
                                     <label>{{ __('Seniority in the company') }} </label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Seniority in the company" name="seniority">
+                                        aria-label="Seniority in the company" name="seniority" value="{{ old('seniority') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Sector to which it belongs') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Sector to which it belongs"
-                                           name="sector">
+                                           name="sector" value="{{ old('sector') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 mb-5">
                                     <label>{{ __('Products and/or Services they offer') }}</label>
                                     <textarea type="text" class="form-control pymais-input-background" 
-                                        aria-label="Products and/or Services they offer" name="products_services"></textarea/>
+                                        aria-label="Products and/or Services they offer" name="products_services">{{ old('products_services') }}</textarea>
                                 </div>
                             </div>
                             <div class="row">
@@ -145,39 +146,39 @@
                                 <div class="col-md-6">
                                     <label>{{ __('Street') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Street"
-                                           name="street">
+                                           name="street" value="{{ old('street') }}">
                                 </div>
                                 <div class="col-md-3">
                                     <label>{{ __('Number') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Number"
-                                           name="number">
+                                           name="number" value="{{ old('number') }}">
                                 </div>
                                 <div class="col-md-3">
                                     <label>{{ __('Postal code') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Postal code"
-                                           name="postal_code">
+                                           name="postal_code" value="{{ old('postal_code') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Neighborhood') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Neighborhood"
-                                           name="neighborhood">
+                                           name="neighborhood" value="{{ old('neighborhood') }}">
                                 </div>
                                 <div class="col-md-3">
                                     <label>{{ __('City') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="City"
-                                           name="city">
+                                           name="city" value="{{ old('city') }}">
                                 </div>
                                 <div class="col-md-3">
                                     <label>{{ __('State') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="State"
-                                           name="state">
+                                           name="state" value="{{ old('state') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="d-flex align-items-center p-3">
-                                    <input type="checkbox" id="toggleInputs" class="m-3" name="incorporated_united_states"
+                                    <input type="checkbox" id="toggleInputs" class="m-3" name="incorporated_united_states" value="{{ old('incorporated_united_states') }}"
                                         style="width: 20px; height: 20px; cursor: pointer; position: relative; margin-top; 20px">
                                     <label for="toggleInputs" class="mt-2 ms-2">{{ __('Are you incorporated in the United States?') }}</label>
                                 </div>
@@ -185,12 +186,12 @@
                                     <div class="col-md-6">
                                     <label>{{ __('Company Name') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Company Name"
-                                           name="company_name">
+                                           name="company_name" value="{{ old('company_name') }}">
                                     </div>
                                     <div class="col-md-6">
                                     <label>{{ __('Business Line') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Business Line"
-                                           name="business_line">
+                                           name="business_line" value="{{ old('business_line') }}">
                                     </div>
                                 </div>
                             </div>
@@ -198,7 +199,7 @@
 
 
                         <h3 class="g-title" style="color:#2849E6; margin-bottom: 20px; margin-top: 60px">
-                            {{ __('Digital Precense') }}</h3>
+                            {{ __('Digital Presence') }}</h3>
                         {{--  Social media  --}}
                         <p class="description">{{ __('In which digital platforms can your company be found?') }}.</p>
 
@@ -207,7 +208,7 @@
                                 <div class="col-md-12 mb-3">
                                     <label>{{ __('Company LinkedIn') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Company LinkedIn"
-                                        name="company_linkedin">
+                                        name="company_linkedin" value="{{ old('company_linkedin') }}">
                                     <div class="d-flex align-items-center p-1">
                                         <label class="me-3">{{ __('Does your company not yet have a presence on LinkedIn?') }}</label>
                                         <a href="https://www.linkedin.com/learning/growing-your-business-with-linkedin-pages-22873022" target="_blank" style="color:#2849E6;">{{ __('Learn how') }}.</a>
@@ -216,14 +217,14 @@
                                 <div class="col-md-12 mb-3">
                                     <label>{{ __('Website') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Website" name="website">
+                                        aria-label="Website" name="website" value="{{ old('website') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 mb-3">
                                     <label>{{ __('Social Networking') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Social Networking" name="social_networking">
+                                        aria-label="Social Networking" name="social_networking" value="{{ old('social_networking') }}">
                                 </div>
                             </div>
                             <div class="row">
@@ -244,62 +245,67 @@
                                 <div class="col-md-6">
                                     <label>{{ __('Participants name') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                           aria-label="Participant Name" name="name" autofocus>
+                                           aria-label="Participant Name" name="name" value="{{ old('name') }}" autofocus >
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Participant\'s last name(s)') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                           aria-label="Participant Name" name="last_name" autofocus>
+                                           aria-label="Participant Name" name="last_name" value="{{ old('last_name') }}" autofocus>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Position') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Position"
-                                           name="position">
+                                           name="position" value="{{ old('position') }}">
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Email') }}</label>
-                                    <input type="email" class="form-control pymais-input-background"
-                                           aria-label="Email" name="email">
+                                    <input type="email" class="form-control pymais-input-background @error('email') border border-danger @enderror" aria-label="Email"
+                                           name="email" value="{{ old('email') }}">
+                                           <!-- @error('email') <p class="text-danger ms-2 mb-3">{{ __('The email is required') }}</p> @enderror -->
+                                           @error('email') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Phone') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                           aria-label="Phone" name="user_phone">
+                                           aria-label="Phone" name="user_phone" value="{{ old('user_phone') }}">
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('LinkedIn profile') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                           aria-label="LinkedIn profile" name="user_linkedin">
+                                           aria-label="LinkedIn profile" name="user_linkedin" value="{{ old('user_linkedin') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Password') }}</label>
                                     <div class="input-group justify-content-end">
-                                        <input type="password" class="form-control pymais-input-background rounded-4"
-                                            id="password" aria-label="Password" name="password">
+                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('password') border border-danger @enderror"
+                                            id="password" aria-label="Password" name="password" value="{{ old('password') }}">
                                         <div class="input-group-append position-absolute mt-3" style="z-index: 99">
                                             <button id="showPassword" class="btn btn-outline-secondary w-25 rounded-circle d-flex justify-content-center" type="button">
                                                 <i class="fas fa-eye"></i>
                                             </button>
                                         </div>
                                     </div>
+                                    @error('password') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Confirm password') }}</label>
                                     <div class="input-group justify-content-end">
-                                        <input type="password" class="form-control pymais-input-background rounded-4"
-                                            id="confirmPassword" aria-label="Confirm Password" name="confirm_password">
+                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('confirm_password') border border-danger @enderror"
+                                            id="confirmPassword" aria-label="Confirm Password" name="confirm_password" value="{{ old('confirm_password') }}">
                                         <div class="input-group-append position-absolute mt-3" style="z-index: 99">
                                             <button id="showConfirmPassword" class="btn btn-outline-secondary w-25 rounded-circle d-flex justify-content-center" type="button">
                                                 <i class="fas fa-eye"></i>
                                             </button>
                                         </div>
                                     </div>
+                                    <!-- @error('confirm_password') <p class="text-danger ms-2 mb-3">{{ __('The confirm password is required') }}</p> @enderror -->
+                                    @error('confirm_password') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                             </div>
                         </div>
@@ -314,10 +320,11 @@
                             </div>
                             
                             <div class="d-flex align-items-center" style="margin-top: 60px;">
-                                <input type="checkbox" id="toggleInputs" class="m-3" name="accept_terms"
+                                <input type="checkbox" id="toggleInputs" class="m-3 @error('accept_terms') border border-danger @enderror" name="accept_terms" 
                                     style="width: 20px; height: 20px; cursor: pointer; position: relative; margin-top; 20px">
                                 <label for="toggleInputs" class="mt-2 ms-2">{{ __('I accept') }} <span class="text-info">{{ __('terms and conditions') }}.</span></label>
                             </div>
+                            @error('accept_terms') <p class="text-danger ms-2 mb-3">{{ __('Confirm terms and conditions') }}</p> @enderror
                         </div>
 
                         <div class="row mt-5">
