@@ -77,7 +77,7 @@ class saveFileController extends Controller
             'legal_name' => 'nullable',
             'company_contact_phone' => 'nullable|min:10|max:10',
             'company_contact_mail' => 'nullable|email',
-            'naics_code' => 'nullable',
+            'naics_code' => 'required',
             'number_employees' => 'nullable',
             'seniority' => 'nullable',
             'sector' => 'nullable',
@@ -104,6 +104,8 @@ class saveFileController extends Controller
             'confirm_password_user' => 'required|same:password_user',
             'accept_terms' => 'required'
         ]);
+
+        // dd($request->naics_code);
 
         $contact_name = $request->contact_name;
         $contact_last_name = $request->contact_last_name;

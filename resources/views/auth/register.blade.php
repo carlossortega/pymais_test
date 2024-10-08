@@ -144,14 +144,17 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('NAICS Code') }}</label> <a href="https://www.naics.com/search/" style="color:blue" target="_blank">{{ __('Search') }}</a>
-                                    <select class="form-control pymais-select-background">
+                                    <select class="form-control pymais-select-background @error('naics_code') border border-danger @enderror" name="naics_code">
                                         <optgroup>
-                                            <option>Select an option</option>
+                                            <option value="">{{ __('Select an option') }}</option>
                                             @foreach ($naics_code as $codes)
-                                                <option>{{ $codes->code }} - {{ $codes->name }}</option>
+                                                <option value="{{ $codes->id }}" {{ old('naics_code') == $codes->id ? 'selected' : '' }}>
+                                                    {{ $codes->code }} - {{ $codes->name }}
+                                                </option>
                                             @endforeach
                                         </optgroup>
                                     </select>
+                                    @error('naics_code') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                                 <div class="col-md-3">
                                     <label>{{ __('Number of employees') }} </label>
