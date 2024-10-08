@@ -31,38 +31,38 @@
                                 <div class="col-md-6">
                                     <label>{{ __('Name') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                           aria-label="Name" name="contact_name" autofocus value="{{ old('contact_name') }}">
-                                           @error('contact_name') <div class="bg-info">{{ __('The contact name is required') }}</div> @enderror
+                                           aria-label="Name" name="name" autofocus value="{{ old('name') }}">
+                                           @error('name') <div class="bg-info">{{ __('The contact name is required') }}</div> @enderror
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Last name') }}(s)</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Last name"
-                                           name="contact_last_name" value="{{ old('contact_last_name') }}">
+                                           name="last_name" value="{{ old('last_name') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Phone') }}</label>
-                                    <input type="text" class="form-control pymais-input-background @error('contact_phone') border border-danger @enderror"
-                                        aria-label="Phone" name="contact_phone" value="{{ old('contact_phone') }}">
-                                        @error('contact_phone') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                    <input type="text" class="form-control pymais-input-background @error('phone') border border-danger @enderror"
+                                        aria-label="Phone" name="phone" value="{{ old('phone') }}">
+                                        @error('phone') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Position') }}</label>
                                     <input type="text" class="form-control pymais-input-background" aria-label="Position"
-                                        name="contact_position" value="{{ old('contact_position') }}">
+                                        name="position" value="{{ old('position') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Job area (e.g. Sales)') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Area of the post" name="contact_area_position" value="{{ old('contact_area_position') }}">
+                                        aria-label="Area of the post" name="area_position" value="{{ old('area_position') }}">
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('LinkedIn profile') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="LinkedIn profile" name="contact_linkedin" value="{{ old('contact_linkedin') }}">
+                                        aria-label="LinkedIn profile" name="linkedin" value="{{ old('linkedin') }}">
                                 </div>
                             </div>
                             <div class="row">
@@ -99,7 +99,6 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <!-- @error('confirm_password_user') <p class="text-danger ms-2 mb-3">{{ __('The confirm password is required') }}</p> @enderror -->
                                     @error('confirm_password_user') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                             </div>
@@ -288,7 +287,7 @@
                             </div>
                             
                             <div class="d-flex align-items-center" style="margin-top: 60px;">
-                                <input type="checkbox" id="toggleInputs" class="m-3 @error('accept_terms') border border-danger @enderror" name="accept_terms" 
+                                <input type="checkbox" id="toggleInputs" class="m-3 @error('accept_terms_and_conditions') border border-danger @enderror" name="accept_terms_and_conditions" 
                                     style="width: 20px; height: 20px; cursor: pointer; position: relative; margin-top; 20px">
                                 <label for="toggleInputs" class="mt-2 ms-2">{{ __('I accept') }}
                                 <a href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/Terminos_y_Condiciones.pdf' : 'pdfs/Terminos_y_Condiciones.pdf') }}"
@@ -296,7 +295,7 @@
                                     {{ __('terms and conditions') }}
                                 </a>
                             </div>
-                            @error('accept_terms') <p class="text-danger ms-2 mb-3">{{ __('Confirm terms and conditions') }}</p> @enderror
+                            @error('accept_terms_and_conditions') <p class="text-danger ms-2 mb-3">{{ __('Confirm terms and conditions') }}</p> @enderror
                         </div>
 
                         <div class="row mt-5">
