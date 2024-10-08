@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
+use App\Models\Enrollment;
 
 class saveFileController extends Controller
 {
@@ -189,7 +190,7 @@ class saveFileController extends Controller
         
         // Registrar al nuevo usuario en la plataforma en relación a la compañia
         $user = User::create([
-            'role' => 'admin',
+            'role' => 'student',
             'email' => $email,
             'status' => 1,
             'name' => $name,
@@ -200,6 +201,14 @@ class saveFileController extends Controller
             'position' => $position,
             'company_id' => $company_id,
         ]);
+
+        $user_id = $user->id;
+
+        Enrollment::create([
+            'user_id' => $user_id,
+            'course_id' => 1,
+            'enrollment_type' => 'free' 
+        ],);
 
         Auth::login($user);
 

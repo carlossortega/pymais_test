@@ -108,7 +108,7 @@
                     <div class="row mt-5">
                         <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
-                                <h4 class="g-title my-4">{{ __('Key resources') }}</h4>
+                                {{-- <h4 class="g-title my-4">{{ __('Key resources') }}</h4>
                                 @foreach ($my_courses as $index => $course)
                                 @if ($index % 3 === 0)
                                 <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
@@ -187,7 +187,7 @@
                                         @include('frontend.default.empty')
                                     </div>
                                 </div>
-                                @endif
+                                @endif --}}
                             </div>
                             <button class="carousel-control-prev" type="button"
                                 data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
@@ -204,7 +204,7 @@
                         <div class="row mt-5">
                             <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    <h4 class="g-title my-4">{{ __('Primer') }}</h4>
+                                    {{-- <h4 class="g-title my-4">{{ __('Primer') }}</h4>
                                     @foreach ($my_courses as $index => $course)
                                     @if ($index % 3 === 0)
                                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
@@ -285,7 +285,7 @@
                                             @include('frontend.default.empty')
                                         </div>
                                     </div>
-                                    @endif
+                                    @endif --}}
                                 </div>
                                 <button class="carousel-control-prev" type="button"
                                     data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
@@ -302,7 +302,7 @@
                             <div class="row mt-5">
                                 <div id="carouselExampleControls4" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
-                                        <h4 class="g-title my-4">{{ __('Accelerating') }}</h4>
+                                        {{-- <h4 class="g-title my-4">{{ __('Accelerating') }}</h4>
                                         @foreach ($my_courses as $index => $course)
                                         @if ($index % 3 === 0)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
@@ -385,7 +385,7 @@
                                                 @include('frontend.default.empty')
                                             </div>
                                         </div>
-                                        @endif
+                                        @endif --}}
                                     </div>
                                     <button class="carousel-control-prev" type="button"
                                         data-bs-target="#carouselExampleControls4" data-bs-slide="prev">
@@ -429,5 +429,5 @@
 <!------------ My wishlist area End  ------------>
 @endsection
 @push('js')
-
+    
 @endpush

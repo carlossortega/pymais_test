@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Course extends Model
 {
@@ -31,8 +32,8 @@ class Course extends Model
     public function wishlists() {
         $query = $this->hasMany(Wishlist::class);
 
-        if(auth()->user()){
-            $query->where('user_id', auth()->user()->id);
+        if(Auth::user()){
+            $query->where('user_id', Auth::user()->id);
         }
 
         return $query;
