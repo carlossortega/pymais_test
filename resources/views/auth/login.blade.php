@@ -1,5 +1,5 @@
 @extends('layouts' . '.' . get_frontend_settings('theme'))
-@push('title', __('Login'))
+@push('title', __('Sign In'))
 @push('meta')@endpush
 @push('css')
     <style>
@@ -23,7 +23,7 @@
                     <div class="col-lg-5 col-md-6">
                         <form action="{{ route('login') }}" class="global-form login-form mt-25" method="POST">
                             @csrf
-                            <h4 class="g-title">{{ __('Login') }}</h4>
+                            <h4 class="g-title">{{ __('Sign In') }}</h4>
                             <p class="description">{{ __('See your growth and get consulting support') }}!</p>
                             <div class="form-group">
                                 <label for="email" class="form-label">{{ __('Email') }}</label>
@@ -42,7 +42,7 @@
                                 </div>
                                 <a href="{{route('password.request')}}">{{ __('Forgot Password') }}?</a>
                             </div>
-                            <button type="submit" class="eBtn gradient w-100">{{ __('Login') }}</button>
+                            <button type="submit" class="eBtn gradient w-100">{{ __('Sign In') }}</button>
                             <p class="mt-20">{{ __('Not have an account yet') }}?
                                 <a href="{{ route('register') }}">{{ __('Create Account') }}</a>
                             </p>

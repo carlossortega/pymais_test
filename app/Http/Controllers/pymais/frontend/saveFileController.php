@@ -190,7 +190,7 @@ class saveFileController extends Controller
         
         // Registrar al nuevo usuario en la plataforma en relación a la compañia
         $user = User::create([
-            'role' => 'student',
+            'role' => 'admin',
             'email' => $email,
             'status' => 1,
             'name' => $name,
