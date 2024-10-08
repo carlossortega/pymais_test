@@ -27,7 +27,14 @@
                                     <li class="active">
                                         <a href="{{route('register')}}">{{__('Sign Up')}}</a>
                                     </li>
+                                    
                                 @endif
+                                @if (Route::currentRouteName() !== 'login')
+                                                <li class="active">
+                                                    <a href="{{route('login')}}">{{__('Sign In')}}</a>
+                                                </li>
+                                            @endif
+                            
                                 {{--  <li>
                                     <a class="menu-arrow" href="javascript:void(0)">Courses</a>
                                     <ul class="sub-menu">

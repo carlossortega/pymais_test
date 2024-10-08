@@ -837,27 +837,27 @@
             {{-- QUITAR ESTILO DE COLOR EN EL DIV --}}
             <div class="container ep-container">
                 <div class="row" style="display: flex; justify-content: center">
-                    <div class="col-md-2 me-5">
+                    <div class="col-md-2 mb-3">
                         <a href="https://www.microsoft.com/en-us/corporate-responsibility/techspark"
-                            class="ep-brand__logo ep-brand__logo--style2">
+                            class="ep-brand__logo ep-brand__logo--style2 d-flex justify-content-center text-center"  >
                             <img src="{{ asset('assets/frontend/pymais/images/collab/Microsoft_Logo.png') }}"
                                 alt="brand-logo" />
                         </a>
                     </div>
-                    <div class="col-md-2 me-5">
-                        <a href="https://funax.org/" class="ep-brand__logo ep-brand__logo--style2">
+                    <div class="col-md-2 mb-3 ">
+                        <a href="https://funax.org/" class="ep-brand__logo ep-brand__logo--style2 d-flex justify-content-center text-center" >
                             <img src="{{ asset('assets/frontend/pymais/images/collab/LOGO-FUNAX-ACTUALIZACION-HORIZONTAL-ESP-01.png') }}"
                                 alt="brand-logo" />
                         </a>
                     </div>
-                    <div class="col-md-2 me-5">
-                        <a href="https://tb-xl.com/" class="ep-brand__logo ep-brand__logo--style2">
+                    <div class="col-md-2  mb-3">
+                        <a href="https://tb-xl.com/" class="ep-brand__logo ep-brand__logo--style2 d-flex justify-content-center text-center" >
                             <img src="{{ asset('assets/frontend/pymais/images/collab/THEBRIDGE_LOGO-01.png') }}"
                                 alt="brand-logo" />
                         </a>
                     </div>
-                    <div class="col-md-2">
-                        <a href="https://t-hub.mx/" class="ep-brand__logo ep-brand__logo--style2">
+                    <div class="col-md-2 mb-3">
+                        <a href="https://t-hub.mx/" class="ep-brand__logo ep-brand__logo--style2 d-flex justify-content-center text-center" >
                             <img src="{{ asset('assets/frontend/pymais/images/collab/logo-thub-01.png') }}"
                                 alt="brand-logo" />
                         </a>
