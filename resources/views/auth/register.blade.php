@@ -42,7 +42,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>{{ __('Email') }}</label>
+                                    <label>{{ __('Primary contact email') }}</label>
                                     <input type="email" class="form-control pymais-input-background" aria-label="Email"
                                         name="contact_email" value="{{ old('contact_email') }}">
                                 </div>
@@ -70,6 +70,41 @@
                                     <label>{{ __('LinkedIn profile') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
                                         aria-label="LinkedIn profile" name="contact_linkedin" value="{{ old('contact_linkedin') }}">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('User email') }}</label>
+                                    <input type="email" class="form-control pymais-input-background @error('email') border border-danger @enderror" aria-label="Email"
+                                           name="email" value="{{ old('email') }}">
+                                           @error('email') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Password') }}</label>
+                                    <div class="input-group justify-content-end">
+                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('password1') border border-danger @enderror"
+                                            id="password" aria-label="Password" name="password1" value="{{ old('password1') }}">
+                                        <div class="input-group-append position-absolute mt-3" style="z-index: 99">
+                                            <button id="showPassword" class="btn btn-outline-secondary w-25 rounded-circle d-flex justify-content-center" type="button">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    @error('password') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Confirm password') }}</label>
+                                    <div class="input-group justify-content-end">
+                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('confirm_password') border border-danger @enderror"
+                                            id="confirmPassword" aria-label="Confirm Password" name="confirm_password" value="{{ old('confirm_password') }}">
+                                        <div class="input-group-append position-absolute mt-3" style="z-index: 99">
+                                            <button id="showConfirmPassword" class="btn btn-outline-secondary w-25 rounded-circle d-flex justify-content-center" type="button">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- @error('confirm_password') <p class="text-danger ms-2 mb-3">{{ __('The confirm password is required') }}</p> @enderror -->
+                                    @error('confirm_password') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                             </div>
                         </div>

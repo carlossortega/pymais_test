@@ -45,6 +45,13 @@
                     </a>
                 </li>
 
+                <li class="@if ($current_route == 'team.members') active @endif">
+                    <a href="{{ route('team.members') }}">
+                        <i class= text-23px me-3 ms-1"></i>
+                        {{ __('Team Members') }}
+                    </a>
+                </li>
+
                 <li class="@if ($current_route == 'my.profile') active @endif">
                     <a href="{{ route('my.profile') }}">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"xmlns="http://www.w3.org/2000/svg">
