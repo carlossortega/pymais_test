@@ -100,7 +100,7 @@ class saveFileController extends Controller
             'user_phone' => 'nullable|min:10|max:10',
             'user_linkedin' => 'nullable',
             'password_user' => 'required',
-            'confirm_password_user' => 'required|same:password1',
+            'confirm_password_user' => 'required|same:password_user',
             'accept_terms' => 'required'
         ]);
 
