@@ -99,8 +99,8 @@ class saveFileController extends Controller
             'email' => 'required|email|unique:users,email',
             'user_phone' => 'nullable|min:10|max:10',
             'user_linkedin' => 'nullable',
-            'password1' => 'required',
-            'confirm_password' => 'required|same:password1',
+            'password_user' => 'required',
+            'confirm_password_user' => 'required|same:password1',
             'accept_terms' => 'required'
         ]);
 
@@ -177,7 +177,6 @@ class saveFileController extends Controller
                 'company_social_net' => $social_networking,
                 'contact_name' => $contact_name,
                 'contact_last_name' => $contact_last_name,
-                'contact_email' => $contact_email,
                 'contact_phone' => $contact_phone,
                 'contact_position' => $contact_position,
                 'contact_job_area' => $contact_area_position,
