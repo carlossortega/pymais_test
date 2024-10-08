@@ -48,8 +48,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Phone') }}</label>
-                                    <input type="text" class="form-control pymais-input-background"
+                                    <input type="text" class="form-control pymais-input-background @error('contact_phone') border border-danger @enderror"
                                         aria-label="Phone" name="contact_phone" value="{{ old('contact_phone') }}">
+                                        @error('contact_phone') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                             </div>
                             <div class="row">
@@ -100,7 +101,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Contact phone') }}</label>
-                                    <input type="text" aria-label="Contact phone" name="company_contact_phone" class="form-control pymais-input-background" value="{{ old('company_contact_phone') }}">
+                                    <input type="text" aria-label="Contact phone" name="company_contact_phone" class="form-control pymais-input-background @error('company_contact_phone') border border-danger @enderror" value="{{ old('company_contact_phone') }}">
+                                    @error('company_contact_phone') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('Contact email') }}</label>
@@ -270,8 +272,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>{{ __('Phone') }}</label>
-                                    <input type="text" class="form-control pymais-input-background"
+                                    <input type="text" class="form-control pymais-input-background @error('user_phone') border border-danger @enderror"
                                            aria-label="Phone" name="user_phone" value="{{ old('user_phone') }}">
+                                           @error('user_phone') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('LinkedIn profile') }}</label>
