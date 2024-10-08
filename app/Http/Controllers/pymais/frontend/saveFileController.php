@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
+use App\Models\Course;
 use App\Models\Enrollment;
 
 class saveFileController extends Controller
@@ -187,9 +188,11 @@ class saveFileController extends Controller
 
         $user_id = $user->id;
 
+        $course = Course::orderBy('id', 'asc')->limit(1)->get();
+        
         Enrollment::create([
             'user_id' => $user_id,
-            'course_id' => 1,
+            'course_id' => $course[0]->id,
             'enrollment_type' => 'free' 
         ],);
 
