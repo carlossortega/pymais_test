@@ -39,11 +39,11 @@
                         @if(!is_null(auth()->user()->email_verified_at))
                             <div class="Userprofile me-0 me-md-2 ms-2 ms-md-3 d-none d-lg-inline-block">
                                 <button class="us-btn dropdown-toggle pt-0" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-                                    <img class="image-40" src="{{ get_image(Auth()->user()->photo) }}" alt="user-img">
+                                <img src="{{ Auth()->user()->photo ? get_image(Auth()->user()->photo) : asset('assets/frontend/default/image/foto-perfil.png') }}" alt="user-img">                                        
                                 </button>
                                 <ul class="dropdown-menu dropmenu-end " data-popper-placement="bottom-start">
-                                    <li class="figure_user d-flex">
-                                        <img src="{{ get_image(Auth()->user()->photo) }}" alt="user-img">
+                                    <li class="figure_user d-flex">                                        
+                                    <img src="{{ Auth()->user()->photo ? get_image(Auth()->user()->photo) : asset('assets/frontend/default/image/foto-perfil.png') }}" alt="user-img">                                        
                                         <div class="figure_text">
                                             <h4>{{ ucfirst(Auth()->user()->name) }}</h4>
                                             <p>{{ ucfirst(Auth()->user()->role) }}</p>
