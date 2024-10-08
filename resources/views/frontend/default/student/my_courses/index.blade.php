@@ -399,13 +399,6 @@
                                     </button>
                                 </div>
 
-                                @if ($my_courses->count() == 0)
-                                <div class="row bg-white radius-10">
-                                    <div class="com-md-12">
-                                        @include('frontend.default.empty')
-                                    </div>
-                                </div>
-                                @endif
                             </div>
                         </div>
                     </div>
