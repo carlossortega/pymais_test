@@ -193,100 +193,29 @@ class saveFileController extends Controller
             'course_id' => 1,
             'enrollment_type' => 'free' 
         ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 2,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 3,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 4,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 5,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 6,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 7,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 8,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 9,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 10,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 11,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 12,
-            'enrollment_type' => 'free' 
-        ]);
-
-        Enrollment::create([
-            'user_id' => $user_id,
-            'course_id' => 13,
-            'enrollment_type' => 'free' 
-        ]);
+        
 
         // Key Resources Enrollment
-        // $key_resources = Category::where('title', 'Key Resources')->get();
-        // $courses = Course::where('category_id', $key_resources[0]->id)->get();
-        // foreach($courses as $course) {
-        //     Enrollment::create([
-        //         'user_id' => $user_id,
-        //         'course_id' => $course->id,
-        //         'enrollment_type' => 'free' 
-        //     ]);
-        // }
+        $key_resources = Category::where('title', 'Key Resources')->get();
+        $courses = Course::where('category_id', $key_resources[0]->id)->get();
+        foreach($courses as $course) {
+            Enrollment::create([
+                'user_id' => $user_id,
+                'course_id' => $course->id,
+                'enrollment_type' => 'free' 
+            ]);
+        }
 
         // Enrollment First
-        // $primer = Category::where('title', 'Primer')->get();
-        // $courses = Course::where('category_id', $primer[0]->id)->get();
-        // foreach($courses as $course) {
-        //     Enrollment::create([
-        //         'user_id' => $user_id,
-        //         'course_id' => $course->id,
-        //         'enrollment_type' => 'free' 
-        //     ]);
-        // }
+        $primer = Category::where('title', 'Primer')->get();
+        $courses = Course::where('category_id', $primer[0]->id)->get();
+        foreach($courses as $course) {
+            Enrollment::create([
+                'user_id' => $user_id,
+                'course_id' => $course->id,
+                'enrollment_type' => 'free' 
+            ]);
+        }
 
         Auth::login($user);
 
