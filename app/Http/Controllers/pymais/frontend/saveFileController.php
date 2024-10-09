@@ -201,7 +201,7 @@ class saveFileController extends Controller
         foreach($courses as $course) {
             Enrollment::create([
                 'user_id' => $user_id,
-                'course_id' => $course->id,
+                'course_id' => 2,
                 'enrollment_type' => 'free' 
             ]);
         }
