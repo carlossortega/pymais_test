@@ -14,6 +14,7 @@
         }
 
         .container {
+            text-align: center;
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
@@ -34,13 +35,14 @@
         }        
 
         .img {
-            width: 45%;
+            width: 200px;
+            height: 100px;
         }        
                 
         .div-button {            
-            display: flex;
+            display: inline;
             justify-content: center;
-            align-items: center;            
+            text-align: center;
             margin-top: 20px;
             margin-bottom: 20px;
         }
@@ -73,25 +75,23 @@
 </head>
 <body>
     <div class="container">
-        
         <div class="div-button">
-            <img src="{{ 'https://pymais-development-aacvfzhcfkdyc7hu.southcentralus-01.azurewebsites.net/assets/frontend/pymais/images/logo-3.svg' }}" alt="" class="img">
+            {{-- <img src="{{ asset('assets/frontend/pymais/images/favicon.svg') }}" alt="" class="img"> --}}
         </div>        
         <p class="titulo" >PYM<span>AI</span>S</p>
         <h2>{{ __('Hello') }} {{ $user->name }}</h2>        
-        <p>{{ __('Please click the button below to verify your email address') }}:</p>
+        <p>{{ __('You have been added to the team. Please click the link below to set your password') }}:</p>
         <div class="div-button">
-            <a href="{{ $verificationUrl }}" class="button">
+            <a href="{{ $link }}" class="button">
                 <p class="text">
-                    {{ __('Verify Email Address') }}                    
+                    {{ __('Set New Password') }}                    
                 </p>
             </a>
         </div> 
-
-        <p>
-            {{ __('If you did not create an account, no further action is required') }}                    
-        </p>
-
+        <br/>
+        <p>{{ __('For more information contact the main member') }}.</p>
+        <br/><br/><br/>
+        <hr/>
         <div class="footer">
             <p>{{ __('Regards')}}, {{ config('app.name') }}</p>
         </div>

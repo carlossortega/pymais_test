@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('last_name')->nullable()->after('name');
             $table->string('position')->nullable();
+            $table->string('job_area')->nullable();
             $table->integer('company_id')->nullable();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      */
@@ -26,6 +27,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('last_name');
             $table->dropColumn('position');
+            $table->dropColumn('job_area');
             $table->dropColumn('company_id');
         });
     }

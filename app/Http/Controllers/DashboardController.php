@@ -9,7 +9,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-
         $monthly_amount = array(0);
         for ($i = 1; $i <= 12; $i++) {
             $total_amount = date('t', strtotime(date("Y-$i-1 00:00:00")));
@@ -21,6 +20,7 @@ class DashboardController extends Controller
             }
         }
         $page_data['monthly_amount'] = $monthly_amount;
+        // dd('test');
         return view('admin.dashboard.index', $page_data);
     }
 }

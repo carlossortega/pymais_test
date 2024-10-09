@@ -33,8 +33,11 @@ Route::middleware(['auth', 'ip.detector'])->group(function () {
     // team members routes
     Route::controller(TeamMembersController::class)->group(function () {
         Route::get('team-members', 'index')->name('team.members');
-        Route::post('team-members', 'store')->name('team.members');
-        Route::post('team-members/update/{member_id}', 'update')->name('team.members.update');
+        Route::get('team-members/create', 'create')->name('team.members.create');
+        Route::post('team-members/store', 'store')->name('team.members.store');
+        Route::get('team-members/edit/{id}', 'edit')->name('team.members.edit');
+        Route::post('team-members/update/{id}', 'update')->name('team.members.update');
+        Route::get('team-members/delete/{id}', 'delete')->name('team.members.delete');
     });
 
     // my wishlist routes

@@ -99,6 +99,7 @@
     "Skills" : "Habilidades",
     "Biography" : "Biografía",
     "Save Changes" : "Guardar Cambios",
+    "Add" : "Agregar",
     "Upload picture" : "Subir foto",
     "Upload New" : "Subir Nueva",
     "My Courses" : "Mis Cursos",
@@ -189,13 +190,14 @@
     "Submit your account email address": "Ingresar el correo electrónico con el que te registraste",
     "Send Request": "Enviar solicitud",
     "Back to login page": "Regresar a iniciar sesión",
-    "Confirm terms and conditions" : "Confirmar términos y condiciones",
     "Enter Your Email": "Ingresa tu correo electrónico",
     "Confirm terms and conditions" : "Confirmar términos y condiciones",
     "Select an option": "Selecciona una opción",
     "Hello" : "Hola",
-    "Please click the button below to verify your email address." : "Por favor da click en el siguiente botón para validar su correo.",
+    "Please click the button below to verify your email address" : "Por favor da click en el siguiente botón para validar su correo",
     "Verify Email Address" : "Verificar correo electrónico",
-    "If you did not create an account, no further action is required." : "Si no creó una cuenta, no es necesario realizar ninguna otra acción.",
-    "Regards" : "Saludos"
+    "If you did not create an account, no further action is required" : "Si no creó una cuenta, no es necesario realizar ninguna otra acción",
+    "Regards" : "Saludos",
+    "You have been added to the team. Please click the link below to set your password": "Te han añadido al equipo. Haz clic en el enlace que aparece a continuación para configurar tu contraseña",
+    "For more information contact the main member": "Para más información contacte con el miembro principal"
 }
