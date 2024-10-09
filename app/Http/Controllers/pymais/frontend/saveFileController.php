@@ -69,7 +69,7 @@ class saveFileController extends Controller
         $request->validate([
             'name' => 'nullable',
             'last_name' => 'nullable',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users,email',
             'phone' => 'nullable|min:10|max:10',
             'position' => 'nullable',
             'job_area' => 'nullable',
