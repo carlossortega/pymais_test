@@ -190,7 +190,7 @@ class saveFileController extends Controller
         // Enrollment Introduction
         Enrollment::create([
             'user_id' => $user_id,
-            'course_id' => $user_id,
+            'course_id' => 1,
             'enrollment_type' => 'free' 
         ]);
 
