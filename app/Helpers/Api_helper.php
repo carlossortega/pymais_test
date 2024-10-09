@@ -70,13 +70,13 @@ if (!function_exists('get_photo')) {
             if (file_exists('public/' . $identifier) && $identifier != "") {
                 return url('public/' . $identifier);
             } else {
-                return url('public/uploads/course-thumbnail/placeholder/placeholder.png');
+                return url('public/upload/placeholder.png');
             }
         } elseif ($type == 'course_banner') {
             if (file_exists('public/' . $identifier) && $identifier != "") {
                 return url('public/' . $identifier);
             } else {
-                return url('public/uploads/course-banner/placeholder/placeholder.png');
+                return url('public/upload/placeholder/placeholder.png');
             }
         } elseif ($type == 'course_preview') {
             if (file_exists('public/' . $identifier) && $identifier != "") {

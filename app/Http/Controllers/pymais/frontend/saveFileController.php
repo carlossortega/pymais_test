@@ -188,15 +188,10 @@ class saveFileController extends Controller
 
         $user_id = $user->id;
 
-        $course = Enrollment::where([
-            ['category_id', 1],
-            ['user_id', $user_id]
-        ])->get();
-
         // Enrollment Introduction
         Enrollment::create([
             'user_id' => $user_id,
-            'course_id' => $course,
+            'course_id' => 1,
             'enrollment_type' => 'free' 
         ]);
         
@@ -207,7 +202,7 @@ class saveFileController extends Controller
         foreach($courses as $course) {
             Enrollment::create([
                 'user_id' => $user_id,
-                'course_id' => 2,
+                'course_id' => $course->id,
                 'enrollment_type' => 'free' 
             ]);
         }
