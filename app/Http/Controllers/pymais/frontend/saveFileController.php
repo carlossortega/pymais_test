@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Auth\EmailVerificationPromptController;
+use App\Models\Category;
 use App\Models\Course;
 use App\Models\Enrollment;
 
@@ -71,7 +71,7 @@ class saveFileController extends Controller
             'email' => 'required|email|unique:users,email',
             'phone' => 'nullable|min:10|max:10',
             'position' => 'nullable',
-            'area_position' => 'nullable',
+            'job_area' => 'nullable',
             'linkedin' => 'nullable',
             'password_user' => 'required',
             'confirm_password_user' => 'required|same:password_user',
@@ -100,13 +100,11 @@ class saveFileController extends Controller
             'accept_terms_and_conditions' => 'required'
         ]);
 
-        // dd($request->naics_code);
-
         $name = $request->name;
         $last_name = $request->last_name;
         $user_phone = $request->user_phone;
         $position = $request->position;
-        $area_position = $request->area_position;
+        $job_area = $request->job_area;
         $linkedin = $request->linkedin;
         $email = $request->email;
         $password_user = $request->password_user;
@@ -175,26 +173,48 @@ class saveFileController extends Controller
         // Registrar al nuevo usuario en la plataforma en relación a la compañia
         $user = User::create([
             'role' => 'student',
-            'email' => $email,
             'status' => 1,
             'name' => $name,
             'last_name' => $last_name,
             'phone' => $user_phone,
-            'linkedin' => $linkedin,
-            'password' => Hash::make($password_user),
             'position' => $position,
+            'job_area' => $job_area,
+            'linkedin' => $linkedin,
+            'email' => $email,
+            'password' => Hash::make($password_user),
             'company_id' => $company_id,
         ]);
 
         $user_id = $user->id;
 
-        $course = Course::orderBy('id', 'asc')->limit(1)->get();
-        
+        // Enrollment Introduction
         Enrollment::create([
             'user_id' => $user_id,
-            'course_id' => $course[0]->id,
+            'course_id' => $user_id->id,
             'enrollment_type' => 'free' 
-        ],);
+        ]);
+
+        // Key Resources Enrollment
+        $key_resources = Category::where('title', 'Key Resources')->get();
+        $courses = Course::where('category_id', $key_resources[0]->id)->get();
+        foreach($courses as $course) {
+            Enrollment::create([
+                'user_id' => $user_id,
+                'course_id' => $course->id,
+                'enrollment_type' => 'free' 
+            ]);
+        }
+
+        // Enrollment First
+        $primer = Category::where('title', 'Primer')->get();
+        $courses = Course::where('category_id', $primer[0]->id)->get();
+        foreach($courses as $course) {
+            Enrollment::create([
+                'user_id' => $user_id,
+                'course_id' => $course->id,
+                'enrollment_type' => 'free' 
+            ]);
+        }
 
         Auth::login($user);
 

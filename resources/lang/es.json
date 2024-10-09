@@ -99,6 +99,7 @@
     "Skills" : "Habilidades",
     "Biography" : "Biografía",
     "Save Changes" : "Guardar Cambios",
+    "Add" : "Agregar",
     "Upload picture" : "Subir foto",
     "Upload New" : "Subir Nueva",
     "My Courses" : "Mis Cursos",
@@ -131,6 +132,7 @@
     "Your Email": "Tu correo electrónico",
     "Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you did not receive the email, we will gladly send you another": "¡Gracias por registrarte! Antes de comenzar, ¿podrías verificar tu dirección de correo electrónico haciendo clic en el enlace que te acabamos de enviar? Si no recibiste el correo electrónico, con gusto te enviaremos otro",
     "Verify Email": "Verificar correo electrónico",
+    "Check your spam folder": "Revisa tu bandeja de correo no deseado",
     "A new verification link has been sent to the email address you provided during registration": "Se ha enviado un nuevo enlace de verificación a la dirección de correo electrónico que proporcionaste durante el registro",
     "Resend Verification Email": "Reenviar correo electrónico de verificación",
     "Download full program outline": "Descargar Contenido Del Programa Completo",
@@ -190,5 +192,12 @@
     "Back to login page": "Regresar a iniciar sesión",
     "Enter Your Email": "Ingresa tu correo electrónico",
     "Confirm terms and conditions" : "Confirmar términos y condiciones",
-    "Select an option": "Selecciona una opción"
+    "Select an option": "Selecciona una opción",
+    "Hello" : "Hola",
+    "Please click the button below to verify your email address" : "Por favor da click en el siguiente botón para validar su correo",
+    "Verify Email Address" : "Verificar correo electrónico",
+    "If you did not create an account, no further action is required" : "Si no creó una cuenta, no es necesario realizar ninguna otra acción",
+    "Regards" : "Saludos",
+    "You have been added to the team. Please click the link below to set your password": "Te han añadido al equipo. Haz clic en el enlace que aparece a continuación para configurar tu contraseña",
+    "For more information contact the main member": "Para más información contacte con el miembro principal"
 }

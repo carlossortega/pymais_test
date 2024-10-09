@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\pymais\frontend\saveFileController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\student\TeamMembersController;
 
 //Cache clear route
 Route::get('/clear-cache', function () {
@@ -64,5 +65,10 @@ Route::controller(InstallController::class)->group(function () {
     Route::any('install/finalizing_setup', 'finalizingSetup')->name('finalizing_setup');
     Route::get('install/success', 'success')->name('success');
 });
+
 //Forms routes
 Route::post('save-sme-application', [saveFileController::class, 'saveFileSME'])->name('save.application');
+
+
+Route::get('set-password/{id}', [TeamMembersController::class, 'showSetPassword'])->name('set.password');
+Route::get('set-password/{id}', [TeamMembersController::class, 'setPassword'])->name('set.password');

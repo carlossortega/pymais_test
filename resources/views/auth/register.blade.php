@@ -57,7 +57,7 @@
                                 <div class="col-md-6">
                                     <label>{{ __('Job area (e.g. Sales)') }}</label>
                                     <input type="text" class="form-control pymais-input-background"
-                                        aria-label="Area of the post" name="area_position" value="{{ old('area_position') }}">
+                                        aria-label="Area of the post" name="job_area" value="{{ old('job_area') }}">
                                 </div>
                                 <div class="col-md-6">
                                     <label>{{ __('LinkedIn profile') }}</label>
