@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
+use App\Models\Enrollment;
 
 class saveFileController extends Controller
 {
@@ -64,19 +65,21 @@ class saveFileController extends Controller
 
     public function saveFileSME(Request $request){
         $request->validate([
-            'contact_name' => 'nullable',
-            'contact_last_name' => 'nullable',
-            'contact_email' => 'nullable|email',
-            'contact_phone' => 'nullable',
-            'contact_position' => 'nullable',
-            'contact_area_position' => 'nullable',
-            'contact_linkedin' => 'nullable',
+            'name' => 'nullable',
+            'last_name' => 'nullable',
+            'email' => 'required|email|unique:users,email',
+            'phone' => 'nullable|min:10|max:10',
+            'position' => 'nullable',
+            'area_position' => 'nullable',
+            'linkedin' => 'nullable',
+            'password_user' => 'required',
+            'confirm_password_user' => 'required|same:password_user',
             'trade_name' => 'nullable',
             'rfc' => 'nullable',
             'legal_name' => 'nullable',
-            'company_contact_phone' => 'nullable',
+            'company_contact_phone' => 'nullable|min:10|max:10',
             'company_contact_mail' => 'nullable|email',
-            'naics_code' => 'nullable',
+            'naics_code' => 'required',
             'number_employees' => 'nullable',
             'seniority' => 'nullable',
             'sector' => 'nullable',
@@ -93,24 +96,19 @@ class saveFileController extends Controller
             'company_linkedin' => 'nullable',
             'website' => 'nullable',
             'social_networking' => 'nullable',
-            'name' => 'nullable',
-            'last_name' => 'nullable',
-            'position' => 'nullable',
-            'email' => 'required|email|unique:users,email',
-            'user_phone' => 'nullable',
-            'user_linkedin' => 'nullable',
-            'password1' => 'required',
-            'confirm_password' => 'required|same:password1',
-            'accept_terms' => 'required'
+            'accept_terms_and_conditions' => 'required'
         ]);
 
-        $contact_name = $request->contact_name;
-        $contact_last_name = $request->contact_last_name;
-        $contact_email = $request->contact_email;
-        $contact_phone = $request->contact_phone;
-        $contact_position = $request->contact_position;
-        $contact_area_position = $request->contact_area_position;
-        $contact_linkedin = $request->contact_linkedin;
+        // dd($request->naics_code);
+
+        $name = $request->name;
+        $last_name = $request->last_name;
+        $user_phone = $request->user_phone;
+        $position = $request->position;
+        $area_position = $request->area_position;
+        $linkedin = $request->linkedin;
+        $email = $request->email;
+        $password_user = $request->password_user;
         $trade_name = $request->trade_name;
         $rfc = $request->rfc;
         $legal_name = $request->legal_name;
@@ -133,24 +131,16 @@ class saveFileController extends Controller
         $company_linkedin = $request->company_linkedin;
         $website = $request->website;
         $social_networking = $request->social_networking;
-        $name = $request->name;
-        $last_name = $request->last_name;
-        $position = $request->position;
-        $email = $request->email;
-        $user_phone = $request->user_phone;
-        $user_linkedin = $request->user_linkedin;
-        $password = $request->password1;
-        $accept_terms = $request->accept_terms;
 
-        $content = "Contact Name: $contact_name\nContact Last Name: $contact_last_name\nContact Email: $contact_email\nContact Phone: $contact_phone\nContact Position: $contact_position\nContact Area Position: $contact_area_position\nContact LinkedIn: $contact_linkedin\nTrade Name: $trade_name\nRFC: $rfc\nLegal Name: $legal_name\nCompany Contact Phone: $company_contact_phone\nCompany Contact Mail: $company_contact_mail\nNAICS: $naics_code\nNumber Employees: $number_employees\nSeniority: $seniority\nSector: $sector\nProducts and/or Services: $products_services\nStreet: $street\nNumber: $number\nPostal Code: $postal_code\nNeighborhood: $neighborhood\nCity: $city\nState: $state\nIncorporated United States: $incorporated_united_states\nCompany Name: $company_name\nBusiness Line: $business_line\nCompany Linkedin: $company_linkedin\nWebsite: $website\nSocial Networking: $social_networking\nName: $name\nLast Name: $last_name\nPosition: $position\nEmail: $email\nPhone: $user_phone\nLinkedin: $user_linkedin\nPassword: $password";
+        // $content = "Contact Name: $contact_name\nContact Last Name: $contact_last_name\nContact Email: $contact_email\nContact Phone: $contact_phone\nContact Position: $contact_position\nContact Area Position: $contact_area_position\nContact LinkedIn: $contact_linkedin\nTrade Name: $trade_name\nRFC: $rfc\nLegal Name: $legal_name\nCompany Contact Phone: $company_contact_phone\nCompany Contact Mail: $company_contact_mail\nNAICS: $naics_code\nNumber Employees: $number_employees\nSeniority: $seniority\nSector: $sector\nProducts and/or Services: $products_services\nStreet: $street\nNumber: $number\nPostal Code: $postal_code\nNeighborhood: $neighborhood\nCity: $city\nState: $state\nIncorporated United States: $incorporated_united_states\nCompany Name: $company_name\nBusiness Line: $business_line\nCompany Linkedin: $company_linkedin\nWebsite: $website\nSocial Networking: $social_networking\nName: $name\nLast Name: $last_name\nPosition: $position\nEmail: $email\nPhone: $user_phone\nLinkedin: $user_linkedin\nPassword: $password";
         
         $filename = 'sme_application_' . now()->format('Y-m-d_H-i-s') . '.txt';
 
-        Storage::disk('local')->put('sme_applications/' . $filename, $content);
+        // Storage::disk('local')->put('sme_applications/' . $filename, $content);
 
         $company_id = null;
 
-        if($contact_name !== null) {
+        if($trade_name !== null) {
             // Registrar compañia en la plataforma
             $company = Company::create([
                 'trade_name' => $trade_name,
@@ -175,13 +165,6 @@ class saveFileController extends Controller
                 'company_linkedin' => $company_linkedin,
                 'company_website' => $website,
                 'company_social_net' => $social_networking,
-                'contact_name' => $contact_name,
-                'contact_last_name' => $contact_last_name,
-                'contact_email' => $contact_email,
-                'contact_phone' => $contact_phone,
-                'contact_position' => $contact_position,
-                'contact_job_area' => $contact_area_position,
-                'contact_linkedin' => $contact_linkedin,
             ]);
 
             $company_id = $company->id;
@@ -196,11 +179,19 @@ class saveFileController extends Controller
             'name' => $name,
             'last_name' => $last_name,
             'phone' => $user_phone,
-            'linkedin' => $user_linkedin,
-            'password' => Hash::make($password),
+            'linkedin' => $linkedin,
+            'password' => Hash::make($password_user),
             'position' => $position,
             'company_id' => $company_id,
         ]);
+
+        $user_id = $user->id;
+
+        Enrollment::create([
+            'user_id' => $user_id,
+            'course_id' => 1,
+            'enrollment_type' => 'free' 
+        ],);
 
         Auth::login($user);
 

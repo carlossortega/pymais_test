@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('legal_name')->nullable();
             $table->string('phone', 20)->nullable();
             $table->string('company_mail', 50)->nullable();
-            $table->string('naics_code')->nullable();
+            $table->integer('naics_code')->nullable();
             $table->integer('number_employees')->nullable();
             $table->string('seniority')->nullable();
             $table->string('sector')->nullable();
@@ -35,13 +35,6 @@ return new class extends Migration
             $table->string('company_linkedin')->nullable();
             $table->string('company_website')->nullable();
             $table->string('company_social_net')->nullable();
-            $table->string('contact_name')->nullable();
-            $table->string('contact_last_name')->nullable();
-            $table->string('contact_email', 50)->nullable();
-            $table->string('contact_phone', 20)->nullable();
-            $table->string('contact_position')->nullable();
-            $table->string('contact_job_area')->nullable();
-            $table->string('contact_linkedin')->nullable();
             $table->timestamps();
         });
     }

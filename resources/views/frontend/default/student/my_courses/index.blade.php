@@ -422,5 +422,5 @@
 <!------------ My wishlist area End  ------------>
 @endsection
 @push('js')
-
+    
 @endpush
