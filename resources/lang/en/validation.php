@@ -193,6 +193,7 @@ return [
         'email' => 'email',
         'name' => 'name',
         'password' => 'password',
+        'password_confirm' => 'password confirm',
         'phone' => 'phone',
     ],
 

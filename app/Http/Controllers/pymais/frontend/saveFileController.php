@@ -10,7 +10,6 @@ use App\Models\User;
 use App\Models\Enrollment;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Models\Category;
 use App\Models\Course;
 
@@ -200,6 +199,7 @@ class saveFileController extends Controller
             'course_id' => $course,
             'enrollment_type' => 'free' 
         ]);
+        
 
         // Key Resources Enrollment
         $key_resources = Category::where('title', 'Key Resources')->get();
@@ -207,7 +207,7 @@ class saveFileController extends Controller
         foreach($courses as $course) {
             Enrollment::create([
                 'user_id' => $user_id,
-                'course_id' => $course->id,
+                'course_id' => 2,
                 'enrollment_type' => 'free' 
             ]);
         }

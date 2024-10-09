@@ -278,13 +278,13 @@
                         </div>
 
                         <div class="p-5">
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-md-3 mb-3">
                                     <button type="button" class="w-100 btn btn-outline-primary btn-lg" style="border: 2px solid blue;" id="showParticipantModal">
                                         <h4>{{ __('Add participant') }}</h4>
                                     </button>
                                 </div>
-                            </div>
+                            </div> --}}
                             
                             <div class="d-flex align-items-center" style="margin-top: 60px;">
                                 <input type="checkbox" id="toggleInputs" class="m-3 @error('accept_terms_and_conditions') border border-danger @enderror" name="accept_terms_and_conditions" 

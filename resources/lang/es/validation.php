@@ -193,6 +193,7 @@ return [
         'email' => 'correo electrónico',
         'name' => 'nombre',
         'password' => 'contraseña',
+        'password_confirm' => 'confirmar contraseña',
         'phone' => 'teléfono',
     ],
 
