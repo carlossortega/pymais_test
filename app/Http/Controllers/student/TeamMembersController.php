@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
 
 class TeamMembersController extends Controller
@@ -70,8 +71,8 @@ class TeamMembersController extends Controller
             'member_user_id' => $user->id
         ]);
 
-        Mail::to($user->email)->send(new InviteMember($user));
-
+        $link = URL::temporarySignedRoute('set.password', now()->addHours(1), ['id' => $user->id]);
+        Mail::to($user->email)->send(new InviteMember($user, $link));
 
         return redirect()->route('team.members')->with('success', 'Participant added successfully.');
     }
@@ -117,8 +118,12 @@ class TeamMembersController extends Controller
     }
 
 
-    public function showSetPassword($id)
+    public function showSetPassword(Request $request, $id)
     {
+        if (!$request->hasValidSignature()) {
+            return response()->view('errors.404', [], 404);
+        }
+
         return view('auth.set-password', ['id' => $id]);
     }
 

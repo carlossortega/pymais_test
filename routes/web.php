@@ -69,6 +69,8 @@ Route::controller(InstallController::class)->group(function () {
 //Forms routes
 Route::post('save-sme-application', [saveFileController::class, 'saveFileSME'])->name('save.application');
 
-
-Route::get('set-password/{id}', [TeamMembersController::class, 'showSetPassword'])->name('set.password');
-Route::get('set-password/{id}', [TeamMembersController::class, 'setPassword'])->name('set.password');
+Route::get('set-password/{id}', [TeamMembersController::class, 'showSetPassword'])
+    ->name('set.password');
+    
+Route::post('set-password/{id}', [TeamMembersController::class, 'updatePassword'])
+    ->name('set.password.update');
