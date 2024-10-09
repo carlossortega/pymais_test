@@ -47,7 +47,7 @@
 
                 <li class="@if ($current_route == 'team.members') active @endif">
                     <a href="{{ route('team.members') }}">
-                        <i class= text-23px me-3 ms-1"></i>
+                        <i class="fa-duotone fa-solid fa-people-group fs-3 me-3 ms-1"></i>
                         {{ __('Team Members') }}
                     </a>
                 </li>

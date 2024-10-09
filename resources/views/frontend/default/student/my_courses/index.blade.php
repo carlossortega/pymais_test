@@ -16,7 +16,7 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <h4 class="g-title my-3">{{ __('Courses') }}</h4>
-                            @foreach ($my_courses as $index => $course)
+                            @foreach ($courses as $index => $course)
                             @if ($index % 3 === 0)
                             <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                                 <div class="row">
@@ -80,12 +80,12 @@
                                         </div>
                                     </div>
 
-                                    @if (($index + 1) % 3 === 0 || $index === count($my_courses) - 1)
+                                    @if (($index + 1) % 3 === 0 || $index === count($courses) - 1)
                                 </div>
                             </div>
                             @endif
                             @endforeach
-                            @if ($my_courses->count() == 0)
+                            @if ($courses->count() == 0)
                             <div class="row bg-white radius-10">
                                 <div class="col-md-12">
                                     @include('frontend.default.empty')
@@ -109,7 +109,7 @@
                         <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <h4 class="g-title my-4">{{ __('Key resources') }}</h4>
-                                @foreach ($my_courses as $index => $course)
+                                @foreach ($key_resources as $index => $course)
                                 @if ($index % 3 === 0)
                                 <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                                     <div class="row">
@@ -176,12 +176,12 @@
                                             </div>
                                         </div>
 
-                                        @if (($index + 1) % 3 === 0 || $index === count($my_courses) - 1)
+                                        @if (($index + 1) % 3 === 0 || $index === count($key_resources) - 1)
                                     </div>
                                 </div>
                                 @endif
                                 @endforeach
-                                @if ($my_courses->count() == 0)
+                                @if ($key_resources->count() == 0)
                                 <div class="row bg-white radius-10">
                                     <div class="col-md-12">
                                         @include('frontend.default.empty')
@@ -205,7 +205,7 @@
                             <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <h4 class="g-title my-4">{{ __('Primer') }}</h4>
-                                    @foreach ($my_courses as $index => $course)
+                                    @foreach ($primer as $index => $course)
                                     @if ($index % 3 === 0)
                                     <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                                         <div class="row">
@@ -274,12 +274,12 @@
                                                 </div>
                                             </div>
 
-                                            @if (($index + 1) % 3 === 0 || $index === count($my_courses) - 1)
+                                            @if (($index + 1) % 3 === 0 || $index === count($primer) - 1)
                                         </div>
                                     </div>
                                     @endif
                                     @endforeach
-                                    @if ($my_courses->count() == 0)
+                                    @if ($primer->count() == 0)
                                     <div class="row bg-white radius-10">
                                         <div class="col-md-12">
                                             @include('frontend.default.empty')
@@ -303,7 +303,7 @@
                                 <div id="carouselExampleControls4" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <h4 class="g-title my-4">{{ __('Accelerating') }}</h4>
-                                        @foreach ($my_courses as $index => $course)
+                                        @foreach ($accelerator as $index => $course)
                                         @if ($index % 3 === 0)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                                             <div class="row">
@@ -374,12 +374,12 @@
                                                     </div>
                                                 </div>
 
-                                                @if (($index + 1) % 3 === 0 || $index === count($my_courses) - 1)
+                                                @if (($index + 1) % 3 === 0 || $index === count($accelerator) - 1)
                                             </div>
                                         </div>
                                         @endif
                                         @endforeach
-                                        @if ($my_courses->count() == 0)
+                                        @if ($accelerator->count() == 0)
                                         <div class="row bg-white radius-10">
                                             <div class="col-md-12">
                                                 @include('frontend.default.empty')

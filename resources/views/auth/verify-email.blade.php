@@ -14,11 +14,13 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6">
-                    <form action="{{ route('verification.send') }}" class="global-form login-form mt-25" method="POST">
+                    <form action="{{ route('verification.sending') }}" class="global-form login-form mt-25" method="POST">
                         @csrf
                         <h4 class="g-title">{{ __('Verify Email') }}</h4>
                         <p class="description">{{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you did not receive the email, we will gladly send you another') }}.</p>
-
+                        <div class="text-center">
+                            <p class="description"> <b> {{ __('Check your spam folder') }}.</b></p>
+                        </div>
                         @if (session('status') == 'verification-link-sent')
                             <p class="description mt-4 text-success">{{ __('A new verification link has been sent to the email address you provided during registration') }}.</p>
                         @endif
@@ -34,4 +36,3 @@
 @push('js')
 
 @endpush
-
