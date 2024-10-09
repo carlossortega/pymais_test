@@ -132,7 +132,7 @@ class CourseController extends Controller
             return json_encode(array('validationError' => $validator->getMessageBag()->toArray()));
         }
         //for normal form submission
-
+        
         $data['title']            = $request->title;
         $data['slug']             = slugify($request->title);
         $data['user_id']          = auth()->user()->id;
@@ -187,7 +187,7 @@ class CourseController extends Controller
         $data['instructors'] = json_encode($request->instructors);
         $data['created_at']  = date('Y-m-d H:i:s');
         $data['updated_at']  = date('Y-m-d H:i:s');
-
+        
         if ($request->thumbnail) {
             $data['thumbnail'] = "assets/upload/course-thumbnail/" . nice_file_name($request->title, $request->thumbnail->extension());
             FileUploader::upload($request->thumbnail, $data['thumbnail'], 400, null, 200, 200);
