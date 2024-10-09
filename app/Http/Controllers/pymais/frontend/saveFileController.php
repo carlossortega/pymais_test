@@ -7,10 +7,11 @@ use App\Models\Company;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
+use App\Models\Enrollment;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
-use App\Models\Enrollment;
+// use App\Models\Enrollment;
 
 class saveFileController extends Controller
 {
@@ -187,12 +188,89 @@ class saveFileController extends Controller
 
         $user_id = $user->id;
 
-        Enrollment::create([
+        $course = Enrollment::where([
+            ['category_id', 1],
+            ['user_id', $user_id]
+        ])->get();
+
+         Enrollment::create([
             'user_id' => $user_id,
-            'course_id' => 1,
+            'course_id' => $course,
             'enrollment_type' => 'free' 
         ],);
 
+        $enrollments = [
+            [
+                'user_id' => $user_id ,
+                'course_id' => 1,
+                'enrollment_type'=> 'free',
+            ],
+            [
+                'user_id' => $user_id ,
+                'course_id' => 1,
+                'enrollment_type'=> 'free',
+            ],
+            [
+                'user_id' => $user_id ,
+                'course_id' => 2,
+                'enrollment_type'=> 'free',
+            ],
+            [
+                'user_id' => $user_id ,
+                'course_id' => 2,
+                'enrollment_type'=> 'free',
+            ],
+            [
+                'user_id' => $user_id ,
+                'course_id' => 3,
+                'enrollment_type'=> 'free',
+            ],
+            [
+                'user_id' => $user_id ,
+                'course_id' => 3,
+                'enrollment_type'=> 'free',
+            ],
+        ];
+        foreach ($enrollments as $enrollment){
+            Enrollment::create($enrollment);
+        }
+         
+        $enrollments1 = [
+            [
+                'user_id' => $user_id ,
+                'course_id' => 1,
+                'enrollment_type'=> 'free',
+            ],
+            [
+                'user_id' => $user_id ,
+                'course_id' => 1,
+                'enrollment_type'=> 'free',
+            ],
+            [
+                'user_id' => $user_id ,
+                'course_id' => 2,
+                'enrollment_type'=> 'free',
+            ],
+            [
+                'user_id' => $user_id ,
+                'course_id' => 2,
+                'enrollment_type'=> 'free',
+            ],
+            [
+                'user_id' => $user_id ,
+                'course_id' => 3,
+                'enrollment_type'=> 'free',
+            ],
+            [
+                'user_id' => $user_id ,
+                'course_id' => 3,
+                'enrollment_type'=> 'free',
+            ],
+        ];
+        foreach ($enrollments1 as $enrollment){
+            Enrollment::create($enrollment);
+        }
+        
         Auth::login($user);
 
         return redirect()->route('login')->with('success', 'You have registered successfully, now please log in with your user data.');
