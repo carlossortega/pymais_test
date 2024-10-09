@@ -34,7 +34,7 @@ Route::get('/logout', function () {
 Route::get('/dashboard', function () {
     if (Auth::user()->role == 'admin') {
         return redirect(route('admin.dashboard'));
-    }elseif (Auth::user()->role == 'student') {
+    }elseif (Auth::user()->role == 'student' || Auth::user()->role == 'member') {
         return redirect(route('my.courses'));
     } else {
         return redirect(route('home'));
@@ -69,6 +69,8 @@ Route::controller(InstallController::class)->group(function () {
 //Forms routes
 Route::post('save-sme-application', [saveFileController::class, 'saveFileSME'])->name('save.application');
 
-
-Route::get('set-password/{id}', [TeamMembersController::class, 'showSetPassword'])->name('set.password');
-Route::get('set-password/{id}', [TeamMembersController::class, 'setPassword'])->name('set.password');
+Route::get('set-password/{id}', [TeamMembersController::class, 'showSetPassword'])
+    ->name('set.password');
+    
+Route::post('set-password/{id}', [TeamMembersController::class, 'setPassword'])
+    ->name('set.password.sett');
