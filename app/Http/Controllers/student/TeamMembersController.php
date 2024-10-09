@@ -5,6 +5,8 @@ namespace App\Http\Controllers\student;
 use App\Http\Controllers\Controller;
 use App\Mail\InviteMember;
 use App\Models\Category;
+use App\Models\Course;
+use App\Models\Enrollment;
 use App\Models\Team_members;
 use App\Models\User;
 use Google\Service\CloudSearch\Id;
@@ -62,14 +64,24 @@ class TeamMembersController extends Controller
             'phone' => $phone,
             'linkedin_profile' => $linkedin,
             'status' => 1,
-            'password' => Hash::make('password'),
-            'email_verified_at' => now()
         ]);
 
         $member = Team_members::create([
             'main_user_id' => $user_id,
             'member_user_id' => $user->id
         ]);
+
+        $member_id = $user->id;
+
+        $main_user = Auth::user()->id;
+        $enrollments = Enrollment::where('user_id', $main_user)->get();
+        foreach ($enrollments as $enroll) {
+            Enrollment::create([
+                'user_id' => $member_id,
+                'course_id' => $enroll->course_id,
+                'enrollment_type' => $enroll->enrollment_type 
+            ]);
+        }
 
         $link = URL::temporarySignedRoute('set.password', now()->addHours(1), ['id' => $user->id]);
         Mail::to($user->email)->send(new InviteMember($user, $link));
@@ -130,14 +142,19 @@ class TeamMembersController extends Controller
     public function setPassword(Request $request, $id)
     {
         $request->validate([
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:8',
+            'password_confirm' => 'required|min:8|same:password',
         ]);
 
-        $member = Team_members::findOrFail($id);
+        $member = User::findOrFail($id);
         $member->password = bcrypt($request->password);
+        $member->email_verified_at = now();
         $member->save();
 
-        return redirect()->route('login')->with('success', 'Password set successfully. You can now log in.');
+        Auth::login($member);
+
+
+        return redirect()->route('dashboard')->with('success', 'Password set successfully. You can now log in.');
     }
     
 }
