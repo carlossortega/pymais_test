@@ -21,7 +21,8 @@ class EmailVerificationPromptController extends Controller
         
         } else {
             
-            $request->user()->sendEmailVerificationNotification();
+            // $request->user()->sendEmailVerificationNotification();
+            app(CustomEmailVerificationNotificationController::class)->store($request);
             return view('auth.verify-email');
         
         }
