@@ -4,6 +4,9 @@
 @push('css')@endpush
 @section('content')
     <!------------ Team members create area start  ------------>
+    @if(Auth::user()->role != 'student' )        
+        <script>window.location = "/my-courses";</script>
+    @endif
     <section class="course-content">
         <div class="profile-banner-area"></div>
         <div class="container profile-banner-area-container">
