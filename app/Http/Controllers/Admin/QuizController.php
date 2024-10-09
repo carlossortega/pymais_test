@@ -60,17 +60,19 @@ class QuizController extends Controller
         $data['section_id']  = $request->section;
         $data['total_mark']  = $request->total_mark;
         $data['pass_mark']   = $request->pass_mark;
-        $data['retake']      = $request->retake;
-        $data['description'] = $request->description;
-        $data['lesson_type'] = 'quiz';
-        $data['status']      = 1;
+        // $data['retake']      = $request->retake;
+        // $data['description'] = $request->description;
+        // $data['lesson_type'] = 'quiz';
+        // $data['status']      = 1;
 
         $hour             = $request->hour ?? 0;
         $minute           = $request->minute ?? 0;
         $second           = $request->second ?? 0;
         $data['duration'] = $hour . ':' . $minute . ':' . $second;
 
-        Lesson::insert($data);
+        Quiz::insert($data);
+
+        // Lesson::insert($data);
 
         Session::flash('success', get_phrase('Quiz has been created.'));
         return redirect()->back();

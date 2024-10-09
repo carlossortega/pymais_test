@@ -123,6 +123,7 @@
     "Participants name": "Nombre del participante",
     "Password": "Contraseña",
     "Confirm password": "Confirmar contraseña",
+    "Confirm": "Confirmar",
     "Already have account": "Ya tengo una cuenta",
     "See your growth and get consulting support": "Vea su crecimiento y obtenga apoyo de consultoría",
     "Remember Me": "Recúerdame",
@@ -130,6 +131,7 @@
     "Not have an account yet": "Aún no tienes una cuenta",
     "Create Account": "Crear una cuenta",
     "Your Email": "Tu correo electrónico",
+    "Your Password": "Tu contraseña",
     "Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you did not receive the email, we will gladly send you another": "¡Gracias por registrarte! Antes de comenzar, ¿podrías verificar tu dirección de correo electrónico haciendo clic en el enlace que te acabamos de enviar? Si no recibiste el correo electrónico, con gusto te enviaremos otro",
     "Verify Email": "Verificar correo electrónico",
     "Check your spam folder": "Revisa tu bandeja de correo no deseado",
@@ -198,7 +200,8 @@
     "Verify Email Address" : "Verificar correo electrónico",
     "If you did not create an account, no further action is required" : "Si no creó una cuenta, no es necesario realizar ninguna otra acción",
     "Regards" : "Saludos",
-    "Set Your New Password": "Establece Tu Nueva Contraseña",
+    "Set your new password": "Establece tu nueva contraseña",
     "You have been added to the team. Please click the link below to set your password": "Te han añadido al equipo. Haz clic en el enlace que aparece a continuación para configurar tu contraseña",
-    "For more information contact the main member": "Para más información contacte con el miembro principal"
+    "For more information contact the main member": "Para más información contacte con el miembro principal",
+    "Set a new password to log in": "Establece una nueva contraseña para poder iniciar sesión"
 }

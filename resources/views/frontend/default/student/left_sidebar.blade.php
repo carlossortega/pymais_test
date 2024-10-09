@@ -1,14 +1,17 @@
 @php
-    $current_route = Route::currentRouteName();
+$current_route = Route::currentRouteName();
 @endphp
 
 <div class="col-lg-3">
     <div class="gradient-border">
         <div class="course-sideBar">
             <div class="profile-info">
-                <img class="photo" src="{{ get_image(auth()->user()->photo) }}" alt="">
+                <img class="photo"
+                    src="{{ Auth()->user()->photo ? get_image(Auth()->user()->photo) : asset('assets/frontend/default/image/foto-perfil.png') }}"
+                    alt="">
                 <div class="upload-new">
-                    <a href="#" onclick="ajaxModal('{{ route('modal', ['frontend.default.upload_profile_pic', 'id' => auth()->user()->id]) }}', '{{ __('Upload picture') }}')">
+                    <a href="#"
+                        onclick="ajaxModal('{{ route('modal', ['frontend.default.upload_profile_pic', 'id' => auth()->user()->id]) }}', '{{ __('Upload picture') }}')">
                         <span>
                             <i class="fi-rr-cloud-upload"></i><br>
                             {{ __('Upload New') }}
@@ -31,14 +34,16 @@
                     </a>
                 </li>
 
-                <li class="@if ($current_route == 'my.bootcamps' || $current_route == 'my.bootcamp.details') active @endif">
+                <li
+                    class="@if ($current_route == 'my.bootcamps' || $current_route == 'my.bootcamp.details') active @endif">
                     <a href="{{ route('my.bootcamps') }}">
                         <i class="fi-rr-video-camera text-23px me-3 ms-1"></i>
                         {{ __('My Bootcamps') }}
                     </a>
                 </li>
 
-                <li class="@if ($current_route == 'my.team.packages' || $current_route == 'my.team.packages.details' || $current_route == 'team.package.invoice') active @endif">
+                <li
+                    class="@if ($current_route == 'my.team.packages' || $current_route == 'my.team.packages.details' || $current_route == 'team.package.invoice') active @endif">
                     <a href="{{ route('my.team.packages') }}">
                         <i class="fi-rr-users-alt text-23px me-3 ms-1"></i>
                         {{ __('My Teams') }}
@@ -54,7 +59,7 @@
 
                 <li class="@if ($current_route == 'my.profile') active @endif">
                     <a href="{{ route('my.profile') }}">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"xmlns="http://www.w3.org/2000/svg">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M7.99978 7.66692C7.00396 7.66692 6.17168 7.33255 5.50293 6.66382C4.83418 5.99507 4.4998 5.16278 4.4998 4.16697C4.4998 3.17113 4.83418 2.33885 5.50293 1.67012C6.17168 1.00137 7.00396 0.666992 7.99978 0.666992C8.9956 0.666992 9.82788 1.00137 10.4966 1.67012C11.1654 2.33885 11.4998 3.17113 11.4998 4.16697C11.4998 5.16278 11.1654 5.99507 10.4966 6.66382C9.82788 7.33255 8.9956 7.66692 7.99978 7.66692ZM13.9556 15.3073H2.044C1.59472 15.3073 1.21254 15.1497 0.897454 14.8346C0.582354 14.5196 0.424805 14.1374 0.424805 13.6881V13.0092C0.424805 12.5028 0.561988 12.0452 0.836354 11.6362C1.1107 11.2272 1.46766 10.9187 1.90723 10.7106C2.88433 10.2597 3.88826 9.91312 4.91903 9.67082C5.9498 9.42852 6.97671 9.30737 7.99978 9.30737C9.02285 9.30737 10.0539 9.42852 11.093 9.67082C12.1321 9.91312 13.1292 10.2599 14.0844 10.7112C14.5292 10.9189 14.8889 11.2272 15.1632 11.6362C15.4376 12.0452 15.5748 12.5028 15.5748 13.0092V13.6881C15.5748 14.1374 15.4172 14.5196 15.1021 14.8346C14.787 15.1497 14.4048 15.3073 13.9556 15.3073ZM2.02478 13.7073H13.9748V13.0028C13.9748 12.8045 13.9203 12.6275 13.8113 12.4717C13.7023 12.316 13.5555 12.2086 13.3709 12.1496C12.5427 11.7586 11.6642 11.4538 10.7355 11.2352C9.80671 11.0166 8.89481 10.9073 7.99978 10.9073C7.10475 10.9073 6.19285 11.0208 5.26408 11.2477C4.33531 11.4746 3.45683 11.7753 2.62863 12.1496C2.44235 12.2405 2.29514 12.3558 2.187 12.4957C2.07885 12.6355 2.02478 12.8045 2.02478 13.0028V13.7073ZM7.99978 6.06697C8.54978 6.06697 9.00395 5.8878 9.36228 5.52947C9.72061 5.17113 9.89978 4.71697 9.89978 4.16697C9.89978 3.61697 9.72061 3.1628 9.36228 2.80447C9.00395 2.44613 8.54978 2.26697 7.99978 2.26697C7.44978 2.26697 6.99561 2.44613 6.63728 2.80447C6.27895 3.1628 6.09978 3.61697 6.09978 4.16697C6.09978 4.71697 6.27895 5.17113 6.63728 5.52947C6.99561 5.8878 7.44978 6.06697 7.99978 6.06697Z"
                                 fill="#6B7385" />
@@ -104,9 +109,10 @@
                 </li>
             </ul>
             @if (auth()->user()->role == 'student')
-                <div class="my-course-btn justify-content-center mt-5">
-                    <a href="{{ route('become.instructor') }}" class="eBtn gradient px-4">{{ __('Become an instructor') }}</a>
-                </div>
+            <div class="my-course-btn justify-content-center mt-5">
+                <a href="{{ route('become.instructor') }}"
+                    class="eBtn gradient px-4">{{ __('Become an instructor') }}</a>
+            </div>
             @endif
         </div>
     </div>

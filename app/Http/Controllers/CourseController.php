@@ -189,17 +189,17 @@ class CourseController extends Controller
         $data['updated_at']  = date('Y-m-d H:i:s');
 
         if ($request->thumbnail) {
-            $data['thumbnail'] = "uploads/course-thumbnail/" . nice_file_name($request->title, $request->thumbnail->extension());
+            $data['thumbnail'] = "assets/upload/course-thumbnail/" . nice_file_name($request->title, $request->thumbnail->extension());
             FileUploader::upload($request->thumbnail, $data['thumbnail'], 400, null, 200, 200);
         }
 
         if ($request->banner) {
-            $data['banner'] = "uploads/course-banner/" . nice_file_name($request->title, $request->banner->extension());
+            $data['banner'] = "assets/upload/course-banner/" . nice_file_name($request->title, $request->banner->extension());
             FileUploader::upload($request->banner, $data['banner'], 1400, null, 300, 300);
         }
 
         if ($request->preview) {
-            $data['preview'] = "uploads/course-preview/" . nice_file_name($request->title, $request->preview->extension());
+            $data['preview'] = "assets/upload/course-preview/" . nice_file_name($request->title, $request->preview->extension());
             FileUploader::upload($request->preview, $data['preview']);
         }
 
