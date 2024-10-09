@@ -66,7 +66,7 @@ class TeamMembersController extends Controller
             'status' => 1,
         ]);
 
-        $member = Team_members::create([
+        Team_members::create([
             'main_user_id' => $user_id,
             'member_user_id' => $user->id
         ]);
