@@ -279,13 +279,13 @@ class CourseController extends Controller
             $data['faqs'] = json_encode($faqs);
         } elseif ($request->tab == 'media') {
             if ($request->thumbnail) {
-                $data['thumbnail'] = "uploads/course-thumbnail/" . nice_file_name($request->title, $request->thumbnail->extension());
+                $data['thumbnail'] = "assets/images/" . nice_file_name($request->title, $request->thumbnail->extension());
                 FileUploader::upload($request->thumbnail, $data['thumbnail'], 400, null, 200, 200);
                 remove_file($query->first()->thumbnail);
             }
 
             if ($request->banner) {
-                $data['banner'] = "uploads/course-banner/" . nice_file_name($request->title, $request->banner->extension());
+                $data['banner'] = "assets/images/" . nice_file_name($request->title, $request->banner->extension());
                 FileUploader::upload($request->banner, $data['banner'], 1400, null, 300, 300);
                 remove_file($query->first()->banner);
             }
