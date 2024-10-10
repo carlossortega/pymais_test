@@ -108,6 +108,7 @@ class CourseController extends Controller
 
     public function store(Request $request)
     {
+       
         $rules = [
             'title'            => 'required|max:255',
             'category_id'      => 'required|numeric|min:1',
@@ -122,7 +123,7 @@ class CourseController extends Controller
             'requirements'     => 'array',
             'outcomes'         => 'array',
             'faqs'             => 'array',
-            'instructors'      => 'required|array|min:1',
+            'instructor_id'      => 'required',
         ];
 
         //For ajax form submission
@@ -135,7 +136,7 @@ class CourseController extends Controller
         
         $data['title']            = $request->title;
         $data['slug']             = slugify($request->title);
-        $data['user_id']          = auth()->user()->id;
+        $data['user_id']          = $request->instructor_id;
         $data['category_id']      = $request->category_id;
         $data['course_type']      = $request->course_type;
         $data['status']           = $request->status;
@@ -184,7 +185,7 @@ class CourseController extends Controller
             $data['faqs'] = json_encode($faqs);
         }
 
-        $data['instructors'] = json_encode($request->instructors);
+        // $data['instructor'] = json_encode($request->instructor);
         $data['created_at']  = date('Y-m-d H:i:s');
         $data['updated_at']  = date('Y-m-d H:i:s');
         
