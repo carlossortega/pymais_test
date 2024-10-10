@@ -137,6 +137,14 @@ Route::name('admin.')->prefix('admin')->middleware('admin')->group(function () {
         Route::post('student/update/{id}', 'student_update')->name('student.update');
         Route::get('student/delete/{id}', 'student_delete')->name('student.delete');
 
+        // Member route
+        Route::get('member', 'member_index')->name('member.index');
+        Route::get('member/create', 'member_create')->name('member.create');
+        Route::post('member/store/{id?}', 'member_store')->name('member.store');
+        Route::get('member/edit/{id}', 'member_edit')->name('member.edit');
+        Route::post('member/update/{id}', 'member_update')->name('member.update');
+        Route::get('member/delete/{id}', 'member_delete')->name('member.delete');
+
         Route::get('admin/create', 'admin_create')->name('admins.create');
         Route::post('admin/store', 'admin_store')->name('admins.store');
 
