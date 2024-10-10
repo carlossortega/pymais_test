@@ -203,5 +203,9 @@
     "Set your new password": "Establece tu nueva contraseña",
     "You have been added to the team. Please click the link below to set your password": "Te han añadido al equipo. Haz clic en el enlace que aparece a continuación para configurar tu contraseña",
     "For more information contact the main member": "Para más información contacte con el miembro principal",
-    "Set a new password to log in": "Establece una nueva contraseña para poder iniciar sesión"
+    "Set a new password to log in": "Establece una nueva contraseña para poder iniciar sesión",
+    "Student" : "Estudiante",
+    "Instructor" : "Instructor",
+    "Instructor Contact" : "Contacto del Instructor",
+    "This person will manage the profile." : "Esta persona gestionará el perfil."
 }

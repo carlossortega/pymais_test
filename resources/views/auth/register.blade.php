@@ -13,7 +13,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <form action="{{ route('save.application') }}" class="global-form login-form mt-25" method="post">
+                    
+                    <!-- Titulo y encabezado -->
+                    <div class="global-form login-form mt-25" >
+                        <div class="row d-flex text-center">
+                            <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('SME Form') }}</h1>
+                        </div>                        
+                        <div class="row d-flex">
+                            <div class="col-md-6 p-3">
+                                <button type="button" id="form-student-btn" class="w-100 btn btn-outline-primary btn-lg active" style="border: 2px solid blue;"  onclick="showForm('form-student')">
+                                    <h4>{{ __('Student') }}</h4>
+                                </button>
+                            </div>
+
+                            <div class="col-md-6 p-3">
+                                <button type="button" id="form-instructor-btn" class="w-100 btn btn-outline-primary btn-lg" style="border: 2px solid blue;"  onclick="showForm('form-instructor')">
+                                    <h4>{{ __('Instructor') }}</h4>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>                   
+
+                    <!-- Inicia formulario Student-->                                        
+                    <form id="form-student" action="{{ route('save.application') }}" class="global-form login-form mt-25" method="post" style="display: block;">
                         @csrf
                         <div class="row d-flex text-center">
                             <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('SME Form') }}</h1>
@@ -309,6 +332,120 @@
                                 </p>
                             </div>
                         </div>
+                    </form>       
+
+                    <!-- Inicia formulario Intructor-->
+                    <form id="form-instructor" action="{{ route('save.application.instructor') }}" class="global-form login-form mt-25" method="post" style="display: none;">
+                        @csrf
+                        <div class="row d-flex text-center">
+                            <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('SME Form') }}</h1>
+                        </div>
+                        <h2 style="margin-bottom: 60px;">{{ __('Please fill in the following information to continue with the registration') }}.</h2>
+                        
+                        
+                        <h3 class="g-title" style="color:#2849E6; margin-bottom: 20px">{{ __('Instructor Contact') }}</h3>
+                        <p class="description">{{ __('This person will manage the profile.') }}.</p>
+
+                        {{--  Main Contact  --}}
+                        <div class="pymais-padding-section">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Name') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                           aria-label="Name" name="name" autofocus value="{{ old('name') }}">
+                                           @error('name') <div class="bg-info">{{ __('The contact name is required') }}</div> @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Last name') }}(s)</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Last name"
+                                           name="last_name" value="{{ old('last_name') }}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Phone') }}</label>
+                                    <input type="text" class="form-control pymais-input-background @error('phone') border border-danger @enderror"
+                                        aria-label="Phone" name="phone" value="{{ old('phone') }}">
+                                        @error('phone') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Position') }}</label>
+                                    <input type="text" class="form-control pymais-input-background" aria-label="Position"
+                                        name="position" value="{{ old('position') }}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Job area (e.g. Sales)') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                        aria-label="Area of the post" name="job_area" value="{{ old('job_area') }}">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('LinkedIn profile') }}</label>
+                                    <input type="text" class="form-control pymais-input-background"
+                                        aria-label="LinkedIn profile" name="linkedin" value="{{ old('linkedin') }}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('User email') }}</label>
+                                    <input type="email" class="form-control pymais-input-background @error('email') border border-danger @enderror" aria-label="Email"
+                                           name="email" value="{{ old('email') }}" >
+                                           @error('email') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Password') }}</label>
+                                    <div class="input-group justify-content-end">
+                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('password_user') border border-danger @enderror"
+                                            id="password2" aria-label="Password" name="password_user" value="{{ old('password_user') }}" >
+                                        <div class="input-group-append position-absolute mt-3" style="z-index: 99">
+                                            <button id="showPassword2" class="btn btn-outline-secondary w-25 rounded-circle d-flex justify-content-center" type="button">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    @error('password_user') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"></div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Confirm password') }}</label>
+                                    <div class="input-group justify-content-end">
+                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('confirm_password_user') border border-danger @enderror"
+                                            id="confirmPassword2" aria-label="Confirm Password" name="confirm_password_user" value="{{ old('confirm_password_user') }}" >
+                                        <div class="input-group-append position-absolute mt-3" style="z-index: 99">
+                                            <button id="showConfirmPassword2" class="btn btn-outline-secondary w-25 rounded-circle d-flex justify-content-center" type="button">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    @error('confirm_password_user') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center" style="margin-top: 60px;">
+                                <input type="checkbox" id="toggleInputs" class="m-3 @error('accept_terms_and_conditions') border border-danger @enderror" name="accept_terms_and_conditions" 
+                                    style="width: 20px; height: 20px; cursor: pointer; position: relative; margin-top; 20px" required>
+                                <label for="toggleInputs" class="mt-2 ms-2">{{ __('I accept') }}
+                                <a href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/Terminos_y_Condiciones.pdf' : 'pdfs/Terminos_y_Condiciones.pdf') }}"
+                                    class="text-info" target="_blank">
+                                    {{ __('terms and conditions') }}
+                                </a>
+                            </div>
+                            @error('accept_terms_and_conditions') <p class="text-danger ms-2 mb-3">{{ __('Confirm terms and conditions') }}</p> @enderror
+                        </div>                        
+
+                        <div class="row mt-5">
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6 d-grid gap-2">
+                                <button type="submit" class="pymais-button-gradient btn-lg">
+                                    {{ __('Submit') }}
+                                </button>
+                                <p class="mt-20">{{ __('Already have account') }}.
+                                    <a href="{{ route('login') }}">{{ __('Sign In') }}</a>
+                                </p>
+                            </div>
+                        </div>
 
                     </form>
 
@@ -352,6 +489,24 @@
 
             togglePasswordBtn('#showPassword', '#password');
             togglePasswordBtn('#showConfirmPassword', '#confirmPassword');
+
+            togglePasswordBtn('#showPassword2', '#password2');
+            togglePasswordBtn('#showConfirmPassword2', '#confirmPassword2');
         });
+    </script>        
+@endpush
+
+@push('js')
+    <script>
+        function showForm(formId) {        
+            document.getElementById('form-student').style.display = 'none';
+            document.getElementById('form-instructor').style.display = 'none';        
+            
+            document.getElementById(formId).style.display = 'block';        
+            
+            document.getElementById('form-student-btn').classList.remove('active');
+            document.getElementById('form-instructor-btn').classList.remove('active');
+            document.getElementById(formId + '-btn').classList.add('active');
+            }
     </script>
 @endpush
