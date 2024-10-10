@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\pymais\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Auth\CustomEmailNotificationController;
 use App\Models\Company;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -231,6 +232,8 @@ class saveFileController extends Controller
 
         Auth::login($user);
 
+        app(CustomEmailNotificationController::class)->store($request, 1);
+        
         return redirect()->route('login')->with('success', 'You have registered successfully, now please log in with your user data.');
     }
 }
