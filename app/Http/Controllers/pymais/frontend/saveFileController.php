@@ -218,6 +218,17 @@ class saveFileController extends Controller
             ]);
         }
 
+        // Enrollment Accelerating
+        $accelerating = Category::where('title', 'Accelerator')->get();
+        $courses = Course::where('category_id', $accelerating[0]->id)->get();
+        foreach($courses as $course) {
+            Enrollment::create([
+                'user_id' => $user_id,
+                'course_id' => $course->id,
+                'enrollment_type' => 'free' 
+            ]);
+        }
+
         Auth::login($user);
 
         return redirect()->route('login')->with('success', 'You have registered successfully, now please log in with your user data.');
