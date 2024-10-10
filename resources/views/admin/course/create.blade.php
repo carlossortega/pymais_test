@@ -90,6 +90,21 @@
                                         </select>
                                     </div>
                                     <div class="fpb-7 mb-3">
+                                        <label for="instructor_id" class="form-label ol-form-label">{{ get_phrase('Instructor') }}<span class="text-danger ms-1">*</span></label>
+                                        <select class="ol-select2" name="instructor_id" id="instructor_id" required>
+                                            <option value="">{{ get_phrase('Select a Intructor') }}</option>
+                                            @foreach (App\Models\User::where('role', 'instructor')->orderBy('name','asc')->get() as $instructor)
+                                                <option value="{{ $instructor->id }}"> {{ $instructor->name }}</option>
+
+                                                <!-- @foreach ($category->childs as $sub_category)
+                                                    <option value="{{ $sub_category->id }}"> --
+                                                        {{ $sub_category->title }}
+                                                    </option>
+                                                @endforeach -->
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="fpb-7 mb-3">
                                         <label for="level" class="form-label ol-form-label">{{ get_phrase('Course level') }}<span class="text-danger ms-1">*</span></label>
                                         <select class="ol-select2" name="level" id="level" required>
                                             <option value="">{{ get_phrase('Select your course level') }}</option>
