@@ -58,7 +58,6 @@ class CurriculumController extends Controller
 
     public function lesson_store(Request $request)
     {
-
         $data['title']       = $request->title;
         $data['user_id']     = auth()->user()->id;
         $data['course_id']   = $request->course_id;
@@ -145,7 +144,7 @@ class CurriculumController extends Controller
             $sec                = sprintf('%02d', $duration_formatter[2]);
             $data['duration']   = $hour . ':' . $min . ':' . $sec;
         } elseif ($request->lesson_type == 'system-video') {
-
+            dd('test system.video');
             if ($request->system_video_file == '') {
                 $file = '';
             } else {

@@ -97,8 +97,18 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                {{ App\Models\Course::where('user_id', $row->id)->count() }}
-                                                {{ get_phrase('Courses') }}
+                                                <?php
+                                                    // Obtener el main_user_id directamente
+                                                    $mainUserId = App\Models\Team_members::where('member_user_id', $row->id)->value('main_user_id');
+                                                    // Opcional: obtener el usuario principal completo
+                                                    $mainUser = App\Models\User::find($mainUserId);
+                                                ?>
+
+                                                @if($mainUser->name)
+                                                    {{ $mainUser->name }}
+                                                @else
+                                                    {{ get_phrase('Sin nombre de usuario principal') }}
+                                                @endif
                                             </td>
                                             <td class="print-d-none">
                                                 <div class="dropdown ol-icon-dropdown ol-icon-dropdown-transparent">

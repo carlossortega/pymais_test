@@ -9,6 +9,7 @@ use App\Models\FileUploader;
 use App\Models\Payout;
 use App\Models\Permission;
 use App\Models\Setting;
+use App\Models\Team_members;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -650,7 +651,7 @@ class UsersController extends Controller
     }
     public function member_edit($id = '')
     {
-        $page_data['memer'] = User::where('id', $id)->first();
+        $page_data['member'] = User::where('id', $id)->first();
         return view('admin.member.edit_member', $page_data);
     }
     public function member_store(Request $request, $id = '')
