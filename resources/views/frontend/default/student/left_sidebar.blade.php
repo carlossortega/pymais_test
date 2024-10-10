@@ -49,13 +49,15 @@ $current_route = Route::currentRouteName();
                         {{ __('My Teams') }}
                     </a>
                 </li>
-
+                
+                @if(auth()->user()->role == 'student')
                 <li class="@if ($current_route == 'team.members') active @endif">
                     <a href="{{ route('team.members') }}">
                         <i class="fa-duotone fa-solid fa-people-group fs-3 me-3 ms-1"></i>
                         {{ __('Team Members') }}
                     </a>
                 </li>
+                @endif                
 
                 <li class="@if ($current_route == 'my.profile') active @endif">
                     <a href="{{ route('my.profile') }}">

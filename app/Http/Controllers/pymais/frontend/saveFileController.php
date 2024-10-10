@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\pymais\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Auth\CustomEmailNotificationController;
 use App\Models\Company;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -218,8 +219,21 @@ class saveFileController extends Controller
             ]);
         }
 
+        // Enrollment Accelerating
+        $accelerating = Category::where('title', 'Accelerator')->get();
+        $courses = Course::where('category_id', $accelerating[0]->id)->get();
+        foreach($courses as $course) {
+            Enrollment::create([
+                'user_id' => $user_id,
+                'course_id' => $course->id,
+                'enrollment_type' => 'free' 
+            ]);
+        }
+
         Auth::login($user);
 
+        app(CustomEmailNotificationController::class)->store($request, 1);
+        
         return redirect()->route('login')->with('success', 'You have registered successfully, now please log in with your user data.');
     }
 }
