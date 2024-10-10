@@ -27,20 +27,20 @@ class saveFileController extends Controller
             'position' => 'nullable',
             'job_area' => 'nullable',
             'linkedin' => 'nullable',
-            'password_user' => 'required',
-            'confirm_password_user' => 'required|same:password_user',
+            'password_instructor' => 'required',
+            'confirm_password_instructor' => 'required|same:password_instructor',
             'accept_terms_and_conditions' => 'required'
         ]);
 
         //get data from the form
         $name = $request->name;
         $last_name = $request->last_name;
-        $user_phone = $request->user_phone;
+        $phone = $request->phone;
         $position = $request->position;
         $job_area = $request->job_area;
         $linkedin = $request->linkedin;
         $email = $request->email;
-        $password_user = $request->password_user;
+        $password_user = $request->password_instructor;
 
         // Registrar al nuevo usuario en la plataforma
         $user = User::create([
@@ -48,7 +48,7 @@ class saveFileController extends Controller
             'status' => 1,
             'name' => $name,
             'last_name' => $last_name,
-            'phone' => $user_phone,
+            'phone' => $phone,
             'position' => $position,
             'job_area' => $job_area,
             'linkedin' => $linkedin,
@@ -102,7 +102,7 @@ class saveFileController extends Controller
 
         $name = $request->name;
         $last_name = $request->last_name;
-        $user_phone = $request->user_phone;
+        $user_phone = $request->phone;
         $position = $request->position;
         $job_area = $request->job_area;
         $linkedin = $request->linkedin;

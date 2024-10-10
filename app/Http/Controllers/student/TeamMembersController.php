@@ -62,7 +62,7 @@ class TeamMembersController extends Controller
             'position' => $position,
             'email' => $email,
             'phone' => $phone,
-            'linkedin_profile' => $linkedin,
+            'linkedin' => $linkedin,
             'status' => 1,
         ]);
 

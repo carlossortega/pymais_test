@@ -27,6 +27,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'linkedin',
         'password',
         'position',
+        'job_area',
         'company_id'
 
     ];

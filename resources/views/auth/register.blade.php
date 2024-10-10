@@ -389,15 +389,15 @@
                                 <div class="col-md-6">
                                     <label>{{ __('Password') }}</label>
                                     <div class="input-group justify-content-end">
-                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('password_user') border border-danger @enderror"
-                                            id="password2" aria-label="Password" name="password_user" value="{{ old('password_user') }}" >
+                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('password_instructor') border border-danger @enderror"
+                                            id="password2" aria-label="Password" name="password_instructor" value="{{ old('password_instructor') }}" >
                                         <div class="input-group-append position-absolute mt-3" style="z-index: 99">
                                             <button id="showPassword2" class="btn btn-outline-secondary w-25 rounded-circle d-flex justify-content-center" type="button">
                                                 <i class="fas fa-eye"></i>
                                             </button>
                                         </div>
                                     </div>
-                                    @error('password_user') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                    @error('password_instructor') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                             </div>
                             <div class="row">
@@ -405,15 +405,15 @@
                                 <div class="col-md-6">
                                     <label>{{ __('Confirm password') }}</label>
                                     <div class="input-group justify-content-end">
-                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('confirm_password_user') border border-danger @enderror"
-                                            id="confirmPassword2" aria-label="Confirm Password" name="confirm_password_user" value="{{ old('confirm_password_user') }}" >
+                                        <input type="password" class="form-control pymais-input-background rounded-4 @error('confirm_password_instructor') border border-danger @enderror"
+                                            id="confirmPassword2" aria-label="Confirm Password" name="confirm_password_instructor" value="{{ old('confirm_password_instructor') }}" >
                                         <div class="input-group-append position-absolute mt-3" style="z-index: 99">
                                             <button id="showConfirmPassword2" class="btn btn-outline-secondary w-25 rounded-circle d-flex justify-content-center" type="button">
                                                 <i class="fas fa-eye"></i>
                                             </button>
                                         </div>
                                     </div>
-                                    @error('confirm_password_user') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                    @error('confirm_password_instructor') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
                                 </div>
                             </div>
                             <div class="d-flex align-items-center" style="margin-top: 60px;">
