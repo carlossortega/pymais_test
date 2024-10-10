@@ -37,12 +37,8 @@
 
                     <!-- Inicia formulario Student-->                                        
                     <form id="form-student" action="{{ route('save.application') }}" class="global-form login-form mt-25" method="post" style="display: block;">
-                        @csrf
-                        <div class="row d-flex text-center">
-                            <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('SME Form') }}</h1>
-                        </div>
-    
-                        <h2 style="margin-bottom: 60px">{{ __('Please fill in the following information to continue with the registration') }}.</h2>
+                        @csrf                            
+                        <h2 style="margin-top: 120px; margin-bottom: 30px">{{ __('Please fill in the following information to continue with the registration') }}.</h2>
                         
                         
                         <h3 class="g-title" style="color:#2849E6; margin-bottom: 20px">{{ __('Main Contact') }}</h3>
@@ -336,15 +332,12 @@
 
                     <!-- Inicia formulario Intructor-->
                     <form id="form-instructor" action="{{ route('save.application.instructor') }}" class="global-form login-form mt-25" method="post" style="display: none;">
-                        @csrf
-                        <div class="row d-flex text-center">
-                            <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('SME Form') }}</h1>
-                        </div>
-                        <h2 style="margin-bottom: 60px;">{{ __('Please fill in the following information to continue with the registration') }}.</h2>
+                        @csrf                        
+                        <h2 style="margin-top: 120px; margin-bottom: 30px">{{ __('Please fill in the following information to continue with the registration') }}.</h2>
                         
                         
                         <h3 class="g-title" style="color:#2849E6; margin-bottom: 20px">{{ __('Instructor Contact') }}</h3>
-                        <p class="description">{{ __('This person will manage the profile.') }}.</p>
+                        <p class="description">{{ __('This person will manage the profile') }}.</p>
 
                         {{--  Main Contact  --}}
                         <div class="pymais-padding-section">
