@@ -32,6 +32,7 @@
             'admin.instructor.index' => get_phrase('Instructor'),
             'admin.admins.index' => get_phrase('Admin'),
             'admin.student.index' => get_phrase('Student'),
+            'admin.member.index' => get_phrase('Member'),            
             'admin.message' => get_phrase('Message'),
             'admin.newsletter' => get_phrase('Newsletter'),
             'admin.subscribed_user' => get_phrase('Newsletter Subscriber'),

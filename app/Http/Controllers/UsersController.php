@@ -633,4 +633,104 @@ class UsersController extends Controller
         Session::flash('success', get_phrase('Your changes has been saved.'));
         return redirect()->back();
     }
+
+    public function member_index()
+    {
+        $query = User::where('role', 'member');
+        if (isset($_GET['search']) && $_GET['search'] != '') {
+            $query = $query->where('name', 'LIKE', '%' . $_GET['search'] . '%');
+        }
+        $page_data['members'] = $query->paginate(10);
+        return view('admin.member.index', $page_data);
+    }
+
+    public function member_create()
+    {
+        return view('admin.member.create_member');
+    }
+    public function member_edit($id = '')
+    {
+        $page_data['memer'] = User::where('id', $id)->first();
+        return view('admin.member.edit_member', $page_data);
+    }
+    public function member_store(Request $request, $id = '')
+    {
+        $rules = [
+            'name'     => 'required|max:255',
+            'email'    => 'required',
+            'password' => 'required',
+        ];
+
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
+            return json_encode(array('validationError' => $validator->getMessageBag()->toArray()));
+        }
+
+        $data['name']        = $request->name;
+        $data['about']       = $request->about;
+        $data['phone']       = $request->phone;
+        $data['address']     = $request->address;
+        $data['email']       = $request->email;
+        $data['facebook']    = $request->facebook;
+        $data['twitter']     = $request->twitter;
+        $data['website']     = $request->website;
+        $data['linkedin']    = $request->linkedin;
+        $data['paymentkeys'] = json_encode($request->paymentkeys);
+
+        $data['password'] = Hash::make($request->password);
+        $data['role']     = 'member';
+
+        if (isset($request->photo) && $request->hasFile('photo')) {
+            $path = "assets/upload/users/member/" . nice_file_name($request->name, $request->photo->extension());
+            FileUploader::upload($request->photo, $path, 400, null, 200, 200);
+            $data['photo'] = $path;
+        }
+
+        User::insert($data);
+        Session::flash('success', get_phrase('Member add successfully'));
+
+        return redirect()->route('admin.member.index');
+    }
+
+    public function member_update(Request $request, $id = '')
+    {
+        $rules = [
+            'name'  => 'required|max:255',
+            'email' => "required|email|unique:users,email,$id",
+        ];
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
+            return json_encode(array('validationError' => $validator->getMessageBag()->toArray()));
+        }
+
+        $data['name']        = $request->name;
+        $data['about']       = $request->about;
+        $data['phone']       = $request->phone;
+        $data['address']     = $request->address;
+        $data['email']       = $request->email;
+        $data['facebook']    = $request->facebook;
+        $data['twitter']     = $request->twitter;
+        $data['website']     = $request->website;
+        $data['linkedin']    = $request->linkedin;
+        $data['paymentkeys'] = json_encode($request->paymentkeys);
+
+        if (isset($request->photo) && $request->hasFile('photo')) {
+            remove_file(User::where('id', $id)->first()->photo);
+            $path = "assets/upload/users/member/" . nice_file_name($request->name, $request->photo->extension());
+            FileUploader::upload($request->photo, $path, 400, null, 200, 200);
+            $data['photo'] = $path;
+        }
+
+        User::where('id', $id)->update($data);
+        Session::flash('success', get_phrase('Member update successfully'));
+        return redirect()->route('admin.member.index');
+    }
+
+    public function member_delete($id)
+    {
+        $query = user::where('id', $id);
+        remove_file($query->first()->photo);
+        $query->delete();
+        return redirect(route('admin.member.index'))->with('success', get_phrase('Course deleted successfully'));
+    }
 }
