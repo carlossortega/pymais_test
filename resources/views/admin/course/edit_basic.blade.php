@@ -1,5 +1,4 @@
 <input type="hidden" name="course_type" value="general" required>
-<input type="hidden" name="instructors[]" value="{{ auth()->user()->id }}" required>
 
 
 <div class="row mb-3">
@@ -53,7 +52,6 @@
         <select class="ol-select2" name="instructor_id" data-minimum-results-for-search="Infinity" required>
             <option value="">{{ get_phrase('Select a instructor') }}</option>
             @foreach (App\Models\User::where('role', 'instructor')->orderBy('name','asc')->get() as $instructor)
-            var_dump($instructor->id)
                 <option value="{{$instructor->id }}" @if ($course_details->user_id == $instructor->id) selected @endif>
                     {{ $instructor->name }}</option>
             @endforeach

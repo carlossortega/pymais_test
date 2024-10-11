@@ -119,7 +119,7 @@
                                             <div class="icon-container">
                                                 <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}" alt="category-icon" />
                                             </div>
-                                            <h3 class="pymais-accordion-title">{{ __('SMEs') }}</h3>
+                                            <h3 class="pymais-accordion-title mt-3 fs-2">{{ __('SMEs') }}</h3>
                                         </div>
                                     </button>
                                 </div>
@@ -130,7 +130,7 @@
                                             <div class="icon-container">
                                                 <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}" alt="category-icon" />
                                             </div>
-                                            <h3 class="pymais-accordion-title">{{ __('Consultant and mentors') }}</h3>
+                                            <h3 class="pymais-accordion-title mt-3 fs-2">{{ __('Consultant and mentors') }}</h3>
                                         </div>
                                     </button>
                                 </div>
@@ -142,7 +142,7 @@
                                             <div class="icon-container">
                                                 <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}" alt="category-icon" />
                                             </div>
-                                            <h3 class="pymais-accordion-title">{{ __('Industry and corporate') }}</h3>
+                                            <h3 class="pymais-accordion-title mt-3 fs-2">{{ __('Industry and corporate') }}</h3>
                                         </div>
                                     </button>
                                 </div>
@@ -154,7 +154,7 @@
                                             <div class="icon-container">
                                                 <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}" alt="category-icon" />
                                             </div>
-                                            <h3 class="pymais-accordion-title">{{ __('Allies and partners') }}</h3>
+                                            <h3 class="pymais-accordion-title mt-3 fs-2">{{ __('Allies and partners') }}</h3>
                                         </div>
                                     </button>
                                 </div>

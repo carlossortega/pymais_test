@@ -236,7 +236,7 @@ class CourseController extends Controller
                 'level'       => 'required|in:everyone,beginner,intermediate,advanced',
                 'language'    => 'required',
                 'status'      => 'required|in:active,pending,draft,private,upcoming,inactive',
-                'instructors' => 'required|array|min:1',
+                'instructor_id' => 'required',
             ];
 
             $data['title']             = $request->title;
@@ -247,7 +247,7 @@ class CourseController extends Controller
             $data['level']             = $request->level;
             $data['language']          = strtolower($request->language);
             $data['status']            = $request->status;
-            $data['instructors']       = json_encode($request->instructors);
+            $data['user_id']     = $request->instructor_id; 
         } elseif ($request->tab == 'pricing') {
             $rules = [
                 'is_paid'          => Rule::in(['0', '1']),
