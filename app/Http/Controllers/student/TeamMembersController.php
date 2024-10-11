@@ -86,7 +86,7 @@ class TeamMembersController extends Controller
         $link = URL::temporarySignedRoute('set.password', now()->addHours(1), ['id' => $user->id]);
         Mail::to($user->email)->send(new InviteMember($user, $link));
 
-        return redirect()->route('team.members')->with('success', 'Participant added successfully.');
+        return redirect()->route('team.members')->with('success', app()->getLocale() === 'en' ? 'Participant added successfully.' : 'Participante agregado con éxito.');
     }
 
 
@@ -118,7 +118,7 @@ class TeamMembersController extends Controller
             'linkedin' => $request->linkedin,
         ]);
 
-        return redirect()->route('team.members')->with('success', 'Participant updated successfully.');
+        return redirect()->route('team.members')->with('success', app()->getLocale() === 'en' ? 'Participant updated successfully.' : 'Participante actualizado con éxito.');
     }
     
     public function delete($id)
@@ -126,7 +126,7 @@ class TeamMembersController extends Controller
         $member = User::where('id', $id);
         $member->delete();
 
-        return redirect()->route('team.members')->with('success', 'Participant deleted successfully.');
+        return redirect()->route('team.members')->with('success', app()->getLocale() === 'en' ? 'Participant deleted successfully.' : 'Participante eliminado con éxito.');
     }
 
 
@@ -154,7 +154,7 @@ class TeamMembersController extends Controller
         Auth::login($member);
 
 
-        return redirect()->route('dashboard')->with('success', 'Password set successfully. You can now log in.');
+        return redirect()->route('dashboard');
     }
     
 }

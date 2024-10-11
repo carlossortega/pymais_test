@@ -26,13 +26,13 @@
                 <div class="icon icon-confirm">
                     <i class="fi-rr-exclamation"></i>
                 </div>
-                <p class="title">{{ get_phrase('Are you sure?') }}</p>
-                <p class="text-muted">{{ get_phrase("You can't bring it back!") }}</p>
+                <p class="title">{{ __('Are you sure?') }}</p>
+                <p class="text-muted">{{ __("You can't bring it back!") }}</p>
 
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="btn ol-btn-secondary fw-500" data-bs-dismiss="modal">{{ get_phrase('Cancel') }}</button>
-                <a href="" class="confirm-btn btn ol-btn-success fw-500">{{ get_phrase('Confirm') }}</a>
+                <button type="button" class="btn ol-btn-secondary fw-500" data-bs-dismiss="modal">{{ __('Cancel') }}</button>
+                <a href="" class="confirm-btn btn ol-btn-success fw-500">{{ __('Confirm') }}</a>
             </div>
         </div>
     </div>

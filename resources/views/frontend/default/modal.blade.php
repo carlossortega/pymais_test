@@ -48,11 +48,11 @@
                         <path d="M22.5 29V10H25.5V29ZM22.5 38V35H25.5V38Z" />
                     </svg>
                 </div>
-                <p>{{ get_phrase('Are you sure?') }}</p>
-                <p class="focus-text">{{ get_phrase("You can't bring it back!") }}</p>
+                <p>{{ __('Are you sure?') }}</p>
+                <p class="focus-text">{{ __("You can't bring it back!") }}</p>
                 <div class="confirmBtn">
-                    <button type="button" class="eBtn eBtn-red" data-bs-dismiss="modal">{{ get_phrase('Cancel') }}</button>
-                    <a href="" class="confirm-btn eBtn eBtn-green">{{ get_phrase("Yes, I'm sure") }}</a>
+                    <button type="button" class="eBtn eBtn-red" data-bs-dismiss="modal">{{ __('Cancel') }}</button>
+                    <a href="" class="confirm-btn eBtn eBtn-green">{{ __("Yes, I'm sure") }}</a>
                 </div>
             </div>
         </div>

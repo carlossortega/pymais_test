@@ -14,6 +14,7 @@ class InviteMember extends Mailable
 
     public $user;
     public $link;
+    public $message;
 
     public function __construct(User $user, $link)
     {
@@ -23,7 +24,7 @@ class InviteMember extends Mailable
 
     public function build()
     {
-        return $this->subject('Set Your New Password')
+        return $this->subject(app()->getLocale() === 'en' ? 'Set your Nnew password' : 'Establece tu nueva contraseña')
                     ->view('auth.emails.set_password') // Vista para el correo
                     ->with([
                         'link' => $this->link,

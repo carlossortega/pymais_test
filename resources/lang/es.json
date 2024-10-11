@@ -207,5 +207,9 @@
     "Student" : "Estudiante",
     "Instructor" : "Instructor",
     "Instructor Contact" : "Contacto del Instructor",
-    "This person will manage the profile" : "Esta persona gestionará el perfil"
+    "This person will manage the profile" : "Esta persona gestionará el perfil",
+    "Set New Password": "Establecer Nueva Contraseña",
+    "Are you sure?": "¿Estás seguro?",
+    "You can't bring it back!": "¡No puedes traerlo de vuelta!",
+    "Cancel": "Cancelar"
 }
