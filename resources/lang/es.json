@@ -208,7 +208,11 @@
     "Instructor" : "Instructor",
     "Instructor Contact" : "Contacto del Instructor",
     "This person will manage the profile" : "Esta persona gestionará el perfil",
-    "Set New Password": "Establecer Nueva Contraseña",
+    "Set New Password":"Establecer nueva contraseña",
+    "A password reset link has been sent. Check your email" : "Se ha enviado un enlace para restablecer la contraseña. Revisa tu correo electrónico",
+    "Reset password notification" : "Notificación de restablecimiento de contraseña",
+    "You are receiving this email because we received a password reset request for your account" : "Estás recibiendo este correo electrónico porque recibimos una solicitud de restablecimiento de contraseña para tu cuenta",
+    "This password reset link will expire in 60 minutes":"Este enlace de restablecimiento de contraseña caducará en 60 minutos",
     "Are you sure?": "¿Estás seguro?",
     "You can't bring it back!": "¡No puedes traerlo de vuelta!",
     "Cancel": "Cancelar"

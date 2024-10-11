@@ -7,6 +7,13 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\URL;
+use App\Models\User;
+use Illuminate\Support\Facades\Mail;
+use Google\Service\CloudSearch\Id;
+use App\Mail\CustomResetPasswordMail;
+
+
 
 class PasswordResetLinkController extends Controller
 {
@@ -24,21 +31,23 @@ class PasswordResetLinkController extends Controller
      * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request): RedirectResponse
-    {
-        $request->validate([
-            'email' => ['required', 'email'],
-        ]);
+{
 
-        // We will send the password reset link to this user. Once we have attempted
-        // to send the link, we will examine the response then see the message we
-        // need to show to the user. Finally, we'll send out a proper response.
-        $status = Password::sendResetLink(
-            $request->only('email')
-        );
+    $request->validate([
+        'email' => ['required', 'email'],
+    ]);
 
-        return $status == Password::RESET_LINK_SENT
-            ? back()->with('status', __($status))
-            : back()->withInput($request->only('email'))
-            ->withErrors(['email' => __($status)]);
+    $user = User::where('email', $request->email)->first();
+    if (!$user) {
+        return back()->withInput($request->only('email'))->withErrors(['email' => 'No se ha encontrado un usuario con esa dirección de correo.']);
     }
+
+    // Crear un enlace temporal firmado para establecer la contraseña
+    $link = URL::temporarySignedRoute('set.password', now()->addHours(1), ['id' => $user->id]);
+
+    // Enviar el correo con el enlace de restablecimiento de contraseña
+    Mail::to($user->email)->send(new CustomResetPasswordMail($user, $link));
+    return redirect()->route('login')->with('success', __('A password reset link has been sent. Check your email'));
+}
+
 }
