@@ -302,7 +302,7 @@
                             <div class="row mt-5">
                                 <div id="carouselExampleControls4" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
-                                        <h4 class="g-title my-4">{{ __('Accelerating') }}</h4>
+                                        <h4 class="g-title my-4">{{ __('Accelerator') }}</h4>
                                         @foreach ($accelerator as $index => $course)
                                         @if ($index % 3 === 0)
                                         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
