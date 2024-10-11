@@ -6,6 +6,80 @@
         body {
             background-color: #f2f2f2 !important;
         }
+
+        .pymais-accordion-card {
+            border: 1px solid #e0e0e0 !important;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px !important;
+            background-color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .pymais-accordion-header {
+            cursor: pointer;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .pymais-accordion-title {
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        .pymais-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .pymais-accordion-content p {
+            margin: 0;
+            padding: 0px 10px !important;
+        }
+
+        .pymais-accordion-card.active .pymais-accordion-content {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.5s ease-in;
+        }
+
+        /* Efecto de hover para la tarjeta */
+        .pymais-accordion-card:hover {
+            color: black;
+            background-color: #2848e6;
+        }
+
+        /* Efecto de hover para los iconos dentro de la tarjeta */
+        .pymais-accordion-card:hover .icon-class {
+            background-color: #ddd;
+            transition: background-color 0.3s ease;
+        }
+
+        .icon-container {
+            background-color: #2848e6; /* Fondo azul */
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            padding: 20px; /* Espaciado adicional alrededor de la imagen */
+            border-radius: 50%; /* Hacer el contenedor circular */
+            width: 80px; /* Ajusta el ancho del contenedor */
+            height: 80px; /* Ajusta la altura del contenedor */
+            margin: 0 auto; /* Centra el contenedor en su contenedor padre */
+        }
+
+        .icon-container img {
+            max-width: 100%; /* Ajusta la imagen para que sea más pequeña que el contenedor */
+            height: auto;
+            display: block; /* Evita el espacio en línea que puede causar que la imagen se desplace a un lado */
+        }
+        
+        .active{
+            background-color: #2848e6 !important;
+        }
     </style>
 @endpush
 @section('content')
@@ -18,22 +92,75 @@
                     <div class="global-form login-form mt-25" >
                         <div class="row d-flex text-center">
                             <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('SME Form') }}</h1>
-                        </div>                        
+                        </div>     
+                        <!--                   
                         <div class="row d-flex">
                             <div class="col-md-6 p-3">
                                 <button type="button" id="form-student-btn" class="w-100 btn btn-outline-primary btn-lg active" style="border: 2px solid blue;"  onclick="showForm('form-student')">
                                     <h4>{{ __('Student') }}</h4>
                                 </button>
                             </div>
-
                             <div class="col-md-6 p-3">
                                 <button type="button" id="form-instructor-btn" class="w-100 btn btn-outline-primary btn-lg" style="border: 2px solid blue;"  onclick="showForm('form-instructor')">
                                     <h4>{{ __('Instructor') }}</h4>
                                 </button>
                             </div>
-
                         </div>
-                    </div>                   
+                        -->
+                    </div>        
+                    <section class="ep-category section-gap pt-0">
+                        <div class="container ep-container">                            
+                            <div class="row accordion accordion-flush" id="accordionExample">
+
+                                <!-- Single Card with Accordion -->
+                                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
+                                    <button type="button" id="form-student-btn" class="w-100 btn btn-outline-primary pymais-accordion-card active" onclick="showForm('form-student')">
+                                        <div class="text-center pymais-accordion-title">
+                                            <div class="icon-container">
+                                                <img src="{{ asset('assets/frontend/pymais/images/category/category-1/1.svg') }}" alt="category-icon" />
+                                            </div>
+                                            <h3 class="pymais-accordion-title">{{ __('SMEs') }}</h3>
+                                        </div>
+                                    </button>
+                                </div>
+                                <!-- Single Card as Button -->
+                                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
+                                    <button type="button" id="form-instructor-btn" class="w-100 btn btn-outline-primary pymais-accordion-card" style="border: 2px solid blue;" onclick="showForm('form-instructor')">
+                                        <div class="text-center pymais-accordion-title">
+                                            <div class="icon-container">
+                                                <img src="{{ asset('assets/frontend/pymais/images/category/category-1/2.svg') }}" alt="category-icon" />
+                                            </div>
+                                            <h3 class="pymais-accordion-title">{{ __('Consultant and mentors') }}</h3>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <!-- Single Card as Button -->
+                                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
+                                <button type="butto" id="form-industry-btn" class="w-100 btn btn-outline-primary pymais-accordion-card" style="border: 2px solid blue;" onclick="showForm('form-industry')">
+                                        <div class="text-center pymais-accordion-title">
+                                            <div class="icon-container">
+                                                <img src="{{ asset('assets/frontend/pymais/images/category/category-1/3.svg') }}" alt="category-icon" />
+                                            </div>
+                                            <h3 class="pymais-accordion-title">{{ __('Industry and corporate') }}</h3>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <!-- Single Card as Button -->
+                                <div class="col-lg-3 col-xl-3 col-md-3 col-12">
+                                <button type="butto" id="form-partnet-btn" class="w-100 btn btn-outline-primary pymais-accordion-card" style="border: 2px solid blue;" onclick="showForm('form-partnet')">
+                                        <div class="text-center pymais-accordion-title">
+                                            <div class="icon-container">
+                                                <img src="{{ asset('assets/frontend/pymais/images/category/category-1/7.svg') }}" alt="category-icon" />
+                                            </div>
+                                            <h3 class="pymais-accordion-title">{{ __('Allies and partners') }}</h3>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>           
 
                     <!-- Inicia formulario Student-->                                        
                     <form id="form-student" action="{{ route('save.application') }}" class="global-form login-form mt-25" method="post" style="display: block;">
@@ -442,6 +569,14 @@
 
                     </form>
 
+                    <form id="form-industry" class="global-form login-form mt-25" method="post" style="display: none;">
+                        @csrf                        
+                    </form>
+
+                    <form id="form-partnet" class="global-form login-form mt-25" method="post" style="display: none;">
+                        @csrf                        
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -494,11 +629,15 @@
         function showForm(formId) {        
             document.getElementById('form-student').style.display = 'none';
             document.getElementById('form-instructor').style.display = 'none';        
+            document.getElementById('form-industry').style.display = 'none';        
+            document.getElementById('form-partnet').style.display = 'none';        
             
             document.getElementById(formId).style.display = 'block';        
             
             document.getElementById('form-student-btn').classList.remove('active');
             document.getElementById('form-instructor-btn').classList.remove('active');
+            document.getElementById('form-industry-btn').classList.remove('active');
+            document.getElementById('form-partnet-btn').classList.remove('active');
             document.getElementById(formId + '-btn').classList.add('active');
             }
     </script>

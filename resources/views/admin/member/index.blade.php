@@ -96,19 +96,30 @@
                                                     <p>{{ $row->phone }}</p>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <?php
-                                                    // Obtener el main_user_id directamente
-                                                    $mainUserId = App\Models\Team_members::where('member_user_id', $row->id)->value('main_user_id');
-                                                    // Opcional: obtener el usuario principal completo
-                                                    $mainUser = App\Models\User::find($mainUserId);
-                                                ?>
+                                            <td>                                               
 
-                                                @if($mainUser->name)
-                                                    {{ $mainUser->name }}
+                                                @php
+                                                    $mainUserId = DB::table('team_members')
+                                                    ->where('member_user_id', $row->id)
+                                                    ->value('main_user_id');
+                                                @endphp
+
+                                                @if($mainUserId)
+                                                    @php
+                                                        $mainUser = DB::table('users')
+                                                                    ->where('id', $mainUserId)
+                                                                    ->first();
+                                                    @endphp
+
+                                                    @if($mainUser)
+                                                        <p>{{ $mainUser->name }}</p>
+                                                    @else
+                                                        <p>Sin nombre de usuario principal</p>
+                                                    @endif
                                                 @else
-                                                    {{ get_phrase('Sin nombre de usuario principal') }}
+                                                    <p>Sin nombre de usuario principal</p>
                                                 @endif
+                                                
                                             </td>
                                             <td class="print-d-none">
                                                 <div class="dropdown ol-icon-dropdown ol-icon-dropdown-transparent">
