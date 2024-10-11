@@ -47,6 +47,20 @@
 </div>
 
 <div class="row mb-3">
+    <label class="form-label ol-form-label col-sm-2 col-form-label">{{ get_phrase('Instructor') }}<span
+            class="text-danger ms-1">*</span></label>
+    <div class="col-sm-10">
+        <select class="ol-select2" name="instructor_id" data-minimum-results-for-search="Infinity" required>
+            <option value="">{{ get_phrase('Select a instructor') }}</option>
+            @foreach (App\Models\User::where('role', 'instructor')->orderBy('name','asc')->get() as $instructor)
+            var_dump($instructor->id)
+                <option value="{{$instructor->id }}" @if ($course_details->user_id == $instructor->id) selected @endif>
+                    {{ $instructor->name }}</option>
+            @endforeach
+        </select>
+    </div>
+</div>
+<div class="row mb-3">
     <label class="form-label ol-form-label col-sm-2 col-form-label">{{ get_phrase('Course level') }}<span
             class="text-danger ms-1">*</span></label>
     <div class="col-sm-10">
