@@ -20,7 +20,7 @@ class DashboardController extends Controller
             }
         }
         $page_data['monthly_amount'] = $monthly_amount;
-        // dd('test');
+        
         return view('admin.dashboard.index', $page_data);
     }
 }

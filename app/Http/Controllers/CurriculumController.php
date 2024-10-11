@@ -144,7 +144,7 @@ class CurriculumController extends Controller
             $sec                = sprintf('%02d', $duration_formatter[2]);
             $data['duration']   = $hour . ':' . $min . ':' . $sec;
         } elseif ($request->lesson_type == 'system-video') {
-            dd('test system.video');
+            
             if ($request->system_video_file == '') {
                 $file = '';
             } else {
