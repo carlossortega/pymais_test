@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
 use App\Models\Course;
-
+use App\Models\Naics_code;
 
 class saveFileController extends Controller
 {
@@ -233,5 +233,47 @@ class saveFileController extends Controller
         app(CustomEmailNotificationController::class)->store($request, 1);
         
         return redirect()->route('login')->with('success', 'You have registered successfully, now please log in with your user data.');
+    }
+
+    public function addRemoveParticipantSME(Request $request)
+    {
+        if ($request->has('remove_index')) {
+            $participants = session('participants', []);
+            $index = $request->input('remove_index');
+    
+            // Verifica si el índice es válido
+            if (isset($participants[$index])) {
+                unset($participants[$index]); // Elimina el participante del array
+                $participants = array_values($participants); // Reindexa el array
+            }
+            
+        } else {
+            $request->validate([
+                'participant_name' => 'required|min:3',
+                'participant_last_name' => 'required|min:3',
+                'participant_position' => 'nullable',
+                'participant_email' => 'required|email|unique:users,email',
+                'participant_phone' => 'nullable',
+                'participant_linkedin' => 'nullable'
+            ]);
+
+            $participant = [
+                'name' => $request->participant_name,
+                'last_name' => $request->participant_last_name,
+                'position' => $request->participant_position,
+                'email' => $request->participant_email,
+                'phone' => $request->participant_phone,
+                'linkedin' => $request->participant_linkedin
+            ];
+            
+            $participants = session('participants', []);
+            $participants[] = $participant;
+        }
+
+        $page_data["naics_code"] = Naics_code::all();
+        $page_data["participants"] = $participants;
+
+
+        return view('auth.register', $page_data);
     }
 }

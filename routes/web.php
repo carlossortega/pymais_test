@@ -68,6 +68,7 @@ Route::controller(InstallController::class)->group(function () {
 
 //Forms routes
 Route::post('save-sme-application', [saveFileController::class, 'saveFileSME'])->name('save.application');
+Route::post('add-participant-sme', [saveFileController::class, 'addRemoveParticipantSME'])->name('add.remove.participant.application');
 
 Route::post('save-sme-application-inst', [saveFileController::class, 'saveFileInstructor'])->name('save.application.instructor');
 

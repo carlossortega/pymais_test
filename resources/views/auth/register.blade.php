@@ -88,25 +88,11 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     
-                    <!-- Titulo y encabezado -->
+                    <!-- Opciones del formulario -->
                     <div class="global-form login-form mt-25" >
                         <div class="row d-flex text-center">
-                            <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('SME Form') }}</h1>
-                        </div>     
-                        <!--                   
-                        <div class="row d-flex">
-                            <div class="col-md-6 p-3">
-                                <button type="button" id="form-student-btn" class="w-100 btn btn-outline-primary btn-lg active" style="border: 2px solid blue;"  onclick="showForm('form-student')">
-                                    <h4>{{ __('Student') }}</h4>
-                                </button>
-                            </div>
-                            <div class="col-md-6 p-3">
-                                <button type="button" id="form-instructor-btn" class="w-100 btn btn-outline-primary btn-lg" style="border: 2px solid blue;"  onclick="showForm('form-instructor')">
-                                    <h4>{{ __('Instructor') }}</h4>
-                                </button>
-                            </div>
+                            <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('Main Form') }}</h1>
                         </div>
-                        -->
                     </div>        
                     <section class="ep-category section-gap pt-0">
                         <div class="container ep-container">                            
@@ -424,25 +410,122 @@
                         </div>
 
                         <div class="p-5">
-                            {{-- <div class="row">
-                                <div class="col-md-3 mb-3">
-                                    <button type="button" class="w-100 btn btn-outline-primary btn-lg" style="border: 2px solid blue;" id="showParticipantModal">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <button type="button" id="addParticipant" class="w-100 btn btn-outline-primary btn-lg" style="border: 2px solid blue;">
                                         <h4>{{ __('Add participant') }}</h4>
                                     </button>
                                 </div>
-                            </div> --}}
-                            
-                            <div class="d-flex align-items-center" style="margin-top: 60px;">
-                                <input type="checkbox" id="toggleInputs" class="m-3 @error('accept_terms_and_conditions') border border-danger @enderror" name="accept_terms_and_conditions" 
-                                    style="width: 20px; height: 20px; cursor: pointer; position: relative; margin-top; 20px">
-                                <label for="toggleInputs" class="mt-2 ms-2">{{ __('I accept') }}
-                                <a href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/Terminos_y_Condiciones.pdf' : 'pdfs/Terminos_y_Condiciones.pdf') }}"
-                                    class="text-info" target="_blank">
-                                    {{ __('terms and conditions') }}
-                                </a>
                             </div>
-                            @error('accept_terms_and_conditions') <p class="text-danger ms-2 mb-3">{{ __('Confirm terms and conditions') }}</p> @enderror
                         </div>
+
+                        <div class="pymais-padding-section" id="participantForm" style="display: none;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Participants name') }}</label>
+                                    <input type="text" value="{{ old('participant_name') }}"
+                                        class="form-control pymais-input-background @error('participant_name') border border-danger @enderror"
+                                        aria-label="Participant Name" name="participant_name">
+                                    @error('participant_name') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Participant\'s last name(s)') }}</label>
+                                    <input type="text" value="{{ old('participant_last_name') }}"
+                                        class="form-control pymais-input-background @error('participant_last_name') border border-danger @enderror"
+                                        aria-label="Participant Name" name="participant_last_name">
+                                    @error('participant_last_name') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                            </div>
+                            <div class="row my-4">
+                                <div class="col-md-6">
+                                    <label>{{ __('Position') }}</label>
+                                    <input type="text" value="{{ old('participant_position') }}"
+                                        class="form-control pymais-input-background @error('participant_position') border border-danger @enderror"
+                                        aria-label="Position" name="participant_position">
+                                    @error('participant_position') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('Email') }}</label>
+                                    <input type="email" value="{{ old('participant_email') }}"
+                                        class="form-control pymais-input-background @error('participant_email') border border-danger @enderror"
+                                        aria-label="Email" name="participant_email">
+                                    @error('participant_email') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>{{ __('Phone') }}</label>
+                                    <input type="text" value="{{ old('participant_phone') }}"
+                                        class="form-control pymais-input-background @error('participant_phone') border border-danger @enderror"
+                                        aria-label="Phone" name="participant_phone">
+                                    @error('participant_phone') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label>{{ __('LinkedIn profile') }}</label>
+                                    <input type="text" value="{{ old('participant_linkedin') }}"
+                                        class="form-control pymais-input-background @error('participant_linkedin') border border-danger @enderror"
+                                        aria-label="LinkedIn profile" name="participant_linkedin">
+                                    @error('participant_linkedin') <p class="text-danger ms-2 mb-3">{{ $message }}</p> @enderror
+                                </div>
+                            </div>
+                                {{-- <div class="row">
+                                    <div class="col-md-6 mt-3">
+                                        <button type="button" class="w-100 btn btn-primary btn-lg" id="submitParticipant">
+                                            <h4>{{ __('Add participant') }}</h4>
+                                        </button>
+                                    </div>
+                                </div> --}}
+                        </div>
+
+                        <div class="pymais-padding-section" id="participantForm" style="{{ $participants ? 'display: block;' : 'display: none;' }}">
+                            @if(!empty($participants))
+                                <div class="table-responsive course_list px-4">
+                                    <table class="table eTable eTable-2 print-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">{{ __('Name') }}</th>
+                                                <th scope="col">{{ __('Last name') }}</th>
+                                                <th scope="col">{{ __('Position') }}</th>
+                                                <th scope="col">{{ __('Email') }}</th>
+                                                <th scope="col">{{ __('Options') }}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach($participants as $index => $participant)
+                                            <tr>
+                                                <td>{{ $participant['name'] }}</td>
+                                                <td>{{ $participant['last_name'] }}</td>
+                                                <td>{{ $participant['position'] }}</td>
+                                                <td>{{ $participant['email'] }}</td>
+                                                <td>{{ $participant['name'] }}</td>
+                                                <td class="col mx-2">
+                                                    <div class="d-flex justify-content-between gap-2">
+                                                        <button type="button" class="btn ol-btn-light ol-icon-btn"
+                                                            onclick="removeParticipant({{ $index }})">
+                                                            <i class="fi-rr-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            @endif
+                        </div>
+                            
+                        <div class="d-flex align-items-center p-5" style="margin-top: 60px;">
+                            <input type="checkbox" id="toggleInputs" class="m-3 @error('accept_terms_and_conditions') border border-danger @enderror" name="accept_terms_and_conditions" 
+                                style="width: 20px; height: 20px; cursor: pointer; position: relative; margin-top; 20px">
+                            <label for="toggleInputs" class="mt-2 ms-2">{{ __('I accept') }}
+                            <a href="{{ asset(app()->getLocale() == 'es' ? 'pdfs/Terminos_y_Condiciones.pdf' : 'pdfs/Terminos_y_Condiciones.pdf') }}"
+                                class="text-info" target="_blank">
+                                {{ __('terms and conditions') }}
+                            </a>
+                        </div>
+                        @error('accept_terms_and_conditions') <p class="text-danger ms-2 mb-3">{{ __('Confirm terms and conditions') }}</p> @enderror
+                        
 
                         <div class="row mt-5">
                             <div class="col-md-6"></div>
@@ -455,7 +538,17 @@
                                 </p>
                             </div>
                         </div>
-                    </form>       
+                    </form>
+                    {{-- Formulario oculto pero se muestran los campos debajo del botón 'Add Participant' --}}
+                    <form id="participantActionForm" action="{{ route('add.remove.participant.application') }}" method="post" style="display: none;">
+                        @csrf
+                        <input type="hidden" name="participant_name" id="hiddenParticipantName">
+                        <input type="hidden" name="participant_last_name" id="hiddenParticipantLastName">
+                        <input type="hidden" name="participant_position" id="hiddenParticipantPosition">
+                        <input type="hidden" name="participant_email" id="hiddenParticipantEmail">
+                        <input type="hidden" name="participant_phone" id="hiddenParticipantPhone">
+                        <input type="hidden" name="participant_linkedin" id="hiddenParticipantLinkedIn">
+                    </form>
 
                     <!-- Inicia formulario Intructor-->
                     <form id="form-instructor" action="{{ route('save.application.instructor') }}" class="global-form login-form mt-25" method="post" style="display: none;">
@@ -585,19 +678,54 @@
 @push('js')
     <script>
         "use strict";
-        let participants = [];
 
         $(document).ready(function() {
             $('#toggleInputs').change(function() {
                 $('#additionalInputs').toggle(this.checked);
             });
 
-            $('#showParticipantModal').on('click', function() {
-                var modal = new bootstrap.Modal(document.getElementById('participantModal'));
-                modal.show();
+            $('#addParticipant').click(function() {
+                $('#participantForm').toggle();
             });
 
+            document.getElementById('submitParticipant').addEventListener('click', function() {
+                var participantName = document.querySelector('input[name="participant_name"]').value;
+                var participantLastName = document.querySelector('input[name="participant_last_name"]').value;
+                var participantPosition = document.querySelector('input[name="participant_position"]').value;
+                var participantEmail = document.querySelector('input[name="participant_email"]').value;
+                var participantPhone = document.querySelector('input[name="participant_phone"]').value;
+                var participantLinkedIn = document.querySelector('input[name="participant_linkedin"]').value;
 
+                document.getElementById('hiddenParticipantName').value = participantName;
+                document.getElementById('hiddenParticipantLastName').value = participantLastName;
+                document.getElementById('hiddenParticipantPosition').value = participantPosition;
+                document.getElementById('hiddenParticipantEmail').value = participantEmail;
+                document.getElementById('hiddenParticipantPhone').value = participantPhone;
+                document.getElementById('hiddenParticipantLinkedIn').value = participantLinkedIn;
+
+                document.getElementById('participantActionForm').submit();
+            });
+
+            function removeParticipant(index) {
+                fetch('{{ route('add.remove.participant.application') }}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    body: JSON.stringify({ remove_index: index })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        alert('Failed to remove participant.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
             
             function togglePasswordBtn(btnId, inputId) {
                 $(btnId).on('click', function(e) {

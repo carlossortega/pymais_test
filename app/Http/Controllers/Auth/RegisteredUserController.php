@@ -23,7 +23,9 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
+        session()->forget('participants');
         $page_data["naics_code"] = Naics_code::all();
+        $page_data["participants"] = [];
         return view('auth.register', $page_data);
     }
 

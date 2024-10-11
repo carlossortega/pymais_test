@@ -17,16 +17,32 @@ window.location = "/my-courses";
             <div class="col-lg-9">
                 <h4 class="g-title mb-5">{{ __('Team Members') }}</h4>
                 <div class="my-panel message-panel">
-                    <div class=" d-flex justify-content-end mb-5 mt-0">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="pt-4">
+                                <h3 class="text-black">{{ __('Enter the details of the other participants from the company. Register up to 4 people') }}.</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-end">
+                            <div class=" d-flex justify-content-end mb-5 mt-0">
+                                <button class="eBtn btn gradient mt-10 w-15 h-75"
+                                    onclick="window.location='{{ route('team.members.create') }}'" @if(count($members)>
+                                    3 )
+                                    disabled @endif>
+                                    {{ __('Add participant') }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- <div class=" d-flex justify-content-end mb-5 mt-0">
                         <button class="eBtn btn gradient mt-10 w-15 h-75"
                             onclick="window.location='{{ route('team.members.create') }}'" @if(count($members)>
                             3 )
                             disabled @endif>
                             {{ __('Add participant') }}
                         </button>
-                    </div>
-                    <h3 class="col-lg-12 text-black mb-5">Ingresa los datos de los demás participantes de la
-                        compañia. Registra hasta 4 personas.</h3>
+                    </div> --}}
+                   
                     @if (count($members) > 0)
                     <div class="table-responsive course_list px-4">
                         <table class="table eTable eTable-2 print-table">
