@@ -50,25 +50,25 @@
                     <div class="course-video-area border-primary border">
                         <!-- Video -->
                         <div class="course-video-wrap">
-                            <div class="plyr__video-embed">
+                        <div class="plyr__video-embed">
+                            @php
+                                $watermark_type = get_player_settings('watermark_type');
+                            @endphp
+                            @if ($watermark_type != 'ffmpeg')
                                 @php
-                                    $watermark_type = get_player_settings('watermark_type');
+                                    $width = get_player_settings('watermark_width');
+                                    $height = get_player_settings('watermark_height');
+                                    $top = get_player_settings('watermark_top');
+                                    $left = get_player_settings('watermark_left');
+                                    $logo = get_player_settings('watermark_logo');
+                                    $opacity = get_player_settings('watermark_opacity');
                                 @endphp
-                                @if ($watermark_type != 'ffmpeg')
-                                    @php
-                                        $width = get_player_settings('watermark_width');
-                                        $height = get_player_settings('watermark_height');
-                                        $top = get_player_settings('watermark_top');
-                                        $left = get_player_settings('watermark_left');
-                                        $logo = get_player_settings('watermark_logo');
-                                        $opacity = get_player_settings('watermark_opacity');
-                                    @endphp
-                                    @if ($lesson_details->lesson_type == 'system-video')
-                                        @include('course_player.watermark')
-                                    @endif
+                                @if ($lesson_details && $lesson_details->lesson_type == 'system-video')
+                                    @include('course_player.watermark')
                                 @endif
-                                @include('course_player.player_page')
-                            </div>
+                            @endif
+                            @include('course_player.player_page')
+                        </div>
                         </div>
                     </div>
                     <!-- Tab -->
