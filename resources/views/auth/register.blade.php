@@ -235,6 +235,31 @@
                                 </div>
                             </div>
                         </div>
+                        @push('js')
+                            <script>
+                                function togglePasswordBtn(btnId, inputId) {
+                                    $(btnId).on('click', function(e) {
+                                        e.preventDefault();
+                                        const passwordInput = $(inputId);
+                                        const type = passwordInput.attr('type');
+
+                                        if (type == 'password') {
+                                            passwordInput.attr('type', 'text');
+                                            $(this).find('i').removeClass('fa-eye').addClass('fa-eye-slash');
+                                        } else {
+                                            passwordInput.attr('type', 'password');
+                                            $(this).find('i').removeClass('fa-eye-slash').addClass('fa-eye');
+                                        }
+                                    });
+                                }
+
+                                togglePasswordBtn('#showPassword', '#password');
+                                togglePasswordBtn('#showConfirmPassword', '#confirmPassword');
+
+                                togglePasswordBtn('#showPassword2', '#password2');
+                                togglePasswordBtn('#showConfirmPassword2', '#confirmPassword2');
+                            </script>
+                        @endpush
 
 
                         <h3 class="g-title" style="color:#2849E6; margin-bottom: 60px; margin-top: 60px">
@@ -549,6 +574,8 @@
                         <input type="hidden" name="participant_phone" id="hiddenParticipantPhone">
                         <input type="hidden" name="participant_linkedin" id="hiddenParticipantLinkedIn">
                     </form>
+
+                    
 
                     <!-- Inicia formulario Intructor-->
                     <form id="form-instructor" action="{{ route('save.application.instructor') }}" class="global-form login-form mt-25" method="post" style="display: none;">
