@@ -116,13 +116,13 @@
         <div class="header-dropdown-md">
             <button class="header-dropdown-toggle-md" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="user-profile-sm">
-                    <img src="{{ get_image(auth()->user()->photo) }}" alt="">
+                    <img src="{{ auth()->user()->photo ? get_image(auth()->user()->photo) : asset('assets/frontend/default/image/foto-perfil.png') }}" alt="">
                 </div>
             </button>
             <div class="header-dropdown-menu-md p-3">
                 <div class="d-flex column-gap-2 mb-12px pb-12px ol-border-bottom-2">
                     <div class="user-profile-sm">
-                        <img src="{{ get_image(auth()->user()->photo) }}" alt="">
+                        <img src="{{ auth()->user()->photo ? get_image(auth()->user()->photo) : asset('assets/frontend/default/image/foto-perfil.png') }}" alt="te">
                     </div>
                     <div>
                         <h6 class="title fs-12px mb-2px">{{ auth()->user()->name }}</h6>

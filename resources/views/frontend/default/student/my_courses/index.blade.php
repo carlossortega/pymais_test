@@ -30,7 +30,7 @@
                                             <div class="card-body entry-details">
                                                 <div class="info-card mb-15">
                                                     <div class="creator">
-                                                        <img src="{{ get_image($course->user_photo) }}"
+                                                        <img src="{{ $course->user_photo ? get_image($course->user_photo) : asset('assets/frontend/default/image/foto-perfil.png') }}"
                                                             alt="author-image">
                                                         <h5>{{ $course->user_name }}</h5>
                                                     </div>
@@ -124,7 +124,7 @@
                                                 <div class="card-body entry-details">
                                                     <div class="info-card mb-15">
                                                         <div class="creator">
-                                                            <img src="{{ get_image($course->user_photo) }}"
+                                                            <img src="{{ $course->user_photo ? get_image($course->user_photo) : asset('assets/frontend/default/image/foto-perfil.png') }}"
                                                                 alt="author-image">
                                                             <h5>{{ $course->user_name }}</h5>
                                                         </div>
@@ -220,7 +220,7 @@
                                                     <div class="card-body entry-details">
                                                         <div class="info-card mb-15">
                                                             <div class="creator">
-                                                                <img src="{{ get_image($course->user_photo) }}"
+                                                                <img src="{{ $course->user_photo ? get_image($course->user_photo) : asset('assets/frontend/default/image/foto-perfil.png') }}"
                                                                     alt="author-image">
                                                                 <h5>{{ $course->user_name }}</h5>
                                                             </div>
@@ -318,7 +318,7 @@
                                                         <div class="card-body entry-details">
                                                             <div class="info-card mb-15">
                                                                 <div class="creator">
-                                                                    <img src="{{ get_image($course->user_photo) }}"
+                                                                    <img src="{{ $course->user_photo ? get_image($course->user_photo) : asset('assets/frontend/default/image/foto-perfil.png') }}"
                                                                         alt="author-image">
                                                                     <h5>{{ $course->user_name }}</h5>
                                                                 </div>
