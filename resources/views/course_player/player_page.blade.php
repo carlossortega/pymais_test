@@ -21,7 +21,7 @@
         @endphp
         <div class=" bd-r-10 mb-16 position-relative bg-light custom-system-video">
             <video id="player" playsinline controls>
-                <source src="{{ $lesson_details->lesson_src) }}" type="video/mp4">
+                <source src="{{ $lesson_details->lesson_src }}" type="video/mp4">
             </video>
             @include('course_player.player_config')
         </div>
