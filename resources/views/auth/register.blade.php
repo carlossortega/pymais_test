@@ -91,7 +91,7 @@
                     <!-- Opciones del formulario -->
                     <div class="global-form login-form mt-25" >
                         <div class="row d-flex text-center">
-                            <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('Main Form') }}</h1>
+                            <h1 class="g-title" style="color:#2849E6; margin-bottom: 60px">{{ __('Form register') }}</h1>
                         </div>
                     </div>        
                     <section class="ep-category section-gap pt-0">
